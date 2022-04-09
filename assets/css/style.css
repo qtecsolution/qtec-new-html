@@ -1,0 +1,910 @@
+/**=====================================================**
+                    THEME-COLORS
+=======================================================**/
+/**=====================================================**
+                    TEXT-COLORS
+=======================================================**/
+/**=====================================================**
+                    BACKGROUND-COLORS
+=======================================================**/
+/**=====================================================**
+                    BORDER-COLORS
+=======================================================**/
+/**=====================================================**
+                    NORMAL-COLORS
+=======================================================**/
+/**=====================================================**
+                    GRADIENT-COLORS
+=======================================================**/
+/**=====================================================**
+                    GRADIENT-BACKGROUNDS
+=======================================================**/
+/**=====================================================**
+                        SHADOWS
+=======================================================**/
+/**=====================================================**
+                        BOX-SHADOWS
+=======================================================**/
+/**=====================================================**
+                        TEXT-SHADOWS
+=======================================================**/
+/**=====================================================**
+                    TIMING-VARIABLES
+=======================================================**/
+/**=====================================================**
+                    GLOBAL-MIXINS
+=======================================================**/
+/**=====================================================**
+                ANIMATION-STYLES
+=======================================================**/
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap");
+@-webkit-keyframes slideDownIn {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+  0% {
+    transform: translateY(-100%);
+  }
+}
+@keyframes slideDownIn {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+  0% {
+    transform: translateY(-100%);
+  }
+}
+@-webkit-keyframes slideDownInMobile {
+  0% {
+    transform: translateY(-1.25rem);
+  }
+  100% {
+    transform: translateY(0.625rem);
+  }
+  0% {
+    transform: translateY(-1.25rem);
+  }
+}
+@keyframes slideDownInMobile {
+  0% {
+    transform: translateY(-1.25rem);
+  }
+  100% {
+    transform: translateY(0.625rem);
+  }
+  0% {
+    transform: translateY(-1.25rem);
+  }
+}
+@-webkit-keyframes slideUpIn {
+  0% {
+    transform: translateY(-1.25rem);
+  }
+  100% {
+    transform: translateY(0);
+  }
+  0% {
+    transform: translateY(1.25rem);
+  }
+}
+@keyframes slideUpIn {
+  0% {
+    transform: translateY(-1.25rem);
+  }
+  100% {
+    transform: translateY(0);
+  }
+  0% {
+    transform: translateY(1.25rem);
+  }
+}
+@-webkit-keyframes slideUpInMobile {
+  0% {
+    transform: translateY(2.5rem);
+  }
+  100% {
+    transform: translateY(1.5625rem);
+  }
+  0% {
+    transform: translateY(2.5rem);
+  }
+}
+@keyframes slideUpInMobile {
+  0% {
+    transform: translateY(2.5rem);
+  }
+  100% {
+    transform: translateY(1.5625rem);
+  }
+  0% {
+    transform: translateY(2.5rem);
+  }
+}
+@-webkit-keyframes slideLeftIn {
+  0% {
+    transform: translateX(6.25rem);
+  }
+  100% {
+    transform: translateX(0);
+  }
+  0% {
+    transform: translateX(-6.25rem);
+  }
+}
+@keyframes slideLeftIn {
+  0% {
+    transform: translateX(6.25rem);
+  }
+  100% {
+    transform: translateX(0);
+  }
+  0% {
+    transform: translateX(-6.25rem);
+  }
+}
+@-webkit-keyframes slideRightIn {
+  0% {
+    transform: translateX(6.25rem);
+  }
+  100% {
+    transform: translateX(0);
+  }
+  0% {
+    transform: translateX(6.25rem);
+  }
+}
+@keyframes slideRightIn {
+  0% {
+    transform: translateX(6.25rem);
+  }
+  100% {
+    transform: translateX(0);
+  }
+  0% {
+    transform: translateX(6.25rem);
+  }
+}
+@keyframes floating {
+  0% {
+    transform: translateY(0%);
+  }
+  50% {
+    transform: translateY(1%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
+@-webkit-keyframes floating {
+  0% {
+    -webkit-transform: translateY(0%);
+  }
+  50% {
+    -webkit-transform: translateY(1%);
+  }
+  100% {
+    -webkit-transform: translateY(0%);
+  }
+}
+/**==================================================
+                GOOGLE FONT CDN (INTER)
+==================================================**/
+/**==================================================
+                FONTS INFO START
+==================================================**/
+/**===============================================
+                FONT STYLE MIXINS
+===============================================**/
+/**=====================================================**
+                BREAKPOINT-VARIABLES
+=======================================================**/
+/**=====================================================**
+                BREAKPOINT-FUNCTIONS
+=======================================================**/
+/**=====================================================**
+                    BREAKPOINT-MIXIN
+=======================================================**/
+/**=====================================================**
+                    BREAKPOINT-USAGE
+=======================================================**/
+/**=====================================================**
+                    GLOBAL-RESETTINGS
+=======================================================**/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+a,
+abbr,
+acronym,
+address,
+applet,
+article,
+aside,
+audio,
+b,
+big,
+blockquote,
+button,
+body,
+canvas,
+caption,
+center,
+cite,
+code,
+dd,
+del,
+details,
+dfn,
+div,
+dl,
+dt,
+em,
+embed,
+fieldset,
+figcaption,
+figure,
+footer,
+form,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+header,
+hgroup,
+html,
+i,
+input,
+iframe,
+img,
+ins,
+kbd,
+label,
+legend,
+li,
+mark,
+menu,
+main,
+nav,
+object,
+ol,
+output,
+option,
+p,
+pre,
+q,
+ruby,
+s,
+samp,
+section,
+small,
+span,
+strike,
+strong,
+sub,
+summary,
+select,
+sup,
+table,
+tbody,
+td,
+tfoot,
+th,
+thead,
+time,
+tr,
+tt,
+u,
+ul,
+var,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+a::-moz-selection, abbr::-moz-selection, acronym::-moz-selection, address::-moz-selection, applet::-moz-selection, article::-moz-selection, aside::-moz-selection, audio::-moz-selection, b::-moz-selection, big::-moz-selection, blockquote::-moz-selection, button::-moz-selection, body::-moz-selection, canvas::-moz-selection, caption::-moz-selection, center::-moz-selection, cite::-moz-selection, code::-moz-selection, dd::-moz-selection, del::-moz-selection, details::-moz-selection, dfn::-moz-selection, div::-moz-selection, dl::-moz-selection, dt::-moz-selection, em::-moz-selection, embed::-moz-selection, fieldset::-moz-selection, figcaption::-moz-selection, figure::-moz-selection, footer::-moz-selection, form::-moz-selection, h1::-moz-selection, h2::-moz-selection, h3::-moz-selection, h4::-moz-selection, h5::-moz-selection, h6::-moz-selection, header::-moz-selection, hgroup::-moz-selection, html::-moz-selection, i::-moz-selection, input::-moz-selection, iframe::-moz-selection, img::-moz-selection, ins::-moz-selection, kbd::-moz-selection, label::-moz-selection, legend::-moz-selection, li::-moz-selection, mark::-moz-selection, menu::-moz-selection, main::-moz-selection, nav::-moz-selection, object::-moz-selection, ol::-moz-selection, output::-moz-selection, option::-moz-selection, p::-moz-selection, pre::-moz-selection, q::-moz-selection, ruby::-moz-selection, s::-moz-selection, samp::-moz-selection, section::-moz-selection, small::-moz-selection, span::-moz-selection, strike::-moz-selection, strong::-moz-selection, sub::-moz-selection, summary::-moz-selection, select::-moz-selection, sup::-moz-selection, table::-moz-selection, tbody::-moz-selection, td::-moz-selection, tfoot::-moz-selection, th::-moz-selection, thead::-moz-selection, time::-moz-selection, tr::-moz-selection, tt::-moz-selection, u::-moz-selection, ul::-moz-selection, var::-moz-selection, video::-moz-selection {
+  background: #0876FC;
+  color: #ffffff;
+}
+a::selection,
+abbr::selection,
+acronym::selection,
+address::selection,
+applet::selection,
+article::selection,
+aside::selection,
+audio::selection,
+b::selection,
+big::selection,
+blockquote::selection,
+button::selection,
+body::selection,
+canvas::selection,
+caption::selection,
+center::selection,
+cite::selection,
+code::selection,
+dd::selection,
+del::selection,
+details::selection,
+dfn::selection,
+div::selection,
+dl::selection,
+dt::selection,
+em::selection,
+embed::selection,
+fieldset::selection,
+figcaption::selection,
+figure::selection,
+footer::selection,
+form::selection,
+h1::selection,
+h2::selection,
+h3::selection,
+h4::selection,
+h5::selection,
+h6::selection,
+header::selection,
+hgroup::selection,
+html::selection,
+i::selection,
+input::selection,
+iframe::selection,
+img::selection,
+ins::selection,
+kbd::selection,
+label::selection,
+legend::selection,
+li::selection,
+mark::selection,
+menu::selection,
+main::selection,
+nav::selection,
+object::selection,
+ol::selection,
+output::selection,
+option::selection,
+p::selection,
+pre::selection,
+q::selection,
+ruby::selection,
+s::selection,
+samp::selection,
+section::selection,
+small::selection,
+span::selection,
+strike::selection,
+strong::selection,
+sub::selection,
+summary::selection,
+select::selection,
+sup::selection,
+table::selection,
+tbody::selection,
+td::selection,
+tfoot::selection,
+th::selection,
+thead::selection,
+time::selection,
+tr::selection,
+tt::selection,
+u::selection,
+ul::selection,
+var::selection,
+video::selection {
+  background: #0876FC;
+  color: #ffffff;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+main,
+nav,
+section {
+  display: block;
+  margin: 0;
+}
+
+html {
+  font-size: 100%;
+}
+
+/**=====================================================**
+                    DEFAULT-SETTINGS
+=======================================================**/
+body {
+  margin: 0;
+  padding: 0;
+  position: relative;
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+  display: inline-block;
+}
+
+figure {
+  margin-bottom: 0;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+input[type=search]::-webkit-search-decoration,
+input[type=search]::-webkit-search-cancel-button,
+input[type=search]::-webkit-search-results-button,
+input[type=search]::-webkit-search-results-decoration {
+  display: none;
+}
+input[type=search]::-webkit-search-decoration:focus,
+input[type=search]::-webkit-search-cancel-button:focus,
+input[type=search]::-webkit-search-results-button:focus,
+input[type=search]::-webkit-search-results-decoration:focus {
+  outline: none;
+}
+
+input:focus,
+select:focus {
+  outline: none;
+}
+
+textarea {
+  resize: none;
+}
+
+::-webkit-datetime-edit-year-field:not([aria-valuenow]),
+::-webkit-datetime-edit-month-field:not([aria-valuenow]),
+::-webkit-datetime-edit-day-field:not([aria-valuenow]) {
+  color: transparent;
+}
+
+input[type=date]::before {
+  content: attr(data-placeholder);
+  width: 100%;
+}
+
+input[type=date]:focus::before,
+input[type=date]:valid::before {
+  display: none;
+}
+
+select {
+  cursor: pointer;
+}
+
+.decories-container {
+  max-width: 107.5rem;
+  margin-inline: auto;
+  padding: 0rem 1.25rem;
+}
+@media screen and (min-width: 62rem) {
+  .decories-container {
+    padding: 0rem 3.125rem;
+  }
+}
+
+.dimond-container {
+  max-width: 82.5rem;
+  margin-inline: auto;
+  padding: 0rem 1.25rem;
+}
+@media screen and (min-width: 62rem) {
+  .dimond-container {
+    padding: 0rem 3.125rem;
+  }
+}
+
+/**=======================================================**
+                        HEADER SECTION START
+**=======================================================**/
+.header {
+  padding: 0.625rem 0.5rem;
+}
+.header-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  align-items: center;
+}
+.header-nav .logo {
+  height: 5rem;
+  width: 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.header-nav .logo img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.header-nav .desktopmenu {
+  margin-left: auto;
+}
+.header-nav .desktoplist {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
+}
+@media screen and (min-width: 75rem) {
+  .header-nav .desktoplist {
+    gap: 5rem;
+  }
+}
+@media screen and (min-width: 87.5rem) {
+  .header-nav .desktoplist {
+    gap: 5rem;
+  }
+}
+.header-nav .desktoplist-link {
+  color: #9D9D9D;
+  letter-spacing: 0.1rem;
+  text-transform: uppercase;
+}
+.header-nav .desktoplist-link:hover:not(.active) {
+  color: #4A5568;
+}
+.header-nav .desktoplist-link.active {
+  color: #4A5568;
+}
+
+/**=======================================================**
+                        HEADER SECTION END
+**=======================================================**/
+/**=====================================================
+                FOOTER SECTION START
+=====================================================**/
+.footer {
+  background: #001A39;
+  padding: 3.375rem 0.5rem 3.875rem;
+}
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  gap: 4.875rem;
+}
+.footer-content .footlogo-subscribe {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+.footer-content .footlogo-subscribe .footlogo {
+  height: 5rem;
+  width: 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 100%;
+  overflow: hidden;
+}
+.footer-content .footlogo-subscribe .footlogo img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.footer-content .footlogo-subscribe .subscribe {
+  background: #EDF2F7;
+  -webkit-backdrop-filter: blur(0.625rem);
+          backdrop-filter: blur(0.625rem);
+  display: flex;
+  align-items: center;
+  padding: 0.3125rem 0.25rem;
+}
+.footer-content .footlogo-subscribe .subscribe .inputfield {
+  flex: 1;
+  padding: 0.75rem;
+  background: transparent;
+  background: transparent;
+  color: #2D3748;
+}
+.footer-content .footlogo-subscribe .subscribe .inputfield::-moz-placeholder {
+  color: #7A828A;
+}
+.footer-content .footlogo-subscribe .subscribe .inputfield:-ms-input-placeholder {
+  color: #7A828A;
+}
+.footer-content .footlogo-subscribe .subscribe .inputfield::placeholder {
+  color: #7A828A;
+}
+.footer-content .footerinfo {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.footer-content .footerinfo-header .footerinfo-title {
+  color: #ffffff;
+  font-feature-settings: "salt" on;
+}
+.footer-content .footerinfo-body {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+.footer-content .footerinfo-body .footerlist {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+.footer-content .footerinfo-body .footerlist-link {
+  color: #ffffff;
+  font-feature-settings: "salt" on;
+  position: relative;
+}
+.footer-content .footerinfo-body .footerlist-link::before {
+  content: "";
+  position: absolute;
+  bottom: 0.0625rem;
+  left: 0;
+  height: 0.0625rem;
+  width: 0;
+  background: #FCDE08;
+  transition: 0.5s;
+}
+.footer-content .footerinfo-body .footerlist-link:not([disabled]):hover {
+  color: #FCDE08;
+}
+.footer-content .footerinfo-body .footerlist-link:not([disabled]):hover::before {
+  width: 100%;
+}
+.footer-content .footerinfo-body .contactlist {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+.footer-content .footerinfo-body .contactlist-link {
+  color: #ffffff;
+  font-feature-settings: "salt" on;
+  position: relative;
+}
+.footer-content .footerinfo-body .contactlist-link::before {
+  content: "";
+  position: absolute;
+  bottom: 0.0625rem;
+  left: 0;
+  height: 0.0625rem;
+  width: 0;
+  background: #FCDE08;
+  transition: 0.5s;
+}
+.footer-content .footerinfo-body .contactlist-link:not([disabled]):hover {
+  color: #FCDE08;
+}
+.footer-content .footerinfo-body .contactlist-link:not([disabled]):hover::before {
+  width: 100%;
+}
+.footer-content .footerinfo-body .contactlist .address {
+  color: #ffffff;
+  font-feature-settings: "salt" on;
+}
+.footer-content .footerinfo-body .social-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
+}
+.footer-content .footerinfo-body .social-list-link {
+  height: 2.25rem;
+  width: 2.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.footer-content .footerinfo-body .social-list-link svg {
+  width: 100%;
+  height: 100%;
+}
+.footer-content .copyright-text {
+  color: #ffffff;
+  text-align: center;
+}
+
+/**=====================================================
+                FOOTER SECTION END
+=====================================================**/
+.btn-subscibe {
+  background: #0876FC;
+  color: #ffffff;
+  padding: 0.75rem 1.25rem;
+  text-align: center;
+  transition: background 200ms ease-in-out;
+}
+.btn-subscibe:not([disabled]):hover {
+  background: #001A39;
+}
+
+/**=====================================================**
+                        HOME-CARDS
+=======================================================**/
+.modal-content {
+  overflow: hidden;
+  border: none;
+}
+.modal-header {
+  border-bottom: 0rem;
+}
+/**=====================================================
+                OFFCANVAS START
+=====================================================**/
+.offcanvas-top {
+  height: 100vh;
+  border-bottom: none;
+}
+
+.offcanvas-bottom {
+  height: 100vh;
+  border-top: none;
+}
+
+.offcanvas-start {
+  border-right: none;
+}
+
+.offcanvas-end {
+  border-left: 0;
+}
+
+.offcanvas {
+  width: 16.25rem;
+  background: #02D7F8;
+}
+@media screen and (min-width: 22.5rem) {
+  .offcanvas {
+    width: 18.75rem;
+  }
+}
+.offcanvas-header {
+  position: relative;
+}
+.offcanvas-header .logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.offcanvas-header .logo img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.offcanvas-header .btn-close {
+  height: 1.25rem;
+  width: 1.25rem;
+  background: #0876FC;
+  margin: 0;
+  padding: 0;
+  padding: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 100%;
+  opacity: 1;
+}
+.offcanvas-header .btn-close svg {
+  width: 100%;
+  height: 100%;
+  transition: transform 200ms ease-in-out;
+}
+.offcanvas-header .btn-close svg path {
+  fill: rgba(255, 255, 255, 0.75);
+  transition: all 200ms ease-in-out;
+}
+.offcanvas-header .btn-close:focus {
+  box-shadow: none;
+  outline: none;
+}
+.offcanvas-header .btn-close:not([disabled]):hover svg {
+  transform: rotate(90deg);
+}
+.offcanvas-body {
+  overflow-x: hidden;
+  padding-top: 0rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-bottom: 4rem;
+}
+.offcanvas-body::-webkit-scrollbar {
+  background: transparent;
+  width: 0.5rem;
+}
+.offcanvas-body::-webkit-scrollbar-thumb {
+  background: #0876FC;
+}
+
+/**=====================================================
+                OFFCANVAS END
+=====================================================**/
+.preloader {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  width: 100%;
+  min-height: 100vh;
+  overflow: hidden;
+  z-index: 10000;
+  background: #0876FC;
+}
+.preloader .preload {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@media screen and (min-width: 22.5rem) {
+  .preloader .preload {
+    margin-right: -45%;
+  }
+}
+@media screen and (min-width: 36rem) {
+  .preloader .preload {
+    margin-right: -20%;
+  }
+}
+@media screen and (min-width: 48rem) {
+  .preloader .preload {
+    margin-right: -20%;
+  }
+}
+@media screen and (min-width: 62rem) {
+  .preloader .preload {
+    margin-right: -10%;
+  }
+}
+
+/**=======================================================**
+                    HOME-BANNER SECTION START
+**=======================================================**/
+.homebanner {
+  background: url(../images/home-banner/home-banner.svg) no-repeat center center/cover;
+}
+
+/**=======================================================**
+                    HOME-BANNER SECTION END
+**=======================================================**/

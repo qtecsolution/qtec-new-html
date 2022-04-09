@@ -1,0 +1,57 @@
+/**=======================================================**
+                        HEADER SECTION START
+**=======================================================**/
+
+.header {
+    padding: length(10) length(8);
+
+    &-nav {
+        @include flex-center-between;
+
+        .logo {
+            @include square(length(80));
+            @include flex-center;
+            overflow: hidden;
+
+            img {
+                @include wh100;
+                object-fit: contain;
+            }
+        }
+
+        .desktopmenu {
+            margin-left: auto;
+        }
+
+        .desktoplist {
+            @include list-horizontal;
+            gap: length(40);
+            
+            @include breakpoint(desktop1200) {
+                gap: length(80);
+            }
+            
+            @include breakpoint(desktop1400) {
+                gap: length(80);
+            }
+
+            &-link {
+                color: $headerLinkColor;
+                letter-spacing: length(1.6);
+                text-transform: uppercase;
+
+                &:hover:not(.active) {
+                    color: $gray-700;
+                }
+
+                &.active {
+                    color: $gray-700;
+                }
+            }
+        }
+    }
+}
+
+/**=======================================================**
+                        HEADER SECTION END
+**=======================================================**/

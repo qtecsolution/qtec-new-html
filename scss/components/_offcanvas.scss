@@ -1,0 +1,101 @@
+/**=====================================================
+                OFFCANVAS START
+=====================================================**/
+
+.offcanvas-top {
+    height: 100vh;
+    border-bottom: none;
+}
+
+.offcanvas-bottom {
+    height: 100vh;
+    border-top: none;
+}
+
+.offcanvas-start {
+    border-right: none;
+}
+
+.offcanvas-end {
+    border-left: 0;
+}
+
+.offcanvas {
+    width: length(260);
+    background: $secondary;
+
+    @include breakpoint(mobile360) {
+        width: length(300);
+    }
+
+    &-header {
+        position: relative;
+
+        .logo {
+            @include flex-center;
+            overflow: hidden;
+
+            img {
+                @include wh100;
+                object-fit: contain;
+            }
+        }
+
+        .btn-close {
+            @include square(length(20));
+            background: $primary;
+            margin: 0;
+            padding: 0;
+            padding: length(8);
+            @include flex-center;
+            @include circle;
+            opacity: 1;
+
+            svg {
+                @include wh100;
+                @include transitiontransform;
+
+                path {
+                    fill: rgba($white, 0.75);
+                    @include transitionsall;
+                }
+            }
+
+            &:focus {
+                box-shadow: none;
+                outline: none;
+            }
+
+            @include hover {
+                svg {
+                    @include transform(rotate(90deg));
+
+                    path {
+                        // fill: $primaryaccent;
+                    }
+                }
+            }
+        }
+    }
+
+    &-body {
+        overflow-x: hidden;
+        padding-top: length(0);
+        @include flex-column;
+        justify-content: space-between;
+        padding-bottom: length(64);
+
+        &::-webkit-scrollbar {
+            background: transparent;
+            width: length(8);
+        }
+
+        &::-webkit-scrollbar-thumb {
+            background: $primary;
+        }
+    }
+}
+
+/**=====================================================
+                OFFCANVAS END
+=====================================================**/

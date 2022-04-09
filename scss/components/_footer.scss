@@ -1,0 +1,156 @@
+/**=====================================================
+                FOOTER SECTION START
+=====================================================**/
+
+.footer {
+    background: $footerbg;
+    padding: length(54) length(8) length(62);
+
+    &-content {
+        @include flex-column;
+        gap: length(78);
+
+        .footlogo-subscribe {
+            @include flex-column;
+            gap: length(40);
+
+            .footlogo {
+                @include square(length(80));
+                @include flex-center;
+                @include circle;
+                overflow: hidden;
+
+                img {
+                    @include wh100;
+                    object-fit: contain;
+                }
+            }
+
+            .subscribe {
+                background: $gray-200;
+                backdrop-filter: blur(length(10));
+                @include flex-center-vert;
+                padding: length(5) length(4);
+
+                .inputfield {
+                    flex: 1;
+                    padding: length(12);
+                    background: transparent;
+                    @include setBgColor(transparent, $gray-800);
+
+                    &::placeholder {
+                        color: $subscribePlaceholder;
+                    }
+                }
+            }
+        }
+
+        .footerinfo {
+            @include flex-column;
+            gap: length(24);
+
+            &-header {
+                .footerinfo-title {
+                    color: $white;
+                    font-feature-settings: 'salt'on;
+                }
+            }
+
+            &-body {
+                @include flex-column;
+                gap: length(40);
+
+                .footerlist {
+                    @include list-vertical;
+                    gap: length(12);
+
+                    &-link {
+                        color: $white;
+                        font-feature-settings: 'salt'on;
+                        position: relative;
+
+                        &::before {
+                            content: '';
+                            position: absolute;
+                            bottom: length(1);
+                            left: 0;
+                            height: length(1);
+                            width: 0;
+                            background: $tertiary;
+                            transition: .5s;
+                        }
+
+                        @include hover {
+                            color: $tertiary;
+
+                            &::before {
+                                @include w100;
+                            }
+                        }
+                    }
+                }
+
+                .contactlist {
+                    @include list-vertical;
+                    gap: length(12);
+
+                    &-link {
+                        color: $white;
+                        font-feature-settings: 'salt'on;
+                        position: relative;
+
+                        &::before {
+                            content: '';
+                            position: absolute;
+                            bottom: length(1);
+                            left: 0;
+                            height: length(1);
+                            width: 0;
+                            background: $tertiary;
+                            transition: .5s;
+                        }
+
+                        @include hover {
+                            color: $tertiary;
+
+                            &::before {
+                                @include w100;
+                            }
+                        }
+                    }
+
+                    .address {
+                        color: $white;
+                        font-feature-settings: 'salt'on;
+                    }
+                }
+
+                .social-list {
+                    @include list-horizontal;
+                    gap: length(40);
+
+                    &-link {
+                        @include square(length(36));
+                        @include flex-center;
+                        overflow: hidden;
+
+                        svg {
+                            @include wh100;
+                        }
+                    }
+                }
+            }
+        }
+
+        .copyright {
+            &-text {
+                color: $white;
+                text-align: center;
+            }
+        }
+    }
+}
+
+/**=====================================================
+                FOOTER SECTION END
+=====================================================**/

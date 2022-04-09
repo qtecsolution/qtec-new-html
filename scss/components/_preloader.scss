@@ -1,0 +1,29 @@
+.preloader {
+    @include flex-center;
+    position: fixed;
+    @include w100;
+    min-height: 100vh;
+    overflow: hidden;
+    z-index: 10000;
+    background: $primary;
+
+    .preload {
+        @include flex-center;
+        
+        @include breakpoint(mobile360) {
+            margin-right: -45%;
+        }
+
+        @include breakpoint(mobile576) {
+            margin-right: -20%;
+        }
+
+        @include breakpoint(mobile768) {
+            margin-right: -20%;
+        }
+
+        @include breakpoint(tab992) {
+            margin-right: -10%;
+        }
+    }
+}
