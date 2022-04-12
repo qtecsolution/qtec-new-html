@@ -3,7 +3,67 @@
 **=======================================================**/
 
 .homebanner {
-    background: url(../images/home-banner/home-banner.svg) no-repeat center center/cover;
+    background: url(../images/home-banner/banner-bg-1.svg) no-repeat;
+    background-position: center;
+    background-size: cover;
+    padding: length(24) length(0) length(0);
+
+    // @include breakpoint(mobile576) {
+    //     padding: length(64) length(0) length(0);
+    // }
+
+    @include breakpoint(tab992) {
+        height: calc(100vh - 6.25rem);
+        padding: length(100) length(0) length(0);
+        background-size: cover;
+    }
+
+    &-details {
+        .banner-title {
+            .homebanner-title {
+                color: $primary;
+                @include font-face($primaryFont, style('normal'), size(40), weight('bold'), line-height(60, 40));
+                
+                @include breakpoint(mobile500) {
+                    @include font-face($primaryFont, style('normal'), size(54), weight('bold'), line-height(74, 54));
+                }
+
+                @include breakpoint(mobile768) {
+                    @include font-face($primaryFont, style('normal'), size(64), weight('bold'), line-height(84, 64));
+                }
+
+                @include breakpoint(tab992) {
+                    color: $gray-700;
+                }
+
+                @include breakpoint(desktop1400) {
+                    @include font-face($primaryFont, style('normal'), size(80), weight('bold'), line-height(100, 80));
+                }
+
+                .underline {
+                    position: relative;
+
+                    &::after {
+                        content: '';
+                        position: absolute;
+                        left: 0;
+                        bottom: 0;
+                        width: 100%;
+                        height: length(4);
+                        background: $tertiary;
+
+                        @include breakpoint(mobile768) {
+                            height: length(8);
+                        }
+
+                        @include breakpoint(desktop1400) {
+                            height: length(10);
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
 
 /**=======================================================**

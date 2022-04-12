@@ -1579,7 +1579,89 @@ select {
                     HOME-BANNER SECTION START
 **=======================================================**/
 .homebanner {
-  background: url(../images/home-banner/home-banner.svg) no-repeat center center/cover;
+  background: url(../images/home-banner/banner-bg-1.svg) no-repeat;
+  background-position: center;
+  background-size: cover;
+  padding: 1.5rem 0rem 0rem;
+}
+
+@media screen and (min-width: 62rem) {
+  .homebanner {
+    height: calc(100vh - 6.25rem);
+    padding: 6.25rem 0rem 0rem;
+    background-size: cover;
+  }
+}
+
+.homebanner-details .banner-title .homebanner-title {
+  color: #0876FC;
+  font-family: "Titillium Web";
+  font-style: normal;
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 1.5;
+}
+
+@media screen and (min-width: 31.25rem) {
+  .homebanner-details .banner-title .homebanner-title {
+    font-family: "Titillium Web";
+    font-style: normal;
+    font-size: 3.375rem;
+    font-weight: 700;
+    line-height: 1.37037;
+  }
+}
+
+@media screen and (min-width: 48rem) {
+  .homebanner-details .banner-title .homebanner-title {
+    font-family: "Titillium Web";
+    font-style: normal;
+    font-size: 4rem;
+    font-weight: 700;
+    line-height: 1.3125;
+  }
+}
+
+@media screen and (min-width: 62rem) {
+  .homebanner-details .banner-title .homebanner-title {
+    color: #4A5568;
+  }
+}
+
+@media screen and (min-width: 87.5rem) {
+  .homebanner-details .banner-title .homebanner-title {
+    font-family: "Titillium Web";
+    font-style: normal;
+    font-size: 5rem;
+    font-weight: 700;
+    line-height: 1.25;
+  }
+}
+
+.homebanner-details .banner-title .homebanner-title .underline {
+  position: relative;
+}
+
+.homebanner-details .banner-title .homebanner-title .underline::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 0.25rem;
+  background: #fcde08;
+}
+
+@media screen and (min-width: 48rem) {
+  .homebanner-details .banner-title .homebanner-title .underline::after {
+    height: 0.5rem;
+  }
+}
+
+@media screen and (min-width: 87.5rem) {
+  .homebanner-details .banner-title .homebanner-title .underline::after {
+    height: 0.625rem;
+  }
 }
 
 /**=======================================================**
