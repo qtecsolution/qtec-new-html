@@ -19,14 +19,10 @@
             }
 
             .footlogo {
-                @include square(length(48));
+                @include square(length(64));
                 @include flex-center;
                 @include circle;
                 overflow: hidden;
-            
-                @include breakpoint(mobile576) {
-                    @include square(length(60));
-                }
                 
                 @include breakpoint(tab992) {
                     @include square(length(80));

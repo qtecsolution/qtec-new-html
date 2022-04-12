@@ -1,32 +1,38 @@
-.color-tooltip > .tooltip-inner {
-    background-color: green !important;
-}
+.tooltip {
+    &-inner {
+        background: $primary;
+        @include font-face($primaryFont, style('normal'), size(12), weight('medium'), line-height(20, 12));
+    }
 
-.color-tooltip.bs-tooltip-bottom > .tooltip-arrow::before,
-.color-tooltip.bs-tooltip-auto[data-popper-placement^=bottom] > .tooltip-arrow::before {
-    border-bottom-color: red !important;
-}
+    &.bs-tooltip-top {
+        .tooltip-arrow {
+            &::before {
+                border-top-color: $primary;
+            }
+        }
+    }
 
-.color-tooltip.bs-tooltip-top > .tooltip-arrow::before,
-.color-tooltip.bs-tooltip-auto[data-popper-placement^=top] > .tooltip-arrow::before {
-    border-top-color: aqua !important;
-}
+    &.bs-tooltip-bottom {
+        .tooltip-arrow {
+            &::before {
+                border-bottom-color: $primary;
+            }
+        }
+    }
 
-.color-tooltip.bs-tooltip-start > .tooltip-arrow::before,
-.color-tooltip.bs-tooltip-auto[data-popper-placement^=left] > .tooltip-arrow::before {
-    border-left-color: chocolate !important;
-}
+    &.bs-tooltip-start {
+        .tooltip-arrow {
+            &::before {
+                border-left-color: $primary;
+            }
+        }
+    }
 
-.color-tooltip.bs-tooltip-end > .tooltip-arrow::before,
-.color-tooltip.bs-tooltip-auto[data-popper-placement^=right] > .tooltip-arrow::before {
-    border-right-color: crimson !important;
-}
-
-[data-tooltip] { background: rgb(6, 199, 54) !important; }
-[data-tooltip]::before {
-  background: #ff0 !important;
-  color: #fff;
-  padding: 5px;
-  min-width: 100px;
-  text-align: center;
+    &.bs-tooltip-end {
+        .tooltip-arrow {
+            &::before {
+                border-right-color: $primary;
+            }
+        }
+    }
 }
