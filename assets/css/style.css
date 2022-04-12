@@ -1344,6 +1344,71 @@ select {
   background: #001a39;
 }
 
+.btn-explore {
+  background: #0876FC;
+  color: #ffffff;
+  font-family: "Titillium Web";
+  font-style: normal;
+  font-size: 0.875rem;
+  font-weight: 700;
+  line-height: 1.28571;
+  padding: 1rem 1.5rem;
+  border-radius: 0.5rem;
+  border-radius: 0.5rem;
+  -webkit-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
+}
+
+.btn-explore:not([disabled]):hover {
+  background: #02D7F8;
+  color: #ffffff;
+}
+
+.btn-contact {
+  background: rgba(244, 209, 209, 0.5);
+  height: 4.375rem;
+  width: 4.375rem;
+  border-radius: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.btn-contact .icon {
+  background: #0876FC;
+  height: 3.4375rem;
+  width: 3.4375rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 100%;
+  overflow: hidden;
+  padding: 0.875rem;
+  position: relative;
+  -webkit-transition: 200ms;
+  transition: 200ms;
+}
+
+.btn-contact:not([disabled]):hover {
+  background: transparent;
+}
+
+.btn-contact:not([disabled]):hover .icon {
+  background: #02D7F8;
+}
+
 /**=====================================================**
                         HOME-CARDS
 =======================================================**/
@@ -1580,30 +1645,69 @@ select {
 **=======================================================**/
 .homebanner {
   background: url(../images/home-banner/banner-bg-1.svg) no-repeat;
-  background-position: center;
+  background-position: left;
   background-size: cover;
-  padding: 1.5rem 0rem 0rem;
+  padding: 1.5rem 0.5rem 0rem;
 }
 
 @media screen and (min-width: 62rem) {
   .homebanner {
-    height: calc(100vh - 6.25rem);
-    padding: 6.25rem 0rem 0rem;
-    background-size: cover;
+    min-height: calc(100vh - 6.25rem);
+    padding: 6.25rem 0rem 8.75rem;
   }
 }
 
-.homebanner-details .banner-title .homebanner-title {
-  color: #0876FC;
+.homebanner-details {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1.5rem;
+}
+
+@media screen and (min-width: 48rem) {
+  .homebanner-details {
+    gap: 2.5rem;
+  }
+}
+
+@media screen and (min-width: 62rem) {
+  .homebanner-details {
+    gap: 3.75rem;
+  }
+}
+
+.homebanner-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1.5rem;
+}
+
+@media screen and (min-width: 48rem) {
+  .homebanner-header {
+    gap: 2.5rem;
+  }
+}
+
+.homebanner-header .banner-title .homebanner-title {
+  color: #4A5568;
   font-family: "Titillium Web";
   font-style: normal;
-  font-size: 2.5rem;
+  font-size: 2.25rem;
   font-weight: 700;
-  line-height: 1.5;
+  line-height: 1.33333;
 }
 
 @media screen and (min-width: 31.25rem) {
-  .homebanner-details .banner-title .homebanner-title {
+  .homebanner-header .banner-title .homebanner-title {
     font-family: "Titillium Web";
     font-style: normal;
     font-size: 3.375rem;
@@ -1613,7 +1717,7 @@ select {
 }
 
 @media screen and (min-width: 48rem) {
-  .homebanner-details .banner-title .homebanner-title {
+  .homebanner-header .banner-title .homebanner-title {
     font-family: "Titillium Web";
     font-style: normal;
     font-size: 4rem;
@@ -1622,14 +1726,8 @@ select {
   }
 }
 
-@media screen and (min-width: 62rem) {
-  .homebanner-details .banner-title .homebanner-title {
-    color: #4A5568;
-  }
-}
-
 @media screen and (min-width: 87.5rem) {
-  .homebanner-details .banner-title .homebanner-title {
+  .homebanner-header .banner-title .homebanner-title {
     font-family: "Titillium Web";
     font-style: normal;
     font-size: 5rem;
@@ -1638,11 +1736,11 @@ select {
   }
 }
 
-.homebanner-details .banner-title .homebanner-title .underline {
+.homebanner-header .banner-title .homebanner-title .underline {
   position: relative;
 }
 
-.homebanner-details .banner-title .homebanner-title .underline::after {
+.homebanner-header .banner-title .homebanner-title .underline::after {
   content: '';
   position: absolute;
   left: 0;
@@ -1653,14 +1751,220 @@ select {
 }
 
 @media screen and (min-width: 48rem) {
-  .homebanner-details .banner-title .homebanner-title .underline::after {
+  .homebanner-header .banner-title .homebanner-title .underline::after {
     height: 0.5rem;
   }
 }
 
 @media screen and (min-width: 87.5rem) {
-  .homebanner-details .banner-title .homebanner-title .underline::after {
+  .homebanner-header .banner-title .homebanner-title .underline::after {
     height: 0.625rem;
+  }
+}
+
+.homebanner-header .banner-info {
+  max-width: 100%;
+}
+
+@media screen and (min-width: 62rem) {
+  .homebanner-header .banner-info {
+    max-width: 85%;
+  }
+}
+
+.homebanner-header .banner-info .banner-text {
+  color: #718096;
+  font-family: "Titillium Web";
+  font-style: normal;
+  font-size: 1rem;
+  font-weight: normal;
+  line-height: 1.82714;
+  letter-spacing: 0.015rem;
+  text-align: justify;
+}
+
+@media screen and (min-width: 48rem) {
+  .homebanner-header .banner-info .banner-text {
+    font-family: "Titillium Web";
+    font-style: normal;
+    font-size: 1.125rem;
+    font-weight: normal;
+    line-height: 1.66667;
+  }
+}
+
+.homebanner-body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 1.5rem;
+}
+
+.homebanner-descriptions {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 2.25rem;
+  padding-top: 6.25rem;
+  padding: 10rem 0rem 2.5rem;
+  margin-left: 0rem;
+}
+
+@media screen and (min-width: 62rem) {
+  .homebanner-descriptions {
+    padding: 15rem 0rem 0rem;
+    margin-left: -3rem;
+  }
+}
+
+.homebanner-descriptions .card-banner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1rem;
+  background: #ffffff;
+  -webkit-backdrop-filter: blur(0.625rem);
+          backdrop-filter: blur(0.625rem);
+  border: solid 0.0625rem #F7FAFC;
+  border-radius: 1rem;
+  border-radius: 1rem;
+  padding: 1.5rem 1.5rem 1rem;
+  -webkit-filter: drop-shadow(0 0 0.0625rem rgba(12, 26, 75, 0.24));
+          filter: drop-shadow(0 0 0.0625rem rgba(12, 26, 75, 0.24));
+  -webkit-box-shadow: 0 0 0.0625rem rgba(12, 26, 75, 0.24), 0 0.1875rem 0.5rem -0.0625rem rgba(50, 50, 71, 0.05);
+          box-shadow: 0 0 0.0625rem rgba(12, 26, 75, 0.24), 0 0.1875rem 0.5rem -0.0625rem rgba(50, 50, 71, 0.05);
+}
+
+@media screen and (min-width: 36rem) {
+  .homebanner-descriptions .card-banner {
+    -webkit-filter: none;
+            filter: none;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+  }
+}
+
+.homebanner-descriptions .card-banner.cardlast {
+  margin-top: -50%;
+}
+
+.homebanner-descriptions .card-banner-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.homebanner-descriptions .card-banner-header .cardcap {
+  background: #FFFCEA;
+  height: 3rem;
+  width: 3rem;
+  border-radius: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 0.5rem;
+}
+
+.homebanner-descriptions .card-banner-body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+}
+
+.homebanner-descriptions .card-banner-title {
+  color: #2D3748;
+  font-family: "Titillium Web";
+  font-style: normal;
+  font-size: 1.5rem;
+  font-weight: normal;
+  line-height: 1.5;
+}
+
+@media screen and (min-width: 36rem) {
+  .homebanner-descriptions .card-banner-title {
+    font-family: "Titillium Web";
+    font-style: normal;
+    font-size: 2.5rem;
+    font-weight: normal;
+    line-height: 0.9;
+    margin-bottom: 0.5rem;
+  }
+}
+
+.homebanner-descriptions .card-banner-subtitle {
+  color: #718096;
+  font-family: "Titillium Web";
+  font-style: normal;
+  font-size: 0.75rem;
+  font-weight: normal;
+  line-height: 2;
+}
+
+@media screen and (min-width: 36rem) {
+  .homebanner-descriptions .card-banner-subtitle {
+    font-family: "Titillium Web";
+    font-style: normal;
+    font-size: 1.125rem;
+    font-weight: normal;
+    line-height: 2;
+  }
+}
+
+.homebanner-descriptions .card-banner-text {
+  color: #718096;
+  font-family: "Titillium Web";
+  font-style: normal;
+  font-size: 0.75rem;
+  font-weight: normal;
+  line-height: 2;
+}
+
+@media screen and (min-width: 36rem) {
+  .homebanner-descriptions .card-banner-text {
+    font-family: "Titillium Web";
+    font-style: normal;
+    font-size: 1.125rem;
+    font-weight: normal;
+    line-height: 2;
   }
 }
 

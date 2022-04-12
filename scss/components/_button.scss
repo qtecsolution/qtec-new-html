@@ -9,3 +9,56 @@
         background: $footerbg;
     }
 }
+
+.btn-explore {
+    @include setBgColor($primary, $white);
+    @include font-face($primaryFont, style('normal'), size(14), weight('bold'), line-height(18, 14));
+    padding: length(16) length(24);
+    @include radius(8);
+    @include transitionsall;
+
+    @include hover {
+        @include setBgColor($secondary, $white);
+    }
+}
+
+.btn-contact {
+    background: $btnbg;
+    @include square(length(70));
+    @include circle;
+    @include flex-center;
+
+    .icon {
+        background: $primary;
+        @include square(length(55));
+        @include flex-center;
+        @include circle;
+        overflow: hidden;
+        padding: length(14);
+        position: relative;
+        transition: $time;
+    }
+
+    @include hover {
+        background: transparent;
+        // background: lighten($color: $secondary, $amount: 40%);
+
+        .icon {
+            background: $secondary;
+        }
+    }
+}
+
+// @keyframes pulse {
+//     animation: pulse 1s infinite;
+//     transition: .3s;
+//     0% {
+//         @include transform(scale(1));
+//     }
+//     50% {
+//         @include transform(scale(.9));
+//     }
+//     100% {
+//         @include transform(scale(1));
+//     }
+// }

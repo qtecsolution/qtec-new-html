@@ -4,25 +4,44 @@
 
 .homebanner {
     background: url(../images/home-banner/banner-bg-1.svg) no-repeat;
-    background-position: center;
+    background-position: left;
     background-size: cover;
-    padding: length(24) length(0) length(0);
+    padding: length(24) length(8) length(0);
 
     // @include breakpoint(mobile576) {
     //     padding: length(64) length(0) length(0);
     // }
 
     @include breakpoint(tab992) {
-        height: calc(100vh - 6.25rem);
-        padding: length(100) length(0) length(0);
-        background-size: cover;
+        min-height: calc(100vh - 6.25rem);
+        padding: length(100) length(0) length(140);
     }
 
     &-details {
+        @include flex-column;
+        gap: length(24);
+
+        @include breakpoint(mobile768) {
+            gap: length(40);
+        }
+
+        @include breakpoint(tab992) {
+            gap: length(60);
+        }
+    }
+
+    &-header {
+        @include flex-column;
+        gap: length(24);
+
+        @include breakpoint(mobile768) {
+            gap: length(40);
+        }
+
         .banner-title {
             .homebanner-title {
-                color: $primary;
-                @include font-face($primaryFont, style('normal'), size(40), weight('bold'), line-height(60, 40));
+                color: $gray-700;
+                @include font-face($primaryFont, style('normal'), size(36), weight('bold'), line-height(48, 36));
                 
                 @include breakpoint(mobile500) {
                     @include font-face($primaryFont, style('normal'), size(54), weight('bold'), line-height(74, 54));
@@ -30,10 +49,6 @@
 
                 @include breakpoint(mobile768) {
                     @include font-face($primaryFont, style('normal'), size(64), weight('bold'), line-height(84, 64));
-                }
-
-                @include breakpoint(tab992) {
-                    color: $gray-700;
                 }
 
                 @include breakpoint(desktop1400) {
@@ -60,6 +75,109 @@
                             height: length(10);
                         }
                     }
+                }
+            }
+        }
+
+        .banner-info {
+            max-width: 100%;
+
+            @include breakpoint(tab992) {
+                max-width: 85%;
+            }
+
+            .banner-text {
+                color: $gray-600;
+                @include font-face($primaryFont, style('normal'), size(16), weight('normal'), line-height(25.58, 14));
+                letter-spacing: length(0.24);
+                text-align: justify;
+
+                @include breakpoint(mobile768) {
+                    @include font-face($primaryFont, style('normal'), size(18), weight('normal'), line-height(30, 18));
+                }
+            }
+        }
+    }
+
+    &-body {
+        @include flex-center-vert;
+        gap: length(24);
+    }
+
+    &-descriptions {
+        @include flex-center-vert;
+        gap: length(36);
+        padding-top: length(100);
+        padding: length(160) length(0) length(40);
+        margin-left: length(0);
+
+        @include breakpoint(tab992) {
+            padding: length(240) length(0) length(0);
+            margin-left: length(-48);
+        }
+
+        .card-banner {
+            @include flex-center-column;
+            gap: length(16);
+            background: $white;
+            backdrop-filter: blur(length(10));
+            @include border(solid, 1, $gray-100);
+            @include radius(16);
+            padding: length(24) length(24) length(16);
+            filter: $drop-shadow-1;
+            box-shadow: $box-shadow-1;
+
+            @include breakpoint(mobile576) {
+                filter: none;
+                box-shadow: none;
+            }
+
+            &.cardlast {
+                margin-top: -50%;
+            }
+
+            &-header {
+                @include flex-center;
+
+                .cardcap {
+                    background: $bannericonbg;
+                    @include square(length(48));
+                    @include circle;
+                    @include flex-center;
+                    padding: length(8);
+                }
+            }
+
+            &-body {
+                @include flex-center-column;
+                text-align: center;
+            }
+            
+            &-title {
+                color: $gray-800;
+                @include font-face($primaryFont, style('normal'), size(24), weight('normal'), line-height(36, 24));
+                
+                @include breakpoint(mobile576) {
+                    @include font-face($primaryFont, style('normal'), size(40), weight('normal'), line-height(36, 40));
+                    margin-bottom: length(8);
+                }
+            }
+
+            &-subtitle {
+                color: $gray-600;
+                @include font-face($primaryFont, style('normal'), size(12), weight('normal'), line-height(24, 12));
+
+                @include breakpoint(mobile576) {
+                    @include font-face($primaryFont, style('normal'), size(18), weight('normal'), line-height(36, 18));
+                }
+            }
+
+            &-text {
+                color: $gray-600;
+                @include font-face($primaryFont, style('normal'), size(12), weight('normal'), line-height(24, 12));
+
+                @include breakpoint(mobile576) {
+                    @include font-face($primaryFont, style('normal'), size(18), weight('normal'), line-height(36, 18));
                 }
             }
         }
