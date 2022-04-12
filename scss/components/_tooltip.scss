@@ -1,0 +1,32 @@
+.color-tooltip > .tooltip-inner {
+    background-color: green !important;
+}
+
+.color-tooltip.bs-tooltip-bottom > .tooltip-arrow::before,
+.color-tooltip.bs-tooltip-auto[data-popper-placement^=bottom] > .tooltip-arrow::before {
+    border-bottom-color: red !important;
+}
+
+.color-tooltip.bs-tooltip-top > .tooltip-arrow::before,
+.color-tooltip.bs-tooltip-auto[data-popper-placement^=top] > .tooltip-arrow::before {
+    border-top-color: aqua !important;
+}
+
+.color-tooltip.bs-tooltip-start > .tooltip-arrow::before,
+.color-tooltip.bs-tooltip-auto[data-popper-placement^=left] > .tooltip-arrow::before {
+    border-left-color: chocolate !important;
+}
+
+.color-tooltip.bs-tooltip-end > .tooltip-arrow::before,
+.color-tooltip.bs-tooltip-auto[data-popper-placement^=right] > .tooltip-arrow::before {
+    border-right-color: crimson !important;
+}
+
+[data-tooltip] { background: rgb(6, 199, 54) !important; }
+[data-tooltip]::before {
+  background: #ff0 !important;
+  color: #fff;
+  padding: 5px;
+  min-width: 100px;
+  text-align: center;
+}

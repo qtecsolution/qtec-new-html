@@ -1,5 +1,6 @@
 .btn-subscibe {
     @include setBgColor($primary, $white);
+    @include font-face($primaryFont, style('normal'), size(12), weight('semibold'), line-height(12, 12));
     padding: length(12) length(20);
     text-align: center;
     @include transitionsbackground;

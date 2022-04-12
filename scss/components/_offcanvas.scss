@@ -8,23 +8,26 @@
 }
 
 .offcanvas-bottom {
-    height: 100vh;
+    height: 110vh;
     border-top: none;
 }
 
 .offcanvas-start {
+    height: 100vh;
     border-right: none;
 }
 
 .offcanvas-end {
+    height: 100vh;
     border-left: 0;
 }
 
 .offcanvas {
-    width: length(260);
-    background: $secondary;
+    @include w100;
+    background: $footerbg;
+    overflow: hidden;
 
-    @include breakpoint(mobile360) {
+    @include breakpoint(mobile500) {
         width: length(300);
     }
 
@@ -32,6 +35,7 @@
         position: relative;
 
         .logo {
+            @include square(length(60));
             @include flex-center;
             overflow: hidden;
 
@@ -42,8 +46,8 @@
         }
 
         .btn-close {
-            @include square(length(20));
-            background: $primary;
+            @include square(length(24));
+            background: transparent;
             margin: 0;
             padding: 0;
             padding: length(8);
@@ -56,7 +60,7 @@
                 @include transitiontransform;
 
                 path {
-                    fill: rgba($white, 0.75);
+                    fill: $primary;
                     @include transitionsall;
                 }
             }
@@ -68,10 +72,8 @@
 
             @include hover {
                 svg {
-                    @include transform(rotate(90deg));
-
                     path {
-                        // fill: $primaryaccent;
+                        fill: $secondary;
                     }
                 }
             }
@@ -82,8 +84,6 @@
         overflow-x: hidden;
         padding-top: length(0);
         @include flex-column;
-        justify-content: space-between;
-        padding-bottom: length(64);
 
         &::-webkit-scrollbar {
             background: transparent;

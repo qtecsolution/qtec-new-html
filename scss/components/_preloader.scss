@@ -5,25 +5,38 @@
     min-height: 100vh;
     overflow: hidden;
     z-index: 10000;
-    background: $primary;
+    background: $white;
 
-    .preload {
+    .spinner {
+        display: inline-block;
         @include flex-center;
-        
-        @include breakpoint(mobile360) {
-            margin-right: -45%;
-        }
+        @include square(length(80));
+        @include circle;
+        -webkit-animation: linear pulse 1s infinite;
+        animation: linear pulse 1s infinite;
+    }
+}
 
-        @include breakpoint(mobile576) {
-            margin-right: -20%;
-        }
+@-webkit-keyframes pulse {
+    0% {
+        -webkit-transform: scale(0, 0);
+    }
+    50% {
+        -webkit-transform: scale(1, 1);
+    }
+    100% {
+        -webkit-transform: scale(0, 0);
+    }
+}
 
-        @include breakpoint(mobile768) {
-            margin-right: -20%;
-        }
-
-        @include breakpoint(tab992) {
-            margin-right: -10%;
-        }
+@keyframes pulse {
+    0% {
+        @include transform(scale(0, 0));
+    }
+    50% {
+        @include transform(scale(1, 1));
+    }
+    100% {
+        @include transform(scale(0, 0));
     }
 }
