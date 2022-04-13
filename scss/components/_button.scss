@@ -49,16 +49,86 @@
     }
 }
 
-// @keyframes pulse {
-//     animation: pulse 1s infinite;
-//     transition: .3s;
-//     0% {
-//         @include transform(scale(1));
-//     }
-//     50% {
-//         @include transform(scale(.9));
-//     }
-//     100% {
-//         @include transform(scale(1));
-//     }
-// }
+.btn-play {
+    @include square(length(80));
+    @include transparent-button;
+    @include circle;
+    @include flex-center;
+    position: relative;
+
+    &::before {
+        content: '';
+        position: absolute;
+        width: 120%;
+        height: 120%;
+        -webkit-animation-delay: 0s;
+        animation-delay: 0s;
+        opacity: 0;
+        @include circle;
+        @include border(solid, 10, darken($white, 20%));
+
+        @include breakpoint(tab992) {
+            @include border(solid, 12, darken($white, 20%));
+        }
+
+        @include breakpoint(desktop1200) {
+            @include border(solid, 20, darken($white, 20%));
+        }
+    }
+
+    svg {
+        @include wh100;
+    }
+
+    @include breakpoint(desktop1200) {
+        @include square(length(100));
+    }
+
+    @include breakpoint(desktop1400) {
+        @include square(length(144));
+    }
+
+    @include hover {
+        &::before {
+            -webkit-animation: pulsate 1s;
+            animation: pulsate 1s;
+            -webkit-animation-direction: linear;
+            animation-direction: linear;
+            -webkit-animation-iteration-count: infinite;
+            animation-iteration-count: infinite;
+            -webkit-animation-timing-function: steps;
+            animation-timing-function: steps;
+            opacity: 1;
+        }
+    }
+}
+
+@-webkit-keyframes pulsate {
+    0% {
+        -webkit-transform: scale(1);
+        transform: scale(0.6);
+        opacity: 1;
+        box-shadow: $box-shadow-1;
+    }
+    100% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+        opacity: 0;
+        box-shadow: none;
+    }
+}
+
+@keyframes pulsate {
+    0% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+        opacity: 1;
+        box-shadow: $box-shadow-1;
+    }
+    100% {
+        -webkit-transform: scale(1.1, 1.1);
+        transform: scale(1.1);
+        opacity: 0;
+        box-shadow: none;
+    }
+}

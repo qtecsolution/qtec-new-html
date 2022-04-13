@@ -1,3 +1,154 @@
 /**=====================================================**
                         HOME-CARDS
 =======================================================**/
+.card-feature {
+    @include flex-column;
+    gap: length(16);
+    padding: length(32) length(24);
+    @include radius(16);
+    @include h100;
+
+    &-header {
+        .card-cap {
+            background: $textGray;
+            @include square(length(56));
+            @include circle;
+            @include flex-center;
+            padding: length(14);
+            overflow: hidden;
+        }
+    }
+    
+    &-body {
+        @include flex-column;
+        gap: length(8);
+
+        .feature-title {
+            color: $gray-700;
+            @include font-face($primaryFont, style('normal'), size(24), weight('semibold'), line-height(34.09, 24));
+
+            @include breakpoint(mobile768) {
+                @include font-face($primaryFont, style('normal'), size(28), weight('semibold'), line-height(38.09, 28));
+            }
+        }
+
+        .feature-text {
+            color: $gray-600;
+            @include font-face($primaryFont, style('normal'), size(16), weight('normal'), line-height(28, 16));
+            letter-spacing: length(0.24);
+            text-align: justify;
+
+            @include breakpoint(mobile768) {
+                @include font-face($primaryFont, style('normal'), size(18), weight('normal'), line-height(30, 18));
+            }
+        }
+    }
+}
+
+.feature-1,
+.feature-4 {
+    background: $expartBg;
+}
+
+.feature-2 {
+    background: $professionalBg;
+}
+
+.feature-3 {
+    background: $transparencylBg;
+}
+
+.card-article {
+    background: $white;
+    @include radius(8);
+    @include flex-column;
+    gap: length(8);
+    padding: length(6);
+    max-width: 100%;
+
+    @include breakpoint(mobile480) {
+        max-width: length(312);
+        margin-inline: auto;
+    }
+
+    @include breakpoint(mobile576) {
+        max-width: 100%;
+    }
+
+    &-header {
+        @include radius(8);
+        @include w100;
+        height: length(170);
+        overflow: hidden;
+
+        img {
+            @include wh100;
+            object-fit: cover;
+            @include transitiontransform;
+
+            @include hover {
+                @include transform(scale(1.05));
+            }
+        }
+    }
+
+    &-body {
+        @include flex-column;
+        gap: length(12);
+        padding: length(6);
+
+        .title-date {
+            @include flex-column;
+
+            .title {
+                color: $gray-800;
+                @include font-face($primaryFont, style('normal'), size(16), weight('semibold'), line-height(25, 16));
+            }
+
+            .date {
+                color: $gray-600;
+                @include font-face($primaryFont, style('normal'), size(14), weight('normal'), line-height(24, 14));
+                font-feature-settings: 'salt';
+            }
+        }
+
+        .articledescript {
+            .articletext {
+                color: $gray-600;
+                @include font-face($primaryFont, style('normal'), size(14), weight('normal'), line-height(24, 14));
+                font-feature-settings: 'salt';
+            }
+        }
+
+        .articlelink {
+            color: $gray-800;
+            @include font-face($primaryFont, style('normal'), size(14), weight('semibold'), line-height(24, 14));
+            font-feature-settings: 'salt';
+        }
+    }
+}
+
+.card-testimonial {
+    background: $white;
+    @include radius(8);
+    padding: length(16) length(40);
+    @include flex-center-column;
+    gap: length(24);
+    text-align: center;
+
+    .text-testimonial {
+        color: $gray-600;
+        @include font-face($primaryFont, style('normal'), size(16), weight('normal'), line-height(26, 16));
+        letter-spacing: length(0.24);
+
+        @include breakpoint(mobile768) {
+            @include font-face($primaryFont, style('normal'), size(18), weight('normal'), line-height(30, 18));
+        }
+    }
+
+    .author {
+        color: $black;
+        @include font-face($primaryFont, style('normal'), size(14), weight('normal'), line-height(24, 14));
+        font-feature-settings: 'salt' on;
+    }
+}
