@@ -1365,6 +1365,81 @@ select {
   color: #ffffff;
 }
 
+.btn-service {
+  background: #0876FC;
+  color: #ffffff;
+  font-family: "Titillium Web";
+  font-style: normal;
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 0.875;
+  padding: 1.375rem 1.125rem;
+  border-radius: 0.5rem;
+  border-radius: 0.5rem;
+  -webkit-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
+}
+
+.btn-service:not([disabled]):hover {
+  background: #02D7F8;
+  color: #ffffff;
+}
+
+.btn-text {
+  background: transparent;
+  border: none;
+  padding: 1.375rem 1.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 0.625rem;
+  -webkit-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
+}
+
+.btn-text .text {
+  font-family: "Titillium Web";
+  font-style: normal;
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 0.875;
+  color: #0876FC;
+}
+
+.btn-text .icon {
+  height: 2.25rem;
+  width: 2.25rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  overflow: hidden;
+}
+
+.btn-text .icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+.btn-text:not([disabled]):hover .text {
+  color: #02D7F8;
+}
+
+.btn-text:not([disabled]):hover .icon svg path {
+  fill: #02D7F8;
+}
+
 .btn-contact {
   background: rgba(244, 209, 209, 0.5);
   height: 4.375rem;
@@ -1788,6 +1863,166 @@ select {
           font-feature-settings: 'salt' on;
 }
 
+.card-project {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1.375rem;
+}
+
+.card-project-header {
+  background: #F2F2F2;
+  border-radius: 1rem;
+  border-radius: 1rem;
+  width: 100%;
+  height: 19.875rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  overflow: hidden;
+}
+
+@media screen and (min-width: 30rem) {
+  .card-project-header {
+    width: 26.25rem;
+  }
+}
+
+@media screen and (min-width: 36rem) {
+  .card-project-header {
+    width: 100%;
+  }
+}
+
+.card-project-header img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -webkit-transition: transform 200ms ease-in-out;
+  -webkit-transition: -webkit-transform 200ms ease-in-out;
+  transition: -webkit-transform 200ms ease-in-out;
+  transition: transform 200ms ease-in-out;
+  transition: transform 200ms ease-in-out, -webkit-transform 200ms ease-in-out;
+}
+
+.card-project-header img:not([disabled]):hover {
+  -webkit-transform: scale(1.05);
+  transform: scale(1.05);
+}
+
+.card-project-body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1rem;
+}
+
+.card-project-body .project-title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 2.5rem;
+}
+
+.card-project-body .project-title .title {
+  color: #4A5568;
+  font-family: "Titillium Web";
+  font-style: normal;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.625;
+  letter-spacing: 0.015rem;
+}
+
+@media screen and (min-width: 48rem) {
+  .card-project-body .project-title .title {
+    font-family: "Titillium Web";
+    font-style: normal;
+    font-size: 1.25rem;
+    font-weight: 600;
+    line-height: 1.365;
+  }
+}
+
+.card-project-body .project-title .icon {
+  height: 1.5rem;
+  width: 1.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  overflow: hidden;
+}
+
+.card-project-body .project-title .icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+.card-project-body .project-title:not([disabled]):hover .title {
+  color: #02D7F8;
+}
+
+.card-project-body .project-title:not([disabled]):hover svg path {
+  fill: #02D7F8;
+}
+
+.card-project-body .tags {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 0.5rem;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.card-project-body .tags .tag {
+  background: #EDF2F7;
+  color: #A0AEC0;
+  border-radius: 0.375rem;
+  border-radius: 0.375rem;
+  font-family: "Titillium Web";
+  font-style: normal;
+  font-size: 0.875rem;
+  font-weight: 600;
+  line-height: 1.52071;
+  padding: 0.5rem 0.75rem;
+  text-align: center;
+  -webkit-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
+}
+
+.card-project-body .tags .tag:not([disabled]):hover {
+  background: #A0AEC0;
+  color: #EDF2F7;
+}
+
 .modal-content {
   overflow: hidden;
   border: none;
@@ -1991,6 +2226,98 @@ select {
   }
 }
 
+/**=======================================================**
+                        TAB START
+**=======================================================**/
+.tabmenu {
+  max-width: 100%;
+}
+
+@media screen and (min-width: 36rem) {
+  .tabmenu {
+    max-width: 60%;
+  }
+}
+
+@media screen and (min-width: 48rem) {
+  .tabmenu {
+    max-width: 50%;
+  }
+}
+
+@media screen and (min-width: 62rem) {
+  .tabmenu {
+    max-width: 35%;
+  }
+}
+
+@media screen and (min-width: 75rem) {
+  .tabmenu {
+    max-width: 25%;
+  }
+}
+
+.nav-tabs {
+  border: none;
+  background: #F7FAFC;
+  padding: 0.25rem;
+  border-radius: 0.5rem;
+  border-radius: 0.5rem;
+  width: auto;
+  max-width: 100%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.nav-tabs .nav-item:last-of-type .nav-link {
+  border-right: 0;
+}
+
+.nav-tabs .nav-item:not([disabled]):hover .nav-link {
+  border: 0;
+}
+
+.nav-tabs .nav-link {
+  padding: 0.9375rem 0.5rem;
+  border: none;
+  background: transparent;
+  color: #2D3748;
+  font-family: "Titillium Web";
+  font-style: normal;
+  font-size: 0.875rem;
+  font-weight: 600;
+  line-height: 1;
+  margin: 0;
+  border-radius: 0;
+  width: 4.5rem;
+}
+
+.nav-tabs .nav-link:hover:not(.active) {
+  border-radius: 0.5rem;
+  border-radius: 0.5rem;
+  border: none;
+  outline: none;
+  background: #ffffff;
+  -webkit-box-shadow: 0 0.25rem 1.25rem -0.125rem rgba(50, 50, 71, 0.08);
+          box-shadow: 0 0.25rem 1.25rem -0.125rem rgba(50, 50, 71, 0.08);
+  -webkit-filter: drop-shadow(0 0 0.0625rem rgba(12, 26, 75, 0.1));
+          filter: drop-shadow(0 0 0.0625rem rgba(12, 26, 75, 0.1));
+}
+
+.nav-tabs .nav-link.active {
+  border-radius: 0.5rem;
+  border-radius: 0.5rem;
+  background: #ffffff;
+  -webkit-box-shadow: 0 0.25rem 1.25rem -0.125rem rgba(50, 50, 71, 0.08);
+          box-shadow: 0 0.25rem 1.25rem -0.125rem rgba(50, 50, 71, 0.08);
+  -webkit-filter: drop-shadow(0 0 0.0625rem rgba(12, 26, 75, 0.1));
+          filter: drop-shadow(0 0 0.0625rem rgba(12, 26, 75, 0.1));
+}
+
+/**=======================================================**
+                        TAB END
+**=======================================================**/
 .tooltip-inner {
   background: #0876FC;
   font-family: "Titillium Web";
@@ -2097,6 +2424,98 @@ select {
   margin: 0;
 }
 
+/**=======================================================**
+                        ACCORDION START
+**=======================================================**/
+.accordion-item {
+  border: none;
+}
+
+.accordion-item:last-of-type .accordion-button.collapsed {
+  border-radius: 0rem;
+  border-radius: 0rem;
+}
+
+.accordion-button {
+  background: #FFFDF2;
+  color: #4A5568;
+  font-family: "Titillium Web";
+  font-style: normal;
+  font-size: 1.25rem;
+  font-weight: 600;
+  line-height: 1.365;
+  border-radius: 0rem;
+  border-radius: 0rem;
+  padding: 1.375rem 2rem 0.75rem;
+}
+
+.accordion-button:not(.collapsed) {
+  border-radius: 0rem;
+  border-radius: 0rem;
+  background: #FFFDF2;
+  color: #4A5568;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.accordion-button:not(.collapsed)::after {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23212529'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+}
+
+.accordion-button:focus {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  outline: none;
+}
+
+.accordion-body {
+  background: #ffffff;
+  padding: 1.375rem 2rem 1.75rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 2.25rem;
+}
+
+.accordion-body .servicetext {
+  color: #718096;
+  font-family: "Titillium Web";
+  font-style: normal;
+  font-size: 1rem;
+  font-weight: normal;
+  line-height: 1.625;
+  letter-spacing: 0.015rem;
+}
+
+@media screen and (min-width: 48rem) {
+  .accordion-body .servicetext {
+    font-family: "Titillium Web";
+    font-style: normal;
+    font-size: 1.125rem;
+    font-weight: normal;
+    line-height: 1.66667;
+  }
+}
+
+.accordion-body .service-buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 1.25rem;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+/**=======================================================**
+                        ACCORDION END
+**=======================================================**/
 /**=======================================================**
                     HOME-BANNER SECTION START
 **=======================================================**/
@@ -2567,6 +2986,173 @@ select {
 
 /**=======================================================**
                     HOME-VIDEO SECTION END
+**=======================================================**/
+/**=======================================================**
+                OUR-SERVICES SECTION START
+**=======================================================**/
+.ourservices {
+  background: #F2F8FF;
+  padding: 3rem 0.5rem;
+}
+
+@media screen and (min-width: 62rem) {
+  .ourservices {
+    padding: 5rem 0rem;
+  }
+}
+
+.ourservices-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 2.5rem;
+}
+
+.ourservices-header .servicesinfo .services-title {
+  color: #4A5568;
+  font-family: "Titillium Web";
+  font-style: normal;
+  font-size: 2rem;
+  font-weight: 600;
+  line-height: 1.46875;
+}
+
+@media screen and (min-width: 48rem) {
+  .ourservices-header .servicesinfo .services-title {
+    font-family: "Titillium Web";
+    font-style: normal;
+    font-size: 2.5rem;
+    font-weight: 600;
+    line-height: 1.925;
+  }
+}
+
+@media screen and (min-width: 62rem) {
+  .ourservices-header .servicesinfo .services-title {
+    font-family: "Titillium Web";
+    font-style: normal;
+    font-size: 3.25rem;
+    font-weight: 600;
+    line-height: 1.52096;
+  }
+}
+
+.ourservices-header .servicesdescription .servicestext {
+  color: #718096;
+  font-family: "Titillium Web";
+  font-style: normal;
+  font-size: 1rem;
+  font-weight: normal;
+  line-height: 1.75;
+  letter-spacing: 0.015rem;
+  text-align: justify;
+}
+
+@media screen and (min-width: 48rem) {
+  .ourservices-header .servicesdescription .servicestext {
+    font-family: "Titillium Web";
+    font-style: normal;
+    font-size: 1.125rem;
+    font-weight: normal;
+    line-height: 1.66667;
+  }
+}
+
+/**=======================================================**
+                OUR-SERVICES SECTION END
+**=======================================================**/
+/**=======================================================**
+                OUR-PROJECTS SECTION START
+**=======================================================**/
+.ourprojects {
+  background: #ffffff;
+  padding: 3rem 0.5rem;
+}
+
+@media screen and (min-width: 62rem) {
+  .ourprojects {
+    padding: 5rem 0rem;
+  }
+}
+
+.ourprojects-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 2.5rem;
+}
+
+.ourprojects-header .projectsinfo .projects-title {
+  color: #4A5568;
+  font-family: "Titillium Web";
+  font-style: normal;
+  font-size: 2rem;
+  font-weight: 600;
+  line-height: 1.46875;
+}
+
+@media screen and (min-width: 48rem) {
+  .ourprojects-header .projectsinfo .projects-title {
+    font-family: "Titillium Web";
+    font-style: normal;
+    font-size: 2.5rem;
+    font-weight: 600;
+    line-height: 1.925;
+  }
+}
+
+@media screen and (min-width: 62rem) {
+  .ourprojects-header .projectsinfo .projects-title {
+    font-family: "Titillium Web";
+    font-style: normal;
+    font-size: 3.25rem;
+    font-weight: 600;
+    line-height: 1.52096;
+  }
+}
+
+.ourprojects-header .projectsdescription .projectstext {
+  color: #718096;
+  font-family: "Titillium Web";
+  font-style: normal;
+  font-size: 1rem;
+  font-weight: normal;
+  line-height: 1.75;
+  letter-spacing: 0.015rem;
+  text-align: justify;
+}
+
+@media screen and (min-width: 48rem) {
+  .ourprojects-header .projectsdescription .projectstext {
+    font-family: "Titillium Web";
+    font-style: normal;
+    font-size: 1.125rem;
+    font-weight: normal;
+    line-height: 1.66667;
+  }
+}
+
+.ourprojects-body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 2.5rem;
+}
+
+/**=======================================================**
+                OUR-PROJECTS SECTION END
 **=======================================================**/
 /**=======================================================**
                 HOME-ARTICLES SECTION START

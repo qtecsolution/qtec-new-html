@@ -8,10 +8,6 @@
     background-size: cover;
     padding: length(24) length(8) length(0);
 
-    // @include breakpoint(mobile576) {
-    //     padding: length(64) length(0) length(0);
-    // }
-
     @include breakpoint(tab992) {
         min-height: calc(100vh - 6.25rem);
         padding: length(100) length(0) length(140);
@@ -188,6 +184,8 @@
                     HOME-BANNER SECTION END
 **=======================================================**/
 
+
+
 /**=======================================================**
                 HOME-FEATURES SECTION START
 **=======================================================**/
@@ -240,6 +238,8 @@
                 HOME-FEATURES SECTION END
 **=======================================================**/
 
+
+
 /**=======================================================**
                     HOME-VIDEO SECTION START
 **=======================================================**/
@@ -284,6 +284,121 @@
 /**=======================================================**
                     HOME-VIDEO SECTION END
 **=======================================================**/
+
+
+
+/**=======================================================**
+                OUR-SERVICES SECTION START
+**=======================================================**/
+
+.ourservices {
+    background: $serviceBg;
+    padding: length(48) length(8);
+
+    @include breakpoint(tab992) {
+        padding: length(80) length(0);
+    }
+
+    &-content {
+        @include flex-column;
+        gap: length(40);
+    }
+
+    &-header {
+        .servicesinfo {
+            .services-title {
+                color: $gray-700;
+                @include font-face($primaryFont, style('normal'), size(32), weight('semibold'), line-height(47, 32));
+
+                @include breakpoint(mobile768) {
+                    @include font-face($primaryFont, style('normal'), size(40), weight('semibold'), line-height(77, 40));
+                }
+
+                @include breakpoint(tab992) {
+                    @include font-face($primaryFont, style('normal'), size(52), weight('semibold'), line-height(79.09, 52));
+                }
+            }
+        }
+
+        .servicesdescription {
+            .servicestext {
+                color: $gray-600;
+                @include font-face($primaryFont, style('normal'), size(16), weight('normal'), line-height(28, 16));
+                letter-spacing: length(0.24);
+                text-align: justify;
+
+                @include breakpoint(mobile768) {
+                    @include font-face($primaryFont, style('normal'), size(18), weight('normal'), line-height(30, 18));
+                }
+            }
+        }
+    }
+}
+
+/**=======================================================**
+                OUR-SERVICES SECTION END
+**=======================================================**/
+
+
+
+/**=======================================================**
+                OUR-PROJECTS SECTION START
+**=======================================================**/
+
+.ourprojects {
+    background: $white;
+    padding: length(48) length(8);
+
+    @include breakpoint(tab992) {
+        padding: length(80) length(0);
+    }
+
+    &-content {
+        @include flex-column;
+        gap: length(40);
+    }
+
+    &-header {
+        .projectsinfo {
+            .projects-title {
+                color: $gray-700;
+                @include font-face($primaryFont, style('normal'), size(32), weight('semibold'), line-height(47, 32));
+
+                @include breakpoint(mobile768) {
+                    @include font-face($primaryFont, style('normal'), size(40), weight('semibold'), line-height(77, 40));
+                }
+
+                @include breakpoint(tab992) {
+                    @include font-face($primaryFont, style('normal'), size(52), weight('semibold'), line-height(79.09, 52));
+                }
+            }
+        }
+
+        .projectsdescription {
+            .projectstext {
+                color: $gray-600;
+                @include font-face($primaryFont, style('normal'), size(16), weight('normal'), line-height(28, 16));
+                letter-spacing: length(0.24);
+                text-align: justify;
+
+                @include breakpoint(mobile768) {
+                    @include font-face($primaryFont, style('normal'), size(18), weight('normal'), line-height(30, 18));
+                }
+            }
+        }
+    }
+
+    &-body {
+        @include flex-column;
+        gap: length(40);
+    }
+}
+
+/**=======================================================**
+                OUR-PROJECTS SECTION END
+**=======================================================**/
+
+
 
 /**=======================================================**
                 HOME-ARTICLES SECTION START
@@ -336,6 +451,8 @@
 /**=======================================================**
                 HOME-ARTICLES SECTION END
 **=======================================================**/
+
+
 
 /**=======================================================**
                 HOME-TESTIMONIALS SECTION START

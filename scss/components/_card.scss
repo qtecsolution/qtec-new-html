@@ -152,3 +152,96 @@
         font-feature-settings: 'salt' on;
     }
 }
+
+.card-project {
+    @include flex-column;
+    gap: length(22);
+
+    &-header {
+        background: $cardHeaderBg;
+        @include radius(16);
+        @include w100;
+        height: length(318);
+        @include flex-center;
+        overflow: hidden;
+
+        @include breakpoint(mobile480) {
+            width: length(420);
+        }
+
+        @include breakpoint(mobile576) {
+            @include w100;
+        }
+
+        img {
+            @include wh100;
+            object-fit: cover;
+            @include transitiontransform;
+
+            @include hover {
+                @include transform(scale(1.05));
+            }
+        }
+    }
+
+    &-body {
+        @include flex-column;
+        gap: length(16);
+
+        .project-title {
+            @include flex-center-vert;
+            gap: length(40);
+            
+            .title {
+                color: $gray-700;
+                @include font-face($primaryFont, style('normal'), size(16), weight('semibold'), line-height(26, 16));
+                letter-spacing: length(0.24);
+
+                @include breakpoint(mobile768) {
+                    @include font-face($primaryFont, style('normal'), size(20), weight('semibold'), line-height(27.3, 20));
+                }
+            }
+
+            .icon {
+                @include square(length(24));
+                @include flex-center;
+                overflow: hidden;
+
+                svg {
+                    @include wh100;
+                }
+            }
+
+            @include hover {
+                .title {
+                    color: $secondary;
+                }
+
+                svg {
+                    path {
+                        fill: $secondary;
+                    }
+                }
+            }
+        }
+
+        .tags {
+            @include flex-center-vert;
+            gap: length(8);
+            flex-wrap: wrap;
+
+            .tag {
+                @include setBgColor($gray-200, $gray-500);
+                @include radius(6);
+                @include font-face($primaryFont, style('normal'), size(14), weight('semibold'), line-height(21.29, 14));
+                padding: length(8) length(12);
+                text-align: center;
+                @include transitionsall;
+
+                @include hover {
+                    @include setBgColor($gray-500, $gray-200);
+                }
+            }
+        }
+    }
+}

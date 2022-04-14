@@ -22,6 +22,55 @@
     }
 }
 
+.btn-service {
+    @include setBgColor($primary, $white);
+    @include font-face($primaryFont, style('normal'), size(16), weight('bold'), line-height(14, 16));
+    padding: length(22) length(18);
+    @include radius(8);
+    @include transitionsall;
+
+    @include hover {
+        @include setBgColor($secondary, $white);
+    }
+}
+
+.btn-text {
+    @include transparent-button;
+    padding: length(22) length(24);
+    @include flex-center;
+    gap: length(10);
+    @include transitionsall;
+
+    .text {
+        @include font-face($primaryFont, style('normal'), size(16), weight('bold'), line-height(14, 16));
+        color: $primary;
+    }
+
+    .icon {
+        @include square(length(36));
+        @include flex-center;
+        overflow: hidden;
+
+        svg {
+            @include wh100;
+        }
+    }
+
+    @include hover {
+        .text {
+            color: $secondary;
+        }
+
+        .icon {
+            svg {
+                path {
+                    fill: $secondary;
+                }
+            }
+        }
+    }
+}
+
 .btn-contact {
     background: $btnbg;
     @include square(length(70));
