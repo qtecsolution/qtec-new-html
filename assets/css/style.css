@@ -1386,6 +1386,26 @@ select {
   color: #ffffff;
 }
 
+.btn-detail {
+  background: #0876FC;
+  color: #ffffff;
+  font-family: "Titillium Web";
+  font-style: normal;
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 0.875;
+  padding: 1.375rem 2.8125rem;
+  border-radius: 0.5rem;
+  border-radius: 0.5rem;
+  -webkit-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
+}
+
+.btn-detail:not([disabled]):hover {
+  background: #02D7F8;
+  color: #ffffff;
+}
+
 .btn-text {
   background: transparent;
   border: none;
@@ -1823,6 +1843,12 @@ select {
   font-size: 1rem;
   font-weight: 600;
   line-height: 1.5625;
+  -webkit-transition: color 200ms ease-in-out;
+  transition: color 200ms ease-in-out;
+}
+
+.card-article-body .title-date .title:not([disabled]):hover {
+  color: #0876FC;
 }
 
 .card-article-body .title-date .date {
@@ -1856,6 +1882,12 @@ select {
   line-height: 1.71429;
   -webkit-font-feature-settings: 'salt';
           font-feature-settings: 'salt';
+  -webkit-transition: color 200ms ease-in-out;
+  transition: color 200ms ease-in-out;
+}
+
+.card-article-body .articlelink:not([disabled]):hover {
+  color: #0876FC;
 }
 
 .card-testimonial {
@@ -3801,12 +3833,202 @@ select {
 /**=======================================================**
                     PRODUCTS-SECTION START
 **=======================================================**/
+.products {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 2rem;
+  padding: 3rem 0.5rem;
+}
+
+@media screen and (min-width: 62rem) {
+  .products {
+    padding: 3.75rem 0rem 5rem;
+  }
+}
+
+@media screen and (min-width: 62rem) {
+  .products {
+    gap: 3rem;
+  }
+}
+
+.products .singleproduct {
+  padding: 3.75rem 0rem;
+}
+
+.products .thumbnailbox {
+  background: #DCDCDC;
+  border-radius: 1rem;
+  border-radius: 1rem;
+  padding: 2rem;
+  position: relative;
+}
+
+.products .thumbnailbox::after {
+  content: '';
+  position: absolute;
+  top: -3.75rem;
+  right: -1.875rem;
+  z-index: -100;
+  width: 70%;
+  height: 10.4375rem;
+}
+
+.products .thumbnailbox .product-thumbnail {
+  width: 100%;
+  overflow: hidden;
+}
+
+.products .thumbnailbox .product-thumbnail img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.products .products-description {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1.5rem;
+}
+
+.products .products-description .productlogo {
+  width: 12.375rem;
+  height: lenght(34);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  overflow: hidden;
+}
+
+.products .products-description .productlogo img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.products .products-description .squarelogo {
+  height: 12.375rem;
+  width: 12.375rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  overflow: hidden;
+}
+
+.products .products-description .squarelogo img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.products .products-description .prodinfo {
+  max-width: 100%;
+}
+
+@media screen and (min-width: 62rem) {
+  .products .products-description .prodinfo {
+    max-width: 34.375rem;
+  }
+}
+
+.products .products-description .prodinfo .product-title {
+  color: #4A5568;
+  font-family: "Titillium Web";
+  font-style: normal;
+  font-size: 1.75rem;
+  font-weight: 600;
+  line-height: 1.89321;
+}
+
+@media screen and (min-width: 48rem) {
+  .products .products-description .prodinfo .product-title {
+    font-family: "Titillium Web";
+    font-style: normal;
+    font-size: 2.375rem;
+    font-weight: 600;
+    line-height: 1.65816;
+  }
+}
+
+@media screen and (min-width: 62rem) {
+  .products .products-description .prodinfo .product-title {
+    font-family: "Titillium Web";
+    font-style: normal;
+    font-size: 3rem;
+    font-weight: 600;
+    line-height: 1.52104;
+  }
+}
+
+.products .thumbnail-1 {
+  margin-top: 6.25rem;
+}
+
+@media screen and (min-width: 62rem) {
+  .products .thumbnail-1 {
+    margin-top: 0rem;
+  }
+}
+
+.products .thumbnail-1::after {
+  background: #EBBE0B;
+}
+
+.products .thumbnail-2::after {
+  background: #DD5117;
+}
+
+.products .thumbnail-3 {
+  margin-top: 6.25rem;
+}
+
+@media screen and (min-width: 62rem) {
+  .products .thumbnail-3 {
+    margin-top: 0rem;
+  }
+}
+
+.products .thumbnail-3::after {
+  background: #B4DC62;
+}
+
 .products .product-1 {
   background: rgba(252, 222, 8, 0.05);
 }
 
 .products .product-2 {
   background: rgba(255, 219, 204, 0.3);
+}
+
+@media screen and (min-width: 62rem) {
+  .products .product-2 .products-description {
+    padding-left: 8.75rem;
+  }
 }
 
 .products .product-3 {
