@@ -577,6 +577,7 @@ html {
                     DEFAULT-SETTINGS
 =======================================================**/
 body {
+  background: #F7FAFC;
   margin: 0;
   padding: 0;
   position: relative;
@@ -1558,6 +1559,37 @@ select {
   opacity: 1;
 }
 
+.btn-submit {
+  width: 100%;
+  border-radius: 0.5rem;
+  border-radius: 0.5rem;
+  background: #0876FC;
+  color: #ffffff;
+  font-family: "Titillium Web";
+  font-style: normal;
+  font-size: 1.125rem;
+  font-weight: 700;
+  line-height: 1;
+  padding: 1rem 1.75rem;
+  text-align: center;
+  -webkit-transition: background 200ms ease-in-out;
+  transition: background 200ms ease-in-out;
+}
+
+@media screen and (min-width: 62rem) {
+  .btn-submit {
+    font-family: "Titillium Web";
+    font-style: normal;
+    font-size: 1.125rem;
+    font-weight: 700;
+    line-height: 0.77778;
+  }
+}
+
+.btn-submit:not([disabled]):hover {
+  background: #02D7F8;
+}
+
 @-webkit-keyframes pulsate {
   0% {
     -webkit-transform: scale(1);
@@ -1590,6 +1622,22 @@ select {
     -webkit-box-shadow: none;
             box-shadow: none;
   }
+}
+
+.up-btn {
+  margin-left: auto;
+  border-radius: 100%;
+  padding: 0.875rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  cursor: pointer;
 }
 
 /**=====================================================**
@@ -3309,4 +3357,462 @@ select {
 
 /**=======================================================**
                 HOME-TESTIMONIALS SECTION END
+**=======================================================**/
+/**=======================================================**
+                    CONTACT-SECTION START
+**=======================================================**/
+.contact {
+  padding: 3rem 0.5rem 0rem;
+}
+
+@media screen and (min-width: 62rem) {
+  .contact {
+    padding: 5rem 0rem;
+  }
+}
+
+.contact-details {
+  background: #ffffff;
+  padding: 1.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 2.5rem;
+}
+
+@media screen and (min-width: 36rem) {
+  .contact-details {
+    padding: 2.5rem;
+  }
+}
+
+@media screen and (min-width: 48rem) {
+  .contact-details {
+    padding: 2.5rem 3.4375rem;
+    gap: 4rem;
+  }
+}
+
+@media screen and (min-width: 62rem) {
+  .contact-details {
+    padding: 5rem 6.875rem;
+    gap: 5rem;
+  }
+}
+
+.contact-details .contact-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+}
+
+.contact-details .contact-header .contact-title {
+  color: #4A5568;
+  font-family: "Titillium Web";
+  font-style: normal;
+  font-size: 2rem;
+  font-weight: 600;
+  line-height: 1.46875;
+}
+
+@media screen and (min-width: 48rem) {
+  .contact-details .contact-header .contact-title {
+    font-family: "Titillium Web";
+    font-style: normal;
+    font-size: 2.5rem;
+    font-weight: 600;
+    line-height: 1.925;
+  }
+}
+
+@media screen and (min-width: 62rem) {
+  .contact-details .contact-header .contact-title {
+    font-family: "Titillium Web";
+    font-style: normal;
+    font-size: 3.25rem;
+    font-weight: 600;
+    line-height: 1.52096;
+  }
+}
+
+.contact-details .contact-body .contactform {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1rem;
+}
+
+.contact-details .contact-body .contactform .forminfo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1.5rem;
+}
+
+.contact-details .contact-body .contactform .forminfo .inputbox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 0.5rem;
+}
+
+.contact-details .contact-body .contactform .forminfo .inputbox .inputlabel {
+  font-family: "Titillium Web";
+  font-style: normal;
+  font-size: 0.875rem;
+  font-weight: normal;
+  line-height: 1.21;
+  color: #425466;
+}
+
+.contact-details .contact-body .contactform .forminfo .inputbox .inputfield {
+  border: solid 0.0625rem #E2E8F0;
+  border-radius: 0.375rem;
+  border-radius: 0.375rem;
+  background: #ffffff;
+  color: #000000;
+  font-family: "Titillium Web";
+  font-style: normal;
+  font-size: 0.9375rem;
+  font-weight: 500;
+  line-height: 1;
+  padding: 0.71875rem 1rem;
+}
+
+.contact-details .contact-body .contactform .forminfo .inputbox .inputfield::-webkit-input-placeholder {
+  color: #B5B5BD;
+}
+
+.contact-details .contact-body .contactform .forminfo .inputbox .inputfield:-ms-input-placeholder {
+  color: #B5B5BD;
+}
+
+.contact-details .contact-body .contactform .forminfo .inputbox .inputfield::-ms-input-placeholder {
+  color: #B5B5BD;
+}
+
+.contact-details .contact-body .contactform .forminfo .inputbox .inputfield::placeholder {
+  color: #B5B5BD;
+}
+
+.contact-details .contact-body .contactform .forminfo .inputbox .selectfield {
+  border: solid 0.0625rem #E2E8F0;
+  border-radius: 0.375rem;
+  border-radius: 0.375rem;
+  background: #ffffff;
+  color: #000000;
+  font-family: "Titillium Web";
+  font-style: normal;
+  font-size: 0.9375rem;
+  font-weight: 500;
+  line-height: 1;
+  padding: 0.96875rem 1rem;
+  background: #ffffff url("data:image/svg+xml,%3Csvg width='11' height='11' viewBox='0 0 11 11' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cmask id='mask0_102_11830' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='11' height='11'%3E%3Cpath d='M4.98252 7.65869L1.68511 3.89022C1.29615 3.4457 1.61184 2.75 2.20251 2.75H8.79733C9.388 2.75 9.70369 3.4457 9.31473 3.89022L6.01732 7.65869C5.74341 7.97173 5.25643 7.97173 4.98252 7.65869Z' fill='black'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_102_11830)'%3E%3Crect width='11' height='11' fill='%23B5B5BD'/%3E%3C/g%3E%3C/svg%3E%0A") no-repeat center right 3%;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+
+.contact-details .contact-body .contactform .forminfo .inputbox textarea {
+  resize: none;
+}
+
+.contact-details .contact-body .contactform .forminfo .inputbox textarea:focus {
+  outline: none;
+}
+
+/**=======================================================**
+                    CONTACT-SECTION END
+**=======================================================**/
+/**=======================================================**
+                    GET-IN-TOUCH END
+**=======================================================**/
+.getintouch {
+  padding: 3rem 0.5rem;
+}
+
+@media screen and (min-width: 62rem) {
+  .getintouch {
+    padding: 5rem 0rem 10rem;
+  }
+}
+
+.getintouch-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 2.5rem;
+}
+
+.getintouch-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 2.5rem;
+  text-align: center;
+}
+
+@media screen and (min-width: 62rem) {
+  .getintouch-header {
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    text-align: left;
+  }
+}
+
+.getintouch-header .getintouchinfo .getintouchtitle {
+  color: #4A5568;
+  font-family: "Titillium Web";
+  font-style: normal;
+  font-size: 2rem;
+  font-weight: 600;
+  line-height: 1.46875;
+}
+
+@media screen and (min-width: 48rem) {
+  .getintouch-header .getintouchinfo .getintouchtitle {
+    font-family: "Titillium Web";
+    font-style: normal;
+    font-size: 2.5rem;
+    font-weight: 600;
+    line-height: 1.925;
+  }
+}
+
+@media screen and (min-width: 62rem) {
+  .getintouch-header .getintouchinfo .getintouchtitle {
+    font-family: "Titillium Web";
+    font-style: normal;
+    font-size: 3.25rem;
+    font-weight: 600;
+    line-height: 1.52096;
+  }
+}
+
+.getintouch-header .getintouchlist {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 0.25rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media screen and (min-width: 62rem) {
+  .getintouch-header .getintouchlist {
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+}
+
+.getintouch-header .getintouchlist-link {
+  color: #4A5568;
+  font-family: "Titillium Web";
+  font-style: normal;
+  font-size: 0.875rem;
+  font-weight: normal;
+  line-height: 1.5;
+  -webkit-transition: color 200ms ease-in-out;
+  transition: color 200ms ease-in-out;
+}
+
+@media screen and (min-width: 48rem) {
+  .getintouch-header .getintouchlist-link {
+    font-family: "Titillium Web";
+    font-style: normal;
+    font-size: 1rem;
+    font-weight: normal;
+    line-height: 1.62;
+  }
+}
+
+.getintouch-header .getintouchlist-link:not([disabled]):hover {
+  color: #0876FC;
+}
+
+.getintouch-header .getintouchaddress {
+  text-align: center;
+}
+
+@media screen and (min-width: 62rem) {
+  .getintouch-header .getintouchaddress {
+    text-align: left;
+  }
+}
+
+.getintouch-header .getintouchaddress .address {
+  color: #4A5568;
+  font-family: "Titillium Web";
+  font-style: normal;
+  font-size: 0.875rem;
+  font-weight: normal;
+  line-height: 1.5;
+}
+
+@media screen and (min-width: 48rem) {
+  .getintouch-header .getintouchaddress .address {
+    font-family: "Titillium Web";
+    font-style: normal;
+    font-size: 1rem;
+    font-weight: normal;
+    line-height: 1.62;
+  }
+}
+
+.getintouch-header .getintouchsocial {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+@media screen and (min-width: 62rem) {
+  .getintouch-header .getintouchsocial {
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+  }
+}
+
+.getintouch-header .getintouchsocial .social-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 2rem;
+}
+
+@media screen and (min-width: 62rem) {
+  .getintouch-header .getintouchsocial .social-list {
+    gap: 2.5rem;
+  }
+}
+
+.getintouch-header .getintouchsocial .social-list-link {
+  height: 1.875rem;
+  width: 1.875rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  overflow: hidden;
+}
+
+@media screen and (min-width: 62rem) {
+  .getintouch-header .getintouchsocial .social-list-link {
+    height: 2.25rem;
+    width: 2.25rem;
+  }
+}
+
+.getintouch-header .getintouchsocial .social-list-link svg {
+  width: 100%;
+  height: 100%;
+}
+
+.getintouch-body {
+  background: #E2E8F0;
+  height: 16.25rem;
+}
+
+@media screen and (min-width: 36rem) {
+  .getintouch-body {
+    height: 20rem;
+  }
+}
+
+@media screen and (min-width: 48rem) {
+  .getintouch-body {
+    height: 28.75rem;
+  }
+}
+
+@media screen and (min-width: 62rem) {
+  .getintouch-body {
+    min-height: 39.0625rem;
+  }
+}
+
+/**=======================================================**
+                    GET-IN-TOUCH END
+**=======================================================**/
+/**=======================================================**
+                    PRODUCTS-SECTION START
+**=======================================================**/
+.products .product-1 {
+  background: rgba(252, 222, 8, 0.05);
+}
+
+.products .product-2 {
+  background: rgba(255, 219, 204, 0.3);
+}
+
+.products .product-3 {
+  background: rgba(180, 220, 98, 0.08);
+}
+
+/**=======================================================**
+                    PRODUCTS-SECTION END
 **=======================================================**/

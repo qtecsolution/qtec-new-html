@@ -152,6 +152,24 @@
     }
 }
 
+.btn-submit {
+    @include w100;
+    @include radius(8);
+    @include setBgColor($primary, $white);
+    @include font-face($primaryFont, style('normal'), size(18), weight('bold'), line-height(14, 14));
+    padding: length(16) length(28);
+    text-align: center;
+    @include transitionsbackground;
+
+    @include breakpoint(tab992) {
+        @include font-face($primaryFont, style('normal'), size(18), weight('bold'), line-height(14, 18));
+    }
+
+    @include hover {
+        background: $secondary;
+    }
+}
+
 @-webkit-keyframes pulsate {
     0% {
         -webkit-transform: scale(1);
@@ -180,4 +198,12 @@
         opacity: 0;
         box-shadow: none;
     }
+}
+
+.up-btn {
+    margin-left: auto;
+    @include circle;
+    padding: length(14);
+    @include flex-center;
+    cursor: pointer;
 }
