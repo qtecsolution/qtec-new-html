@@ -198,6 +198,26 @@
     }
 }
 
+.btn-link {
+    @include w100;
+    @include radius(8);
+    @include setBgColor($white, $primary);
+    @include border(solid, 1.5, $primary);
+    @include font-face($primaryFont, style('normal'), size(18), weight('bold'), line-height(14, 14));
+    padding: length(16) length(28);
+    text-align: center;
+    text-decoration: none;
+    @include transitionsbackground;
+
+    @include breakpoint(tab992) {
+        @include font-face($primaryFont, style('normal'), size(18), weight('bold'), line-height(14, 18));
+    }
+
+    @include hover {
+        @include setBgColor($primary, $white);
+    }
+}
+
 @-webkit-keyframes pulsate {
     0% {
         -webkit-transform: scale(1);

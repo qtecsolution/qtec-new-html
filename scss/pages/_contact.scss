@@ -99,6 +99,19 @@
             }
         }
     }
+
+    &-body {
+        .formsubmit {
+            @include flex-center-column;
+            gap: length(16);
+            text-align: center;
+
+            .or {
+                @include font-face($primaryFont, style('normal'), size(16), weight('normal'), line-height(16, 16));
+                color: $textLabel;
+            }
+        }
+    }
 }
 /**=======================================================**
                     CONTACT-SECTION END
@@ -233,6 +246,14 @@
 
         @include breakpoint(tab992) {
             min-height: length(625);
+        }
+
+        .mapouter {
+            @include wh100;
+            
+            .gmap_canvas {
+                @include wh100;
+            }
         }
     }
 }
