@@ -17,7 +17,11 @@
     }
 
     .singleproduct {
-        padding: length(60) length(0);
+        padding: length(30) length(0);
+        
+        @include breakpoint(tab992) {
+            padding: length(60) length(0);
+        }
     }
 
     .thumbnailbox {
@@ -29,11 +33,16 @@
         &::after {
             content: '';
             position: absolute;
-            top: length(-60);
-            right: length(-30);
+            top: length(-30);
+            right: length(-15);
             z-index: -100;
             width: 70%;
             height: length(167);
+
+            @include breakpoint(tab992) {
+                top: length(-60);
+                right: length(-30);
+            }
         }
 
         .product-thumbnail {

@@ -84,11 +84,15 @@
 
             .banner-text {
                 color: $gray-600;
-                @include font-face($primaryFont, style('normal'), size(16), weight('normal'), line-height(25.58, 14));
+                @include font-face($primaryFont, style('normal'), size(14), weight('normal'), line-height(25.58, 14));
                 letter-spacing: length(0.24);
                 text-align: justify;
 
                 @include breakpoint(mobile768) {
+                    @include font-face($primaryFont, style('normal'), size(16), weight('normal'), line-height(25.92, 16));
+                }
+
+                @include breakpoint(tab992) {
                     @include font-face($primaryFont, style('normal'), size(18), weight('normal'), line-height(30, 18));
                 }
             }

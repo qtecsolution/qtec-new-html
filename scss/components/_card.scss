@@ -255,3 +255,116 @@
         }
     }
 }
+
+.feature {
+    @include flex-column;
+    gap: length(22);
+    background: $white;
+    padding: length(20);
+
+    @include breakpoint(mobile768) {
+        padding: length(24);
+    }
+
+    @include breakpoint(tab992) {
+        padding: length(40);
+    }
+
+    &-header {
+        @include flex-column;
+        gap: length(16);
+    }
+
+    &-cap {
+        background: $technologyBg;
+        @include square(length(60));
+        @include circle;
+        @include flex-center;
+        padding: length(12);
+    }
+
+    &-title {
+        color: $gray-600;
+        @include font-face($primaryFont, style('normal'), size(18), weight('semibold'), line-height(25.3, 18));
+
+        @include breakpoint(mobile768) {
+            @include font-face($primaryFont, style('normal'), size(20), weight('semibold'), line-height(27.3, 20));
+        }
+    }
+
+    &-text {
+        color: $gray-600;
+        @include font-face($primaryFont, style('normal'), size(14), weight('normal'), line-height(25.58, 14));
+        letter-spacing: length(0.24);
+        text-align: justify;
+
+        @include breakpoint(mobile768) {
+            @include font-face($primaryFont, style('normal'), size(16), weight('normal'), line-height(25.92, 16));
+        }
+
+        @include breakpoint(tab992) {
+            @include font-face($primaryFont, style('normal'), size(18), weight('normal'), line-height(30, 18));
+        }
+    }
+}
+
+.card-technology {
+    @include flex-center-column;
+    gap: length(22);
+    background: $white;
+    padding: length(20);
+
+    @include breakpoint(mobile768) {
+        padding: length(24);
+    }
+
+    @include breakpoint(tab992) {
+        padding: length(40);
+    }
+
+    &-header {
+        @include flex-center-column;
+        gap: length(16);
+        text-align: center;
+    }
+
+    &-cap {
+        background: $technologyBg;
+        @include square(length(60));
+        @include circle;
+        @include flex-center;
+        padding: length(12);
+
+        @include breakpoint(mobile768) {
+            @include square(length(80));
+        }
+
+        @include breakpoint(tab992) {
+            @include square(length(100));
+        }
+    }
+
+    &-title {
+        color: $gray-700;
+        @include font-face($primaryFont, style('normal'), size(24), weight('semibold'), line-height(36.97, 24));
+
+        @include breakpoint(mobile768) {
+            @include font-face($primaryFont, style('normal'), size(36), weight('semibold'), line-height(48.97, 36));
+        }
+    }
+
+    &-text {
+        color: $gray-600;
+        @include font-face($primaryFont, style('normal'), size(14), weight('normal'), line-height(25.58, 14));
+        letter-spacing: length(0.24);
+        text-align: center;
+
+        @include breakpoint(mobile768) {
+            @include font-face($primaryFont, style('normal'), size(16), weight('normal'), line-height(25.92, 16));
+        }
+
+        @include breakpoint(tab992) {
+            @include font-face($primaryFont, style('normal'), size(18), weight('normal'), line-height(30, 18));
+        }
+    }
+}

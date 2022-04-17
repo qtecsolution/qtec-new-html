@@ -1406,6 +1406,36 @@ select {
   color: #ffffff;
 }
 
+.btn-getintouch {
+  background: #0876FC;
+  color: #ffffff;
+  font-family: "Titillium Web";
+  font-style: normal;
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 0.875;
+  padding: 1.25rem 2.5rem;
+  border-radius: 0.5rem;
+  border-radius: 0.5rem;
+  -webkit-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
+}
+
+@media screen and (min-width: 62rem) {
+  .btn-getintouch {
+    font-family: "Titillium Web";
+    font-style: normal;
+    font-size: 1.125rem;
+    font-weight: 700;
+    line-height: 0.77778;
+  }
+}
+
+.btn-getintouch:not([disabled]):hover {
+  background: #02D7F8;
+  color: #ffffff;
+}
+
 .btn-text {
   background: transparent;
   border: none;
@@ -2103,6 +2133,241 @@ select {
   color: #EDF2F7;
 }
 
+.feature {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1.375rem;
+  background: #ffffff;
+  padding: 1.25rem;
+}
+
+@media screen and (min-width: 48rem) {
+  .feature {
+    padding: 1.5rem;
+  }
+}
+
+@media screen and (min-width: 62rem) {
+  .feature {
+    padding: 2.5rem;
+  }
+}
+
+.feature-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1rem;
+}
+
+.feature-cap {
+  background: -webkit-gradient(linear, left top, left bottom, from(#ffffff), color-stop(28.37%, #FAFBFC), color-stop(59.78%, #EDEFF2), color-stop(92.52%, #D7DBE2), to(#D1D5DE));
+  background: linear-gradient(180deg, #ffffff 0%, #FAFBFC 28.37%, #EDEFF2 59.78%, #D7DBE2 92.52%, #D1D5DE 100%);
+  height: 3.75rem;
+  width: 3.75rem;
+  border-radius: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 0.75rem;
+}
+
+.feature-title {
+  color: #718096;
+  font-family: "Titillium Web";
+  font-style: normal;
+  font-size: 1.125rem;
+  font-weight: 600;
+  line-height: 1.40556;
+}
+
+@media screen and (min-width: 48rem) {
+  .feature-title {
+    font-family: "Titillium Web";
+    font-style: normal;
+    font-size: 1.25rem;
+    font-weight: 600;
+    line-height: 1.365;
+  }
+}
+
+.feature-text {
+  color: #718096;
+  font-family: "Titillium Web";
+  font-style: normal;
+  font-size: 0.875rem;
+  font-weight: normal;
+  line-height: 1.82714;
+  letter-spacing: 0.015rem;
+  text-align: justify;
+}
+
+@media screen and (min-width: 48rem) {
+  .feature-text {
+    font-family: "Titillium Web";
+    font-style: normal;
+    font-size: 1rem;
+    font-weight: normal;
+    line-height: 1.62;
+  }
+}
+
+@media screen and (min-width: 62rem) {
+  .feature-text {
+    font-family: "Titillium Web";
+    font-style: normal;
+    font-size: 1.125rem;
+    font-weight: normal;
+    line-height: 1.66667;
+  }
+}
+
+.card-technology {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1.375rem;
+  background: #ffffff;
+  padding: 1.25rem;
+}
+
+@media screen and (min-width: 48rem) {
+  .card-technology {
+    padding: 1.5rem;
+  }
+}
+
+@media screen and (min-width: 62rem) {
+  .card-technology {
+    padding: 2.5rem;
+  }
+}
+
+.card-technology-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1rem;
+  text-align: center;
+}
+
+.card-technology-cap {
+  background: -webkit-gradient(linear, left top, left bottom, from(#ffffff), color-stop(28.37%, #FAFBFC), color-stop(59.78%, #EDEFF2), color-stop(92.52%, #D7DBE2), to(#D1D5DE));
+  background: linear-gradient(180deg, #ffffff 0%, #FAFBFC 28.37%, #EDEFF2 59.78%, #D7DBE2 92.52%, #D1D5DE 100%);
+  height: 3.75rem;
+  width: 3.75rem;
+  border-radius: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 0.75rem;
+}
+
+@media screen and (min-width: 48rem) {
+  .card-technology-cap {
+    height: 5rem;
+    width: 5rem;
+  }
+}
+
+@media screen and (min-width: 62rem) {
+  .card-technology-cap {
+    height: 6.25rem;
+    width: 6.25rem;
+  }
+}
+
+.card-technology-title {
+  color: #4A5568;
+  font-family: "Titillium Web";
+  font-style: normal;
+  font-size: 1.5rem;
+  font-weight: 600;
+  line-height: 1.54042;
+}
+
+@media screen and (min-width: 48rem) {
+  .card-technology-title {
+    font-family: "Titillium Web";
+    font-style: normal;
+    font-size: 2.25rem;
+    font-weight: 600;
+    line-height: 1.36028;
+  }
+}
+
+.card-technology-text {
+  color: #718096;
+  font-family: "Titillium Web";
+  font-style: normal;
+  font-size: 0.875rem;
+  font-weight: normal;
+  line-height: 1.82714;
+  letter-spacing: 0.015rem;
+  text-align: center;
+}
+
+@media screen and (min-width: 48rem) {
+  .card-technology-text {
+    font-family: "Titillium Web";
+    font-style: normal;
+    font-size: 1rem;
+    font-weight: normal;
+    line-height: 1.62;
+  }
+}
+
+@media screen and (min-width: 62rem) {
+  .card-technology-text {
+    font-family: "Titillium Web";
+    font-style: normal;
+    font-size: 1.125rem;
+    font-weight: normal;
+    line-height: 1.66667;
+  }
+}
+
 .modal-content {
   overflow: hidden;
   border: none;
@@ -2732,7 +2997,7 @@ select {
   color: #718096;
   font-family: "Titillium Web";
   font-style: normal;
-  font-size: 1rem;
+  font-size: 0.875rem;
   font-weight: normal;
   line-height: 1.82714;
   letter-spacing: 0.015rem;
@@ -2740,6 +3005,16 @@ select {
 }
 
 @media screen and (min-width: 48rem) {
+  .homebanner-header .banner-info .banner-text {
+    font-family: "Titillium Web";
+    font-style: normal;
+    font-size: 1rem;
+    font-weight: normal;
+    line-height: 1.62;
+  }
+}
+
+@media screen and (min-width: 62rem) {
   .homebanner-header .banner-info .banner-text {
     font-family: "Titillium Web";
     font-style: normal;
@@ -3391,6 +3666,637 @@ select {
                 HOME-TESTIMONIALS SECTION END
 **=======================================================**/
 /**=======================================================**
+                    CASE-STUDY-BANNER START
+**=======================================================**/
+.casestudy-banner {
+  background: rgba(252, 222, 8, 0.05);
+  padding: 3rem 0.5rem 4rem;
+}
+
+@media screen and (min-width: 62rem) {
+  .casestudy-banner {
+    padding: 3.75rem 0rem 7.5rem;
+  }
+}
+
+.casestudy-banner-description {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1.5rem;
+}
+
+.casestudy-banner-description .casestudyinfo .casestudy-title {
+  color: #4A5568;
+  font-family: "Titillium Web";
+  font-style: normal;
+  font-size: 1.75rem;
+  font-weight: 600;
+  line-height: 1.89321;
+}
+
+@media screen and (min-width: 48rem) {
+  .casestudy-banner-description .casestudyinfo .casestudy-title {
+    font-family: "Titillium Web";
+    font-style: normal;
+    font-size: 2.375rem;
+    font-weight: 600;
+    line-height: 1.65816;
+  }
+}
+
+@media screen and (min-width: 62rem) {
+  .casestudy-banner-description .casestudyinfo .casestudy-title {
+    font-family: "Titillium Web";
+    font-style: normal;
+    font-size: 3rem;
+    font-weight: 600;
+    line-height: 1.52104;
+  }
+}
+
+.casestudy-banner-description .casestudydetetail .casestudy-text {
+  color: #718096;
+  font-family: "Titillium Web";
+  font-style: normal;
+  font-size: 0.875rem;
+  font-weight: normal;
+  line-height: 1.82714;
+  letter-spacing: 0.015rem;
+  text-align: justify;
+}
+
+@media screen and (min-width: 48rem) {
+  .casestudy-banner-description .casestudydetetail .casestudy-text {
+    font-family: "Titillium Web";
+    font-style: normal;
+    font-size: 1rem;
+    font-weight: normal;
+    line-height: 1.62;
+  }
+}
+
+@media screen and (min-width: 62rem) {
+  .casestudy-banner-description .casestudydetetail .casestudy-text {
+    font-family: "Titillium Web";
+    font-style: normal;
+    font-size: 1.125rem;
+    font-weight: normal;
+    line-height: 1.66667;
+  }
+}
+
+.casestudy-banner .thumbnailbox {
+  border-radius: 1rem;
+  border-radius: 1rem;
+  position: relative;
+  margin-top: 5rem;
+}
+
+@media screen and (min-width: 62rem) {
+  .casestudy-banner .thumbnailbox {
+    margin-top: 0rem;
+  }
+}
+
+.casestudy-banner .thumbnailbox::after {
+  content: '';
+  position: absolute;
+  top: -1.875rem;
+  right: -0.9375rem;
+  z-index: -100;
+  width: 70%;
+  height: 10.4375rem;
+  background: #E1E8FF;
+}
+
+@media screen and (min-width: 62rem) {
+  .casestudy-banner .thumbnailbox::after {
+    top: -3.75rem;
+    right: -1.875rem;
+  }
+}
+
+.casestudy-banner .thumbnailbox .product-thumbnail {
+  width: 100%;
+  border-radius: 1rem;
+  border-radius: 1rem;
+  overflow: hidden;
+}
+
+.casestudy-banner .thumbnailbox .product-thumbnail img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+/**=======================================================**
+                    CASE-STUDY-BANNER END
+**=======================================================**/
+/**=======================================================**
+                CLIENT-REQUIREMENTS START
+**=======================================================**/
+.client-requirements {
+  background: #ffffff;
+  padding: 3rem 0rem;
+}
+
+@media screen and (min-width: 62rem) {
+  .client-requirements {
+    padding: 5rem 0rem;
+  }
+}
+
+.client-requirements .requirements {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1.5rem;
+}
+
+@media screen and (min-width: 62rem) {
+  .client-requirements .requirements {
+    gap: 2.5rem;
+  }
+}
+
+.client-requirements .requirements-title {
+  color: #4A5568;
+  font-family: "Titillium Web";
+  font-style: normal;
+  font-size: 1.75rem;
+  font-weight: 600;
+  line-height: 1.89321;
+}
+
+@media screen and (min-width: 48rem) {
+  .client-requirements .requirements-title {
+    font-family: "Titillium Web";
+    font-style: normal;
+    font-size: 2.375rem;
+    font-weight: 600;
+    line-height: 1.65816;
+  }
+}
+
+@media screen and (min-width: 62rem) {
+  .client-requirements .requirements-title {
+    font-family: "Titillium Web";
+    font-style: normal;
+    font-size: 3rem;
+    font-weight: 600;
+    line-height: 1.52104;
+  }
+}
+
+.client-requirements .requirements-text {
+  color: #718096;
+  font-family: "Titillium Web";
+  font-style: normal;
+  font-size: 0.875rem;
+  font-weight: normal;
+  line-height: 1.82714;
+  letter-spacing: 0.015rem;
+  text-align: justify;
+}
+
+@media screen and (min-width: 48rem) {
+  .client-requirements .requirements-text {
+    font-family: "Titillium Web";
+    font-style: normal;
+    font-size: 1rem;
+    font-weight: normal;
+    line-height: 1.62;
+  }
+}
+
+@media screen and (min-width: 62rem) {
+  .client-requirements .requirements-text {
+    font-family: "Titillium Web";
+    font-style: normal;
+    font-size: 1.125rem;
+    font-weight: normal;
+    line-height: 1.66667;
+  }
+}
+
+/**=======================================================**
+                CLIENT-REQUIREMENTS END
+**=======================================================**/
+/**=======================================================**
+                    KEY-FEATURES START
+**=======================================================**/
+.keyfeatures {
+  padding: 3rem 0.5rem 4rem;
+}
+
+@media screen and (min-width: 62rem) {
+  .keyfeatures {
+    padding: 3.75rem 0rem 7.5rem;
+  }
+}
+
+.keyfeatures-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 2.5rem;
+}
+
+.keyfeatures-header .featuresinfo .features-title {
+  color: #4A5568;
+  font-family: "Titillium Web";
+  font-style: normal;
+  font-size: 2rem;
+  font-weight: 600;
+  line-height: 1.46875;
+}
+
+@media screen and (min-width: 48rem) {
+  .keyfeatures-header .featuresinfo .features-title {
+    font-family: "Titillium Web";
+    font-style: normal;
+    font-size: 2.5rem;
+    font-weight: 600;
+    line-height: 1.925;
+  }
+}
+
+@media screen and (min-width: 62rem) {
+  .keyfeatures-header .featuresinfo .features-title {
+    font-family: "Titillium Web";
+    font-style: normal;
+    font-size: 3.25rem;
+    font-weight: 600;
+    line-height: 1.52096;
+  }
+}
+
+.keyfeatures-header .featuresdescription .featurestext {
+  color: #718096;
+  font-family: "Titillium Web";
+  font-style: normal;
+  font-size: 1rem;
+  font-weight: normal;
+  line-height: 1.75;
+  letter-spacing: 0.015rem;
+  text-align: justify;
+}
+
+@media screen and (min-width: 48rem) {
+  .keyfeatures-header .featuresdescription .featurestext {
+    font-family: "Titillium Web";
+    font-style: normal;
+    font-size: 1.125rem;
+    font-weight: normal;
+    line-height: 1.66667;
+  }
+}
+
+.keyfeatures-body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 3rem;
+}
+
+@media screen and (min-width: 62rem) {
+  .keyfeatures-body {
+    gap: 5rem;
+  }
+}
+
+.keyfeatures-body .features {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 2.5rem;
+}
+
+.keyfeatures-body .features-header .feature-title {
+  color: #4A5568;
+  font-family: "Titillium Web";
+  font-style: normal;
+  font-size: 1.25rem;
+  font-weight: 600;
+  line-height: 1.4045;
+}
+
+@media screen and (min-width: 48rem) {
+  .keyfeatures-body .features-header .feature-title {
+    font-family: "Titillium Web";
+    font-style: normal;
+    font-size: 1.75rem;
+    font-weight: 600;
+    line-height: 1.36036;
+  }
+}
+
+/**=======================================================**
+                    KEY-FEATURES END
+**=======================================================**/
+/**=======================================================**
+                    HOW-BUILD-IT START
+**=======================================================**/
+.how-build {
+  background: #ffffff;
+  padding: 1.875rem 0.5rem 0rem;
+}
+
+@media screen and (min-width: 62rem) {
+  .how-build {
+    padding: 3.75rem 0rem 0rem;
+  }
+}
+
+.how-build-description {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1.5rem;
+}
+
+.how-build-description .buildinfo .build-title {
+  color: #4A5568;
+  font-family: "Titillium Web";
+  font-style: normal;
+  font-size: 1.75rem;
+  font-weight: 600;
+  line-height: 1.89321;
+}
+
+@media screen and (min-width: 48rem) {
+  .how-build-description .buildinfo .build-title {
+    font-family: "Titillium Web";
+    font-style: normal;
+    font-size: 2.375rem;
+    font-weight: 600;
+    line-height: 1.65816;
+  }
+}
+
+@media screen and (min-width: 62rem) {
+  .how-build-description .buildinfo .build-title {
+    font-family: "Titillium Web";
+    font-style: normal;
+    font-size: 3rem;
+    font-weight: 600;
+    line-height: 1.52104;
+  }
+}
+
+.how-build-description .builddetetail .build-text {
+  color: #718096;
+  font-family: "Titillium Web";
+  font-style: normal;
+  font-size: 0.875rem;
+  font-weight: normal;
+  line-height: 1.82714;
+  letter-spacing: 0.015rem;
+  text-align: justify;
+}
+
+@media screen and (min-width: 48rem) {
+  .how-build-description .builddetetail .build-text {
+    font-family: "Titillium Web";
+    font-style: normal;
+    font-size: 1rem;
+    font-weight: normal;
+    line-height: 1.62;
+  }
+}
+
+@media screen and (min-width: 62rem) {
+  .how-build-description .builddetetail .build-text {
+    font-family: "Titillium Web";
+    font-style: normal;
+    font-size: 1.125rem;
+    font-weight: normal;
+    line-height: 1.66667;
+  }
+}
+
+.how-build .thumbnailbox {
+  position: relative;
+  margin-top: 5rem;
+}
+
+@media screen and (min-width: 62rem) {
+  .how-build .thumbnailbox {
+    margin-top: 0rem;
+  }
+}
+
+.how-build .thumbnailbox::after {
+  content: '';
+  position: absolute;
+  top: -1.875rem;
+  right: -0.9375rem;
+  z-index: 1;
+  width: 50%;
+  height: 10.4375rem;
+  background: #02D7F8;
+}
+
+@media screen and (min-width: 62rem) {
+  .how-build .thumbnailbox::after {
+    top: -3.75rem;
+    right: -1.875rem;
+  }
+}
+
+.how-build .thumbnailbox .product-thumbnail {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  z-index: 2;
+}
+
+.how-build .thumbnailbox .product-thumbnail img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+/**=======================================================**
+                    HOW-BUILD-IT END
+**=======================================================**/
+/**=======================================================**
+                        TECHNOLOGIES START
+**=======================================================**/
+.technologies {
+  padding: 3rem 0.5rem 4rem;
+}
+
+@media screen and (min-width: 62rem) {
+  .technologies {
+    padding: 3.75rem 0rem 7.5rem;
+  }
+}
+
+.technologies-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 2.5rem;
+}
+
+.technologies-header .technologyinfo .technology-title {
+  color: #4A5568;
+  font-family: "Titillium Web";
+  font-style: normal;
+  font-size: 2rem;
+  font-weight: 600;
+  line-height: 1.46875;
+}
+
+@media screen and (min-width: 48rem) {
+  .technologies-header .technologyinfo .technology-title {
+    font-family: "Titillium Web";
+    font-style: normal;
+    font-size: 2.5rem;
+    font-weight: 600;
+    line-height: 1.925;
+  }
+}
+
+@media screen and (min-width: 62rem) {
+  .technologies-header .technologyinfo .technology-title {
+    font-family: "Titillium Web";
+    font-style: normal;
+    font-size: 3.25rem;
+    font-weight: 600;
+    line-height: 1.52096;
+  }
+}
+
+.technologies-header .technologydescription .technologytext {
+  color: #718096;
+  font-family: "Titillium Web";
+  font-style: normal;
+  font-size: 1rem;
+  font-weight: normal;
+  line-height: 1.75;
+  letter-spacing: 0.015rem;
+  text-align: justify;
+}
+
+@media screen and (min-width: 48rem) {
+  .technologies-header .technologydescription .technologytext {
+    font-family: "Titillium Web";
+    font-style: normal;
+    font-size: 1.125rem;
+    font-weight: normal;
+    line-height: 1.66667;
+  }
+}
+
+/**=======================================================**
+                        TECHNOLOGIES END
+**=======================================================**/
+/**=======================================================**
+                        SUBSCRIBE START
+**=======================================================**/
+.subscribe {
+  background: #ffffff;
+  padding: 3rem 0.5rem;
+}
+
+@media screen and (min-width: 62rem) {
+  .subscribe {
+    padding: 5rem 0rem;
+  }
+}
+
+.subscribe-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 2.5rem;
+  text-align: center;
+  background: url(../images/subscribe/subscribeBg.svg) no-repeat center center/cover;
+  padding: 3rem 0.5rem 4rem;
+}
+
+@media screen and (min-width: 62rem) {
+  .subscribe-content {
+    padding: 4rem 0rem 6rem;
+  }
+}
+
+.subscribe-content .subscribe-title {
+  color: #4A5568;
+  font-family: "Titillium Web";
+  font-style: normal;
+  font-size: 2rem;
+  font-weight: 600;
+  line-height: 1.46875;
+}
+
+@media screen and (min-width: 48rem) {
+  .subscribe-content .subscribe-title {
+    font-family: "Titillium Web";
+    font-style: normal;
+    font-size: 2.5rem;
+    font-weight: 600;
+    line-height: 1.925;
+  }
+}
+
+@media screen and (min-width: 62rem) {
+  .subscribe-content .subscribe-title {
+    font-family: "Titillium Web";
+    font-style: normal;
+    font-size: 3.25rem;
+    font-weight: 600;
+    line-height: 1.52096;
+  }
+}
+
+/**=======================================================**
+                        SUBSCRIBE END
+**=======================================================**/
+/**=======================================================**
                     CONTACT-SECTION START
 **=======================================================**/
 .contact {
@@ -3831,6 +4737,285 @@ select {
                     GET-IN-TOUCH END
 **=======================================================**/
 /**=======================================================**
+                        ABOUT-BANNER START
+**=======================================================**/
+.about-banner {
+  background: url(../images/about/about-banner.png) no-repeat center center/cover;
+}
+
+.about-banner-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-height: 15rem;
+}
+
+@media screen and (min-width: 62rem) {
+  .about-banner-content {
+    min-height: 40rem;
+  }
+}
+
+.about-banner-title {
+  color: #4A5568;
+  font-family: "Titillium Web";
+  font-style: normal;
+  font-size: 2rem;
+  font-weight: 600;
+  line-height: 1.25;
+}
+
+@media screen and (min-width: 48rem) {
+  .about-banner-title {
+    font-family: "Titillium Web";
+    font-style: normal;
+    font-size: 2.5rem;
+    font-weight: 600;
+    line-height: 1.25;
+  }
+}
+
+@media screen and (min-width: 62rem) {
+  .about-banner-title {
+    font-family: "Titillium Web";
+    font-style: normal;
+    font-size: 3.25rem;
+    font-weight: 600;
+    line-height: 1.15385;
+  }
+}
+
+.about-banner-title span {
+  color: #A0AEC0;
+}
+
+/**=======================================================**
+                        ABOUT-BANNER END
+**=======================================================**/
+/**=======================================================**
+                        OUR-STORY START
+**=======================================================**/
+.ourstory {
+  background: rgba(252, 222, 8, 0.05);
+  padding: 5rem 0.5rem;
+}
+
+@media screen and (min-width: 62rem) {
+  .ourstory {
+    padding: 10rem 0rem;
+  }
+}
+
+.ourstory-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 2.5rem;
+  text-align: center;
+}
+
+.ourstory-content .ourstory-title {
+  color: #4A5568;
+  font-family: "Titillium Web";
+  font-style: normal;
+  font-size: 2rem;
+  font-weight: 600;
+  line-height: 1.46875;
+}
+
+@media screen and (min-width: 48rem) {
+  .ourstory-content .ourstory-title {
+    font-family: "Titillium Web";
+    font-style: normal;
+    font-size: 2.5rem;
+    font-weight: 600;
+    line-height: 1.925;
+  }
+}
+
+@media screen and (min-width: 62rem) {
+  .ourstory-content .ourstory-title {
+    font-family: "Titillium Web";
+    font-style: normal;
+    font-size: 3.25rem;
+    font-weight: 600;
+    line-height: 1.52096;
+  }
+}
+
+.ourstory-content .ourstory-text {
+  color: #718096;
+  font-family: "Titillium Web";
+  font-style: normal;
+  font-size: 1rem;
+  font-weight: normal;
+  line-height: 1.75;
+  letter-spacing: 0.015rem;
+  text-align: justify;
+}
+
+@media screen and (min-width: 48rem) {
+  .ourstory-content .ourstory-text {
+    font-family: "Titillium Web";
+    font-style: normal;
+    font-size: 1.125rem;
+    font-weight: normal;
+    line-height: 1.66667;
+  }
+}
+
+/**=======================================================**
+                        OUR-STORY END
+**=======================================================**/
+/**=======================================================**
+                        FEATURED START
+**=======================================================**/
+.featured {
+  background: #ffffff;
+  padding: 3rem 0.5rem 4rem;
+}
+
+@media screen and (min-width: 62rem) {
+  .featured {
+    padding: 3.75rem 0rem 7.5rem;
+  }
+}
+
+.featured-description {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1.5rem;
+}
+
+.featured-description .featuredinfo .featured-title {
+  color: #4A5568;
+  font-family: "Titillium Web";
+  font-style: normal;
+  font-size: 1.75rem;
+  font-weight: 600;
+  line-height: 1.89321;
+}
+
+@media screen and (min-width: 48rem) {
+  .featured-description .featuredinfo .featured-title {
+    font-family: "Titillium Web";
+    font-style: normal;
+    font-size: 2.375rem;
+    font-weight: 600;
+    line-height: 1.65816;
+  }
+}
+
+@media screen and (min-width: 62rem) {
+  .featured-description .featuredinfo .featured-title {
+    font-family: "Titillium Web";
+    font-style: normal;
+    font-size: 3rem;
+    font-weight: 600;
+    line-height: 1.52104;
+  }
+}
+
+.featured-description .featureddetetail .featured-text {
+  color: #718096;
+  font-family: "Titillium Web";
+  font-style: normal;
+  font-size: 0.875rem;
+  font-weight: normal;
+  line-height: 1.82714;
+  letter-spacing: 0.015rem;
+  text-align: justify;
+}
+
+@media screen and (min-width: 48rem) {
+  .featured-description .featureddetetail .featured-text {
+    font-family: "Titillium Web";
+    font-style: normal;
+    font-size: 1rem;
+    font-weight: normal;
+    line-height: 1.62;
+  }
+}
+
+@media screen and (min-width: 62rem) {
+  .featured-description .featureddetetail .featured-text {
+    font-family: "Titillium Web";
+    font-style: normal;
+    font-size: 1.125rem;
+    font-weight: normal;
+    line-height: 1.66667;
+  }
+}
+
+.featured .thumbnailbox {
+  border-radius: 1rem;
+  border-radius: 1rem;
+  position: relative;
+  margin-top: 5rem;
+}
+
+@media screen and (min-width: 62rem) {
+  .featured .thumbnailbox {
+    margin-top: 0rem;
+  }
+}
+
+.featured .thumbnailbox::after {
+  content: '';
+  position: absolute;
+  top: -1.875rem;
+  right: -0.9375rem;
+  z-index: 1;
+  width: 70%;
+  height: 10.4375rem;
+  background: #E1E8FF;
+}
+
+@media screen and (min-width: 62rem) {
+  .featured .thumbnailbox::after {
+    top: -3.75rem;
+    right: -1.875rem;
+  }
+}
+
+.featured .thumbnailbox .product-thumbnail {
+  width: 100%;
+  border-radius: 1rem;
+  border-radius: 1rem;
+  overflow: hidden;
+  position: relative;
+  z-index: 2;
+}
+
+.featured .thumbnailbox .product-thumbnail img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+/**=======================================================**
+                        FEATURED END
+**=======================================================**/
+/**=======================================================**
                     PRODUCTS-SECTION START
 **=======================================================**/
 .products {
@@ -3858,7 +5043,13 @@ select {
 }
 
 .products .singleproduct {
-  padding: 3.75rem 0rem;
+  padding: 1.875rem 0rem;
+}
+
+@media screen and (min-width: 62rem) {
+  .products .singleproduct {
+    padding: 3.75rem 0rem;
+  }
 }
 
 .products .thumbnailbox {
@@ -3872,11 +5063,18 @@ select {
 .products .thumbnailbox::after {
   content: '';
   position: absolute;
-  top: -3.75rem;
-  right: -1.875rem;
+  top: -1.875rem;
+  right: -0.9375rem;
   z-index: -100;
   width: 70%;
   height: 10.4375rem;
+}
+
+@media screen and (min-width: 62rem) {
+  .products .thumbnailbox::after {
+    top: -3.75rem;
+    right: -1.875rem;
+  }
 }
 
 .products .thumbnailbox .product-thumbnail {

@@ -46,6 +46,22 @@
     }
 }
 
+.btn-getintouch {
+    @include setBgColor($primary, $white);
+    @include font-face($primaryFont, style('normal'), size(16), weight('bold'), line-height(14, 16));
+    padding: length(20) length(40);
+    @include radius(8);
+    @include transitionsall;
+
+    @include breakpoint(tab992) {
+        @include font-face($primaryFont, style('normal'), size(18), weight('bold'), line-height(14, 18));
+    }
+
+    @include hover {
+        @include setBgColor($secondary, $white);
+    }
+}
+
 .btn-text {
     @include transparent-button;
     padding: length(22) length(24);
