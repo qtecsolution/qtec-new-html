@@ -22,6 +22,14 @@
         @include breakpoint(tab992) {
             padding: length(60) length(0);
         }
+
+        &:nth-child(even) {
+            .products-description {
+                @include breakpoint(tab992) {
+                    padding-left: length(140);
+                }
+            }
+        }
     }
 
     .thumbnailbox {
@@ -142,11 +150,11 @@
     .product-2 {
         background: $bannerBg-2;
 
-        .products-description {
-            @include breakpoint(tab992) {
-                padding-left: length(140);
-            }
-        }
+        // .products-description {
+        //     @include breakpoint(tab992) {
+        //         padding-left: length(140);
+        //     }
+        // }
     }
     
     .product-3 {

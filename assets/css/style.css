@@ -5123,6 +5123,12 @@ select {
   }
 }
 
+@media screen and (min-width: 62rem) {
+  .products .singleproduct:nth-child(even) .products-description {
+    padding-left: 8.75rem;
+  }
+}
+
 .products .thumbnailbox {
   background: #DCDCDC;
   border-radius: 1rem;
@@ -5292,12 +5298,6 @@ select {
 
 .products .product-2 {
   background: rgba(255, 219, 204, 0.3);
-}
-
-@media screen and (min-width: 62rem) {
-  .products .product-2 .products-description {
-    padding-left: 8.75rem;
-  }
 }
 
 .products .product-3 {
