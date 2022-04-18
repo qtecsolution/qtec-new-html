@@ -40,10 +40,11 @@
                 @include flex-center-vert;
                 padding: length(5) length(4);
                 @include w100;
+                margin-inline: auto;
 
                 @include breakpoint(mobile768) {
                     width: 70%;
-                    margin-inline: auto;
+                    margin: 0;
                 }
 
                 @include breakpoint(tab992) {

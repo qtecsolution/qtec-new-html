@@ -24,10 +24,14 @@
 
 .btn-service {
     @include setBgColor($primary, $white);
-    @include font-face($primaryFont, style('normal'), size(16), weight('bold'), line-height(14, 16));
+    @include font-face($primaryFont, style('normal'), size(14), weight('bold'), line-height(14, 14));
     padding: length(22) length(18);
     @include radius(8);
     @include transitionsall;
+    
+    @include breakpoint(mobile768) {
+        @include font-face($primaryFont, style('normal'), size(16), weight('bold'), line-height(14, 16));
+    }
 
     @include hover {
         @include setBgColor($secondary, $white);
@@ -36,10 +40,14 @@
 
 .btn-detail {
     @include setBgColor($primary, $white);
-    @include font-face($primaryFont, style('normal'), size(16), weight('bold'), line-height(14, 16));
+    @include font-face($primaryFont, style('normal'), size(14), weight('bold'), line-height(14, 14));
     padding: length(22) length(45);
     @include radius(8);
     @include transitionsall;
+    
+    @include breakpoint(mobile768) {
+        @include font-face($primaryFont, style('normal'), size(16), weight('bold'), line-height(14, 16));
+    }
 
     @include hover {
         @include setBgColor($secondary, $white);
@@ -48,10 +56,14 @@
 
 .btn-getintouch {
     @include setBgColor($primary, $white);
-    @include font-face($primaryFont, style('normal'), size(16), weight('bold'), line-height(14, 16));
+    @include font-face($primaryFont, style('normal'), size(14), weight('bold'), line-height(14, 14));
     padding: length(20) length(40);
     @include radius(8);
     @include transitionsall;
+    
+    @include breakpoint(mobile768) {
+        @include font-face($primaryFont, style('normal'), size(16), weight('bold'), line-height(14, 16));
+    }
 
     @include breakpoint(tab992) {
         @include font-face($primaryFont, style('normal'), size(18), weight('bold'), line-height(14, 18));
@@ -64,14 +76,22 @@
 
 .btn-text {
     @include transparent-button;
-    padding: length(22) length(24);
+    padding: length(8);
     @include flex-center;
     gap: length(10);
     @include transitionsall;
 
+    @include breakpoint(mobile500) {
+        padding: length(22) length(24);
+    }
+
     .text {
-        @include font-face($primaryFont, style('normal'), size(16), weight('bold'), line-height(14, 16));
+        @include font-face($primaryFont, style('normal'), size(14), weight('bold'), line-height(14, 14));
         color: $primary;
+
+        @include breakpoint(mobile768) {
+            @include font-face($primaryFont, style('normal'), size(16), weight('bold'), line-height(14, 16));
+        }
     }
 
     .icon {

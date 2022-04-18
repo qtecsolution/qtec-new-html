@@ -862,7 +862,7 @@ select {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  height: 80%;
+  height: 60%;
 }
 
 .header-nav .mobilelist-link {
@@ -995,12 +995,13 @@ select {
           align-items: center;
   padding: 0.3125rem 0.25rem;
   width: 100%;
+  margin-inline: auto;
 }
 
 @media screen and (min-width: 48rem) {
   .footer-content .footlogo-subscribe .subscribe {
     width: 70%;
-    margin-inline: auto;
+    margin: 0;
   }
 }
 
@@ -1371,14 +1372,24 @@ select {
   color: #ffffff;
   font-family: "Titillium Web";
   font-style: normal;
-  font-size: 1rem;
+  font-size: 0.875rem;
   font-weight: 700;
-  line-height: 0.875;
+  line-height: 1;
   padding: 1.375rem 1.125rem;
   border-radius: 0.5rem;
   border-radius: 0.5rem;
   -webkit-transition: all 200ms ease-in-out;
   transition: all 200ms ease-in-out;
+}
+
+@media screen and (min-width: 48rem) {
+  .btn-service {
+    font-family: "Titillium Web";
+    font-style: normal;
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 0.875;
+  }
 }
 
 .btn-service:not([disabled]):hover {
@@ -1391,14 +1402,24 @@ select {
   color: #ffffff;
   font-family: "Titillium Web";
   font-style: normal;
-  font-size: 1rem;
+  font-size: 0.875rem;
   font-weight: 700;
-  line-height: 0.875;
+  line-height: 1;
   padding: 1.375rem 2.8125rem;
   border-radius: 0.5rem;
   border-radius: 0.5rem;
   -webkit-transition: all 200ms ease-in-out;
   transition: all 200ms ease-in-out;
+}
+
+@media screen and (min-width: 48rem) {
+  .btn-detail {
+    font-family: "Titillium Web";
+    font-style: normal;
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 0.875;
+  }
 }
 
 .btn-detail:not([disabled]):hover {
@@ -1411,14 +1432,24 @@ select {
   color: #ffffff;
   font-family: "Titillium Web";
   font-style: normal;
-  font-size: 1rem;
+  font-size: 0.875rem;
   font-weight: 700;
-  line-height: 0.875;
+  line-height: 1;
   padding: 1.25rem 2.5rem;
   border-radius: 0.5rem;
   border-radius: 0.5rem;
   -webkit-transition: all 200ms ease-in-out;
   transition: all 200ms ease-in-out;
+}
+
+@media screen and (min-width: 48rem) {
+  .btn-getintouch {
+    font-family: "Titillium Web";
+    font-style: normal;
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 0.875;
+  }
 }
 
 @media screen and (min-width: 62rem) {
@@ -1439,7 +1470,7 @@ select {
 .btn-text {
   background: transparent;
   border: none;
-  padding: 1.375rem 1.5rem;
+  padding: 0.5rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1454,13 +1485,29 @@ select {
   transition: all 200ms ease-in-out;
 }
 
+@media screen and (min-width: 31.25rem) {
+  .btn-text {
+    padding: 1.375rem 1.5rem;
+  }
+}
+
 .btn-text .text {
   font-family: "Titillium Web";
   font-style: normal;
-  font-size: 1rem;
+  font-size: 0.875rem;
   font-weight: 700;
-  line-height: 0.875;
+  line-height: 1;
   color: #0876FC;
+}
+
+@media screen and (min-width: 48rem) {
+  .btn-text .text {
+    font-family: "Titillium Web";
+    font-style: normal;
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 0.875;
+  }
 }
 
 .btn-text .icon {
@@ -1780,7 +1827,7 @@ select {
   line-height: 1.42042;
 }
 
-@media screen and (min-width: 48rem) {
+@media screen and (min-width: 87.5rem) {
   .card-feature-body .feature-title {
     font-family: "Titillium Web";
     font-style: normal;
@@ -1798,16 +1845,22 @@ select {
   font-weight: normal;
   line-height: 1.75;
   letter-spacing: 0.015rem;
-  text-align: justify;
+  text-align: left;
 }
 
-@media screen and (min-width: 48rem) {
+@media screen and (min-width: 87.5rem) {
   .card-feature-body .feature-text {
     font-family: "Titillium Web";
     font-style: normal;
     font-size: 1.125rem;
     font-weight: normal;
     line-height: 1.66667;
+  }
+}
+
+@media screen and (min-width: 87.5rem) {
+  .card-feature-body .feature-text {
+    text-align: justify;
   }
 }
 
@@ -2560,8 +2613,10 @@ select {
   background: #ffffff;
 }
 
-.preloader .spinner {
-  display: inline-block;
+.preloader .preload {
+  position: relative;
+  height: 9.375rem;
+  width: 9.375rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2571,37 +2626,50 @@ select {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  height: 5rem;
-  width: 5rem;
+}
+
+.preloader .preload::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  border: solid 0.25rem #EDF2F7;
+  border-left-color: #0876FC;
+  height: 9.375rem;
+  width: 9.375rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   border-radius: 100%;
-  -webkit-animation: linear pulse 1s infinite;
-  animation: linear pulse 1s infinite;
+  -webkit-animation: spinning 2s linear infinite;
+          animation: spinning 2s linear infinite;
 }
 
-@-webkit-keyframes pulse {
+@-webkit-keyframes spinning {
   0% {
-    -webkit-transform: scale(0, 0);
-  }
-  50% {
-    -webkit-transform: scale(1, 1);
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
   }
   100% {
-    -webkit-transform: scale(0, 0);
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
   }
 }
 
-@keyframes pulse {
+@keyframes spinning {
   0% {
-    -webkit-transform: scale(0, 0);
-    transform: scale(0, 0);
-  }
-  50% {
-    -webkit-transform: scale(1, 1);
-    transform: scale(1, 1);
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
   }
   100% {
-    -webkit-transform: scale(0, 0);
-    transform: scale(0, 0);
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
   }
 }
 
@@ -2907,8 +2975,13 @@ select {
 
 @media screen and (min-width: 62rem) {
   .homebanner {
-    min-height: calc(100vh - 6.25rem);
     padding: 6.25rem 0rem 8.75rem;
+  }
+}
+
+@media screen and (min-width: 68.75rem) {
+  .homebanner {
+    min-height: calc(100vh - 6.25rem);
   }
 }
 

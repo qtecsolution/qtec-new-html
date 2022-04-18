@@ -7,36 +7,32 @@
     z-index: 10000;
     background: $white;
 
-    .spinner {
-        display: inline-block;
+    .preload {
+        position: relative;
+        @include square(length(150));
         @include flex-center;
-        @include square(length(80));
-        @include circle;
-        -webkit-animation: linear pulse 1s infinite;
-        animation: linear pulse 1s infinite;
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            @include border(solid, 4, $gray-200);
+            border-left-color: $primary;
+            @include square(length(150));
+            @include flex-center;
+            @include circle;
+            animation: spinning 2s linear infinite;
+        }
     }
 }
 
-@-webkit-keyframes pulse {
+@keyframes spinning {
     0% {
-        -webkit-transform: scale(0, 0);
+        @include transform(rotate(0deg));
     }
-    50% {
-        -webkit-transform: scale(1, 1);
-    }
-    100% {
-        -webkit-transform: scale(0, 0);
-    }
-}
 
-@keyframes pulse {
-    0% {
-        @include transform(scale(0, 0));
-    }
-    50% {
-        @include transform(scale(1, 1));
-    }
     100% {
-        @include transform(scale(0, 0));
+        @include transform(rotate(360deg));
     }
 }

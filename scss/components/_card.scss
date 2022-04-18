@@ -27,7 +27,7 @@
             color: $gray-700;
             @include font-face($primaryFont, style('normal'), size(24), weight('semibold'), line-height(34.09, 24));
 
-            @include breakpoint(mobile768) {
+            @include breakpoint(desktop1400) {
                 @include font-face($primaryFont, style('normal'), size(28), weight('semibold'), line-height(38.09, 28));
             }
         }
@@ -36,10 +36,14 @@
             color: $gray-600;
             @include font-face($primaryFont, style('normal'), size(16), weight('normal'), line-height(28, 16));
             letter-spacing: length(0.24);
-            text-align: justify;
+            text-align: left;
 
-            @include breakpoint(mobile768) {
+            @include breakpoint(desktop1400) {
                 @include font-face($primaryFont, style('normal'), size(18), weight('normal'), line-height(30, 18));
+            }
+            
+            @include breakpoint(desktop1400) {
+                text-align: justify;
             }
         }
     }
