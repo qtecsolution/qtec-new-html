@@ -10,12 +10,16 @@
 
     &-header {
         .card-cap {
-            background: $textGray;
+            background: $gray-200;
             @include square(length(56));
             @include circle;
             @include flex-center;
-            padding: length(14);
+            // padding: length(14);
             overflow: hidden;
+
+            svg {
+                @include wh100;
+            }
         }
     }
     
@@ -337,7 +341,7 @@
         @include square(length(60));
         @include circle;
         @include flex-center;
-        padding: length(12);
+        padding: length(16);
 
         @include breakpoint(mobile768) {
             @include square(length(80));
@@ -345,6 +349,10 @@
 
         @include breakpoint(tab992) {
             @include square(length(100));
+        }
+
+        svg {
+            @include wh100;
         }
     }
 
