@@ -4,7 +4,7 @@
 
 .footer {
     background: $footerbg;
-    padding: length(54) length(8) length(62);
+    padding: length(64) length(8) length(20);
 
     &-content {
         @include flex-column;
@@ -188,10 +188,6 @@
                 .social-list {
                     @include list-horizontal;
                     gap: length(32);
-                    
-                    @include breakpoint(tab992) {
-                        gap: length(40);
-                    }
 
                     &-link {
                         @include square(length(30));

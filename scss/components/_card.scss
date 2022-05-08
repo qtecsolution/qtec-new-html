@@ -341,7 +341,7 @@
         @include square(length(60));
         @include circle;
         @include flex-center;
-        padding: length(16);
+        padding: length(24);
 
         @include breakpoint(mobile768) {
             @include square(length(80));

@@ -225,19 +225,6 @@
                 }
             }
         }
-
-        .featuredescription {
-            .featurestext {
-                color: $gray-600;
-                @include font-face($primaryFont, style('normal'), size(16), weight('normal'), line-height(28, 16));
-                letter-spacing: length(0.24);
-                text-align: justify;
-
-                @include breakpoint(mobile768) {
-                    @include font-face($primaryFont, style('normal'), size(18), weight('normal'), line-height(30, 18));
-                }
-            }
-        }
     }
 }
 
@@ -326,19 +313,6 @@
                 }
             }
         }
-
-        .servicesdescription {
-            .servicestext {
-                color: $gray-600;
-                @include font-face($primaryFont, style('normal'), size(16), weight('normal'), line-height(28, 16));
-                letter-spacing: length(0.24);
-                text-align: justify;
-
-                @include breakpoint(mobile768) {
-                    @include font-face($primaryFont, style('normal'), size(18), weight('normal'), line-height(30, 18));
-                }
-            }
-        }
     }
 }
 
@@ -377,19 +351,6 @@
 
                 @include breakpoint(tab992) {
                     @include font-face($primaryFont, style('normal'), size(52), weight('semibold'), line-height(79.09, 52));
-                }
-            }
-        }
-
-        .projectsdescription {
-            .projectstext {
-                color: $gray-600;
-                @include font-face($primaryFont, style('normal'), size(16), weight('normal'), line-height(28, 16));
-                letter-spacing: length(0.24);
-                text-align: justify;
-
-                @include breakpoint(mobile768) {
-                    @include font-face($primaryFont, style('normal'), size(18), weight('normal'), line-height(30, 18));
                 }
             }
         }
@@ -439,19 +400,6 @@
                 }
             }
         }
-
-        .articledescription {
-            .articletext {
-                color: $gray-600;
-                @include font-face($primaryFont, style('normal'), size(16), weight('normal'), line-height(28, 16));
-                letter-spacing: length(0.24);
-                text-align: justify;
-
-                @include breakpoint(mobile768) {
-                    @include font-face($primaryFont, style('normal'), size(18), weight('normal'), line-height(30, 18));
-                }
-            }
-        }
     }
 }
 
@@ -490,19 +438,6 @@
 
                 @include breakpoint(tab992) {
                     @include font-face($primaryFont, style('normal'), size(52), weight('semibold'), line-height(79.09, 52));
-                }
-            }
-        }
-
-        .testimonialdescription {
-            .testimonialtext {
-                color: $gray-600;
-                @include font-face($primaryFont, style('normal'), size(16), weight('normal'), line-height(28, 16));
-                letter-spacing: length(0.24);
-                text-align: justify;
-
-                @include breakpoint(mobile768) {
-                    @include font-face($primaryFont, style('normal'), size(18), weight('normal'), line-height(30, 18));
                 }
             }
         }
