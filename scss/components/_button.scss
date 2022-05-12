@@ -238,6 +238,47 @@
 	}
 }
 
+.btn-read {
+	@include setBgColor($primary, $white);
+	@include font-face($primaryFont, style('normal'), size(12), weight('semibold'), line-height(12, 12));
+	padding: length(16);
+	text-align: center;
+	@include flex-center;
+	@include w100;
+	@include radius(8);
+	text-align: center;
+	@include transitionsall;
+
+	@include breakpoint(mobile576) {
+		@include font-face($primaryFont, style('normal'), size(14), weight('semibold'), line-height(14, 14));
+	}
+
+	@include hover {
+			@include setBgColor(darken($primary, 15%), $white);
+	}
+}
+
+.btn-seeall {
+	@include border(solid, 1, $primary);
+	@include setBgColor(transparent, $primary);
+	@include font-face($primaryFont, style('normal'), size(12), weight('semibold'), line-height(12, 12));
+	padding: length(16);
+	text-align: center;
+	@include flex-center;
+	@include w100;
+	@include radius(8);
+	text-align: center;
+	@include transitionsall;
+
+	@include breakpoint(mobile576) {
+		@include font-face($primaryFont, style('normal'), size(14), weight('semibold'), line-height(14, 14));
+	}
+
+	@include hover {
+		@include setBgColor($primary, $white);
+	}
+}
+
 @-webkit-keyframes pulsate {
 	0% {
 		-webkit-transform: scale(1);
