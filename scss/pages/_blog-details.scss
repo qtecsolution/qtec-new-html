@@ -143,6 +143,8 @@
                   @include transitionsall;
 
                   svg {
+                    @include wh100;
+                    
                     path {
                       @include transitionsall;
                     }
