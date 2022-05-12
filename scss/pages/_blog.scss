@@ -26,6 +26,19 @@
       position: relative;
       z-index: 2;
       color: $gray-100;
+      @include font-face($primaryFont, style('normal'), size(24), weight('semibold'), line-height(32.64, 24));
+
+      @include breakpoint(mobile768) {
+        @include font-face($primaryFont, style('normal'), size(28), weight('semibold'), line-height(38.08, 28));
+      }
+
+      @include breakpoint(tab992) {
+        @include font-face($primaryFont, style('normal'), size(36), weight('semibold'), line-height(48.96, 36));
+      }
+
+      @include breakpoint(desktop1100) {
+        @include font-face($primaryFont, style('normal'), size(48), weight('semibold'), line-height(67.2, 48));
+      }
     }
   }
 }
