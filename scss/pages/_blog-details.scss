@@ -53,7 +53,7 @@
 
     .blogdescriptions {
       @include flex-column;
-      gap: length(40);
+      gap: length(48);
 
       &-header {
         @include flex-column;
