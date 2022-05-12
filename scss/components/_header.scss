@@ -3,135 +3,135 @@
 **=======================================================**/
 
 .header {
-    padding: length(10) length(8);
-    background: $white;
-    box-shadow: $box-shadow-2;
-    filter: $drop-shadow-1;
-    position: fixed;
-    @include w100;
-    top: 0;
-    left: 0;
-    height: length(68);
-    transition: ease $time;
-    z-index: 9999;
+	padding: length(10) length(8);
+	background: $white;
+	box-shadow: $box-shadow-2;
+	filter: $drop-shadow-1;
+	position: fixed;
+	@include w100;
+	top: 0;
+	left: 0;
+	height: length(68);
+	transition: ease $time;
+	z-index: 9999;
 
-    @include breakpoint(mobile576) {
-        height: length(80);
-    }
+	@include breakpoint(mobile576) {
+		height: length(80);
+	}
 
-    @include breakpoint(tab992) {
-        height: length(100);
-    }
+	@include breakpoint(tab992) {
+		height: length(100);
+	}
 
-    &-nav {
-        @include flex-center-between;
+	&-nav {
+		@include flex-center-between;
 
-        .logo {
-            @include square(length(48));
-            @include flex-center;
-            overflow: hidden;
-            
-            @include breakpoint(mobile576) {
-                @include square(length(60));
-            }
-            
-            @include breakpoint(tab992) {
-                @include square(length(80));
-            }
+		.logo {
+			@include square(length(48));
+			@include flex-center;
+			overflow: hidden;
 
-            img {
-                @include wh100;
-                object-fit: contain;
-            }
-        }
+			@include breakpoint(mobile576) {
+				@include square(length(60));
+			}
 
-        .desktopmenu {
-            margin-left: auto;
-            display: none;
+			@include breakpoint(tab992) {
+				@include square(length(80));
+			}
 
-            @include breakpoint(tab992) {
-                display: block;
-            }
-        }
+			img {
+				@include wh100;
+				object-fit: contain;
+			}
+		}
 
-        .desktoplist {
-            @include list-horizontal;
-            gap: length(40);
-            
-            @include breakpoint(desktop1200) {
-                gap: length(80);
-            }
-            
-            @include breakpoint(desktop1400) {
-                gap: length(80);
-            }
+		.desktopmenu {
+			margin-left: auto;
+			display: none;
 
-            &-link {
-                color: $headerLinkColor;
-                @include font-face($primaryFont, style('normal'), size(14), weight('semibold'), line-height(21.29, 14));
-                letter-spacing: length(1.6);
-                text-transform: uppercase;
+			@include breakpoint(tab992) {
+				display: block;
+			}
+		}
 
-                &:hover:not(.active) {
-                    color: $gray-700;
-                }
+		.desktoplist {
+			@include list-horizontal;
+			gap: length(40);
 
-                &.active {
-                    color: $gray-700;
-                }
-            }
-        }
+			@include breakpoint(desktop1200) {
+				gap: length(80);
+			}
 
-        .hamburgermenu {
-            display: block;
-            
-            @include breakpoint(tab992) {
-                display: none;
-            }
+			@include breakpoint(desktop1400) {
+				gap: length(80);
+			}
 
-            .btn-hamburger {
-                @include square(length(24));
-                @include transparent-button;
-                @include flex-center;
-                overflow: hidden;
+			&-link {
+				color: $headerLinkColor;
+				@include font-face($primaryFont, style('normal'), size(14), weight('semibold'), line-height(21.29, 14));
+				letter-spacing: length(1.6);
+				text-transform: uppercase;
 
-                svg {
-                    @include wh100;
-                }
+				&:hover:not(.active) {
+					color: $gray-700;
+				}
 
-                @include hover {
-                    svg {
-                        .fill {
-                            fill: $primary;
-                        }
-                    }
-                }
-            }
-        }
+				&.active {
+					color: $gray-700;
+				}
+			}
+		}
 
-        .mobilelist {
-            @include list-vertical;
-            gap: length(24);
-            align-items: center;
-            justify-content: center;
-            height: 60%;
+		.hamburgermenu {
+			display: block;
 
-            &-link {
-                color: $headerLinkColor;
-                @include font-face($primaryFont, style('normal'), size(14), weight('semibold'), line-height(21.29, 14));
-                letter-spacing: length(1.6);
-                text-transform: uppercase;
+			@include breakpoint(tab992) {
+				display: none;
+			}
 
-                &:hover:not(.active) {
-                    color: $secondary;
-                }
+			.btn-hamburger {
+				@include square(length(24));
+				@include transparent-button;
+				@include flex-center;
+				overflow: hidden;
 
-                &.active {
-                    color: $secondary;
-                }
-            }
-        }
-    }
+				svg {
+					@include wh100;
+				}
+
+				@include hover {
+					svg {
+						.fill {
+							fill: $primary;
+						}
+					}
+				}
+			}
+		}
+
+		.mobilelist {
+			@include list-vertical;
+			gap: length(24);
+			align-items: center;
+			justify-content: center;
+			height: 60%;
+
+			&-link {
+				color: $headerLinkColor;
+				@include font-face($primaryFont, style('normal'), size(14), weight('semibold'), line-height(21.29, 14));
+				letter-spacing: length(1.6);
+				text-transform: uppercase;
+
+				&:hover:not(.active) {
+					color: $secondary;
+				}
+
+				&.active {
+					color: $secondary;
+				}
+			}
+		}
+	}
 }
 
 /**=======================================================**
@@ -143,15 +143,15 @@
 **=======================================================**/
 
 .gap {
-    height: length(68);
+	height: length(68);
 
-    @include breakpoint(mobile576) {
-        height: length(80);
-    }
+	@include breakpoint(mobile576) {
+		height: length(80);
+	}
 
-    @include breakpoint(tab992) {
-        height: length(100);
-    }
+	@include breakpoint(tab992) {
+		height: length(100);
+	}
 }
 
 /**=======================================================**

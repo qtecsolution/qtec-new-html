@@ -3,217 +3,217 @@
 =====================================================**/
 
 .footer {
-    background: $footerbg;
-    padding: length(64) length(8) length(20);
+	background: $footerbg;
+	padding: length(64) length(8) length(20);
 
-    &-content {
-        @include flex-column;
-        gap: length(78);
+	&-content {
+		@include flex-column;
+		gap: length(78);
 
-        .footlogo-subscribe {
-            @include flex-center-column;
-            gap: length(40);
+		.footlogo-subscribe {
+			@include flex-center-column;
+			gap: length(40);
 
-            @include breakpoint(tab992) {
-                align-items: flex-start;
-            }
+			@include breakpoint(tab992) {
+				align-items: flex-start;
+			}
 
-            .footlogo {
-                @include square(length(64));
-                @include flex-center;
-                @include circle;
-                overflow: hidden;
-                
-                @include breakpoint(tab992) {
-                    @include square(length(80));
-                }
+			.footlogo {
+				@include square(length(64));
+				@include flex-center;
+				@include circle;
+				overflow: hidden;
 
-                img {
-                    @include wh100;
-                    object-fit: contain;
-                }
-            }
+				@include breakpoint(tab992) {
+					@include square(length(80));
+				}
 
-            .subscribe {
-                background: $gray-200;
-                backdrop-filter: blur(length(10));
-                @include flex-center-vert;
-                padding: length(5) length(4);
-                @include w100;
-                margin-inline: auto;
+				img {
+					@include wh100;
+					object-fit: contain;
+				}
+			}
 
-                @include breakpoint(mobile768) {
-                    width: 70%;
-                    margin: 0;
-                }
+			.subscribe {
+				background: $gray-200;
+				backdrop-filter: blur(length(10));
+				@include flex-center-vert;
+				padding: length(5) length(4);
+				@include w100;
+				margin-inline: auto;
 
-                @include breakpoint(tab992) {
-                    width: length(332);
-                }
+				@include breakpoint(mobile768) {
+					width: 70%;
+					margin: 0;
+				}
 
-                .inputfield {
-                    flex: 1;
-                    background: transparent;
-                    @include setBgColor(transparent, $gray-800);
-                    @include font-face($primaryFont, style('normal'), size(13), weight('normal'), line-height(13, 13));
-                    padding: length(8) length(12);
+				@include breakpoint(tab992) {
+					width: length(332);
+				}
 
-                    &::placeholder {
-                        color: $subscribePlaceholder;
-                    }
-                }
-            }
-        }
+				.inputfield {
+					flex: 1;
+					background: transparent;
+					@include setBgColor(transparent, $gray-800);
+					@include font-face($primaryFont, style('normal'), size(13), weight('normal'), line-height(13, 13));
+					padding: length(8) length(12);
 
-        .footerinfo {
-            @include flex-center-column;
-            gap: length(24);
+					&::placeholder {
+						color: $subscribePlaceholder;
+					}
+				}
+			}
+		}
 
-            @include breakpoint(tab992) {
-                align-items: flex-start;
-            }
+		.footerinfo {
+			@include flex-center-column;
+			gap: length(24);
 
-            &-header {
-                .footerinfo-title {
-                    color: $white;
-                    @include font-face($primaryFont, style('normal'), size(18), weight('semibold'), line-height(24, 18));
-                    font-feature-settings: 'salt';
+			@include breakpoint(tab992) {
+				align-items: flex-start;
+			}
 
-                    @include breakpoint(tab992) {
-                        @include font-face($primaryFont, style('normal'), size(22), weight('semibold'), line-height(28, 22));
-                    }
-                }
-            }
+			&-header {
+				.footerinfo-title {
+					color: $white;
+					@include font-face($primaryFont, style('normal'), size(18), weight('semibold'), line-height(24, 18));
+					font-feature-settings: 'salt';
 
-            &-body {
-                @include flex-center-column;
-                gap: length(40);
+					@include breakpoint(tab992) {
+						@include font-face($primaryFont, style('normal'), size(22), weight('semibold'), line-height(28, 22));
+					}
+				}
+			}
 
-                @include breakpoint(tab992) {
-                    align-items: flex-start;
-                }
+			&-body {
+				@include flex-center-column;
+				gap: length(40);
 
-                .footerlist {
-                    @include list-vertical;
-                    align-items: center;
-                    gap: length(12);
+				@include breakpoint(tab992) {
+					align-items: flex-start;
+				}
 
-                    @include breakpoint(tab992) {
-                        align-items: flex-start;
-                    }
+				.footerlist {
+					@include list-vertical;
+					align-items: center;
+					gap: length(12);
 
-                    &-link {
-                        color: $white;
-                        position: relative;
-                        @include font-face($primaryFont, style('normal'), size(14), weight('normal'), line-height(21, 14));
-                        font-feature-settings: 'salt';
-                    
-                        @include breakpoint(tab992) {
-                            @include font-face($primaryFont, style('normal'), size(16), weight('normal'), line-height(25.92, 16));
-                        }
+					@include breakpoint(tab992) {
+						align-items: flex-start;
+					}
 
-                        &::before {
-                            content: '';
-                            position: absolute;
-                            bottom: length(1);
-                            left: 0;
-                            height: length(1);
-                            width: 0;
-                            background: $tertiary;
-                            transition: .5s;
-                        }
+					&-link {
+						color: $white;
+						position: relative;
+						@include font-face($primaryFont, style('normal'), size(14), weight('normal'), line-height(21, 14));
+						font-feature-settings: 'salt';
 
-                        @include hover {
-                            color: $tertiary;
+						@include breakpoint(tab992) {
+							@include font-face($primaryFont, style('normal'), size(16), weight('normal'), line-height(25.92, 16));
+						}
 
-                            &::before {
-                                @include w100;
-                            }
-                        }
-                    }
-                }
+						&::before {
+							content: '';
+							position: absolute;
+							bottom: length(1);
+							left: 0;
+							height: length(1);
+							width: 0;
+							background: $tertiary;
+							transition: .5s;
+						}
 
-                .contactlist {
-                    @include list-vertical;
-                    gap: length(12);
-                    align-items: center;
-                    text-align: center;
+						@include hover {
+							color: $tertiary;
 
-                    @include breakpoint(tab992) {
-                        align-items: flex-start;
-                        text-align: left;
-                    }
+							&::before {
+								@include w100;
+							}
+						}
+					}
+				}
 
-                    &-link {
-                        color: $white;
-                        @include font-face($primaryFont, style('normal'), size(14), weight('normal'), line-height(21, 14));
-                        font-feature-settings: 'salt';
-                        position: relative;
-                    
-                        @include breakpoint(tab992) {
-                            @include font-face($primaryFont, style('normal'), size(16), weight('normal'), line-height(25.92, 16));
-                        }
+				.contactlist {
+					@include list-vertical;
+					gap: length(12);
+					align-items: center;
+					text-align: center;
 
-                        &::before {
-                            content: '';
-                            position: absolute;
-                            bottom: length(1);
-                            left: 0;
-                            height: length(1);
-                            width: 0;
-                            background: $tertiary;
-                            transition: .5s;
-                        }
+					@include breakpoint(tab992) {
+						align-items: flex-start;
+						text-align: left;
+					}
 
-                        @include hover {
-                            color: $tertiary;
+					&-link {
+						color: $white;
+						@include font-face($primaryFont, style('normal'), size(14), weight('normal'), line-height(21, 14));
+						font-feature-settings: 'salt';
+						position: relative;
 
-                            &::before {
-                                @include w100;
-                            }
-                        }
-                    }
+						@include breakpoint(tab992) {
+							@include font-face($primaryFont, style('normal'), size(16), weight('normal'), line-height(25.92, 16));
+						}
 
-                    .address {
-                        color: $white;
-                        @include font-face($primaryFont, style('normal'), size(14), weight('normal'), line-height(21, 14));
-                        font-feature-settings: 'salt';
-                    
-                        @include breakpoint(tab992) {
-                            @include font-face($primaryFont, style('normal'), size(16), weight('normal'), line-height(25.92, 16));
-                        }
-                    }
-                }
+						&::before {
+							content: '';
+							position: absolute;
+							bottom: length(1);
+							left: 0;
+							height: length(1);
+							width: 0;
+							background: $tertiary;
+							transition: .5s;
+						}
 
-                .social-list {
-                    @include list-horizontal;
-                    gap: length(32);
+						@include hover {
+							color: $tertiary;
 
-                    &-link {
-                        @include square(length(30));
-                        @include flex-center;
-                        overflow: hidden;
-                    
-                        @include breakpoint(tab992) {
-                            @include square(length(36));
-                        }
+							&::before {
+								@include w100;
+							}
+						}
+					}
 
-                        svg {
-                            @include wh100;
-                        }
-                    }
-                }
-            }
-        }
+					.address {
+						color: $white;
+						@include font-face($primaryFont, style('normal'), size(14), weight('normal'), line-height(21, 14));
+						font-feature-settings: 'salt';
 
-        .copyright {
-            &-text {
-                color: $white;
-                @include font-face($primaryFont, style('normal'), size(12), weight('normal'), line-height(20, 12));
-                text-align: center;
-            }
-        }
-    }
+						@include breakpoint(tab992) {
+							@include font-face($primaryFont, style('normal'), size(16), weight('normal'), line-height(25.92, 16));
+						}
+					}
+				}
+
+				.social-list {
+					@include list-horizontal;
+					gap: length(32);
+
+					&-link {
+						@include square(length(30));
+						@include flex-center;
+						overflow: hidden;
+
+						@include breakpoint(tab992) {
+							@include square(length(36));
+						}
+
+						svg {
+							@include wh100;
+						}
+					}
+				}
+			}
+		}
+
+		.copyright {
+			&-text {
+				color: $white;
+				@include font-face($primaryFont, style('normal'), size(12), weight('normal'), line-height(20, 12));
+				text-align: center;
+			}
+		}
+	}
 }
 
 /**=====================================================
