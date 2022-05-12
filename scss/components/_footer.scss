@@ -4,7 +4,7 @@
 
 .footer {
 	background: $footerbg;
-	padding: length(64) length(8) length(20);
+	padding: length(64) length(8) length(0);
 
 	&-content {
 		@include flex-column;
@@ -41,6 +41,7 @@
 				padding: length(5) length(4);
 				@include w100;
 				margin-inline: auto;
+				@include radius(4);
 
 				@include breakpoint(mobile768) {
 					width: 70%;
@@ -206,11 +207,17 @@
 			}
 		}
 
-		.copyright {
-			&-text {
-				color: $white;
-				@include font-face($primaryFont, style('normal'), size(12), weight('normal'), line-height(20, 12));
-				text-align: center;
+		.copyrightinfo {
+			background: lighten($footerbg, 5%);
+			padding: length(24);
+			margin: length(0) length(-8);
+
+			.copyright {
+				&-text {
+					color: $white;
+					@include font-face($primaryFont, style('normal'), size(12), weight('normal'), line-height(20, 12));
+					text-align: center;
+				}
 			}
 		}
 	}

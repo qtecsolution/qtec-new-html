@@ -1,14 +1,20 @@
-// BLOG-DETAILS SECTION START
+/**=======================================================**
+                  BLOG-DETAILS SECTION START
+**=======================================================**/
 .blogdetails {
-  padding: length(40) length(0) length(80);
+  padding: length(40) length(8) length(80);
 
   @include breakpoint(tablet991) {
-    padding: length(40) length(0) length(40);
+    padding: length(40) length(8) length(40);
   }
 
   &-content {
     @include flex-center-column;
-    gap: length(96);
+    gap: length(48);
+
+    @include breakpoint(tablet991) {
+      gap: length(96);
+    }
   }
 
   &-thumbnail {
@@ -81,11 +87,12 @@
         }
 
         .authorinfo-shareinfo {
-          @include flex-between;
-          align-items: flex-start;
+          @include flex-column;
+          gap: length(12);
 
-          @include breakpoint(phone768) {
-            flex-direction: column;
+          @include breakpoint(mobile768) {
+            flex-direction: row;
+            align-items: flex-start;
             gap: length(24);
           }
 
@@ -97,7 +104,7 @@
               @include font-face($primaryFont, style('normal'), size(14), weight('semibold'), line-height(24, 14));
               color: $gray-600;
 
-              @include breakpoint(desktop1199) {
+              @include breakpoint(mobile768) {
                 @include font-face($primaryFont, style('normal'), size(16), weight('semibold'), line-height(26, 16));
               }
             }
@@ -150,11 +157,11 @@
 
                 @include hover {
                   .icon {
-                    background: lighten($primary, 25%);
+                    background: lighten($primary, 40%);
 
                     svg {
                       path {
-                        fill: $white;
+                        fill: $primary;
                       }
                     }
                   }
@@ -181,13 +188,14 @@
 
         .detail {
           @include flex-column;
-          gap: length(8);
+          gap: length(14);
 
-          .detailtitle {
+          &-title {
             color: $gray-800;
+            @include font-face($primaryFont, style('normal'), size(20), weight('semibold'), line-height(27.3, 20));
 
-            @include breakpoint(phone768) {
-              // @include heading-3;
+            @include breakpoint(mobile768) {
+              @include font-face($primaryFont, style('normal'), size(24), weight('semibold'), line-height(32.64, 24));
             }
           }
 
@@ -196,11 +204,11 @@
             gap: length(4);
 
             .descriptiontext {
-              // @include font-30-18-normal;
+              @include font-face($primaryFont, style('normal'), size(16), weight('normal'), line-height(26, 16));
               color: $gray-600;
 
-              @include breakpoint(phone768) {
-                // @include font-26-16-normal;
+              @include breakpoint(mobile768) {
+                @include font-face($primaryFont, style('normal'), size(18), weight('normal'), line-height(30, 18));
               }
             }
           }
@@ -209,17 +217,21 @@
     }
   }
 }
+/**=======================================================**
+                  BLOG-DETAILS SECTION END
+**=======================================================**/
 
-// BLOG-DETAILS SECTION END
 
 
-// READ NEXT SECTION START
+/**=======================================================**
+                  READ NEXT SECTION START
+**=======================================================**/
 
 .readnext {
-  padding: length(80) length(0);
+  padding: length(0) length(0) length(40);
 
-  @include breakpoint(tablet991) {
-    padding: length(40) length(0);
+  @include breakpoint(tab992) {
+    padding: length(80) length(0);
   }
 
   &-content {
@@ -232,10 +244,11 @@
 
     .readnext-title {
       color: $gray-800;
+      @include font-face($primaryFont, style('normal'), size(24), weight('semibold'), line-height(32.64, 24));
       text-align: center;
 
-      @include breakpoint(tablet991) {
-        // @include heading-2;
+      @include breakpoint(tab992) {
+        @include font-face($primaryFont, style('normal'), size(28), weight('semibold'), line-height(38.08, 28));
       }
     }
   }
@@ -253,5 +266,6 @@
     }
   }
 }
-
-// READ NEXT SECTION END
+/**=======================================================**
+                  READ NEXT SECTION END
+**=======================================================**/
