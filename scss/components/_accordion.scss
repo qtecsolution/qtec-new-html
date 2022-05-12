@@ -17,9 +17,18 @@
 
 	&-button {
 		@include setBgColor($aboutBg, $gray-700);
-		@include font-face($primaryFont, style('normal'), size(20), weight('semibold'), line-height(27.3, 20));
+		@include font-face($primaryFont, style('normal'), size(18), weight('semibold'), line-height(25.3, 18));
 		@include radius(0);
-		padding: length(22) length(32) length(12);
+		padding: length(22) length(16) length(12);
+
+		@include breakpoint(mobile768) {
+			padding: length(22) length(24) length(12);
+			@include font-face($primaryFont, style('normal'), size(20), weight('semibold'), line-height(27.3, 20));
+		}
+
+		@include breakpoint(tab992) {
+			padding: length(22) length(32) length(12);
+		}
 
 		&:not(.collapsed) {
 			@include radius(0);
@@ -40,16 +49,28 @@
 
 	&-body {
 		background: $white;
-		padding: length(22) length(32) length(28);
 		@include flex-column;
 		gap: length(36);
+		padding: length(22) length(16) length(28);
+
+		@include breakpoint(mobile768) {
+			padding: length(22) length(24) length(28);
+		}
+
+		@include breakpoint(tab992) {
+			padding: length(22) length(32) length(28);
+		}
 
 		.servicetext {
 			color: $gray-600;
-			@include font-face($primaryFont, style('normal'), size(16), weight('normal'), line-height(26, 16));
+			@include font-face($primaryFont, style('normal'), size(14), weight('normal'), line-height(24, 14));
 			letter-spacing: length(0.24);
 
 			@include breakpoint(mobile768) {
+				@include font-face($primaryFont, style('normal'), size(16), weight('normal'), line-height(26, 16));
+			}
+
+			@include breakpoint(tab992) {
 				@include font-face($primaryFont, style('normal'), size(18), weight('normal'), line-height(30, 18));
 			}
 		}

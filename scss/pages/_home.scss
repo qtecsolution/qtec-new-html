@@ -314,6 +314,60 @@
 			}
 		}
 	}
+
+	&-body {
+		.services {
+			@include w100;
+
+			.accordion {
+				@include w100;
+
+				.nav.nav-tabs {
+					@include w100;
+					flex-direction: column;
+					align-items: flex-start;
+
+					.nav-item {
+						@include w100;
+					}
+
+					.nav-link {
+						@include w100;
+						box-shadow: none;
+						padding: 0;
+						background: transparent;
+
+						&:hover:not(.active) {
+							@include radius(0);
+							filter: none;
+						}
+
+						&.active {
+							@include radius(0);
+							filter: none;
+						}
+					}
+				}
+			}
+		}
+
+		.tab-content {
+			.tab-thumbnail {
+				@include wh100;
+				overflow: hidden;
+
+				img {
+					@include wh100;
+					object-fit: cover;
+					@include transitiontransform;
+
+					@include hover {
+						@include transform(scale(1.05));
+					}
+				}
+			}
+		}
+	}
 }
 
 /**=======================================================**
