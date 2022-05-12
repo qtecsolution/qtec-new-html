@@ -93,6 +93,7 @@
           @include breakpoint(mobile768) {
             flex-direction: row;
             align-items: flex-start;
+            justify-content: space-between;
             gap: length(24);
           }
 
