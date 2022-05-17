@@ -284,11 +284,14 @@
 	}
 
 	&-cap {
-		background: $technologyBg;
-		@include square(length(60));
+		// background: $technologyBg;
+		@include square(length(48));
 		@include circle;
 		@include flex-center;
-		padding: length(12);
+
+		svg {
+			@include wh100;
+		}
 	}
 
 	&-title {
