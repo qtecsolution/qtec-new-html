@@ -340,7 +340,7 @@
 	}
 
 	&-cap {
-		background: $technologyBg;
+		// background: $technologyBg;
 		@include square(length(60));
 		@include circle;
 		@include flex-center;
