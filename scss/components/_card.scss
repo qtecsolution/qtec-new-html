@@ -53,6 +53,10 @@
 	}
 }
 
+.feature {
+	@include h100;
+}
+
 .feature-1,
 .feature-4 {
 	background: $expartBg;
@@ -324,6 +328,7 @@
 	gap: length(22);
 	background: $white;
 	padding: length(20);
+	@include h100;
 
 	@include breakpoint(mobile768) {
 		padding: length(24);
