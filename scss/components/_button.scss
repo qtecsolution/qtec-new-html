@@ -280,6 +280,33 @@
 	}
 }
 
+.btn-backto {
+	@include setBgColor($primary, $white);
+	padding: length(12) length(24);
+	@include radius(8);
+	@include flex-center;
+	gap: length(10);
+	@include transitionsall;
+
+	.text {
+		color: inherit;
+		@include font-face($primaryFont, style('normal'), size(14), weight('bold'), line-height(18, 14));
+	}
+
+	.icon {
+		margin-top: length(-4);
+		svg {
+			path {
+				fill: $white;
+			}
+		}
+	}
+
+	@include hover {
+		@include setBgColor(darken($primary, 20%), $white);
+	}
+}
+
 @-webkit-keyframes pulsate {
 	0% {
 		-webkit-transform: scale(1);

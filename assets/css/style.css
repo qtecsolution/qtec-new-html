@@ -1810,6 +1810,48 @@ select {
   color: #ffffff;
 }
 
+.btn-backto {
+  background: #0876FC;
+  color: #ffffff;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  border-radius: 0.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 0.625rem;
+  -webkit-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
+}
+
+.btn-backto .text {
+  color: inherit;
+  font-family: "Titillium Web";
+  font-style: normal;
+  font-size: 0.875rem;
+  font-weight: 700;
+  line-height: 1.28571;
+}
+
+.btn-backto .icon {
+  margin-top: -0.25rem;
+}
+
+.btn-backto .icon svg path {
+  fill: #ffffff;
+}
+
+.btn-backto:not([disabled]):hover {
+  background: #02479c;
+  color: #ffffff;
+}
+
 @-webkit-keyframes pulsate {
   0% {
     -webkit-transform: scale(1);
@@ -3259,6 +3301,94 @@ select {
 /**=======================================================**
                         ACCORDION END
 **=======================================================**/
+/**=====================================================**
+                        ERROR START
+=======================================================**/
+.error {
+  background: #EDF2F7;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1.5rem;
+  height: 100vh;
+}
+
+.error-thumbnail {
+  overflow: hidden;
+}
+
+.error-thumbnail img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.error-link {
+  width: 12.5rem;
+  margin-inline: auto;
+}
+
+/**=====================================================**
+                        ERROR END
+=======================================================**/
+/**=====================================================**
+                      COMING SOON START
+=======================================================**/
+.comingsoon {
+  background: #EDF2F7;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1.5rem;
+  height: 100vh;
+  padding: 1.25rem;
+}
+
+.comingsoon-thumbnail {
+  overflow: hidden;
+}
+
+.comingsoon-thumbnail img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.comingsoon-info .comingsoon-text {
+  color: #0876FC;
+  font-family: "Titillium Web";
+  font-style: normal;
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1.25;
+  text-align: center;
+}
+
+/**=====================================================**
+                      COMING SOON END
+=======================================================**/
 /**=======================================================**
                         ABOUT-BANNER START
 **=======================================================**/
