@@ -409,9 +409,14 @@
 	}
 
 	&-details {
-		padding: length(44) length(44) length(44) length(0);
+		padding: length(24);
 		@include flex-column;
-		gap: length(44);
+		gap: length(24);
+		
+		@include breakpoint(tab992) {
+			gap: length(44);
+			padding: length(44) length(44) length(44) length(0);
+		}
 
 		@include breakpoint(desktop1400) {
 			padding: length(40) length(42) length(40) length(0);
