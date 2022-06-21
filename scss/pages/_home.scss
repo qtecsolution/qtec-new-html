@@ -3,7 +3,7 @@
 **=======================================================**/
 
 .homebanner {
-	background: url(../images/home-banner/banner-bg-1.svg) no-repeat;
+	background: url(../images/home-banner/home-banner.png) no-repeat;
 	background-position: left;
 	background-size: cover;
 	padding: length(24) length(8) length(0);
@@ -456,9 +456,11 @@
 			.home-articles-title {
 				color: $gray-700;
 				@include font-face($primaryFont, style('normal'), size(32), weight('semibold'), line-height(47, 32));
-
+				// text-align: center;
+				
 				@include breakpoint(mobile768) {
 					@include font-face($primaryFont, style('normal'), size(40), weight('semibold'), line-height(77, 40));
+					// text-align: left;
 				}
 
 				@include breakpoint(tab992) {

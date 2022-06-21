@@ -495,3 +495,121 @@
 		}
 	}
 }
+
+.cardwork {
+	padding: length(32) length(24) length(64);
+	@include radius(16);
+	@include flex-column;
+	gap: length(16);
+
+	&-header {
+		.card-thumbnail {
+			@include square(length(56));
+			@include flex-center;
+			overflow: hidden;
+
+			svg {
+				@include wh100;
+			}
+		}
+	}
+
+	&-body {
+		@include flex-column;
+		gap: length(8);
+
+		.cardwork-title {
+			color: $gray-700;
+			@include font-face($primaryFont, style('normal'), size(28), weight('semibold'), line-height(53.01, 28));
+		}
+
+		.cardwork-text {
+			color: $gray-600;
+			@include font-face($primaryFont, style('normal'), size(14), weight('normal'), line-height(24, 14));
+			letter-spacing: length(0.24);
+
+			@include breakpoint(mobile768) {
+				@include font-face($primaryFont, style('normal'), size(16), weight('normal'), line-height(26, 16));
+			}
+
+			@include breakpoint(tab992) {
+				@include font-face($primaryFont, style('normal'), size(18), weight('normal'), line-height(30, 18));
+			}
+		}
+	}
+
+	&-1 {
+		background: $cardbg-1;
+	}
+	
+	&-2 {
+		background: $cardbg-2;
+	}
+
+	&-3 {
+		background: $cardbg-3;
+	}
+}
+
+.card-opportunities {
+	@include flex-column;
+	gap: length(40);
+	background: $white;
+	@include radius(8);
+	@include border(solid, 1, $gray-300);
+	padding: length(20) length(24);
+	@include h100;
+
+	&-header {
+		@include flex-center-between;
+
+		.titlebox {
+			width: calc(100% - 5rem);
+
+			.card-opportunities-title {
+				color: $gray-800;
+				@include font-face($primaryFont, style('normal'), size(16), weight('semibold'), line-height(25, 16));
+			}
+		}
+
+		.badge-opportunities {
+			@include setBgColor($choosebg, $choose);
+			display: inline-block;
+			@include font-face($primaryFont, style('normal'), size(12), weight('semibold'), line-height(16, 12));
+			@include radius(5);
+			padding: length(6) length(12);
+			text-align: center;
+			width: length(80);
+
+			@include breakpoint(mobile768) {
+				@include font-face($primaryFont, style('normal'), size(14), weight('semibold'), line-height(20, 14));
+			}
+		}
+	}
+
+	&-body {
+		@include flex-center-between;
+		align-items: flex-end;
+		gap: length(8);
+
+		.deadline {
+			@include flex-column;
+			
+			.text {
+				color: $gray-600;
+				@include font-face($primaryFont, style('normal'), size(14), weight('normal'), line-height(20, 14));
+				font-feature-settings: 'salt';
+			}
+		}
+
+		.link {
+			color: $primary;
+			@include font-face($primaryFont, style('normal'), size(14), weight('semibold'), line-height(20, 14));
+			@include transitionscolor;
+
+			@include hover {
+				color: darken($primary, 15%);
+			}
+		}
+	}
+}

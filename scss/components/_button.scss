@@ -19,7 +19,7 @@
 	@include transitionsall;
 
 	@include hover {
-		@include setBgColor($secondary, $white);
+		@include setBgColor(darken($primary, 15%), $white);
 	}
 }
 
@@ -35,7 +35,7 @@
 	}
 
 	@include hover {
-		@include setBgColor($secondary, $white);
+		@include setBgColor(darken($primary, 15%), $white);
 	}
 }
 
@@ -51,7 +51,7 @@
 	}
 
 	@include hover {
-		@include setBgColor($secondary, $white);
+		@include setBgColor(darken($primary, 15%), $white);
 	}
 }
 
@@ -71,7 +71,7 @@
 	}
 
 	@include hover {
-		@include setBgColor($secondary, $white);
+		@include setBgColor(darken($primary, 15%), $white);
 	}
 }
 
@@ -142,7 +142,7 @@
 		// background: lighten($color: $secondary, $amount: 40%);
 
 		.icon {
-			background: $secondary;
+			background: darken($primary, 15%);
 		}
 	}
 }
@@ -215,7 +215,7 @@
 	}
 
 	@include hover {
-		background: $secondary;
+		background: darken($primary, 15%);
 	}
 }
 

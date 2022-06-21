@@ -2,10 +2,10 @@
                     CONTACT-SECTION START
 **=======================================================**/
 .contact {
-	padding: length(48) length(8) length(0);
+	padding: length(40) length(8) length(0);
 
 	@include breakpoint(tab992) {
-		padding: length(80) length(0);
+		padding: length(40) length(0);
 	}
 
 	&-details {
@@ -15,17 +15,7 @@
 		gap: length(40);
 
 		@include breakpoint(mobile576) {
-			padding: length(40);
-		}
-
-		@include breakpoint(mobile768) {
-			padding: length(40) length(55);
-			gap: length(64);
-		}
-
-		@include breakpoint(tab992) {
-			padding: length(80) length(110);
-			gap: length(80);
+			padding: length(48);
 		}
 
 		.contact-header {
@@ -126,7 +116,7 @@
 	padding: length(48) length(8);
 
 	@include breakpoint(tab992) {
-		padding: length(80) length(0) length(160);
+		padding: length(40) length(0) length(160);
 	}
 
 	&-content {

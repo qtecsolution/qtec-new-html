@@ -1,0 +1,167 @@
+/**=======================================================**
+                    CAREER-BANNER START
+**=======================================================**/
+
+.career-hero {
+	// background: url(../images/career/career.png) no-repeat center center/contain;
+  position: relative;
+
+  .career-thumb {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 60%;
+    @include h100;
+    overflow: hidden;
+    z-index: -1;
+    
+    img {
+      @include wh100;
+      object-fit: cover;
+    }
+  }
+
+	&-content {
+		@include flex-column;
+    gap: length(16);
+    justify-content: center;
+		min-height: length(240);
+
+		@include breakpoint(tab992) {
+			min-height: length(640);
+      gap: length(24);
+		}
+
+    .career-title {
+      color: $gray-700;
+      @include font-face($primaryFont, style('normal'), size(32), weight('semibold'), line-height(40, 32));
+  
+      @include breakpoint(mobile768) {
+        @include font-face($primaryFont, style('normal'), size(40), weight('semibold'), line-height(50, 40));
+      }
+  
+      @include breakpoint(tab992) {
+        @include font-face($primaryFont, style('normal'), size(52), weight('semibold'), line-height(60, 52));
+      }
+  
+      @include breakpoint(desktop1400) {
+        @include font-face($primaryFont, style('normal'), size(80), weight('semibold'), line-height(100, 80));
+      }
+    }
+
+    .info {
+      max-width: length(644);
+
+      .infotext {
+        color: $gray-700;
+        @include font-face($primaryFont, style('normal'), size(14), weight('normal'), line-height(24, 14));
+        letter-spacing: length(0.24);
+
+        @include breakpoint(mobile768) {
+          @include font-face($primaryFont, style('normal'), size(16), weight('normal'), line-height(26, 16));
+        }
+
+        @include breakpoint(tab992) {
+          @include font-face($primaryFont, style('normal'), size(18), weight('normal'), line-height(30, 18));
+        }
+      }
+    }
+	}
+}
+
+/**=======================================================**
+                    CAREER-BANNER START
+**=======================================================**/
+
+
+/**=======================================================**
+                    WHY WORK WITH US START
+**=======================================================**/
+
+.whywork {
+  background: $white;
+	padding: length(48) length(8);
+
+	@include breakpoint(tab992) {
+		padding: length(60) length(0) length(120);
+	}
+
+  &-content {
+    @include flex-center-column;
+    gap: length(48);
+  }
+
+  &-header {
+    @include flex-center;
+    text-align: center;
+
+    .whywork-title {
+      color: $gray-700;
+      @include font-face($primaryFont, style('normal'), size(32), weight('semibold'), line-height(40, 32));
+  
+      @include breakpoint(mobile768) {
+        @include font-face($primaryFont, style('normal'), size(40), weight('semibold'), line-height(50, 40));
+      }
+  
+      @include breakpoint(tab992) {
+        @include font-face($primaryFont, style('normal'), size(52), weight('semibold'), line-height(60, 52));
+      }
+    }
+  }
+
+  &-body {
+    @include w100;
+  }
+}
+
+/**=======================================================**
+                    WHY WORK WITH US END
+**=======================================================**/
+
+
+/**=======================================================**
+                    CAREER-OPPORTUNITIES START
+**=======================================================**/
+
+.opportunities {
+	padding: length(48) length(8);
+
+	@include breakpoint(tab992) {
+		padding: length(60) length(0) length(120);
+	}
+
+  &-content {
+    @include flex-center-column;
+    gap: length(48);
+
+    @include breakpoint(tab992) {
+      gap: length(80);
+    }
+  }
+
+  &-header {
+    @include flex-center;
+    text-align: center;
+
+    .opportunities-title {
+      color: $gray-700;
+      @include font-face($primaryFont, style('normal'), size(32), weight('semibold'), line-height(40, 32));
+  
+      @include breakpoint(mobile768) {
+        @include font-face($primaryFont, style('normal'), size(40), weight('semibold'), line-height(50, 40));
+      }
+  
+      @include breakpoint(tab992) {
+        @include font-face($primaryFont, style('normal'), size(52), weight('semibold'), line-height(60, 52));
+      }
+    }
+  }
+
+  &-body {
+    @include w100;
+  }
+}
+
+/**=======================================================**
+                    CAREER-OPPORTUNITIES END
+**=======================================================**/

@@ -1,0 +1,401 @@
+/**=======================================================**
+                    CAREER-BANNER START
+**=======================================================**/
+
+.career-banner {
+  padding: length(24) length(8);
+
+  @include breakpoint(tab992) {
+    padding: length(48) length(0);
+  }
+
+
+  &-content {
+    @include flex-center-column;
+    gap: length(24);
+
+    @include breakpoint(tab992) {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+
+    .career-thumbnail {
+      @include square(length(264));
+      @include flex-center;
+      overflow: hidden;
+      order: 1;
+
+      @include breakpoint(mobile576) {
+        @include square(length(364));
+      }
+
+      @include breakpoint(tab992) {
+        order: 0;
+      }
+
+      svg {
+        @include wh100;
+      }
+    }
+
+    .bannerinfo {
+      order: 0;
+      @include flex-center-column;
+      gap: length(24);
+
+      @include breakpoint(tab992) {
+        align-items: flex-start;
+      }
+
+      @include breakpoint(tab992) {
+        order: 1;
+      }
+
+      &-header {
+        @include flex-center-column;
+        gap: length(20);
+        text-align: center;
+
+        @include breakpoint(tab992) {
+          text-align: left;
+          align-items: flex-start;
+        }
+
+        .banner-title {
+          color: $gray-800;
+          @include font-face($primaryFont, style('normal'), size(28), weight('semibold'), line-height(42.59, 28));
+        }
+        
+        .info {
+          p {
+            color: $gray-700;
+            @include font-face($primaryFont, style('normal'), size(18), weight('normal'), line-height(30, 18));
+            font-feature-settings: 'salt';
+          }
+        }
+      }
+    }
+  }
+}
+
+/**=======================================================**
+                    CAREER-BANNER END
+**=======================================================**/
+
+
+/**=======================================================**
+                    CAREER-DETAILS START
+**=======================================================**/
+
+.career-details {
+  background: $white;
+  padding: length(40) length(8);
+
+  @include breakpoint(tab992) {
+    padding: length(80) length(0);
+  }
+
+  &-content {
+    @include flex-column;
+    gap: length(48);
+
+    .article {
+      @include flex-column;
+      gap: length(20);
+
+      &-header {
+        .article-title {
+          color: $gray-800;
+          @include font-face($primaryFont, style('normal'), size(20), weight('semibold'), line-height(27.3, 20));
+
+          @include breakpoint(mobile768) {
+            @include font-face($primaryFont, style('normal'), size(24), weight('semibold'), line-height(32.64, 24));
+          }
+
+          @include breakpoint(tab992) {
+            @include font-face($primaryFont, style('normal'), size(28), weight('semibold'), line-height(38.08, 28));
+          }
+        }
+      }
+
+      &-body {
+        .article-text {
+          color: $gray-700;
+          @include font-face($primaryFont, style('normal'), size(14), weight('normal'), line-height(24, 14));
+          letter-spacing: length(0.24);
+
+          @include breakpoint(mobile768) {
+            @include font-face($primaryFont, style('normal'), size(16), weight('normal'), line-height(26, 16));
+          }
+
+          @include breakpoint(tab992) {
+            @include font-face($primaryFont, style('normal'), size(18), weight('normal'), line-height(30, 18));
+          }
+        }
+
+        .article-list {
+          @include list-vertical;
+          gap: length(10);
+
+          &-item {
+            color: $gray-700;
+            @include font-face($primaryFont, style('normal'), size(14), weight('normal'), line-height(24, 14));
+            letter-spacing: length(0.24);
+  
+            @include breakpoint(mobile768) {
+              @include font-face($primaryFont, style('normal'), size(16), weight('normal'), line-height(26, 16));
+            }
+  
+            @include breakpoint(tab992) {
+              @include font-face($primaryFont, style('normal'), size(18), weight('normal'), line-height(30, 18));
+            }
+
+            strong {
+              color: inherit;
+              font: inherit;
+              font-weight: 600;
+            }
+          }
+        }
+
+        .joblist {
+          @include list-vertical;
+          gap: length(10);
+
+          &-item {
+            color: $gray-700;
+            @include font-face($primaryFont, style('normal'), size(14), weight('normal'), line-height(24, 14));
+            letter-spacing: length(0.24);
+            position: relative;
+            padding-left: length(24);
+
+            &::before {
+              content: '';
+              @include square(length(8));
+              background: $gray-700;
+              @include vertical-align;
+              left: 0;
+            }
+
+            @include breakpoint(mobile768) {
+              @include font-face($primaryFont, style('normal'), size(16), weight('normal'), line-height(26, 16));
+            }
+
+            @include breakpoint(tab992) {
+              @include font-face($primaryFont, style('normal'), size(18), weight('normal'), line-height(30, 18));
+            }
+          }
+        }
+
+        .location {
+          @include flex-column;
+          gap: length(10);
+
+          &-text {
+            color: $gray-700;
+            @include font-face($primaryFont, style('normal'), size(14), weight('normal'), line-height(24, 14));
+            letter-spacing: length(0.24);
+
+            @include breakpoint(mobile768) {
+              @include font-face($primaryFont, style('normal'), size(16), weight('normal'), line-height(26, 16));
+            }
+
+            @include breakpoint(tab992) {
+              @include font-face($primaryFont, style('normal'), size(18), weight('normal'), line-height(30, 18));
+            }
+          }
+
+          &-info {
+            color: $gray-700;
+            @include font-face($primaryFont, style('normal'), size(14), weight('normal'), line-height(24, 14));
+            letter-spacing: length(0.24);
+
+            @include breakpoint(mobile768) {
+              @include font-face($primaryFont, style('normal'), size(16), weight('normal'), line-height(26, 16));
+            }
+
+            @include breakpoint(tab992) {
+              @include font-face($primaryFont, style('normal'), size(18), weight('normal'), line-height(30, 18));
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+/**=======================================================**
+                    CAREER-DETAILS END
+**=======================================================**/
+
+
+/**=======================================================**
+                    CAREER-APPLY START
+**=======================================================**/
+
+.career-apply {
+  padding: length(40) length(8);
+
+  @include breakpoint(tab992) {
+    padding: length(80) length(0);
+  }
+
+  .apply {
+    @include flex-column;
+    gap: length(44);
+
+    &-header {
+      @include flex-center;
+      text-align: center;
+      
+      .apply-title {
+        color: $gray-800;
+        @include font-face($primaryFont, style('normal'), size(20), weight('semibold'), line-height(27.3, 20));
+
+        @include breakpoint(mobile768) {
+          @include font-face($primaryFont, style('normal'), size(24), weight('semibold'), line-height(32.64, 24));
+        }
+
+        @include breakpoint(tab992) {
+          @include font-face($primaryFont, style('normal'), size(28), weight('semibold'), line-height(38.08, 28));
+        }
+      }
+    }
+
+    &-body {
+      .applyform {
+        @include flex-column;
+        gap: length(20);
+
+        .inputbox {
+          @include flex-column;
+          gap: length(12);
+
+          .inputlabel {
+            color: $gray-600;
+            @include font-face($primaryFont, style('normal'), size(14), weight('normal'), line-height(24, 14));
+  
+            @include breakpoint(mobile768) {
+              @include font-face($primaryFont, style('normal'), size(16), weight('normal'), line-height(26, 16));
+            }
+  
+            @include breakpoint(tab992) {
+              @include font-face($primaryFont, style('normal'), size(18), weight('normal'), line-height(30, 18));
+            }
+          }
+
+          .inputfield {
+            @include setBgColor($white, $gray-800);
+            @include border(solid, 1, $gray-300);
+            @include radius(10);
+            @include font-face($primaryFont, style('normal'), size(14), weight('normal'), line-height(24, 14));
+            padding: length(8) length(16);
+  
+            @include breakpoint(mobile768) {
+              @include font-face($primaryFont, style('normal'), size(16), weight('normal'), line-height(26, 16));
+            }
+  
+            @include breakpoint(tab992) {
+              @include font-face($primaryFont, style('normal'), size(18), weight('normal'), line-height(30, 18));
+            }
+          }
+
+          .upload {
+            @include flex-center-between;
+            background: $white;
+            @include border(solid, 1, $gray-300);
+            @include radius(10);
+            padding: length(7) length(12) length(7) length(20);
+
+            &-text {
+              color: $textPlaceholder;
+              @include font-face($primaryFont, style('normal'), size(14), weight('normal'), line-height(24, 14));
+            }
+
+            &-info {
+              .btn-choose {
+                @include setBgColor($choosebg, $choose);
+                @include radius(8);
+                @include font-face($primaryFont, style('normal'), size(12), weight('semibold'), line-height(20, 12));
+                padding: length(6) length(20);
+                @include transitionsall;
+
+                @include hover {
+                  @include setBgColor($choose, $choosebg);
+                }
+              }
+            }
+          }
+
+          .info {
+            color: $gray-600;
+            @include font-face($primaryFont, style('normal'), size(14), weight('normal'), line-height(24, 14));
+  
+            @include breakpoint(mobile768) {
+              @include font-face($primaryFont, style('normal'), size(16), weight('normal'), line-height(26, 16));
+            }
+  
+            @include breakpoint(tab992) {
+              @include font-face($primaryFont, style('normal'), size(18), weight('normal'), line-height(30, 18));
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+/**=======================================================**
+                    CAREER-APPLY END
+**=======================================================**/
+
+
+/**=======================================================**
+                      APPLIED START
+**=======================================================**/
+
+.applied {
+  padding: length(80) length(8);
+
+  @include breakpoint(tab992) {
+    padding: length(160) length(0);
+  }
+
+  &-content {
+    @include flex-center;
+
+    .confirm {
+      max-width: length(550);
+      margin-inline: auto;
+      @include flex-center-column;
+      gap: length(44);
+
+      .appliedicon {
+        @include square(length(280));
+        @include flex-center;
+        overflow: hidden;
+
+        @include breakpoint(mobile576) {
+          @include square(length(325));
+        }
+
+        svg {
+          @include wh100;
+        }
+      }
+
+      .confirmed {
+        &-text {
+          color: $gray-700;
+          @include font-face($primaryFont, style('normal'), size(20), weight('semibold'), line-height(30, 20));
+          letter-spacing: length(0.24);
+          text-align: center;
+        }
+      }
+    }
+  }
+}
+
+/**=======================================================**
+                      APPLIED END
+**=======================================================**/
