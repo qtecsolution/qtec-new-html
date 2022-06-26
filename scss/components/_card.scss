@@ -624,3 +624,85 @@
 		}
 	}
 }
+
+.service {
+	@include flex-column;
+	gap: length(22);
+	background: $white;
+	padding: length(20);
+	@include h100;
+
+	@include breakpoint(mobile768) {
+		padding: length(24);
+	}
+
+	@include breakpoint(tab992) {
+		padding: length(40);
+	}
+
+	&-header {
+		@include flex-column;
+		gap: length(16);
+
+		.service-icon {
+			@include square(length(48));
+			@include circle;
+			@include flex-center;
+	
+			svg {
+				@include wh100;
+			}
+		}
+
+		.service-title {
+			color: $gray-600;
+			@include font-face($primaryFont, style('normal'), size(18), weight('semibold'), line-height(25.3, 18));
+			overflow: hidden;
+			@include flex-center-vert;
+
+			@include breakpoint(mobile768) {
+				@include font-face($primaryFont, style('normal'), size(20), weight('semibold'), line-height(27.3, 20));
+			}
+
+			@include breakpoint(tab992) {
+				height: length(55);
+			}
+
+			@include hover {
+				color: $primary;
+			}
+		}
+	}
+
+	&-body {
+		@include flex-column;
+		gap: length(36);
+
+		.servicetext {
+			color: $gray-600;
+			@include font-face($primaryFont, style('normal'), size(14), weight('normal'), line-height(25.58, 14));
+			letter-spacing: length(0.24);
+			text-align: justify;
+	
+			@include breakpoint(mobile768) {
+				@include font-face($primaryFont, style('normal'), size(16), weight('normal'), line-height(25.92, 16));
+			}
+	
+			@include breakpoint(tab992) {
+				@include font-face($primaryFont, style('normal'), size(18), weight('normal'), line-height(30, 18));
+			}
+		}
+
+		.learnmore {
+			color: $primary;
+			@include font-face($primaryFont, style('normal'), size(16), weight('semibold'), line-height(24, 16));
+			font-feature-settings: 'salt';
+			@include transitionscolor;
+
+			@include hover {
+				color: darken($primary, 20%);
+				// color: $footerbg;
+			}
+		}
+	}
+}

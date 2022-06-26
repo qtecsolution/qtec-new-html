@@ -1,0 +1,104 @@
+/**=======================================================**
+                    SERVICE BANNER START
+**=======================================================**/
+
+.servicebanner {
+  background: url(../images/service/service-banner.jpeg) no-repeat center center/cover;
+  min-height: 30vh;
+  position: relative;
+  @include flex-center;
+  
+  @include breakpoint(mobile768) {
+    min-height: 50vh;
+  }
+
+  .overlay {
+    background: rgba($black, 0.6);
+    position: absolute;
+    top: 0;
+    left: 0;
+    @include wh100;
+    z-index: 1;
+  }
+
+  &-content {
+    padding: length(48);
+    @include flex-center;
+
+    .servicebanner-title {
+      position: relative;
+      z-index: 2;
+      color: $gray-100;
+      @include font-face($primaryFont, style('normal'), size(24), weight('semibold'), line-height(32.64, 24));
+
+      @include breakpoint(mobile768) {
+        @include font-face($primaryFont, style('normal'), size(28), weight('semibold'), line-height(38.08, 28));
+      }
+
+      @include breakpoint(tab992) {
+        @include font-face($primaryFont, style('normal'), size(36), weight('semibold'), line-height(48.96, 36));
+      }
+
+      @include breakpoint(desktop1100) {
+        @include font-face($primaryFont, style('normal'), size(48), weight('normal'), line-height(67.2, 48));
+      }
+    }
+  }
+}
+
+/**=======================================================**
+                    SERVICE BANNER END
+**=======================================================**/
+
+/**=======================================================**
+                    SERVICES SECTION START
+**=======================================================**/
+
+.ourservice {
+  padding: length(40) length(0);
+
+  @include breakpoint(tab992) {
+    padding: length(80) length(0);
+  }
+
+  &-content {
+    @include flex-center-column;
+    gap: length(40);
+
+    @include breakpoint(tab992) {
+      gap: length(80);
+    }
+  }
+
+  &-header {
+    @include flex-center-column;
+    gap: length(12);
+    text-align: center;
+
+    .ourservice-title {
+      color: $gray-700;
+      @include font-face($primaryFont, style('normal'), size(32), weight('semibold'), line-height(40, 32));
+  
+      @include breakpoint(mobile768) {
+        @include font-face($primaryFont, style('normal'), size(40), weight('semibold'), line-height(50, 40));
+      }
+  
+      @include breakpoint(tab992) {
+        @include font-face($primaryFont, style('normal'), size(48), weight('semibold'), line-height(73, 48));
+      }
+    }
+
+    .ourservice-text {
+      color: $gray-700;
+      @include font-face($primaryFont, style('normal'), size(16), weight('normal'), line-height(24, 16));
+  
+      @include breakpoint(tab992) {
+        @include font-face($primaryFont, style('normal'), size(18), weight('normal'), line-height(30, 18));
+      }
+    }
+  }
+}
+
+/**=======================================================**
+                    SERVICES SECTION END
+**=======================================================**/
