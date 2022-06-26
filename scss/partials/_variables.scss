@@ -66,6 +66,27 @@ $cardbg-1: #F7FAFF;
 $cardbg-2: rgba(180, 220, 98, 0.08);
 $cardbg-3: rgba(255, 219, 204, 0.3);
 
+$client-1: rgba(232, 182, 235, 0.2);
+$client-2: rgba(243, 246, 86, 0.2);
+$client-3: rgba(41, 196, 131, 0.2);
+$client-4: rgba(254, 199, 30, 0.2);
+$client-5: rgba(254, 158, 151, 0.2);
+
+$client-thumb-1: #E8B6EB;
+$client-thumb-2: #F3F656;
+$client-thumb-3: #29C483;
+$client-thumb-4: #FEC71E;
+$client-thumb-5: #FE9E97;
+
+$technology-1: rgba(255, 245, 0, 0.3);
+$technology-2: rgba(135, 211, 250, 0.3);
+$technology-3: rgba(255, 199, 248, 0.3);
+$technology-4: rgba(191, 209, 237, 0.3);
+$technology-5: rgba(235, 244, 212, 0.3);
+
+$thumbg: #E0E5FE;
+$thumbbg: #FFAB8D;
+
 /**=====================================================**
                     BORDER-COLORS
 =======================================================**/
@@ -90,6 +111,7 @@ $color-4: #D1D5DE;
                     GRADIENT-BACKGROUNDS
 =======================================================**/
 $technologyBg: linear-gradient(180deg, $white 0%, $color-1 28.37%, $color-2 59.78%, $color-3 92.52%, $color-4 100%);
+$glassmorbg: linear-gradient(180deg, rgba($white, 0.4) 0%, rgba($white, 0.1) 100%);
 
 /**=====================================================**
                         SHADOWS
