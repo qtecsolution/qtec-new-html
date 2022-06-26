@@ -370,7 +370,11 @@
 
 		.subscribe-title {
 			color: $gray-700;
-			@include font-face($primaryFont, style('normal'), size(32), weight('semibold'), line-height(47, 32));
+			@include font-face($primaryFont, style('normal'), size(24), weight('semibold'), line-height(32, 24));
+			
+			@include breakpoint(mobile576) {
+				@include font-face($primaryFont, style('normal'), size(32), weight('semibold'), line-height(47, 32));
+			}
 
 			@include breakpoint(mobile768) {
 				@include font-face($primaryFont, style('normal'), size(40), weight('semibold'), line-height(77, 40));
