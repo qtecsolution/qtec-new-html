@@ -59,11 +59,11 @@
 			gap: length(40);
 
 			@include breakpoint(desktop1200) {
-				gap: length(80);
+				gap: length(48);
 			}
 
 			@include breakpoint(desktop1400) {
-				gap: length(80);
+				gap: length(64);
 			}
 
 			&-link {

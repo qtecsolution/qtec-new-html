@@ -65,7 +65,7 @@
 							<a href="about.html" class="desktoplist-link">About Us</a>
 						</li>
 
-						<li class="desktoplist-item d-none">
+						<li class="desktoplist-item">
 							<a href="services.html" class="desktoplist-link">Services</a>
 						</li>
 
@@ -120,7 +120,7 @@
 								<a href="about.html" class="mobilelist-link">About Us</a>
 							</li>
 
-							<li class="mobilelist-item d-none">
+							<li class="mobilelist-item">
 								<a href="services.html" class="mobilelist-link">Services</a>
 							</li>
 
@@ -496,16 +496,18 @@
 
 								<div class="row">
 									<div class="col-12">
-										<div class="inputbox">
+										<div class="inputbox inputerror">
 											<label for="careeremail" class="inputlabel">E-mail *</label>
 											<input type="email" id="careeremail" class="inputfield">
+
+											<p class="error-message">Email is invailed</p>
 										</div>
 									</div>
 								</div>
 
 								<div class="row">
 									<div class="col-12">
-										<div class="inputbox">
+										<div class="inputbox inputerror">
 											<label class="inputlabel">Upload CV *</label>
 
 											<div class="upload">
@@ -517,6 +519,8 @@
 												</div>
 											</div>
 
+											<p class="error-message">‘ document.pdf ‘ file size exceed maximum limit. Maximum allowed file size is 2 mb.</p>
+
 											<p class="info">only doc, pdf or docx file allowed and file size will be less than 2MB</p>
 										</div>
 									</div>
@@ -524,9 +528,11 @@
 
 								<div class="row">
 									<div class="col-12">
-										<div class="inputbox">
+										<div class="inputbox inputerror">
 											<label for="capcha" class="inputlabel">What's 11 + 1 = ? *</label>
 											<input type="text" id="capcha" class="inputfield">
+
+											<p class="error-message">Capcha is invailed</p>
 										</div>
 									</div>
 								</div>

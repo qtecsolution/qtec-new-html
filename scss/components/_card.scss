@@ -553,22 +553,32 @@
 
 .card-opportunities {
 	@include flex-column;
+	justify-content: space-between;
 	gap: length(40);
 	background: $white;
 	@include radius(8);
 	@include border(solid, 1, $gray-300);
-	padding: length(20) length(24);
+	padding: length(16);
 	@include h100;
+				
+	@include breakpoint(desktop1400) {
+		padding: length(20) length(24);
+	}
 
 	&-header {
 		@include flex-center-between;
 
 		.titlebox {
 			width: calc(100% - 5rem);
+			overflow: hidden;
 
 			.card-opportunities-title {
 				color: $gray-800;
-				@include font-face($primaryFont, style('normal'), size(16), weight('semibold'), line-height(25, 16));
+				@include font-face($primaryFont, style('normal'), size(14), weight('semibold'), line-height(25, 14));
+				
+				@include breakpoint(desktop1400) {
+					@include font-face($primaryFont, style('normal'), size(16), weight('semibold'), line-height(25, 16));
+				}
 			}
 		}
 
@@ -590,6 +600,7 @@
 	&-body {
 		@include flex-center-between;
 		align-items: flex-end;
+		flex-wrap: wrap;
 		gap: length(8);
 
 		.deadline {

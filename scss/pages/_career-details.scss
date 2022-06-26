@@ -339,6 +339,27 @@
               @include font-face($primaryFont, style('normal'), size(18), weight('normal'), line-height(30, 18));
             }
           }
+
+          .error-message {
+            color: $danger;
+            display: none;
+            margin-top: length(-4);
+            @include font-face($primaryFont, style('normal'), size(12), weight('medium'), line-height(18, 12));
+          }
+
+          &.inputerror {
+            .error-message {
+              display: block;
+            }
+
+            .upload {
+              border-color: $danger;
+            }
+
+            .inputfield {
+              border-color: $danger;
+            }
+          }
         }
       }
     }
