@@ -159,6 +159,27 @@
 
   &-body {
     @include w100;
+
+    .emptyscreen {
+      @include flex-center-column;
+      gap: length(36);
+      text-align: center;
+
+      .icon {
+        @include square(length(200));
+        @include flex-center;
+        overflow: hidden;
+
+        svg {
+          @include wh100;
+        }
+      }
+
+      .text {
+				color: $gray-700;
+        @include font-face($primaryFont, style('normal'), size(24), weight('normal'), line-height(32, 24));
+      }
+    }
   }
 }
 

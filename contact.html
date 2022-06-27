@@ -166,30 +166,36 @@
 								<div class="forminfo">
 									<div class="row g-4">
 										<div class="col-lg-6 col-12">
-											<div class="inputbox">
+											<div class="inputbox errorfield">
 												<label for="name" class="inputlabel">Enter Full Name</label>
 												<input type="text" class="inputfield" placeholder="Enter full name" id="name">
+
+												<p class="error-message">This field is required</p>
 											</div>
 										</div>
 
 										<div class="col-lg-6 col-12">
-											<div class="inputbox">
+											<div class="inputbox errorfield">
 												<label for="email" class="inputlabel">Enter Email Address</label>
 												<input type="email" class="inputfield" placeholder="Enter email address" id="email">
+
+												<p class="error-message">Invailed email</p>
 											</div>
 										</div>
 									</div>
 
 									<div class="row g-4">
 										<div class="col-lg-6 col-12">
-											<div class="inputbox">
+											<div class="inputbox errorfield">
 												<label for="phone" class="inputlabel">Enter Phone Number</label>
 												<input type="tel" class="inputfield" placeholder="Enter phone number" id="phone">
+
+												<p class="error-message">Invailed Phone</p>
 											</div>
 										</div>
 
 										<div class="col-lg-6 col-12">
-											<div class="inputbox">
+											<div class="inputbox errorfield">
 												<label for="budget" class="inputlabel">Enter Your Budget</label>
 												<select class="selectfield" id="budget">
 													<option value="">Below $3,000</option>
@@ -197,6 +203,8 @@
 													<option value="">$10,000 to $40,000</option>
 													<option value="">$50,000+</option>
 												</select>
+
+												<p class="error-message">Invailed Budget</p>
 											</div>
 										</div>
 									</div>
@@ -212,7 +220,7 @@
 								</div>
 
 								<div class="formsubmit">
-									<button class="btn-submit" type="button">Send</button>
+									<button id="submit-message" class="btn-submit" type="button">Send</button>
 
 									<span class="or">Or</span>
 
@@ -337,7 +345,9 @@
 								
 								<div class="subscribe">
 									<input type="email" class="inputfield" placeholder="E-mail">
-									<button class="btn-subscibe" type="button">Subscribe</button>
+									<button id="subscribe-button" class="btn-subscibe" type="button">Subscribe</button>
+
+									<p class="error-message">Email is required</p>
 								</div>
 							</div>
 						</div>
@@ -485,6 +495,65 @@
 	</footer>
 	<!--========== FOOTER-END ==============-->
 
+  <!-- SEND TOAST START -->
+  <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 11">
+    <div id="successToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+      <div class="toast-body">
+        <div class="subscribeinfo">
+					<div class="left">
+						<div class="icon">
+							<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check2-circle" viewBox="0 0 16 16">
+								<path d="M2.5 8a5.5 5.5 0 0 1 8.25-4.764.5.5 0 0 0 .5-.866A6.5 6.5 0 1 0 14.5 8a.5.5 0 0 0-1 0 5.5 5.5 0 1 1-11 0z"/>
+								<path d="M15.354 3.354a.5.5 0 0 0-.708-.708L8 9.293 5.354 6.646a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l7-7z"/>
+							</svg>
+						</div>
+					</div>
+
+          <div class="detail">
+            <h5 class="title">Your message has been successfully sent</h5>
+          </div>
+        </div>
+
+        <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">
+            <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+  <!-- SEND TOAST END -->
+
+  <!-- SUBSCRIBE TOAST START -->
+  <div class="position-fixed bottom-0 start-0 p-3" style="z-index: 11">
+    <div id="subscribeToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+      <div class="toast-body">
+        <div class="subscribeinfo">
+					<div class="left">
+						<div class="icon">
+							<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check2-circle" viewBox="0 0 16 16">
+								<path d="M2.5 8a5.5 5.5 0 0 1 8.25-4.764.5.5 0 0 0 .5-.866A6.5 6.5 0 1 0 14.5 8a.5.5 0 0 0-1 0 5.5 5.5 0 1 1-11 0z"/>
+								<path d="M15.354 3.354a.5.5 0 0 0-.708-.708L8 9.293 5.354 6.646a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l7-7z"/>
+							</svg>
+						</div>
+					</div>
+
+          <div class="detail">
+            <h5 class="title">Thank you for subscribing!</h5>
+            <p class="message">You will receive an email to confirm your subscription.</p>
+          </div>
+        </div>
+
+        <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">
+            <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+  <!-- SUBSCRIBE TOAST END -->
+
 	<!-- BOOTSTRAP JS -->
 	<script src="assets/js/bootstrap.bundle.min.js"></script>
 	<!-- KURSOR JS -->
@@ -505,6 +574,9 @@
 	<script src="assets/js/up_btn.js"></script>
 	<!-- BACK-TO-TOP JS -->
 	<script src="assets/js/back-top.js"></script>
+  <!-- TOASTS -->
+	<script src="assets/js/toast.js"></script>
+	<script src="assets/js/contact.js"></script>
 </body>
 
 </html>

@@ -60,7 +60,7 @@ $thumb3-bg: #B4DC62;
 $dateColor: #425466;
 
 $danger: #FF3E3E;
-
+$toastbg: #E6EEF2;
 
 $cardbg-1: #F7FAFF;
 $cardbg-2: rgba(180, 220, 98, 0.08);
@@ -86,6 +86,12 @@ $technology-5: rgba(235, 244, 212, 0.3);
 
 $thumbg: #E0E5FE;
 $thumbbg: #FFAB8D;
+
+$closebg: #F7F7FC;
+
+$success: #8DC640;
+
+$leftbg: #EBFBF6;
 
 /**=====================================================**
                     BORDER-COLORS
@@ -113,6 +119,7 @@ $color-4: #D1D5DE;
 $technologyBg: linear-gradient(180deg, $white 0%, $color-1 28.37%, $color-2 59.78%, $color-3 92.52%, $color-4 100%);
 $glassmorbg: linear-gradient(180deg, rgba($white, 0.4) 0%, rgba($white, 0.1) 100%);
 
+
 /**=====================================================**
                         SHADOWS
 =======================================================**/
@@ -133,6 +140,8 @@ $close-shadow: 0 0 .0625rem $shadow-3, 0 .625rem 1rem $shadow-4;
 $tab-shadow: 0 .25rem 1.25rem -0.125rem $shadow-5;
 $tab-shade: drop-shadow(0 0 .0625rem $shadow-3);
 $header-shadow: 0 0 .625rem 0 rgba($black, 0.1%);
+
+$toast-shadow: 0 .625rem 4.375rem rgba($black, 0.15%);
 
 /**=====================================================**
                         TEXT-SHADOWS

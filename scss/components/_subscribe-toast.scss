@@ -1,0 +1,112 @@
+/**=====================================================**
+                  SUBSCRIBE-TOAST START
+=======================================================**/
+
+#subscribeToast,
+#successToast {
+  background: $white;
+  box-shadow: $toast-shadow;
+  @include radius(10);
+  overflow: hidden;
+  border: none;
+
+  .toast-body {
+    position: relative;
+    padding: length(0);
+
+    .subscribeinfo {
+      @include flex;
+
+      .left {
+        width: 20%;
+        position: relative;
+        @include flex-end;
+        align-items: center;
+        padding: length(60) length(0);
+
+        &::after {
+          content: '';
+          position: absolute;
+          top: 0;
+          right: 0;
+          @include wh100;
+          border-radius: 0 50% 50% 0 / 0 100% 100% 0;
+          @include transform(scaleX(1.5));
+          background: $leftbg;
+        }
+
+        .icon {
+          position: relative;
+          z-index: 100;
+          background: $success;
+          @include square(length(36));
+          @include flex-center;
+          padding: length(8);
+          @include radius(10);
+
+          svg {
+            @include wh100;
+
+            path {
+              fill: $white;
+            }
+          }
+        }
+      }
+
+      .detail {
+        width: 80%;
+        padding: length(60) length(0) length(60) length(30);
+
+        .title {
+          color: $gray-800;
+          @include font-face($primaryFont, style('normal'), size(18), weight('semibold'), line-height(30, 18));
+        }
+
+        .message {
+          color: $gray-700;
+          @include font-face($primaryFont, style('normal'), size(12), weight('normal'), line-height(16, 12));
+        }
+      }
+    }
+
+    .btn-close {
+      position: absolute;
+      top: length(16);
+      right: length(16);
+      background: $closebg;
+      @include square(length(16));
+      @include circle;
+      @include flex-center;
+      padding: length(12);
+      overflow: hidden;
+      opacity: 1;
+
+      svg {
+        @include wh100;
+
+        path {
+          stroke: $gray-500;
+        }
+      }
+
+      @include hover {
+        svg {
+          path {
+            stroke: $danger;
+          }
+        }
+      }
+
+      &:focus {
+        box-shadow: none;
+        outline: none;
+      }
+    }
+  }
+
+}
+
+/**=====================================================**
+                  SUBSCRIBE-TOAST START
+=======================================================**/

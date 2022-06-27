@@ -69,11 +69,15 @@
 						.selectfield {
 							@include border(solid, 1, $gray-300);
 							@include radius(6);
-							@include setBgColor($white, $black);
+							@include setBgColor($white, $textPlaceholder);
 							@include font-face($primaryFont, style('normal'), size(15), weight('medium'), line-height(15, 15));
 							padding: length(15.5) length(16);
 							background: $white url("data:image/svg+xml,%3Csvg width='11' height='11' viewBox='0 0 11 11' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cmask id='mask0_102_11830' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='11' height='11'%3E%3Cpath d='M4.98252 7.65869L1.68511 3.89022C1.29615 3.4457 1.61184 2.75 2.20251 2.75H8.79733C9.388 2.75 9.70369 3.4457 9.31473 3.89022L6.01732 7.65869C5.74341 7.97173 5.25643 7.97173 4.98252 7.65869Z' fill='black'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_102_11830)'%3E%3Crect width='11' height='11' fill='%23B5B5BD'/%3E%3C/g%3E%3C/svg%3E%0A") no-repeat center right 3%;
 							appearance: none;
+
+							option {
+								color: $black;
+							}
 						}
 
 						textarea {
@@ -81,6 +85,26 @@
 
 							&:focus {
 								outline: none;
+							}
+						}
+
+						.error-message {
+							@include font-face($primaryFont, style('normal'), size(14), weight('medium'), line-height(16.94, 14));
+							color: $danger;
+							display: none;
+						}
+
+						&.errorfield {
+							.inputfield {
+								border-color: $danger;
+							}
+
+							.selectfield {
+								border-color: $danger;
+							}
+
+							.error-message {
+								display: block;
 							}
 						}
 					}

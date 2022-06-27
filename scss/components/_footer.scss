@@ -13,9 +13,11 @@
 		.footlogo-subscribe {
 			@include flex-center-column;
 			gap: length(16);
+			text-align: center;
 
 			@include breakpoint(tab992) {
 				align-items: flex-start;
+				text-align: left;
 			}
 
 			.footlogo {
@@ -54,6 +56,7 @@
 				@include w100;
 				margin-inline: auto;
 				@include radius(4);
+				position: relative;
 
 				@include breakpoint(mobile768) {
 					width: 70%;
@@ -73,6 +76,23 @@
 
 					&::placeholder {
 						color: $subscribePlaceholder;
+					}
+				}
+
+				.error-message {
+					position: absolute;
+					top: 120%;
+					left: 0;
+					@include w100;
+					@include font-face($primaryFont, style('normal'), size(14), weight('medium'), line-height(16.94, 14));
+					color: $danger;
+					display: none;
+					text-align: left;
+				}
+
+				&.errorfield {
+					.error-message {
+						display: block;
 					}
 				}
 			}
