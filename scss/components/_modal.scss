@@ -35,7 +35,41 @@
 		// }
 	}
 
-	&-body {}
+	&-body {
+    .btn-close {
+      position: absolute;
+      top: length(16);
+      right: length(16);
+      background: $closebg;
+      @include square(length(16));
+      @include circle;
+      @include flex-center;
+      padding: length(12);
+      overflow: hidden;
+      opacity: 1;
+
+      svg {
+        @include wh100;
+
+        path {
+          stroke: $gray-500;
+        }
+      }
+
+      @include hover {
+        svg {
+          path {
+            stroke: $danger;
+          }
+        }
+      }
+
+      &:focus {
+        box-shadow: none;
+        outline: none;
+      }
+    }
+	}
 }
 
 // UPLOAD MEDALLION MODAL END
