@@ -65,6 +65,7 @@
 			width: 70%;
 			height: length(167);
 			background: $caseStudyBannerBg;
+			z-index: 100;
 
 			@include breakpoint(tab992) {
 				top: length(-60);
@@ -75,12 +76,39 @@
 		.product-thumbnail {
 			@include w100;
 			@include radius(16);
-			overflow: hidden;
+			// overflow: hidden;
+			position: relative;
 
 			img {
 				@include wh100;
 				object-fit: cover;
+				position: relative;
+				z-index: 2;
 			}
+
+			.icon {
+				position: absolute;
+				width: length(233);
+				height: length(143);
+				@include flex-center;
+				z-index: 1;
+				bottom: length(-16);
+				left: length(-64);
+	
+				svg {
+					@include wh100;
+				}
+			}
+		}
+	}
+}
+
+.technologybanner {
+	background: $white;
+
+	.thumbnailbox {
+		&::after {
+			background: $techbg;
 		}
 	}
 }

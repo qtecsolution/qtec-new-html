@@ -1,0 +1,81 @@
+/**=======================================================**
+                    TECHNOLOGY-DETAILS START
+**=======================================================**/
+
+.techdetails {
+  background: $white;
+  padding: length(48) length(8) length(64);
+  overflow: hidden;
+
+  @include breakpoint(tab992) {
+    padding: length(96) length(0) length(68);
+  }
+
+  .techthumb {
+    @include square(length(250));
+    @include flex-center;
+    position: relative;
+    margin-inline: auto;
+
+    @include breakpoint(mobile576) {
+      @include square(length(433));
+    }
+
+    img {
+      @include wh100;
+      object-fit: contain;
+      position: relative;
+      z-index: 100;
+    }
+
+    .icon {
+      position: absolute;
+      left: length(-64);
+      top: 50%;
+      @include transform(translateY(-50%));
+      @include flex-center;
+      z-index: 1;
+      width: length(139);
+      height: length(233);
+
+      svg {
+        @include wh100;
+      }
+    }
+  }
+
+  .details {
+    @include flex-column;
+    gap: length(40);
+
+    .title {
+      color: $gray-700;
+      @include font-face($primaryFont, style('normal'), size(32), weight('semibold'), line-height(47, 32));
+      text-align: center;
+
+      @include breakpoint(mobile768) {
+        @include font-face($primaryFont, style('normal'), size(40), weight('semibold'), line-height(77, 40));
+      }
+
+      @include breakpoint(tab992) {
+        @include font-face($primaryFont, style('normal'), size(52), weight('semibold'), line-height(79.09, 52));
+        text-align: right;
+      }
+    }
+
+    .text {
+      color: $gray-700;
+      @include font-face($primaryFont, style('normal'), size(16), weight('normal'), line-height(24, 16));
+      text-align: center;
+      
+      @include breakpoint(tab992) {
+        @include font-face($primaryFont, style('normal'), size(18), weight('normal'), line-height(30, 18));
+        text-align: right;
+      }
+    }
+  }
+}
+
+/**=======================================================**
+                    TECHNOLOGY-DETAILS END
+**=======================================================**/

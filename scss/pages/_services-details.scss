@@ -227,6 +227,75 @@
             @include font-face($primaryFont, style('normal'), size(18), weight('normal'), line-height(30, 18));
           }
         }
+
+        .link {
+          color: $primary;
+          @include font-face($primaryFont, style('normal'), size(14), weight('normal'), line-height(24, 14));
+          letter-spacing: length(0.24);
+
+          @include breakpoint(tab992) {
+            @include font-face($primaryFont, style('normal'), size(16), weight('normal'), line-height(24, 16));
+          }
+
+          @include hover {
+            color: darken($primary, 15%);
+          }
+        }
+      }
+    }
+
+    .program {
+      @include flex-center;
+      position: relative;
+      margin-top: length(64);
+
+      @include breakpoint(tab992) {
+        margin-top: length(0);
+      }
+
+      .programthumb {
+        @include flex-center;
+        @include w100;
+        height: length(315);
+        @include radius(16);
+        overflow: hidden;
+
+        @include breakpoint(mobile576) {
+          width: length(385);
+        }
+
+        img {
+          @include wh100;
+          object-fit: contain;
+          position: relative;
+          z-index: 100;
+        }
+      }
+
+      &::before {
+        content: '';
+        position: absolute;
+        top: length(-38);
+        right: length(-32);
+        background: rgba(94, 155, 122, 0.1);
+        width: length(312);
+        height: length(335);
+        @include radius(16);
+        z-index: -1;
+      }
+
+      .icon {
+        width: length(233);
+        height: length(138);
+        @include flex-center;
+        position: absolute;
+        bottom: length(-24);
+        right: length(-48);
+        z-index: -1;
+
+        svg {
+          @include wh100;
+        }
       }
     }
   }
