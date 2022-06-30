@@ -166,7 +166,7 @@
       text-align: center;
 
       .icon {
-        @include square(length(200));
+        @include square(length(256));
         @include flex-center;
         overflow: hidden;
 

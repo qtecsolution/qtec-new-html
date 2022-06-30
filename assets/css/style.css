@@ -5997,8 +5997,8 @@ select {
 }
 
 .opportunities-body .emptyscreen .icon {
-  height: 12.5rem;
-  width: 12.5rem;
+  height: 16rem;
+  width: 16rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
