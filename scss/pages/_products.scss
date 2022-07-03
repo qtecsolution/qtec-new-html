@@ -42,7 +42,7 @@
 			position: absolute;
 			top: length(-30);
 			right: length(-15);
-			z-index: -100;
+			z-index: -1;
 			width: 70%;
 			height: length(167);
 
@@ -55,6 +55,8 @@
 		.product-thumbnail {
 			@include w100;
 			overflow: hidden;
+			position: relative;
+			z-index: 100;
 
 			img {
 				@include wh100;

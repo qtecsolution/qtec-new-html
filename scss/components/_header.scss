@@ -67,17 +67,17 @@
 			}
 
 			&-link {
-				color: $headerLinkColor;
+				color: $desktopLinkColor;
 				@include font-face($primaryFont, style('normal'), size(14), weight('semibold'), line-height(21.29, 14));
 				letter-spacing: length(1.6);
 				text-transform: uppercase;
 
 				&:hover:not(.active) {
-					color: $gray-700;
+					color: $primary;
 				}
 
 				&.active {
-					color: $gray-700;
+					color: $primary;
 				}
 			}
 		}

@@ -61,11 +61,10 @@
 			position: absolute;
 			top: length(-30);
 			right: length(-15);
-			z-index: -100;
 			width: 70%;
 			height: length(167);
 			background: $caseStudyBannerBg;
-			z-index: 100;
+			z-index: 1;
 
 			@include breakpoint(tab992) {
 				top: length(-60);
@@ -76,8 +75,8 @@
 		.product-thumbnail {
 			@include w100;
 			@include radius(16);
-			// overflow: hidden;
 			position: relative;
+			z-index: 100;
 
 			img {
 				@include wh100;

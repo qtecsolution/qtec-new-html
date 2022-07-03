@@ -345,7 +345,6 @@
 	}
 
 	&-cap {
-		// background: $technologyBg;
 		@include square(length(60));
 		@include circle;
 		@include flex-center;
@@ -385,6 +384,12 @@
 
 		@include breakpoint(tab992) {
 			@include font-face($primaryFont, style('normal'), size(18), weight('normal'), line-height(30, 18));
+		}
+	}
+
+	@include hover {
+		.card-technology-title {
+			color: $primary;
 		}
 	}
 }
@@ -649,7 +654,7 @@
 			@include circle;
 			@include flex-center;
 	
-			svg {
+			img {
 				@include wh100;
 			}
 		}
