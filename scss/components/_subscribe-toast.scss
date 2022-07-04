@@ -75,10 +75,10 @@
       top: length(16);
       right: length(16);
       background: $closebg;
-      @include square(length(16));
+      @include square(length(12));
       @include circle;
       @include flex-center;
-      padding: length(12);
+      padding: length(10);
       overflow: hidden;
       opacity: 1;
 

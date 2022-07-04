@@ -4068,8 +4068,8 @@ select {
   top: 1rem;
   right: 1rem;
   background: #F7F7FC;
-  height: 1rem;
-  width: 1rem;
+  height: 0.75rem;
+  width: 0.75rem;
   border-radius: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -4080,7 +4080,7 @@ select {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  padding: 0.75rem;
+  padding: 0.625rem;
   overflow: hidden;
   opacity: 1;
 }
