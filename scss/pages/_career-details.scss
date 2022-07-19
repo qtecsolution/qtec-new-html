@@ -33,7 +33,7 @@
         order: 0;
       }
 
-      svg {
+      svg, img {
         @include wh100;
       }
     }
@@ -45,10 +45,8 @@
 
       @include breakpoint(tab992) {
         align-items: flex-start;
-      }
-
-      @include breakpoint(tab992) {
         order: 1;
+        width: calc(100% - 24.25rem);
       }
 
       &-header {
