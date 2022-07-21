@@ -720,3 +720,127 @@
 		}
 	}
 }
+
+.card-team {
+	@include flex-center-column;
+	gap: length(24);
+	@include wh100;
+
+	&-header {
+		@include radius(10);
+		@include flex-center;
+		@include w100;
+		height: length(200);
+		overflow: hidden;
+
+		@include breakpoint(mobile576) {
+			height: length(250);
+		}
+
+		@include breakpoint(mobile768) {
+			height: length(312);
+		}
+
+		img {
+			@include wh100;
+			@include transitiontransform;
+			object-fit: cover;
+
+			@include hover {
+				@include transform(scale(1.1));
+			}
+		}
+	}
+
+	&-body {
+		@include flex-center-column;
+		gap: length(4);
+		text-align: center;
+
+		.name {
+			color: $gray-800;
+			@include font-face($primaryFont, style('normal'), size(18), weight('semibold'), line-height(30, 18));
+
+			@include breakpoint(mobile768) {
+				@include font-face($primaryFont, style('normal'), size(20), weight('semibold'), line-height(32, 20));
+			}	
+			
+			@include breakpoint(desktop1400) {
+				@include font-face($primaryFont, style('normal'), size(26), weight('semibold'), line-height(40, 26));
+			}
+		}
+
+		.designation {
+			color: $gray-700;
+			@include font-face($primaryFont, style('normal'), size(14), weight('semibold'), line-height(25, 14));
+			letter-spacing: length(0.24);
+			margin-bottom: length(16);
+			
+			@include breakpoint(desktop1400) {
+				@include font-face($primaryFont, style('normal'), size(16), weight('semibold'), line-height(25, 16));
+			}
+		}
+		
+		.social {
+			@include list-horizontal;
+			justify-content: center;
+			gap: length(14);
+
+			&-link {
+				@include square(length(18));
+				@include flex-center;
+				overflow: hidden;
+
+				svg {
+					@include wh100;
+
+					svg {
+						path {
+							@include transitionsall;
+						}
+					}
+				}
+
+				&.facebooklink {
+					@include hover {
+						svg {
+							path {
+								fill: $facebook;
+							}
+						}
+					}
+				}
+
+				&.twitterlink {
+					@include hover {
+						svg {
+							path {
+								fill: $twitter;
+							}
+						}
+					}
+				}
+
+				&.linkedinlink {
+					@include hover {
+						svg {
+							path {
+								fill: $linkedin;
+							}
+						}
+					}
+				}
+
+				&.instagramlink {
+					@include hover {
+						svg {
+							path {
+								fill: $instagram;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
