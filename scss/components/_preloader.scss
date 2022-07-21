@@ -2,7 +2,7 @@
 	@include flex-center;
 	position: fixed;
 	@include w100;
-	min-height: 100vh;
+	min-height: 120vh;
 	overflow: hidden;
 	z-index: 10000;
 	background: $white;

@@ -5,6 +5,7 @@
 .career-hero {
 	// background: url(../images/career/career.png) no-repeat center center/contain;
   position: relative;
+  padding: length(16) length(8);
 
   .career-thumb {
     position: absolute;
@@ -26,6 +27,8 @@
     gap: length(16);
     justify-content: center;
 		min-height: length(240);
+    position: relative;
+    z-index: 100;
 
 		@include breakpoint(tab992) {
 			min-height: length(640);
@@ -35,6 +38,8 @@
     .career-title {
       color: $gray-700;
       @include font-face($primaryFont, style('normal'), size(32), weight('semibold'), line-height(40, 32));
+      position: relative;
+      z-index: 100;
   
       @include breakpoint(mobile768) {
         @include font-face($primaryFont, style('normal'), size(40), weight('semibold'), line-height(50, 40));
@@ -56,6 +61,8 @@
         color: $gray-700;
         @include font-face($primaryFont, style('normal'), size(14), weight('normal'), line-height(24, 14));
         letter-spacing: length(0.24);
+        position: relative;
+        z-index: 100;
 
         @include breakpoint(mobile768) {
           @include font-face($primaryFont, style('normal'), size(16), weight('normal'), line-height(26, 16));
@@ -67,6 +74,19 @@
       }
     }
 	}
+
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    @include wh100;
+		background: rgba($white, 0.8);
+		z-index: 1;
+
+    @include breakpoint(tab992) {
+      display: none;
+    }
+  }
 }
 
 /**=======================================================**

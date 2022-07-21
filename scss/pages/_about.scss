@@ -3,7 +3,8 @@
 **=======================================================**/
 
 .about-banner {
-	background: url(../images/about/about-banner.png) no-repeat center center/cover;
+	background: url(../images/about/about-banner.webp) no-repeat center center/cover;
+	position: relative;
 
 	&-content {
 		@include flex-center-vert;
@@ -17,6 +18,8 @@
 	&-title {
 		color: $gray-700;
 		@include font-face($primaryFont, style('normal'), size(32), weight('semibold'), line-height(40, 32));
+		position: relative;
+		z-index: 100;
 
 		@include breakpoint(mobile768) {
 			@include font-face($primaryFont, style('normal'), size(40), weight('semibold'), line-height(50, 40));
@@ -27,9 +30,22 @@
 		}
 
 		span {
-			color: $gray-500;
+			color: $black;
 		}
 	}
+
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    @include wh100;
+		background: rgba($white, 0.8);
+		z-index: 1;
+
+    @include breakpoint(tab992) {
+      display: none;
+    }
+  }
 }
 
 /**=======================================================**

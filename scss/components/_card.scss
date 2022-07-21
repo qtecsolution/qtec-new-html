@@ -506,6 +506,7 @@
 	@include radius(16);
 	@include flex-column;
 	gap: length(16);
+	@include h100;
 
 	&-header {
 		.card-thumbnail {
@@ -525,7 +526,15 @@
 
 		.cardwork-title {
 			color: $gray-700;
-			@include font-face($primaryFont, style('normal'), size(28), weight('semibold'), line-height(53.01, 28));
+			@include font-face($primaryFont, style('normal'), size(18), weight('semibold'), line-height(28, 18));
+
+			@include breakpoint(mobile768) {
+				@include font-face($primaryFont, style('normal'), size(20), weight('semibold'), line-height(28, 20));
+			}
+
+			@include breakpoint(tab992) {
+				@include font-face($primaryFont, style('normal'), size(28), weight('semibold'), line-height(53.01, 28));
+			}
 		}
 
 		.cardwork-text {
