@@ -787,7 +787,7 @@
 			gap: length(14);
 
 			&-link {
-				@include square(length(18));
+				@include square(length(19));
 				@include flex-center;
 				overflow: hidden;
 
@@ -801,21 +801,21 @@
 					}
 				}
 
-				&.facebooklink {
+				&.githublink {
 					@include hover {
 						svg {
 							path {
-								fill: $facebook;
+								fill: $gmail;
 							}
 						}
 					}
 				}
 
-				&.twitterlink {
+				&.emaillink {
 					@include hover {
 						svg {
 							path {
-								fill: $twitter;
+								fill: $gmail;
 							}
 						}
 					}
