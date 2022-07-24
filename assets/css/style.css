@@ -3309,9 +3309,19 @@ select {
   color: #2D3748;
   font-family: "Titillium Web";
   font-style: normal;
-  font-size: 1.125rem;
+  font-size: 0.9375rem;
   font-weight: 600;
-  line-height: 1.66667;
+  line-height: 1.6;
+}
+
+@media screen and (min-width: 36rem) {
+  .card-team-body .name {
+    font-family: "Titillium Web";
+    font-style: normal;
+    font-size: 1.125rem;
+    font-weight: 600;
+    line-height: 1.66667;
+  }
 }
 
 @media screen and (min-width: 48rem) {

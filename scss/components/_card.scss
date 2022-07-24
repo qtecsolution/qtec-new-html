@@ -759,7 +759,11 @@
 
 		.name {
 			color: $gray-800;
-			@include font-face($primaryFont, style('normal'), size(18), weight('semibold'), line-height(30, 18));
+			@include font-face($primaryFont, style('normal'), size(15), weight('semibold'), line-height(24, 15));
+
+			@include breakpoint(mobile576) {
+				@include font-face($primaryFont, style('normal'), size(18), weight('semibold'), line-height(30, 18));
+			}
 
 			@include breakpoint(mobile768) {
 				@include font-face($primaryFont, style('normal'), size(20), weight('semibold'), line-height(32, 20));
