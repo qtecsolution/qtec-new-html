@@ -4346,6 +4346,24 @@ select {
 /**=====================================================**
                     CONTACT-TOAST START
 =======================================================**/
+.swiper {
+  max-height: 43.75rem;
+}
+
+@media screen and (min-width: 62rem) {
+  .swiper {
+    max-height: 27.5rem;
+  }
+}
+
+.swiper-pagination {
+  font-size: 0;
+}
+
+.swiper-pagination .swiper-pagination-current {
+  font-size: 1.25rem;
+}
+
 /**=======================================================**
                         ABOUT-BANNER START
 **=======================================================**/
@@ -4642,6 +4660,164 @@ select {
 
 /**=======================================================**
                         FEATURED END
+**=======================================================**/
+/**=======================================================**
+                        OUR-GALLERY START
+**=======================================================**/
+.aboutgallery {
+  padding: 3rem 0.5rem 4rem;
+}
+
+@media screen and (min-width: 62rem) {
+  .aboutgallery {
+    padding: 3.75rem 0rem 7.5rem;
+  }
+}
+
+.aboutgallery-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1.5rem;
+}
+
+.aboutgallery-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+}
+
+.aboutgallery-header .aboutgallery-title {
+  color: #4A5568;
+  font-family: "Titillium Web";
+  font-style: normal;
+  font-size: 1.75rem;
+  font-weight: 600;
+  line-height: 1.89321;
+}
+
+@media screen and (min-width: 48rem) {
+  .aboutgallery-header .aboutgallery-title {
+    font-family: "Titillium Web";
+    font-style: normal;
+    font-size: 2.375rem;
+    font-weight: 600;
+    line-height: 1.65816;
+  }
+}
+
+@media screen and (min-width: 62rem) {
+  .aboutgallery-header .aboutgallery-title {
+    font-family: "Titillium Web";
+    font-style: normal;
+    font-size: 3rem;
+    font-weight: 600;
+    line-height: 1.52104;
+  }
+}
+
+@media screen and (min-width: 62rem) {
+  .aboutgallery-body {
+    max-height: 27.5rem;
+  }
+}
+
+.aboutgallery-body .gallery-images {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.aboutgallery-body .gallery-images .primary-image,
+.aboutgallery-body .gallery-images .secondary-image {
+  overflow: hidden;
+}
+
+.aboutgallery-body .gallery-images .primary-image img,
+.aboutgallery-body .gallery-images .secondary-image img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -webkit-transition: transform 200ms ease-in-out;
+  -webkit-transition: -webkit-transform 200ms ease-in-out;
+  transition: -webkit-transform 200ms ease-in-out;
+  transition: transform 200ms ease-in-out;
+  transition: transform 200ms ease-in-out, -webkit-transform 200ms ease-in-out;
+}
+
+.aboutgallery-body .gallery-images .primary-image img:not([disabled]):hover,
+.aboutgallery-body .gallery-images .secondary-image img:not([disabled]):hover {
+  -webkit-transform: scale(1.05);
+  transform: scale(1.05);
+}
+
+.aboutgallery-body .gallery-images .primary-image {
+  width: 23.4375rem;
+  height: 27.5rem;
+}
+
+.aboutgallery-body .gallery-images .secondary-image {
+  width: 15.625rem;
+  height: 21.875rem;
+}
+
+.aboutgallery-body .gallerydetails {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+}
+
+.aboutgallery-body .gallerydetails .galleryicon {
+  height: 13.5625rem;
+  width: 13.5625rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  overflow: hidden;
+}
+
+.aboutgallery-body .gallerydetails .galleryicon svg {
+  width: 100%;
+  height: 100%;
+}
+
+/**=======================================================**
+                        OUR-GALLERY END
 **=======================================================**/
 /**=======================================================**
                         OUR-TEAM START
@@ -5668,6 +5844,29 @@ select {
     font-weight: normal;
     line-height: 1.66667;
   }
+}
+
+.client-requirements .requirements-thumbnail {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.client-requirements .requirements-thumbnail img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -webkit-transition: transform 200ms ease-in-out;
+  -webkit-transition: -webkit-transform 200ms ease-in-out;
+  transition: -webkit-transform 200ms ease-in-out;
+  transition: transform 200ms ease-in-out;
+  transition: transform 200ms ease-in-out, -webkit-transform 200ms ease-in-out;
+}
+
+.client-requirements .requirements-thumbnail img:not([disabled]):hover {
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
 }
 
 /**=======================================================**

@@ -166,6 +166,21 @@
 			}
 		}
 	}
+
+	.requirements-thumbnail {
+		@include wh100;
+		overflow: hidden;
+
+		img {
+			@include wh100;
+			object-fit: cover;
+			@include transitiontransform;
+
+			@include hover {
+				@include transform(scale(1.1));
+			}
+		}
+	}
 }
 
 /**=======================================================**

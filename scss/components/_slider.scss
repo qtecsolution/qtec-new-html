@@ -1,0 +1,15 @@
+.swiper {
+  max-height: length(700);
+
+  @include breakpoint(tab992) {
+    max-height: length(440);
+  }
+
+  &-pagination {
+    font-size: 0;
+
+    .swiper-pagination-current {
+      font-size: length(20);
+    }
+  }
+}

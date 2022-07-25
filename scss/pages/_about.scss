@@ -196,6 +196,107 @@
 **=======================================================**/
 
 /**=======================================================**
+                        OUR-GALLERY START
+**=======================================================**/
+
+.aboutgallery {
+	padding: length(48) length(8) length(64);
+
+	@include breakpoint(tab992) {
+		padding: length(60) length(0) length(120);
+	}
+
+	&-content {
+		@include flex-column;
+		gap: length(24);
+	}
+
+	&-header {
+		@include flex-center-column;
+		text-align: center;
+
+		.aboutgallery-title {
+			color: $gray-700;
+			@include font-face($primaryFont, style('normal'), size(28), weight('semibold'), line-height(53.01, 28));
+
+			@include breakpoint(mobile768) {
+				@include font-face($primaryFont, style('normal'), size(38), weight('semibold'), line-height(63.01, 38));
+			}
+
+			@include breakpoint(tab992) {
+				@include font-face($primaryFont, style('normal'), size(48), weight('semibold'), line-height(73.01, 48));
+			}
+		}
+	}
+
+	&-body {
+
+		@include breakpoint(tab992) {
+			max-height: length(440);
+		}
+
+		.gallery-images {
+			@include flex;
+			gap: length(24);
+
+			.primary-image,
+			.secondary-image {
+				overflow: hidden;
+
+				img {
+					@include wh100;
+					object-fit: cover;
+					@include transitiontransform;
+					
+					@include hover {
+						@include transform(scale(1.05));
+					}
+				}
+			}
+
+			.primary-image {
+				width: length(375);
+				height: length(440);
+			}
+
+			.secondary-image {
+				width: length(250);
+				height: length(350);
+			}
+		}
+
+		.gallerydetails {
+			position: relative;
+			@include flex-center-column;
+			text-align: center;
+
+			.gallery-title {
+
+			}
+
+			.gallery-text {
+
+			}
+
+			.galleryicon {
+				@include square(length(217));
+				@include flex-center;
+				overflow: hidden;
+
+				svg {
+					@include wh100;
+				}
+			}
+		}
+	}
+}
+
+/**=======================================================**
+                        OUR-GALLERY END
+**=======================================================**/
+
+
+/**=======================================================**
                         OUR-TEAM START
 **=======================================================**/
 
