@@ -4411,7 +4411,7 @@ select {
 @media screen and (min-width: 62rem) {
   .swiper-pagination-fraction {
     right: auto;
-    left: 29%;
+    left: 29.5%;
     top: 91%;
     width: 5%;
   }
