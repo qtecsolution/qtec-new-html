@@ -255,13 +255,33 @@
 			}
 
 			.primary-image {
-				width: length(375);
-				height: length(440);
+				width: length(275);
+				height: length(260);
+
+				@include breakpoint(mobile480) {
+					width: length(300);
+					height: length(280);
+				}
+
+				@include breakpoint(mobile768) {
+					width: length(375);
+					height: length(440);
+				}
 			}
 
 			.secondary-image {
-				width: length(250);
-				height: length(350);
+				width: length(200);
+				height: length(180);
+
+				@include breakpoint(mobile480) {
+					width: length(220);
+					height: length(200);
+				}
+
+				@include breakpoint(mobile768) {
+					width: length(250);
+					height: length(350);
+				}
 			}
 		}
 
@@ -269,19 +289,52 @@
 			position: relative;
 			@include flex-center-column;
 			text-align: center;
+			gap: length(20);
+
+			@include breakpoint(mobile768) {
+				gap: length(48);
+				text-align: right;
+			}
 
 			.gallery-title {
+				color: $gray-700;
+				@include font-face($primaryFont, style('normal'), size(24), weight('semibold'), line-height(36, 24));
 
+				@include breakpoint(mobile768) {
+					@include font-face($primaryFont, style('normal'), size(40), weight('semibold'), line-height(48, 40));
+				}
 			}
 
 			.gallery-text {
+				color: $gray-700;
+				@include font-face($primaryFont, style('normal'), size(14), weight('normal'), line-height(25.58, 14));
+				letter-spacing: length(0.24);
 
+				@include breakpoint(mobile768) {
+					@include font-face($primaryFont, style('normal'), size(16), weight('normal'), line-height(25.92, 16));
+				}
+
+				@include breakpoint(tab992) {
+					@include font-face($primaryFont, style('normal'), size(18), weight('normal'), line-height(30, 18));
+				}
 			}
 
 			.galleryicon {
-				@include square(length(217));
-				@include flex-center;
 				overflow: hidden;
+				position: absolute;
+				z-index: -1;
+				display: none;
+
+				@include breakpoint(mobile768) {
+					@include flex-center;
+					@include square(length(160));
+					top: -17%;
+					right: length(-64);
+				}
+
+				@include breakpoint(tab992) {
+					top: -14%;
+				}
 
 				svg {
 					@include wh100;
