@@ -40,18 +40,14 @@
 		.banner-title {
 			.homebanner-title {
 				color: $gray-700;
-				@include font-face($primaryFont, style('normal'), size(36), weight('bold'), line-height(48, 36));
-
-				@include breakpoint(mobile500) {
-					@include font-face($primaryFont, style('normal'), size(54), weight('bold'), line-height(74, 54));
-				}
+				@include font-face($primaryFont, style('normal'), size(32), weight('semibold'), line-height(47, 32));
 
 				@include breakpoint(mobile768) {
-					@include font-face($primaryFont, style('normal'), size(64), weight('bold'), line-height(84, 64));
+					@include font-face($primaryFont, style('normal'), size(40), weight('semibold'), line-height(77, 40));
 				}
 
-				@include breakpoint(desktop1400) {
-					@include font-face($primaryFont, style('normal'), size(80), weight('bold'), line-height(100, 80));
+				@include breakpoint(tab992) {
+					@include font-face($primaryFont, style('normal'), size(52), weight('semibold'), line-height(79.09, 52));
 				}
 
 				.underline {
@@ -69,10 +65,6 @@
 						@include breakpoint(mobile768) {
 							height: length(8);
 						}
-
-						@include breakpoint(desktop1400) {
-							height: length(10);
-						}
 					}
 				}
 			}
@@ -87,13 +79,9 @@
 
 			.banner-text {
 				color: $gray-600;
-				@include font-face($primaryFont, style('normal'), size(14), weight('normal'), line-height(25.58, 14));
+				@include font-face($primaryFont, style('normal'), size(16), weight('normal'), line-height(25.92, 16));
 				letter-spacing: length(0.24);
 				text-align: justify;
-
-				@include breakpoint(mobile768) {
-					@include font-face($primaryFont, style('normal'), size(16), weight('normal'), line-height(25.92, 16));
-				}
 
 				@include breakpoint(tab992) {
 					@include font-face($primaryFont, style('normal'), size(18), weight('normal'), line-height(30, 18));
