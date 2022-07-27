@@ -12,21 +12,22 @@
 
   &-pagination {
     font-size: 0;
+    display: none;
+
+    @include breakpoint(tab992) {
+      display: block;
+    }
 
     &::before {
       content: '0';
       position: absolute;
       top: 0;
-      left: 0;
+      left: length(-5);
       z-index: 100;
-      font-size: length(28);
-      
-      @include breakpoint(mobile768) {
-        font-size: length(32);
-      }
+      font-size: length(40);
 
-      @include breakpoint(tab992) {
-        font-size: length(40);
+      @include breakpoint(desktop1400) {
+        left: 0;  
       }
     }
 
@@ -40,9 +41,13 @@
       @include breakpoint(tab992) {
         left: auto;
         right: length(80);
-        bottom: length(100);
+        bottom: length(80);
         width: 5%;
         text-align: center;
+      }
+
+      @include breakpoint(desktop1400) {
+        bottom: length(100);
       }
     }
   }
@@ -58,8 +63,12 @@
       @include flex-column;
       align-items: flex-end;
       gap: length(0);
-      bottom: length(100);
+      bottom: length(80);
       right: length(48);
+    }
+
+    @include breakpoint(desktop1400) {
+      bottom: length(100);
     }
   }
 
@@ -102,13 +111,5 @@
         }
       }
     }
-  }
-
-  &-button-next {
-    
-  }
-
-  &-button-prev {
-    
   }
 }

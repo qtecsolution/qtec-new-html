@@ -4332,26 +4332,27 @@ select {
 
 .swiper-pagination {
   font-size: 0;
+  display: none;
+}
+
+@media screen and (min-width: 62rem) {
+  .swiper-pagination {
+    display: block;
+  }
 }
 
 .swiper-pagination::before {
   content: '0';
   position: absolute;
   top: 0;
-  left: 0;
+  left: -0.3125rem;
   z-index: 100;
-  font-size: 1.75rem;
+  font-size: 2.5rem;
 }
 
-@media screen and (min-width: 48rem) {
+@media screen and (min-width: 87.5rem) {
   .swiper-pagination::before {
-    font-size: 2rem;
-  }
-}
-
-@media screen and (min-width: 62rem) {
-  .swiper-pagination::before {
-    font-size: 2.5rem;
+    left: 0;
   }
 }
 
@@ -4367,9 +4368,15 @@ select {
   .swiper-pagination-fraction {
     left: auto;
     right: 5rem;
-    bottom: 6.25rem;
+    bottom: 5rem;
     width: 5%;
     text-align: center;
+  }
+}
+
+@media screen and (min-width: 87.5rem) {
+  .swiper-pagination-fraction {
+    bottom: 6.25rem;
   }
 }
 
@@ -4394,8 +4401,14 @@ select {
         -ms-flex-align: end;
             align-items: flex-end;
     gap: 0rem;
-    bottom: 6.25rem;
+    bottom: 5rem;
     right: 3rem;
+  }
+}
+
+@media screen and (min-width: 87.5rem) {
+  .swiper-buttons {
+    bottom: 6.25rem;
   }
 }
 
@@ -4755,12 +4768,12 @@ select {
                         OUR-GALLERY START
 **=======================================================**/
 .aboutgallery {
-  padding: 3rem 0.5rem 4rem;
+  padding: 3rem 0.5rem 0rem;
 }
 
 @media screen and (min-width: 62rem) {
   .aboutgallery {
-    padding: 3.75rem 0rem 7.5rem;
+    padding: 3.75rem 0rem 3rem;
   }
 }
 
@@ -4899,7 +4912,7 @@ select {
   gap: 1.25rem;
 }
 
-@media screen and (min-width: 48rem) {
+@media screen and (min-width: 62rem) {
   .aboutgallery-body .gallerydetails {
     gap: 3rem;
     text-align: right;
@@ -4915,7 +4928,7 @@ select {
   line-height: 1.5;
 }
 
-@media screen and (min-width: 48rem) {
+@media screen and (min-width: 62rem) {
   .aboutgallery-body .gallerydetails .gallery-title {
     font-family: "Titillium Web";
     font-style: normal;
@@ -4962,7 +4975,7 @@ select {
   display: none;
 }
 
-@media screen and (min-width: 48rem) {
+@media screen and (min-width: 62rem) {
   .aboutgallery-body .gallerydetails .galleryicon {
     display: -webkit-box;
     display: -ms-flexbox;

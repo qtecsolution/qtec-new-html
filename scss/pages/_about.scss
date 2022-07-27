@@ -200,10 +200,10 @@
 **=======================================================**/
 
 .aboutgallery {
-	padding: length(48) length(8) length(64);
+	padding: length(48) length(8) length(0);
 
 	@include breakpoint(tab992) {
-		padding: length(60) length(0) length(120);
+		padding: length(60) length(0) length(48);
 	}
 
 	&-content {
@@ -277,7 +277,7 @@
 			text-align: center;
 			gap: length(20);
 
-			@include breakpoint(mobile768) {
+			@include breakpoint(tab992) {
 				gap: length(48);
 				text-align: right;
 			}
@@ -286,7 +286,7 @@
 				color: $gray-700;
 				@include font-face($primaryFont, style('normal'), size(24), weight('semibold'), line-height(36, 24));
 
-				@include breakpoint(mobile768) {
+				@include breakpoint(tab992) {
 					@include font-face($primaryFont, style('normal'), size(40), weight('semibold'), line-height(48, 40));
 				}
 			}
@@ -302,6 +302,8 @@
 
 				@include breakpoint(tab992) {
 					@include font-face($primaryFont, style('normal'), size(18), weight('normal'), line-height(30, 18));
+					// @include line-clamp-4;
+					// height: length(120);
 				}
 			}
 
@@ -311,7 +313,7 @@
 				z-index: -1;
 				display: none;
 
-				@include breakpoint(mobile768) {
+				@include breakpoint(tab992) {
 					@include flex-center;
 					@include square(length(160));
 					top: -17%;
