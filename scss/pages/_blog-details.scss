@@ -39,7 +39,7 @@
 
     img {
       @include wh100;
-      object-fit: cover;
+      object-fit: contain;
       @include transitiontransform;
 
       @include hover {

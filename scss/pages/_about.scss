@@ -254,7 +254,8 @@
 				}
 			}
 
-			.primary-image {
+			.primary-image,
+			.secondary-image {
 				width: length(275);
 				height: length(260);
 
@@ -266,21 +267,6 @@
 				@include breakpoint(mobile768) {
 					width: length(375);
 					height: length(440);
-				}
-			}
-
-			.secondary-image {
-				width: length(200);
-				height: length(180);
-
-				@include breakpoint(mobile480) {
-					width: length(220);
-					height: length(200);
-				}
-
-				@include breakpoint(mobile768) {
-					width: length(250);
-					height: length(350);
 				}
 			}
 		}

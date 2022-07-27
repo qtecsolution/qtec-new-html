@@ -95,7 +95,7 @@
 
 		img {
 			@include wh100;
-			object-fit: cover;
+			object-fit: contain;
 			@include transitiontransform;
 
 			@include hover {
@@ -180,10 +180,9 @@
 	gap: length(22);
 
 	&-header {
-		background: $cardHeaderBg;
 		@include radius(16);
 		@include w100;
-		height: length(318);
+		max-height: length(310);
 		@include flex-center;
 		overflow: hidden;
 
@@ -197,7 +196,7 @@
 
 		img {
 			@include wh100;
-			object-fit: cover;
+			object-fit: contain;
 			@include transitiontransform;
 
 			@include hover {

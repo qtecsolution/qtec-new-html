@@ -7,116 +7,83 @@
   }
 
   @include breakpoint(tab992) {
-    max-height: length(440);
+    max-height: length(520);
   }
 
   &-pagination {
     font-size: 0;
 
-    // &::before {
-    //   content: '0';
-    //   position: absolute;
-    //   top: 0;
-    //   left: 0;
-    //   z-index: 100;
-    //   font-size: length(28);
-      
-    //   @include breakpoint(mobile768) {
-    //     font-size: length(32);
-    //   }
-
-    //   @include breakpoint(tab992) {
-    //     font-size: length(40);
-    //   }
-    // }
-
-    &-current {
+    &::before {
+      content: '0';
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 100;
       font-size: length(28);
       
       @include breakpoint(mobile768) {
         font-size: length(32);
       }
+
+      @include breakpoint(tab992) {
+        font-size: length(40);
+      }
+    }
+
+    &-current {
+      font-size: length(40);
     }
 
     &-fraction {
-      bottom: auto;
-      right: 22%;
-      width: 15%;
-      top: 42%;
-      margin-left: auto;
-      text-align: left;
-      @include transform(translateX(-20%));
-
-      @include breakpoint(mobile480) {
-        top: 45%;
-      }
-
-      @include breakpoint(mobile500) {
-        width: 10%;
-        right: 28%;
-      }
-
-      @include breakpoint(mobile768) {
-        right: 31%;
-        top: 53%;
-      }
+      z-index: 100;
 
       @include breakpoint(tab992) {
-        right: auto;
-        left: 29.5%;
-        top: 91%;
+        left: auto;
+        right: length(80);
+        bottom: length(100);
         width: 5%;
+        text-align: center;
       }
     }
   }
 
   &-buttons {
     position: absolute;
-    top: 42%;
     @include w100;
-    height: length(32);
-    @include flex-end;
-    align-items: center;
-    padding-right: 2%;
-    gap: length(16);
-
-    @include breakpoint(mobile480) {
-      top: 46%;
-    }
-
-    @include breakpoint(mobile768) {
-      top: 54%;
-      padding-right: 8%;
-    }
+    height: length(64);
+    display: none;
+    z-index: 100;
 
     @include breakpoint(tab992) {
-      padding-right: 0;
-      top: 93%;
-      width: 45%;
-    }
-
-    @include breakpoint(desktop1200) {
-      width: 46%;
-    }
-    
-    @include breakpoint(desktop1400) {
-      width: 46%;
+      @include flex-column;
+      align-items: flex-end;
+      gap: length(0);
+      bottom: length(100);
+      right: length(48);
     }
   }
 
   &-button-next,
   &-button-prev {
     @include transparent-button;
-    width: length(16);
-    height: length(30);
+    @include square(length(28));
     @include flex-center;
     overflow: hidden;
     position: static;
     top: auto;
     margin-top: 0;
 
-    svg {
-      @include wh100;
+    .icon {
+      @include square(length(28));
+      @include flex-center;
+      overflow: hidden;
+
+      svg {
+        @include wh100;
+        path {
+          fill: $gray-700;
+        }
+      }
     }
 
     &::after {
@@ -127,27 +94,21 @@
     }
 
     @include hover {
-      svg {
-        path {
-          fill: $primary;
+      .icon {
+        svg {
+          path {
+            fill: $primary;
+          }
         }
       }
     }
   }
 
   &-button-next {
-    order: 1;
-
-    @include breakpoint(mobile768) {
-      
-    }
+    
   }
 
   &-button-prev {
-    left: length(-74);
-
-    @include breakpoint(mobile768) {
-      
-    }
+    
   }
 }

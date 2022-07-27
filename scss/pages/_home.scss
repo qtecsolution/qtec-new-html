@@ -154,6 +154,21 @@
 			&-body {
 				@include flex-center-column;
 				text-align: center;
+
+				.titlebox {
+					@include flex-center-vert;
+					gap: length(4);
+
+					p {
+						color: $gray-800;
+						@include font-face($primaryFont, style('normal'), size(24), weight('normal'), line-height(36, 24));
+		
+						@include breakpoint(mobile576) {
+							@include font-face($primaryFont, style('normal'), size(40), weight('normal'), line-height(36, 40));
+							margin-bottom: length(8);
+						}
+					}
+				}
 			}
 
 			&-title {
