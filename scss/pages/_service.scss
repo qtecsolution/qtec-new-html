@@ -1,0 +1,271 @@
+/**=======================================================**
+                    SERVICE BANNER START
+**=======================================================**/
+
+.servicebanner {
+  background: $white;
+  padding: size(40) size(0);
+
+  @include breakpoint(tab992) {
+    padding: size(80) size(0);
+  }
+
+  &-details {
+    @include flex-column;
+    gap: size(44);
+    padding-bottom: size(16);
+
+    @include breakpoint(tab992) {
+      padding-bottom: 0;
+    }
+
+    .details {
+      position: relative;
+      @include flex-column;
+      gap: size(4);
+
+      .quotes {
+        @include flex-center-vert;
+        gap: size(16);
+
+        .quote {
+          @include square(length(80));
+          @include flex-center;
+          overflow: hidden;
+  
+          svg {
+            @include wh100;
+          }
+        }
+      }
+
+      .info {
+        @include flex-column;
+        gap: size(24);
+
+        .title {
+          color: $gray-700;
+          @include font-face($primaryFont, style('normal'), size(28), weight('bold'), line-height(36, 28));
+
+          @include breakpoint(mobile414) {
+            @include font-face($primaryFont, style('normal'), size(32), weight('bold'), line-height(44, 32));
+          }
+
+          @include breakpoint(mobile500) {
+            @include font-face($primaryFont, style('normal'), size(40), weight('bold'), line-height(54, 40));
+          }
+
+          @include breakpoint(mobile768) {
+            @include font-face($primaryFont, style('normal'), size(48), weight('bold'), line-height(60, 48));
+          }
+
+          @include breakpoint(tab992) {
+            @include font-face($primaryFont, style('normal'), size(40), weight('bold'), line-height(54, 40));
+          }
+
+          @include breakpoint(desktop1200) {
+            @include font-face($primaryFont, style('normal'), size(48), weight('bold'), line-height(60, 48));
+          }
+          
+          @include breakpoint(desktop1400) {
+            @include font-face($primaryFont, style('normal'), size(60), weight('bold'), line-height(76, 60));
+          }
+        }
+
+        .text {
+          color: $gray-700;
+          @include font-face($primaryFont, style('normal'), size(16), weight('normal'), line-height(28, 16));
+          letter-spacing: length(0.24);
+    
+          @include breakpoint(mobile768) {
+            @include font-face($primaryFont, style('normal'), size(18), weight('normal'), line-height(30, 18));
+          }
+        }
+      }
+    }
+
+    .viewall {
+      .link {
+        @include setBgColor($primary, $white);
+        @include radius(8);
+        @include font-face($primaryFont, style('normal'), size(16), weight('bold'), line-height(24, 16));
+        letter-spacing: length(0.24);
+        display: inline-block;
+        padding: size(14) size(64);
+        @include transitionsbackground;
+
+        @include hover {
+          @include setBgColor(darken($primary, 25%), $white);
+        }
+      }
+    }
+  }
+
+  .thumbnail {
+    @include square(length(280));
+    @include flex-center;
+    position: relative;
+    margin: auto;
+
+    @include breakpoint(mobile768) {
+      @include square(length(410));
+    }
+
+    img {
+      @include wh100;
+      object-fit: cover;
+      position: relative;
+      z-index: 2;
+    }
+
+    .icon {
+      position: absolute;
+      bottom: size(-40);
+      right: length(-40);
+      @include square(size(80));
+      @include flex-center;
+      overflow: hidden;
+      z-index: 1;
+
+      @include breakpoint(mobile768) {
+        bottom: size(-47);
+        right: length(-47);
+        @include square(size(94));
+      }
+
+      svg {
+        @include wh100;
+      }
+    }
+  }
+}
+
+/**=======================================================**
+                    SERVICE BANNER END
+**=======================================================**/
+
+
+/**=======================================================**
+                    SERVICE INFO START
+**=======================================================**/
+
+.serviceinfo {
+  padding: size(40) size(0);
+  
+  @include breakpoint(mobile768) {
+    padding: size(64) size(0);
+  }
+  
+  @include breakpoint(tab992) {
+    padding: size(80) size(0);
+  }
+
+  &-details {
+    .serviceinfotext {
+      color: $gray-700;
+      @include font-face($primaryFont, style('normal'), size(16), weight('normal'), line-height(28, 16));
+      letter-spacing: length(0.24);
+      text-align: center;
+  
+      @include breakpoint(mobile768) {
+        @include font-face($primaryFont, style('normal'), size(18), weight('normal'), line-height(30, 18));
+      }
+  
+      @include breakpoint(tab992) {
+        @include font-face($primaryFont, style('normal'), size(20), weight('normal'), line-height(36, 20));
+      }
+    }
+  }
+}
+
+/**=======================================================**
+                    SERVICE INFO END
+**=======================================================**/
+
+
+/**=======================================================**
+                    SERVICE BANNER START
+**=======================================================**/
+
+
+
+/**=======================================================**
+                    SERVICE BANNER END
+**=======================================================**/
+
+
+/**=======================================================**
+                    SERVICE BANNER START
+**=======================================================**/
+
+
+
+/**=======================================================**
+                    SERVICE BANNER END
+**=======================================================**/
+
+
+/**=======================================================**
+                    SERVICE BANNER START
+**=======================================================**/
+
+
+
+/**=======================================================**
+                    SERVICE BANNER END
+**=======================================================**/
+
+
+/**=======================================================**
+                    SERVICE BANNER START
+**=======================================================**/
+
+
+
+/**=======================================================**
+                    SERVICE BANNER END
+**=======================================================**/
+
+
+/**=======================================================**
+                    SERVICE BANNER START
+**=======================================================**/
+
+
+
+/**=======================================================**
+                    SERVICE BANNER END
+**=======================================================**/
+
+
+/**=======================================================**
+                    SERVICE BANNER START
+**=======================================================**/
+
+
+
+/**=======================================================**
+                    SERVICE BANNER END
+**=======================================================**/
+
+
+/**=======================================================**
+                    SERVICE BANNER START
+**=======================================================**/
+
+
+
+/**=======================================================**
+                    SERVICE BANNER END
+**=======================================================**/
+
+
+/**=======================================================**
+                    SERVICE BANNER START
+**=======================================================**/
+
+
+
+/**=======================================================**
+                    SERVICE BANNER END
+**=======================================================**/
