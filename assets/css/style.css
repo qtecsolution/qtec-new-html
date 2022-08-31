@@ -7863,13 +7863,23 @@ select {
   border-radius: 0.5rem;
   font-family: "Titillium Web";
   font-style: normal;
-  font-size: 1rem;
+  font-size: 0.875rem;
   font-weight: 700;
-  line-height: 1.5;
+  line-height: 1.4285714286;
   letter-spacing: 0.015rem;
   display: inline-block;
-  padding: 0.875rem 4rem;
+  padding: 0.5rem 2rem;
   transition: background 200ms ease-in-out;
+}
+@media screen and (min-width: 62rem) {
+  .servicebanner-details .viewall .link {
+    padding: 0.75rem 2.5rem;
+    font-family: "Titillium Web";
+    font-style: normal;
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 1.5;
+  }
 }
 .servicebanner-details .viewall .link:not([disabled]):hover {
   background: #023c83;
@@ -7975,10 +7985,190 @@ select {
                     SERVICE INFO END
 **=======================================================**/
 /**=======================================================**
-                    SERVICE BANNER START
+                    SERVICE SECTION START
 **=======================================================**/
+.servicesec {
+  padding: 2.5rem 0rem;
+}
+@media screen and (min-width: 48rem) {
+  .servicesec {
+    padding: 4rem 0rem;
+  }
+}
+@media screen and (min-width: 62rem) {
+  .servicesec {
+    padding: 5rem 0rem;
+  }
+}
+.servicesec-content {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+@media screen and (min-width: 62rem) {
+  .servicesec-content {
+    gap: 3rem;
+  }
+}
+@media screen and (min-width: 75rem) {
+  .servicesec-content {
+    gap: 4rem;
+  }
+}
+.servicesec-header {
+  display: flex;
+  align-items: center;
+}
+.servicesec-title {
+  color: #4A5568;
+  font-family: "Titillium Web";
+  font-style: normal;
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1.3333333333;
+}
+@media screen and (min-width: 25.875rem) {
+  .servicesec-title {
+    font-family: "Titillium Web";
+    font-style: normal;
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 1.375;
+  }
+}
+@media screen and (min-width: 31.25rem) {
+  .servicesec-title {
+    font-family: "Titillium Web";
+    font-style: normal;
+    font-size: 2.5rem;
+    font-weight: 700;
+    line-height: 1.35;
+  }
+}
+@media screen and (min-width: 48rem) {
+  .servicesec-title {
+    font-family: "Titillium Web";
+    font-style: normal;
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 1.25;
+  }
+}
+@media screen and (min-width: 62rem) {
+  .servicesec-title {
+    font-family: "Titillium Web";
+    font-style: normal;
+    font-size: 2.5rem;
+    font-weight: 700;
+    line-height: 1.35;
+  }
+}
+@media screen and (min-width: 75rem) {
+  .servicesec-title {
+    font-family: "Titillium Web";
+    font-style: normal;
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 1.25;
+  }
+}
+@media screen and (min-width: 87.5rem) {
+  .servicesec-title {
+    font-family: "Titillium Web";
+    font-style: normal;
+    font-size: 3.75rem;
+    font-weight: 700;
+    line-height: 1.2666666667;
+  }
+}
+.servicesec-body .servicesec-info {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+@media screen and (min-width: 62rem) {
+  .servicesec-body .servicesec-info {
+    gap: 3rem;
+  }
+}
+.servicesec-body .servicesec-info .details {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+@media screen and (min-width: 62rem) {
+  .servicesec-body .servicesec-info .details {
+    gap: 2rem;
+  }
+}
+.servicesec-body .servicesec-info .details .text {
+  color: #4A5568;
+  font-family: "Titillium Web";
+  font-style: normal;
+  font-size: 1rem;
+  font-weight: normal;
+  line-height: 1.75;
+}
+@media screen and (min-width: 48rem) {
+  .servicesec-body .servicesec-info .details .text {
+    font-family: "Titillium Web";
+    font-style: normal;
+    font-size: 1.125rem;
+    font-weight: normal;
+    line-height: 1.6666666667;
+  }
+}
+@media screen and (min-width: 62rem) {
+  .servicesec-body .servicesec-info .details .text {
+    font-family: "Titillium Web";
+    font-style: normal;
+    font-size: 1.25rem;
+    font-weight: normal;
+    line-height: 1.8;
+  }
+}
+.servicesec-body .servicesec-info .viewall .link {
+  background: #0876FC;
+  color: #ffffff;
+  border-radius: 0.5rem;
+  border-radius: 0.5rem;
+  font-family: "Titillium Web";
+  font-style: normal;
+  font-size: 0.875rem;
+  font-weight: 700;
+  line-height: 1.4285714286;
+  letter-spacing: 0.015rem;
+  display: inline-block;
+  padding: 0.5rem 2rem;
+  transition: background 200ms ease-in-out;
+}
+@media screen and (min-width: 62rem) {
+  .servicesec-body .servicesec-info .viewall .link {
+    font-family: "Titillium Web";
+    font-style: normal;
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 1.5;
+    padding: 0.75rem 2.5rem;
+  }
+}
+.servicesec-body .servicesec-info .viewall .link:not([disabled]):hover {
+  background: #023c83;
+  color: #ffffff;
+}
+.servicesec-thumbnail {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.servicesec-thumbnail img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
 /**=======================================================**
-                    SERVICE BANNER END
+                    SERVICE SECTION END
 **=======================================================**/
 /**=======================================================**
                     SERVICE BANNER START

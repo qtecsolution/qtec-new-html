@@ -88,11 +88,16 @@
       .link {
         @include setBgColor($primary, $white);
         @include radius(8);
-        @include font-face($primaryFont, style('normal'), size(16), weight('bold'), line-height(24, 16));
+        @include font-face($primaryFont, style('normal'), size(14), weight('bold'), line-height(20, 14));
         letter-spacing: length(0.24);
         display: inline-block;
-        padding: size(14) size(64);
+        padding: size(8) size(32);
         @include transitionsbackground;
+    
+        @include breakpoint(tab992) {
+          padding: size(12) size(40);
+          @include font-face($primaryFont, style('normal'), size(16), weight('bold'), line-height(24, 16));
+        }
 
         @include hover {
           @include setBgColor(darken($primary, 25%), $white);
@@ -184,13 +189,133 @@
 
 
 /**=======================================================**
-                    SERVICE BANNER START
+                    SERVICE SECTION START
 **=======================================================**/
 
+.servicesec {
+  padding: size(40) size(0);
+  
+  @include breakpoint(mobile768) {
+    padding: size(64) size(0);
+  }
+  
+  @include breakpoint(tab992) {
+    padding: size(80) size(0);
+  }
 
+  &-content {
+    @include flex-column;
+    gap: size(32);
+
+    @include breakpoint(tab992) {
+      gap: size(48);
+    }
+  
+    @include breakpoint(desktop1200) {
+      gap: size(64);
+    }
+  }
+
+  &-header {
+    @include flex-center-vert;
+  }
+
+  &-title {
+    color: $gray-700;
+    @include font-face($primaryFont, style('normal'), size(24), weight('bold'), line-height(32, 24));
+
+    @include breakpoint(mobile414) {
+      @include font-face($primaryFont, style('normal'), size(32), weight('bold'), line-height(44, 32));
+    }
+
+    @include breakpoint(mobile500) {
+      @include font-face($primaryFont, style('normal'), size(40), weight('bold'), line-height(54, 40));
+    }
+
+    @include breakpoint(mobile768) {
+      @include font-face($primaryFont, style('normal'), size(48), weight('bold'), line-height(60, 48));
+    }
+
+    @include breakpoint(tab992) {
+      @include font-face($primaryFont, style('normal'), size(40), weight('bold'), line-height(54, 40));
+    }
+
+    @include breakpoint(desktop1200) {
+      @include font-face($primaryFont, style('normal'), size(48), weight('bold'), line-height(60, 48));
+    }
+    
+    @include breakpoint(desktop1400) {
+      @include font-face($primaryFont, style('normal'), size(60), weight('bold'), line-height(76, 60));
+    }
+  }
+
+  &-body {
+    .servicesec-info {
+      @include flex-column;
+      gap: size(32);
+
+      @include breakpoint(tab992) {
+        gap: size(48);
+      }
+
+      .details {
+        @include flex-column;
+        gap: size(16);
+  
+        @include breakpoint(tab992) {
+          gap: size(32);
+        }
+
+        .text {
+          color: $gray-700;
+          @include font-face($primaryFont, style('normal'), size(16), weight('normal'), line-height(28, 16));
+      
+          @include breakpoint(mobile768) {
+            @include font-face($primaryFont, style('normal'), size(18), weight('normal'), line-height(30, 18));
+          }
+      
+          @include breakpoint(tab992) {
+            @include font-face($primaryFont, style('normal'), size(20), weight('normal'), line-height(36, 20));
+          }
+        }
+      }
+
+      .viewall {
+        .link {
+          @include setBgColor($primary, $white);
+          @include radius(8);
+          @include font-face($primaryFont, style('normal'), size(14), weight('bold'), line-height(20, 14));
+          letter-spacing: length(0.24);
+          display: inline-block;
+          padding: size(8) size(32);
+          @include transitionsbackground;
+      
+          @include breakpoint(tab992) {
+            @include font-face($primaryFont, style('normal'), size(16), weight('bold'), line-height(24, 16));
+            padding: size(12) size(40);
+          }
+  
+          @include hover {
+            @include setBgColor(darken($primary, 25%), $white);
+          }
+        }
+      }
+    }
+  }
+
+  &-thumbnail {
+    @include wh100;
+    overflow: hidden;
+
+    img {
+      @include w100;
+      object-fit: cover;
+    }
+  }
+}
 
 /**=======================================================**
-                    SERVICE BANNER END
+                    SERVICE SECTION END
 **=======================================================**/
 
 
