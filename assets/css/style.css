@@ -711,7 +711,7 @@ select {
                 FOOTER SECTION START
 =====================================================**/
 .footer {
-  background: rgb(0, 26, 57);
+  background: #001938;
   padding: 4rem 0.5rem 0rem;
 }
 .footer-content {
@@ -1016,7 +1016,7 @@ select {
   height: 100%;
 }
 .footer-content .copyrightinfo {
-  background: #002653;
+  background: #002452;
   padding: 1.5rem;
   margin: 0rem -0.5rem;
 }
@@ -1048,7 +1048,7 @@ select {
   transition: background 200ms ease-in-out;
 }
 .btn-subscibe:not([disabled]):hover {
-  background: rgb(0, 26, 57);
+  background: #001938;
 }
 
 .btn-explore {
@@ -2630,7 +2630,7 @@ select {
 
 .offcanvas {
   width: 100%;
-  background: rgb(0, 26, 57);
+  background: #001938;
   overflow: hidden;
 }
 @media screen and (min-width: 31.25rem) {
@@ -7867,13 +7867,16 @@ select {
   font-weight: 700;
   line-height: 1.4285714286;
   letter-spacing: 0.015rem;
-  display: inline-block;
-  padding: 0.5rem 2rem;
+  width: 12.5rem;
+  height: 3.625rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
   transition: background 200ms ease-in-out;
 }
 @media screen and (min-width: 62rem) {
   .servicebanner-details .viewall .link {
-    padding: 0.75rem 2.5rem;
     font-family: "Titillium Web";
     font-style: normal;
     font-size: 1rem;
@@ -8138,8 +8141,12 @@ select {
   font-weight: 700;
   line-height: 1.4285714286;
   letter-spacing: 0.015rem;
-  display: inline-block;
-  padding: 0.5rem 2rem;
+  width: 12.5rem;
+  height: 3.625rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
   transition: background 200ms ease-in-out;
 }
 @media screen and (min-width: 62rem) {
@@ -8149,7 +8156,6 @@ select {
     font-size: 1rem;
     font-weight: 700;
     line-height: 1.5;
-    padding: 0.75rem 2.5rem;
   }
 }
 .servicesec-body .servicesec-info .viewall .link:not([disabled]):hover {

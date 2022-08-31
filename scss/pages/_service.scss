@@ -90,12 +90,13 @@
         @include radius(8);
         @include font-face($primaryFont, style('normal'), size(14), weight('bold'), line-height(20, 14));
         letter-spacing: length(0.24);
-        display: inline-block;
-        padding: size(8) size(32);
+        width: size(200);
+        height: size(58);
+        @include flex-center;
+        text-align: center;
         @include transitionsbackground;
     
         @include breakpoint(tab992) {
-          padding: size(12) size(40);
           @include font-face($primaryFont, style('normal'), size(16), weight('bold'), line-height(24, 16));
         }
 
@@ -286,13 +287,14 @@
           @include radius(8);
           @include font-face($primaryFont, style('normal'), size(14), weight('bold'), line-height(20, 14));
           letter-spacing: length(0.24);
-          display: inline-block;
-          padding: size(8) size(32);
+          width: size(200);
+          height: size(58);
+          @include flex-center;
+          text-align: center;
           @include transitionsbackground;
       
           @include breakpoint(tab992) {
             @include font-face($primaryFont, style('normal'), size(16), weight('bold'), line-height(24, 16));
-            padding: size(12) size(40);
           }
   
           @include hover {
