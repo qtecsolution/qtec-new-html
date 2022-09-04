@@ -127,7 +127,7 @@
 }
 
 @mixin border($style, $width, $color) {
-	border: $style (($width / $base) + rem) $color;
+	border: $style (calc($width / $base) + rem) $color;
 }
 
 @mixin border-single($direction, $style, $width, $color) {

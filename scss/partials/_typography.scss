@@ -22,7 +22,7 @@ $font-weights: ('thin':100, 'extralight': 200, 'light': 300, 'normal': normal, '
 
 // SET FONT-STYLE
 @function size($size) {
-	@return (($size / $base) + rem);
+	@return (calc($size / $base) + rem);
 }
 
 // SET FONT-WEIGHT
@@ -32,7 +32,7 @@ $font-weights: ('thin':100, 'extralight': 200, 'light': 300, 'normal': normal, '
 
 // SET LINE-HEIGHT
 @function line-height($line-height, $size) {
-	@return ($line-height / $size);
+	@return calc($line-height / $size);
 }
 
 /**===============================================
