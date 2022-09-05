@@ -152,44 +152,6 @@
 
 
 /**=======================================================**
-                    SERVICE INFO START
-**=======================================================**/
-
-.serviceinfo {
-  padding: size(40) size(0);
-  
-  @include breakpoint(mobile768) {
-    padding: size(64) size(0);
-  }
-  
-  @include breakpoint(tab992) {
-    padding: size(80) size(0);
-  }
-
-  &-details {
-    .serviceinfotext {
-      color: $gray-700;
-      @include font-face($primaryFont, style('normal'), size(16), weight('normal'), line-height(28, 16));
-      letter-spacing: length(0.24);
-      text-align: center;
-  
-      @include breakpoint(mobile768) {
-        @include font-face($primaryFont, style('normal'), size(18), weight('normal'), line-height(30, 18));
-      }
-  
-      @include breakpoint(tab992) {
-        @include font-face($primaryFont, style('normal'), size(20), weight('normal'), line-height(36, 20));
-      }
-    }
-  }
-}
-
-/**=======================================================**
-                    SERVICE INFO END
-**=======================================================**/
-
-
-/**=======================================================**
                     SERVICE SECTION START
 **=======================================================**/
 
@@ -269,6 +231,10 @@
   &-info {
     @include flex-column;
     gap: size(16);
+
+    @include breakpoint(tab992) {
+      gap: size(32);
+    }
 
     .details {
       @include flex-column;

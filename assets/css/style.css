@@ -7940,54 +7940,6 @@ select {
                     SERVICE BANNER END
 **=======================================================**/
 /**=======================================================**
-                    SERVICE INFO START
-**=======================================================**/
-.serviceinfo {
-  padding: 2.5rem 0rem;
-}
-@media screen and (min-width: 48rem) {
-  .serviceinfo {
-    padding: 4rem 0rem;
-  }
-}
-@media screen and (min-width: 62rem) {
-  .serviceinfo {
-    padding: 5rem 0rem;
-  }
-}
-.serviceinfo-details .serviceinfotext {
-  color: #4A5568;
-  font-family: "Titillium Web";
-  font-style: normal;
-  font-size: 1rem;
-  font-weight: normal;
-  line-height: 1.75;
-  letter-spacing: 0.015rem;
-  text-align: center;
-}
-@media screen and (min-width: 48rem) {
-  .serviceinfo-details .serviceinfotext {
-    font-family: "Titillium Web";
-    font-style: normal;
-    font-size: 1.125rem;
-    font-weight: normal;
-    line-height: 1.6666666667;
-  }
-}
-@media screen and (min-width: 62rem) {
-  .serviceinfo-details .serviceinfotext {
-    font-family: "Titillium Web";
-    font-style: normal;
-    font-size: 1.25rem;
-    font-weight: normal;
-    line-height: 1.8;
-  }
-}
-
-/**=======================================================**
-                    SERVICE INFO END
-**=======================================================**/
-/**=======================================================**
                     SERVICE SECTION START
 **=======================================================**/
 .servicesec {
@@ -8094,6 +8046,11 @@ select {
   display: flex;
   flex-direction: column;
   gap: 1rem;
+}
+@media screen and (min-width: 62rem) {
+  .servicesec-info {
+    gap: 2rem;
+  }
 }
 .servicesec-info .details {
   display: flex;
