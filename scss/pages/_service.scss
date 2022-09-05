@@ -264,10 +264,6 @@
     @include breakpoint(tab992) {
       @include font-face($primaryFont, style('normal'), size(40), weight('semibold'), line-height(54, 40));
     }
-    
-    @include breakpoint(desktop1400) {
-      @include font-face($primaryFont, style('normal'), size(60), weight('semibold'), line-height(76, 60));
-    }
   }
 
   &-info {
@@ -1465,7 +1461,138 @@
   }
 
   &-body {
+    .accordion {
+      &-item {
+        background: transparent;
+        @include border-single(bottom, solid, 1, $faqborder);
+        @include radius(0);
+      }
+      
+      &-header {
+        max-width: 90%;
+        margin: auto;
+      }
+      
+      &-button {
+        background: transparent;
+        @include flex-center-vert;
+        // align-items: baseline;
+        gap: size(16);
 
+        @include breakpoint(tab992) {
+          padding-top: size(32);
+          padding-bottom: size(32);
+        }
+
+        .plusminus {
+          position: relative;
+          @include square(size(16));
+          cursor: pointer;
+          
+          &::before , &::after {
+            content: '';
+            display: block;
+            background: $gray-700;
+            position: absolute;   
+            top: 50%;
+            left: 0;
+            transition: .35s;
+            width: 100%;
+            height: size(3);
+          }
+          
+          &::before {
+            @include transform(translateY(-50%));
+          }
+          
+          &::after {
+            @include transform(translateY(-50%) rotate(90deg));
+          }
+        }
+
+        .faqtitle {
+          width: calc(100% - 2rem);
+          color: $gray-700;
+          @include font-face($primaryFont, style('normal'), size(16), weight('semibold'), line-height(24, 16));
+      
+          @include breakpoint(mobile768) {
+            @include font-face($primaryFont, style('normal'), size(24), weight('semibold'), line-height(32, 24));
+          }
+      
+          @include breakpoint(tab992) {
+            @include font-face($primaryFont, style('normal'), size(28), weight('semibold'), line-height(38, 28));
+          }
+        }
+
+        &::after {
+          background: transparent;
+          content: '';
+          width: 0;
+          height: 0;
+          display: none;
+        }
+        
+        &:not(.collapsed) {
+          &::after {
+            background: transparent;
+            content: '';
+            width: 0;
+            height: 0;
+            display: none;
+          }
+
+          .plusminus {
+            &:before {
+              transform: translatey(-50%) rotate(-90deg);
+              opacity: 0;
+            }
+            &:after {
+              transform: translatey(-50%) rotate(0);
+            }
+          }
+        }
+      }
+
+      &-body {
+        padding: 0;
+        max-width: 70%;
+        margin-left: auto;
+        background: transparent;
+
+        @include breakpoint(tab992) {
+          margin: auto;
+        }
+
+        .faqinfo {
+          padding-bottom: size(32);
+
+          .faqtext {
+            color: $gray-700;
+            @include font-face($primaryFont, style('normal'), size(16), weight('normal'), line-height(28, 16));
+            position: relative;
+
+            @include breakpoint(mobile768) {
+              @include font-face($primaryFont, style('normal'), size(18), weight('normal'), line-height(30, 18));
+            }
+        
+            @include breakpoint(tab992) {
+              @include font-face($primaryFont, style('normal'), size(20), weight('normal'), line-height(36, 20));
+            }
+
+            &::before {
+              content: '';
+              width: size(4);
+              height: 70%;
+              background: $primary;
+              position: absolute;
+              top: 50%;
+              @include transform(translateY(-50%));
+              left: size(-24);
+            }
+          }
+        }
+      }
+    }
   }
 }
 
