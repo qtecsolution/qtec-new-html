@@ -6846,101 +6846,135 @@ select {
                     PRODUCTS-SECTION END
 **=======================================================**/
 /**=======================================================**
-                    SERVICE BANNER START
+                    CUSTOM-SOFTWARE START
 **=======================================================**/
-.servicebanner {
-  background: url(../images/service/service-banner.webp) no-repeat center center/cover;
-  min-height: 30vh;
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.customsoftware {
+  background: #00142D;
+  padding: 2.5rem 0.5rem;
 }
 @media screen and (min-width: 48rem) {
-  .servicebanner {
-    min-height: 50vh;
+  .customsoftware {
+    padding: 4rem 0rem;
   }
 }
-.servicebanner .overlay {
-  background: rgba(0, 0, 0, 0.6);
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 1;
+@media screen and (min-width: 62rem) {
+  .customsoftware {
+    padding: 5rem 0rem;
+  }
 }
-.servicebanner-content {
-  padding: 3rem;
+@media screen and (min-width: 87.5rem) {
+  .customsoftware {
+    padding: 6.25rem 0rem;
+  }
+}
+.customsoftware-content {
   display: flex;
-  align-items: center;
-  justify-content: center;
+  flex-direction: column;
+  gap: 2.5rem;
 }
-.servicebanner-content .servicebanner-title {
-  position: relative;
-  z-index: 2;
-  color: #F7FAFC;
+@media screen and (min-width: 48rem) {
+  .customsoftware-content {
+    gap: 3rem;
+  }
+}
+@media screen and (min-width: 62rem) {
+  .customsoftware-content {
+    gap: 4rem;
+  }
+}
+@media screen and (min-width: 87.5rem) {
+  .customsoftware-content {
+    gap: 5rem;
+  }
+}
+.customsoftware-title {
+  color: #ffffff;
   font-family: "Titillium Web";
   font-style: normal;
   font-size: 1.5rem;
   font-weight: 600;
-  line-height: 1.36;
+  line-height: 1.3333333333;
+  text-align: center;
+}
+@media screen and (min-width: 25.875rem) {
+  .customsoftware-title {
+    font-family: "Titillium Web";
+    font-style: normal;
+    font-size: 2rem;
+    font-weight: 600;
+    line-height: 1.375;
+  }
+}
+@media screen and (min-width: 31.25rem) {
+  .customsoftware-title {
+    font-family: "Titillium Web";
+    font-style: normal;
+    font-size: 2.5rem;
+    font-weight: 600;
+    line-height: 1.35;
+  }
 }
 @media screen and (min-width: 48rem) {
-  .servicebanner-content .servicebanner-title {
-    font-family: "Titillium Web";
-    font-style: normal;
-    font-size: 1.75rem;
-    font-weight: 600;
-    line-height: 1.36;
-  }
-}
-@media screen and (min-width: 62rem) {
-  .servicebanner-content .servicebanner-title {
-    font-family: "Titillium Web";
-    font-style: normal;
-    font-size: 2.25rem;
-    font-weight: 600;
-    line-height: 1.36;
-  }
-}
-@media screen and (min-width: 68.75rem) {
-  .servicebanner-content .servicebanner-title {
+  .customsoftware-title {
     font-family: "Titillium Web";
     font-style: normal;
     font-size: 3rem;
-    font-weight: normal;
-    line-height: 1.4;
+    font-weight: 600;
+    line-height: 1.25;
   }
-}
-
-/**=======================================================**
-                    SERVICE BANNER END
-**=======================================================**/
-/**=======================================================**
-                    SERVICES SECTION START
-**=======================================================**/
-.ourservice {
-  padding: 2.5rem 0rem;
 }
 @media screen and (min-width: 62rem) {
-  .ourservice {
-    padding: 5rem 0rem;
+  .customsoftware-title {
+    font-family: "Titillium Web";
+    font-style: normal;
+    font-size: 2.5rem;
+    font-weight: 600;
+    line-height: 1.35;
   }
 }
-.ourservice-content {
+@media screen and (min-width: 75rem) {
+  .customsoftware-title {
+    font-family: "Titillium Web";
+    font-style: normal;
+    font-size: 3rem;
+    font-weight: 600;
+    line-height: 1.25;
+  }
+}
+@media screen and (min-width: 87.5rem) {
+  .customsoftware-title {
+    font-family: "Titillium Web";
+    font-style: normal;
+    font-size: 3.75rem;
+    font-weight: 600;
+    line-height: 1.2666666667;
+  }
+}
+.customsoftware .cardcustom {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  gap: 2.5rem;
+  gap: 1.5rem;
 }
-@media screen and (min-width: 62rem) {
-  .ourservice-content {
-    gap: 5rem;
-  }
+.customsoftware .cardcustom-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-.ourservice-header {
+.customsoftware .cardcustom-header .icon {
+  height: 3.375rem;
+  width: 3.375rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.customsoftware .cardcustom-header .icon img {
+  width: 100%;
+  height: 100%;
+}
+.customsoftware .cardcustom-body {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -6948,42 +6982,33 @@ select {
   gap: 0.75rem;
   text-align: center;
 }
-.ourservice-header .ourservice-title {
-  color: #4A5568;
+.customsoftware .cardcustom-body .customtitle {
+  color: #ffffff;
   font-family: "Titillium Web";
   font-style: normal;
-  font-size: 2rem;
+  font-size: 1.125rem;
   font-weight: 600;
-  line-height: 1.25;
-}
-@media screen and (min-width: 48rem) {
-  .ourservice-header .ourservice-title {
-    font-family: "Titillium Web";
-    font-style: normal;
-    font-size: 2.5rem;
-    font-weight: 600;
-    line-height: 1.25;
-  }
+  line-height: 1.6666666667;
 }
 @media screen and (min-width: 62rem) {
-  .ourservice-header .ourservice-title {
+  .customsoftware .cardcustom-body .customtitle {
     font-family: "Titillium Web";
     font-style: normal;
-    font-size: 3rem;
+    font-size: 1.25rem;
     font-weight: 600;
-    line-height: 1.5208333333;
+    line-height: 1.8;
   }
 }
-.ourservice-header .ourservice-text {
-  color: #4A5568;
+.customsoftware .cardcustom-body .customtext {
+  color: #ffffff;
   font-family: "Titillium Web";
   font-style: normal;
   font-size: 1rem;
   font-weight: normal;
-  line-height: 1.5;
+  line-height: 1.75;
 }
 @media screen and (min-width: 62rem) {
-  .ourservice-header .ourservice-text {
+  .customsoftware .cardcustom-body .customtext {
     font-family: "Titillium Web";
     font-style: normal;
     font-size: 1.125rem;
@@ -6993,7 +7018,1401 @@ select {
 }
 
 /**=======================================================**
-                    SERVICES SECTION END
+                    CUSTOM-SOFTWARE END
+**=======================================================**/
+/**=======================================================**
+                    SERVICE-ADVANTAGE START
+**=======================================================**/
+.serviceadvantage {
+  padding: 2.5rem 0.5rem;
+}
+@media screen and (min-width: 48rem) {
+  .serviceadvantage {
+    padding: 4rem 0rem;
+  }
+}
+@media screen and (min-width: 62rem) {
+  .serviceadvantage {
+    padding: 5rem 0rem;
+  }
+}
+@media screen and (min-width: 87.5rem) {
+  .serviceadvantage {
+    padding: 6.25rem 0rem;
+  }
+}
+.serviceadvantage-content {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+@media screen and (min-width: 48rem) {
+  .serviceadvantage-content {
+    gap: 3rem;
+  }
+}
+@media screen and (min-width: 62rem) {
+  .serviceadvantage-content {
+    gap: 4rem;
+  }
+}
+@media screen and (min-width: 87.5rem) {
+  .serviceadvantage-content {
+    gap: 5rem;
+  }
+}
+.serviceadvantage-title {
+  color: #4A5568;
+  font-family: "Titillium Web";
+  font-style: normal;
+  font-size: 1.5rem;
+  font-weight: 600;
+  line-height: 1.3333333333;
+}
+@media screen and (min-width: 25.875rem) {
+  .serviceadvantage-title {
+    font-family: "Titillium Web";
+    font-style: normal;
+    font-size: 2rem;
+    font-weight: 600;
+    line-height: 1.375;
+  }
+}
+@media screen and (min-width: 31.25rem) {
+  .serviceadvantage-title {
+    font-family: "Titillium Web";
+    font-style: normal;
+    font-size: 2.5rem;
+    font-weight: 600;
+    line-height: 1.35;
+  }
+}
+@media screen and (min-width: 48rem) {
+  .serviceadvantage-title {
+    font-family: "Titillium Web";
+    font-style: normal;
+    font-size: 3rem;
+    font-weight: 600;
+    line-height: 1.25;
+  }
+}
+@media screen and (min-width: 62rem) {
+  .serviceadvantage-title {
+    font-family: "Titillium Web";
+    font-style: normal;
+    font-size: 2.5rem;
+    font-weight: 600;
+    line-height: 1.35;
+  }
+}
+@media screen and (min-width: 75rem) {
+  .serviceadvantage-title {
+    font-family: "Titillium Web";
+    font-style: normal;
+    font-size: 3rem;
+    font-weight: 600;
+    line-height: 1.25;
+  }
+}
+@media screen and (min-width: 87.5rem) {
+  .serviceadvantage-title {
+    font-family: "Titillium Web";
+    font-style: normal;
+    font-size: 3.75rem;
+    font-weight: 600;
+    line-height: 1.2666666667;
+  }
+}
+.serviceadvantage-thumbnail {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.serviceadvantage-thumbnail img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.serviceadvantage-details {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.serviceadvantage-details .detail {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.serviceadvantage-details .detail-title {
+  color: #4A5568;
+  font-family: "Titillium Web";
+  font-style: normal;
+  font-size: 1.5rem;
+  font-weight: 600;
+  line-height: 1.3333333333;
+}
+@media screen and (min-width: 48rem) {
+  .serviceadvantage-details .detail-title {
+    font-family: "Titillium Web";
+    font-style: normal;
+    font-size: 1.75rem;
+    font-weight: 600;
+    line-height: 1.3571428571;
+  }
+}
+@media screen and (min-width: 62rem) {
+  .serviceadvantage-details .detail-title {
+    font-family: "Titillium Web";
+    font-style: normal;
+    font-size: 2rem;
+    font-weight: 600;
+    line-height: 1.25;
+  }
+}
+.serviceadvantage-details .detail-text {
+  color: #4A5568;
+  font-family: "Titillium Web";
+  font-style: normal;
+  font-size: 1rem;
+  font-weight: normal;
+  line-height: 1.75;
+}
+@media screen and (min-width: 48rem) {
+  .serviceadvantage-details .detail-text {
+    font-family: "Titillium Web";
+    font-style: normal;
+    font-size: 1.125rem;
+    font-weight: normal;
+    line-height: 1.6666666667;
+  }
+}
+@media screen and (min-width: 62rem) {
+  .serviceadvantage-details .detail-text {
+    font-family: "Titillium Web";
+    font-style: normal;
+    font-size: 1.25rem;
+    font-weight: normal;
+    line-height: 1.8;
+  }
+}
+
+/**=======================================================**
+                    SERVICE-ADVANTAGE END
+**=======================================================**/
+/**=======================================================**
+                    SERVICE-CONSIDER START
+**=======================================================**/
+.serviceconsider {
+  padding: 2.5rem 0.5rem;
+}
+@media screen and (min-width: 48rem) {
+  .serviceconsider {
+    padding: 4rem 0rem;
+  }
+}
+@media screen and (min-width: 62rem) {
+  .serviceconsider {
+    padding: 5rem 0rem;
+  }
+}
+@media screen and (min-width: 87.5rem) {
+  .serviceconsider {
+    padding: 6.25rem 0rem;
+  }
+}
+.serviceconsider-content {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+@media screen and (min-width: 48rem) {
+  .serviceconsider-content {
+    gap: 3rem;
+  }
+}
+@media screen and (min-width: 62rem) {
+  .serviceconsider-content {
+    gap: 4rem;
+  }
+}
+@media screen and (min-width: 87.5rem) {
+  .serviceconsider-content {
+    gap: 5rem;
+  }
+}
+.serviceconsider-title {
+  color: #4A5568;
+  font-family: "Titillium Web";
+  font-style: normal;
+  font-size: 1.5rem;
+  font-weight: 600;
+  line-height: 1.3333333333;
+}
+@media screen and (min-width: 25.875rem) {
+  .serviceconsider-title {
+    font-family: "Titillium Web";
+    font-style: normal;
+    font-size: 2rem;
+    font-weight: 600;
+    line-height: 1.375;
+  }
+}
+@media screen and (min-width: 31.25rem) {
+  .serviceconsider-title {
+    font-family: "Titillium Web";
+    font-style: normal;
+    font-size: 2.5rem;
+    font-weight: 600;
+    line-height: 1.35;
+  }
+}
+@media screen and (min-width: 48rem) {
+  .serviceconsider-title {
+    font-family: "Titillium Web";
+    font-style: normal;
+    font-size: 3rem;
+    font-weight: 600;
+    line-height: 1.25;
+  }
+}
+@media screen and (min-width: 62rem) {
+  .serviceconsider-title {
+    font-family: "Titillium Web";
+    font-style: normal;
+    font-size: 2.5rem;
+    font-weight: 600;
+    line-height: 1.35;
+  }
+}
+@media screen and (min-width: 75rem) {
+  .serviceconsider-title {
+    font-family: "Titillium Web";
+    font-style: normal;
+    font-size: 3rem;
+    font-weight: 600;
+    line-height: 1.25;
+  }
+}
+@media screen and (min-width: 87.5rem) {
+  .serviceconsider-title {
+    font-family: "Titillium Web";
+    font-style: normal;
+    font-size: 3.75rem;
+    font-weight: 600;
+    line-height: 1.2666666667;
+  }
+}
+.serviceconsider-thumbnail {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.serviceconsider-thumbnail img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.serviceconsider .cardconsider {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+@media screen and (min-width: 62rem) {
+  .serviceconsider .cardconsider {
+    gap: 2rem;
+  }
+}
+.serviceconsider .cardconsider .cardtitle {
+  color: #4A5568;
+  font-family: "Titillium Web";
+  font-style: normal;
+  font-size: 1.5rem;
+  font-weight: 600;
+  line-height: 1.3333333333;
+}
+@media screen and (min-width: 48rem) {
+  .serviceconsider .cardconsider .cardtitle {
+    font-family: "Titillium Web";
+    font-style: normal;
+    font-size: 1.75rem;
+    font-weight: 600;
+    line-height: 1.3571428571;
+  }
+}
+@media screen and (min-width: 62rem) {
+  .serviceconsider .cardconsider .cardtitle {
+    font-family: "Titillium Web";
+    font-style: normal;
+    font-size: 2rem;
+    font-weight: 600;
+    line-height: 1.25;
+  }
+}
+.serviceconsider .cardconsider .cardtext {
+  color: #4A5568;
+  font-family: "Titillium Web";
+  font-style: normal;
+  font-size: 1rem;
+  font-weight: normal;
+  line-height: 1.75;
+}
+@media screen and (min-width: 48rem) {
+  .serviceconsider .cardconsider .cardtext {
+    font-family: "Titillium Web";
+    font-style: normal;
+    font-size: 1.125rem;
+    font-weight: normal;
+    line-height: 1.6666666667;
+  }
+}
+@media screen and (min-width: 62rem) {
+  .serviceconsider .cardconsider .cardtext {
+    font-family: "Titillium Web";
+    font-style: normal;
+    font-size: 1.25rem;
+    font-weight: normal;
+    line-height: 1.8;
+  }
+}
+
+/**=======================================================**
+                    SERVICE-CONSIDER END
+**=======================================================**/
+/**=======================================================**
+                    SECTION START
+**=======================================================**/
+.servicedeveloped {
+  background: #00142D;
+  padding: 2.5rem 0.5rem;
+}
+@media screen and (min-width: 48rem) {
+  .servicedeveloped {
+    padding: 4rem 0rem;
+  }
+}
+@media screen and (min-width: 62rem) {
+  .servicedeveloped {
+    padding: 5rem 0rem;
+  }
+}
+@media screen and (min-width: 87.5rem) {
+  .servicedeveloped {
+    padding: 6.25rem 0rem;
+  }
+}
+.servicedeveloped-content {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+@media screen and (min-width: 48rem) {
+  .servicedeveloped-content {
+    gap: 3rem;
+  }
+}
+@media screen and (min-width: 62rem) {
+  .servicedeveloped-content {
+    gap: 4rem;
+  }
+}
+@media screen and (min-width: 87.5rem) {
+  .servicedeveloped-content {
+    gap: 5rem;
+  }
+}
+.servicedeveloped-title {
+  color: #ffffff;
+  font-family: "Titillium Web";
+  font-style: normal;
+  font-size: 1.5rem;
+  font-weight: 600;
+  line-height: 1.3333333333;
+  text-align: center;
+}
+@media screen and (min-width: 25.875rem) {
+  .servicedeveloped-title {
+    font-family: "Titillium Web";
+    font-style: normal;
+    font-size: 2rem;
+    font-weight: 600;
+    line-height: 1.375;
+  }
+}
+@media screen and (min-width: 31.25rem) {
+  .servicedeveloped-title {
+    font-family: "Titillium Web";
+    font-style: normal;
+    font-size: 2.5rem;
+    font-weight: 600;
+    line-height: 1.35;
+  }
+}
+@media screen and (min-width: 48rem) {
+  .servicedeveloped-title {
+    font-family: "Titillium Web";
+    font-style: normal;
+    font-size: 3rem;
+    font-weight: 600;
+    line-height: 1.25;
+  }
+}
+@media screen and (min-width: 62rem) {
+  .servicedeveloped-title {
+    font-family: "Titillium Web";
+    font-style: normal;
+    font-size: 2.5rem;
+    font-weight: 600;
+    line-height: 1.35;
+  }
+}
+@media screen and (min-width: 75rem) {
+  .servicedeveloped-title {
+    font-family: "Titillium Web";
+    font-style: normal;
+    font-size: 3rem;
+    font-weight: 600;
+    line-height: 1.25;
+  }
+}
+@media screen and (min-width: 87.5rem) {
+  .servicedeveloped-title {
+    font-family: "Titillium Web";
+    font-style: normal;
+    font-size: 3.75rem;
+    font-weight: 600;
+    line-height: 1.2666666667;
+  }
+}
+.servicedeveloped .developdetail {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 2rem;
+}
+@media screen and (min-width: 62rem) {
+  .servicedeveloped .developdetail {
+    gap: 3rem;
+  }
+}
+.servicedeveloped .developdetail .analysis,
+.servicedeveloped .developdetail .development,
+.servicedeveloped .developdetail .testing,
+.servicedeveloped .developdetail .maintenance {
+  height: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.8125rem;
+  border-radius: 0.8125rem;
+  font-family: "Titillium Web";
+  font-style: normal;
+  font-size: 1.25rem;
+  font-weight: 600;
+  line-height: 1.6;
+  padding: 0.625rem;
+  text-align: center;
+}
+@media screen and (min-width: 48rem) {
+  .servicedeveloped .developdetail .analysis,
+.servicedeveloped .developdetail .development,
+.servicedeveloped .developdetail .testing,
+.servicedeveloped .developdetail .maintenance {
+    font-family: "Titillium Web";
+    font-style: normal;
+    font-size: 1.5rem;
+    font-weight: 600;
+    line-height: 1.3333333333;
+    height: 6.125rem;
+  }
+}
+@media screen and (min-width: 62rem) {
+  .servicedeveloped .developdetail .analysis,
+.servicedeveloped .developdetail .development,
+.servicedeveloped .developdetail .testing,
+.servicedeveloped .developdetail .maintenance {
+    font-family: "Titillium Web";
+    font-style: normal;
+    font-size: 1.75rem;
+    font-weight: 600;
+    line-height: 1.3571428571;
+  }
+}
+.servicedeveloped .developdetail .analysis {
+  background: #D7F890;
+  color: #00142D;
+  width: 100%;
+}
+@media screen and (min-width: 48rem) {
+  .servicedeveloped .developdetail .analysis {
+    width: 28.5rem;
+  }
+}
+.servicedeveloped .developdetail .development {
+  background: #FF8E5E;
+  color: #00142D;
+  width: 16.5rem;
+  opacity: 0.3;
+}
+.servicedeveloped .developdetail .testing {
+  background: #F6F4F2;
+  color: #00142D;
+  width: 20.625rem;
+  opacity: 0.3;
+}
+.servicedeveloped .developdetail .maintenance {
+  background: #84D6D7;
+  color: #00142D;
+  width: 100%;
+  opacity: 0.3;
+}
+@media screen and (min-width: 48rem) {
+  .servicedeveloped .developdetail .maintenance {
+    width: 26.875rem;
+  }
+}
+.servicedeveloped .descriptions {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+@media screen and (min-width: 62rem) {
+  .servicedeveloped .descriptions {
+    gap: 2rem;
+  }
+}
+.servicedeveloped .descriptions .title {
+  color: #ffffff;
+  font-family: "Titillium Web";
+  font-style: normal;
+  font-size: 1.5rem;
+  font-weight: 600;
+  line-height: 1.3333333333;
+}
+@media screen and (min-width: 48rem) {
+  .servicedeveloped .descriptions .title {
+    font-family: "Titillium Web";
+    font-style: normal;
+    font-size: 1.75rem;
+    font-weight: 600;
+    line-height: 1.3571428571;
+  }
+}
+@media screen and (min-width: 62rem) {
+  .servicedeveloped .descriptions .title {
+    font-family: "Titillium Web";
+    font-style: normal;
+    font-size: 2rem;
+    font-weight: 600;
+    line-height: 1.25;
+  }
+}
+.servicedeveloped .descriptions .text {
+  color: #ffffff;
+  font-family: "Titillium Web";
+  font-style: normal;
+  font-size: 1rem;
+  font-weight: normal;
+  line-height: 1.75;
+}
+@media screen and (min-width: 48rem) {
+  .servicedeveloped .descriptions .text {
+    font-family: "Titillium Web";
+    font-style: normal;
+    font-size: 1.125rem;
+    font-weight: normal;
+    line-height: 1.6666666667;
+  }
+}
+@media screen and (min-width: 62rem) {
+  .servicedeveloped .descriptions .text {
+    font-family: "Titillium Web";
+    font-style: normal;
+    font-size: 1.25rem;
+    font-weight: normal;
+    line-height: 1.8;
+  }
+}
+.servicedeveloped .developedinfo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 2rem;
+  text-align: center;
+}
+.servicedeveloped .developedinfo .developtedtext {
+  color: #ffffff;
+  font-family: "Titillium Web";
+  font-style: normal;
+  font-size: 1rem;
+  font-weight: normal;
+  line-height: 1.75;
+}
+@media screen and (min-width: 48rem) {
+  .servicedeveloped .developedinfo .developtedtext {
+    font-family: "Titillium Web";
+    font-style: normal;
+    font-size: 1.125rem;
+    font-weight: normal;
+    line-height: 1.6666666667;
+  }
+}
+@media screen and (min-width: 62rem) {
+  .servicedeveloped .developedinfo .developtedtext {
+    font-family: "Titillium Web";
+    font-style: normal;
+    font-size: 1.25rem;
+    font-weight: normal;
+    line-height: 1.8;
+  }
+}
+.servicedeveloped .developedinfo .viewall {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.servicedeveloped .developedinfo .viewall .link {
+  background: #0876FC;
+  color: #ffffff;
+  border-radius: 0.5rem;
+  border-radius: 0.5rem;
+  font-family: "Titillium Web";
+  font-style: normal;
+  font-size: 0.875rem;
+  font-weight: 700;
+  line-height: 1.4285714286;
+  letter-spacing: 0.015rem;
+  width: 12.5rem;
+  height: 3.625rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  transition: background 200ms ease-in-out;
+}
+@media screen and (min-width: 62rem) {
+  .servicedeveloped .developedinfo .viewall .link {
+    font-family: "Titillium Web";
+    font-style: normal;
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 1.5;
+  }
+}
+.servicedeveloped .developedinfo .viewall .link:not([disabled]):hover {
+  background: #023c83;
+  color: #ffffff;
+}
+
+/**=======================================================**
+                    SECTION END
+**=======================================================**/
+/**=======================================================**
+                    SECTION START
+**=======================================================**/
+.servicexpect {
+  padding: 2.5rem 0.5rem;
+}
+@media screen and (min-width: 48rem) {
+  .servicexpect {
+    padding: 4rem 0rem;
+  }
+}
+@media screen and (min-width: 62rem) {
+  .servicexpect {
+    padding: 5rem 0rem;
+  }
+}
+@media screen and (min-width: 87.5rem) {
+  .servicexpect {
+    padding: 6.25rem 0rem;
+  }
+}
+.servicexpect-content {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+@media screen and (min-width: 48rem) {
+  .servicexpect-content {
+    gap: 3rem;
+  }
+}
+@media screen and (min-width: 62rem) {
+  .servicexpect-content {
+    gap: 4rem;
+  }
+}
+@media screen and (min-width: 87.5rem) {
+  .servicexpect-content {
+    gap: 5rem;
+  }
+}
+.servicexpect-title {
+  color: #4A5568;
+  font-family: "Titillium Web";
+  font-style: normal;
+  font-size: 1.5rem;
+  font-weight: 600;
+  line-height: 1.3333333333;
+}
+@media screen and (min-width: 25.875rem) {
+  .servicexpect-title {
+    font-family: "Titillium Web";
+    font-style: normal;
+    font-size: 2rem;
+    font-weight: 600;
+    line-height: 1.375;
+  }
+}
+@media screen and (min-width: 31.25rem) {
+  .servicexpect-title {
+    font-family: "Titillium Web";
+    font-style: normal;
+    font-size: 2.5rem;
+    font-weight: 600;
+    line-height: 1.35;
+  }
+}
+@media screen and (min-width: 48rem) {
+  .servicexpect-title {
+    font-family: "Titillium Web";
+    font-style: normal;
+    font-size: 3rem;
+    font-weight: 600;
+    line-height: 1.25;
+  }
+}
+@media screen and (min-width: 62rem) {
+  .servicexpect-title {
+    font-family: "Titillium Web";
+    font-style: normal;
+    font-size: 2.5rem;
+    font-weight: 600;
+    line-height: 1.35;
+  }
+}
+@media screen and (min-width: 75rem) {
+  .servicexpect-title {
+    font-family: "Titillium Web";
+    font-style: normal;
+    font-size: 3rem;
+    font-weight: 600;
+    line-height: 1.25;
+  }
+}
+@media screen and (min-width: 87.5rem) {
+  .servicexpect-title {
+    font-family: "Titillium Web";
+    font-style: normal;
+    font-size: 3.75rem;
+    font-weight: 600;
+    line-height: 1.2666666667;
+  }
+}
+.servicexpect-details {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+.servicexpect-details .detail .detailtext {
+  color: #4A5568;
+  font-family: "Titillium Web";
+  font-style: normal;
+  font-size: 1rem;
+  font-weight: normal;
+  line-height: 1.75;
+}
+@media screen and (min-width: 48rem) {
+  .servicexpect-details .detail .detailtext {
+    font-family: "Titillium Web";
+    font-style: normal;
+    font-size: 1.125rem;
+    font-weight: normal;
+    line-height: 1.6666666667;
+  }
+}
+@media screen and (min-width: 62rem) {
+  .servicexpect-details .detail .detailtext {
+    font-family: "Titillium Web";
+    font-style: normal;
+    font-size: 1.25rem;
+    font-weight: normal;
+    line-height: 1.8;
+  }
+}
+.servicexpect-details .viewall .link {
+  background: #0876FC;
+  color: #ffffff;
+  border-radius: 0.5rem;
+  border-radius: 0.5rem;
+  font-family: "Titillium Web";
+  font-style: normal;
+  font-size: 0.875rem;
+  font-weight: 700;
+  line-height: 1.4285714286;
+  letter-spacing: 0.015rem;
+  width: 12.5rem;
+  height: 3.625rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  transition: background 200ms ease-in-out;
+}
+@media screen and (min-width: 62rem) {
+  .servicexpect-details .viewall .link {
+    font-family: "Titillium Web";
+    font-style: normal;
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 1.5;
+  }
+}
+.servicexpect-details .viewall .link:not([disabled]):hover {
+  background: #023c83;
+  color: #ffffff;
+}
+.servicexpect-info {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.servicexpect-info .textinfo {
+  color: #4A5568;
+  font-family: "Titillium Web";
+  font-style: normal;
+  font-size: 1rem;
+  font-weight: normal;
+  line-height: 1.75;
+}
+@media screen and (min-width: 48rem) {
+  .servicexpect-info .textinfo {
+    font-family: "Titillium Web";
+    font-style: normal;
+    font-size: 1.125rem;
+    font-weight: normal;
+    line-height: 1.6666666667;
+  }
+}
+@media screen and (min-width: 62rem) {
+  .servicexpect-info .textinfo {
+    font-family: "Titillium Web";
+    font-style: normal;
+    font-size: 1.25rem;
+    font-weight: normal;
+    line-height: 1.8;
+  }
+}
+
+/**=======================================================**
+                    SECTION END
+**=======================================================**/
+/**=======================================================**
+                    SERVICE-BUSINESS START
+**=======================================================**/
+.servicebusiness {
+  padding: 2.5rem 0.5rem;
+}
+@media screen and (min-width: 48rem) {
+  .servicebusiness {
+    padding: 4rem 0rem;
+  }
+}
+@media screen and (min-width: 62rem) {
+  .servicebusiness {
+    padding: 5rem 0rem;
+  }
+}
+@media screen and (min-width: 87.5rem) {
+  .servicebusiness {
+    padding: 6.25rem 0rem;
+  }
+}
+.servicebusiness-content {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+@media screen and (min-width: 48rem) {
+  .servicebusiness-content {
+    gap: 3rem;
+  }
+}
+@media screen and (min-width: 62rem) {
+  .servicebusiness-content {
+    gap: 4rem;
+  }
+}
+@media screen and (min-width: 87.5rem) {
+  .servicebusiness-content {
+    gap: 5rem;
+  }
+}
+.servicebusiness-title {
+  color: #4A5568;
+  font-family: "Titillium Web";
+  font-style: normal;
+  font-size: 1.5rem;
+  font-weight: 600;
+  line-height: 1.3333333333;
+}
+@media screen and (min-width: 25.875rem) {
+  .servicebusiness-title {
+    font-family: "Titillium Web";
+    font-style: normal;
+    font-size: 2rem;
+    font-weight: 600;
+    line-height: 1.375;
+  }
+}
+@media screen and (min-width: 31.25rem) {
+  .servicebusiness-title {
+    font-family: "Titillium Web";
+    font-style: normal;
+    font-size: 2.5rem;
+    font-weight: 600;
+    line-height: 1.35;
+  }
+}
+@media screen and (min-width: 48rem) {
+  .servicebusiness-title {
+    font-family: "Titillium Web";
+    font-style: normal;
+    font-size: 3rem;
+    font-weight: 600;
+    line-height: 1.25;
+  }
+}
+@media screen and (min-width: 62rem) {
+  .servicebusiness-title {
+    font-family: "Titillium Web";
+    font-style: normal;
+    font-size: 2.5rem;
+    font-weight: 600;
+    line-height: 1.35;
+  }
+}
+@media screen and (min-width: 75rem) {
+  .servicebusiness-title {
+    font-family: "Titillium Web";
+    font-style: normal;
+    font-size: 3rem;
+    font-weight: 600;
+    line-height: 1.25;
+  }
+}
+@media screen and (min-width: 87.5rem) {
+  .servicebusiness-title {
+    font-family: "Titillium Web";
+    font-style: normal;
+    font-size: 3.75rem;
+    font-weight: 600;
+    line-height: 1.2666666667;
+  }
+}
+.servicebusiness-thumbnail {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.servicebusiness-thumbnail img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.servicebusiness .business {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+.servicebusiness .business .cardbusiness {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+@media screen and (min-width: 48rem) {
+  .servicebusiness .business .cardbusiness {
+    gap: 2rem;
+  }
+}
+.servicebusiness .business .cardbusiness-title {
+  color: #4A5568;
+  font-family: "Titillium Web";
+  font-style: normal;
+  font-size: 1.5rem;
+  font-weight: 600;
+  line-height: 1.3333333333;
+}
+@media screen and (min-width: 48rem) {
+  .servicebusiness .business .cardbusiness-title {
+    font-family: "Titillium Web";
+    font-style: normal;
+    font-size: 1.75rem;
+    font-weight: 600;
+    line-height: 1.3571428571;
+  }
+}
+@media screen and (min-width: 62rem) {
+  .servicebusiness .business .cardbusiness-title {
+    font-family: "Titillium Web";
+    font-style: normal;
+    font-size: 2rem;
+    font-weight: 600;
+    line-height: 1.25;
+  }
+}
+.servicebusiness .business .cardbusiness-text {
+  color: #4A5568;
+  font-family: "Titillium Web";
+  font-style: normal;
+  font-size: 1rem;
+  font-weight: normal;
+  line-height: 1.75;
+}
+@media screen and (min-width: 48rem) {
+  .servicebusiness .business .cardbusiness-text {
+    font-family: "Titillium Web";
+    font-style: normal;
+    font-size: 1.125rem;
+    font-weight: normal;
+    line-height: 1.6666666667;
+  }
+}
+@media screen and (min-width: 62rem) {
+  .servicebusiness .business .cardbusiness-text {
+    font-family: "Titillium Web";
+    font-style: normal;
+    font-size: 1.25rem;
+    font-weight: normal;
+    line-height: 1.8;
+  }
+}
+.servicebusiness .business-info .businesstext {
+  color: #4A5568;
+  font-family: "Titillium Web";
+  font-style: normal;
+  font-size: 1rem;
+  font-weight: normal;
+  line-height: 1.75;
+}
+@media screen and (min-width: 48rem) {
+  .servicebusiness .business-info .businesstext {
+    font-family: "Titillium Web";
+    font-style: normal;
+    font-size: 1.125rem;
+    font-weight: normal;
+    line-height: 1.6666666667;
+  }
+}
+@media screen and (min-width: 62rem) {
+  .servicebusiness .business-info .businesstext {
+    font-family: "Titillium Web";
+    font-style: normal;
+    font-size: 1.25rem;
+    font-weight: normal;
+    line-height: 1.8;
+  }
+}
+
+/**=======================================================**
+                    SERVICE-BUSINESS END
+**=======================================================**/
+/**=======================================================**
+                    RECENT-WORK START
+**=======================================================**/
+.recentwork {
+  background: #ffffff;
+  padding: 2.5rem 0.5rem;
+}
+@media screen and (min-width: 48rem) {
+  .recentwork {
+    padding: 4rem 0rem;
+  }
+}
+@media screen and (min-width: 62rem) {
+  .recentwork {
+    padding: 5rem 0rem;
+  }
+}
+@media screen and (min-width: 87.5rem) {
+  .recentwork {
+    padding: 6.25rem 0rem;
+  }
+}
+.recentwork-content {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+@media screen and (min-width: 48rem) {
+  .recentwork-content {
+    gap: 3rem;
+  }
+}
+@media screen and (min-width: 62rem) {
+  .recentwork-content {
+    gap: 4rem;
+  }
+}
+@media screen and (min-width: 87.5rem) {
+  .recentwork-content {
+    gap: 5rem;
+  }
+}
+.recentwork-info {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.recentwork-info .recentwork-title {
+  color: #4A5568;
+  font-family: "Titillium Web";
+  font-style: normal;
+  font-size: 1.5rem;
+  font-weight: 600;
+  line-height: 1.3333333333;
+}
+@media screen and (min-width: 25.875rem) {
+  .recentwork-info .recentwork-title {
+    font-family: "Titillium Web";
+    font-style: normal;
+    font-size: 2rem;
+    font-weight: 600;
+    line-height: 1.375;
+  }
+}
+@media screen and (min-width: 31.25rem) {
+  .recentwork-info .recentwork-title {
+    font-family: "Titillium Web";
+    font-style: normal;
+    font-size: 2.5rem;
+    font-weight: 600;
+    line-height: 1.35;
+  }
+}
+@media screen and (min-width: 48rem) {
+  .recentwork-info .recentwork-title {
+    font-family: "Titillium Web";
+    font-style: normal;
+    font-size: 3rem;
+    font-weight: 600;
+    line-height: 1.25;
+  }
+}
+@media screen and (min-width: 62rem) {
+  .recentwork-info .recentwork-title {
+    font-family: "Titillium Web";
+    font-style: normal;
+    font-size: 2.5rem;
+    font-weight: 600;
+    line-height: 1.35;
+  }
+}
+@media screen and (min-width: 75rem) {
+  .recentwork-info .recentwork-title {
+    font-family: "Titillium Web";
+    font-style: normal;
+    font-size: 3rem;
+    font-weight: 600;
+    line-height: 1.25;
+  }
+}
+@media screen and (min-width: 87.5rem) {
+  .recentwork-info .recentwork-title {
+    font-family: "Titillium Web";
+    font-style: normal;
+    font-size: 3.75rem;
+    font-weight: 600;
+    line-height: 1.2666666667;
+  }
+}
+.recentwork-info .recentwork-text {
+  color: #4A5568;
+  font-family: "Titillium Web";
+  font-style: normal;
+  font-size: 1rem;
+  font-weight: normal;
+  line-height: 1.75;
+}
+@media screen and (min-width: 48rem) {
+  .recentwork-info .recentwork-text {
+    font-family: "Titillium Web";
+    font-style: normal;
+    font-size: 1.125rem;
+    font-weight: normal;
+    line-height: 1.6666666667;
+  }
+}
+@media screen and (min-width: 62rem) {
+  .recentwork-info .recentwork-text {
+    font-family: "Titillium Web";
+    font-style: normal;
+    font-size: 1.25rem;
+    font-weight: normal;
+    line-height: 1.8;
+  }
+}
+.recentwork-thumbnail {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.recentwork-thumbnail img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.recentwork .recentproject {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+@media screen and (min-width: 48rem) {
+  .recentwork .recentproject {
+    gap: 4rem;
+  }
+}
+@media screen and (min-width: 62rem) {
+  .recentwork .recentproject {
+    gap: 5rem;
+  }
+}
+.recentwork .recentproject-header {
+  display: flex;
+  flex-direction: column;
+  gap: 0.875rem;
+}
+.recentwork .recentproject-header .recentsubtitle {
+  color: #4A5568;
+  font-family: "Titillium Web";
+  font-style: normal;
+  font-size: 1rem;
+  font-weight: normal;
+  line-height: 1.75;
+}
+@media screen and (min-width: 48rem) {
+  .recentwork .recentproject-header .recentsubtitle {
+    font-family: "Titillium Web";
+    font-style: normal;
+    font-size: 1.125rem;
+    font-weight: normal;
+    line-height: 1.6666666667;
+  }
+}
+@media screen and (min-width: 62rem) {
+  .recentwork .recentproject-header .recentsubtitle {
+    font-family: "Titillium Web";
+    font-style: normal;
+    font-size: 1.25rem;
+    font-weight: normal;
+    line-height: 1.8;
+  }
+}
+.recentwork .recentproject-header .recent-title {
+  color: #4A5568;
+  font-family: "Titillium Web";
+  font-style: normal;
+  font-size: 1.5rem;
+  font-weight: 600;
+  line-height: 1.3333333333;
+}
+@media screen and (min-width: 48rem) {
+  .recentwork .recentproject-header .recent-title {
+    font-family: "Titillium Web";
+    font-style: normal;
+    font-size: 1.75rem;
+    font-weight: 600;
+    line-height: 1.3571428571;
+  }
+}
+@media screen and (min-width: 62rem) {
+  .recentwork .recentproject-header .recent-title {
+    font-family: "Titillium Web";
+    font-style: normal;
+    font-size: 2rem;
+    font-weight: 600;
+    line-height: 1.25;
+  }
+}
+.recentwork .recentproject-body .text {
+  color: #4A5568;
+  font-family: "Titillium Web";
+  font-style: normal;
+  font-size: 1rem;
+  font-weight: normal;
+  line-height: 1.75;
+}
+@media screen and (min-width: 48rem) {
+  .recentwork .recentproject-body .text {
+    font-family: "Titillium Web";
+    font-style: normal;
+    font-size: 1.125rem;
+    font-weight: normal;
+    line-height: 1.6666666667;
+  }
+}
+@media screen and (min-width: 62rem) {
+  .recentwork .recentproject-body .text {
+    font-family: "Titillium Web";
+    font-style: normal;
+    font-size: 1.25rem;
+    font-weight: normal;
+    line-height: 1.8;
+  }
+}
+.recentwork .recentproject .viewall .link {
+  background: #0876FC;
+  color: #ffffff;
+  border-radius: 0.5rem;
+  border-radius: 0.5rem;
+  font-family: "Titillium Web";
+  font-style: normal;
+  font-size: 0.875rem;
+  font-weight: 700;
+  line-height: 1.4285714286;
+  letter-spacing: 0.015rem;
+  width: 12.5rem;
+  height: 3.625rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  transition: background 200ms ease-in-out;
+}
+@media screen and (min-width: 62rem) {
+  .recentwork .recentproject .viewall .link {
+    font-family: "Titillium Web";
+    font-style: normal;
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 1.5;
+  }
+}
+.recentwork .recentproject .viewall .link:not([disabled]):hover {
+  background: #023c83;
+  color: #ffffff;
+}
+
+/**=======================================================**
+                    RECENT-WORK END
 **=======================================================**/
 /**=======================================================**
                     DETAILS BANNER START
