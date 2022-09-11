@@ -423,17 +423,31 @@
     @include breakpoint(tab992) {
       gap: size(48);
     }
+  }
 
-    .analysis,
-    .development,
-    .testing,
-    .maintenance {
+  .list-group {
+    background: transparent;
+    @include radius(0);
+    @include w100;
+    align-items: center;
+    gap: size(32);
+
+    @include breakpoint(tab992) {
+      gap: size(48);
+    }
+
+    &-item {
+      background: transparent;
+      margin: 0;
+      border: none;
       height: size(64);
       @include flex-center;
       @include radius(13);
       @include font-face($primaryFont, style('normal'), size(20), weight('semibold'), line-height(32, 20));
+      opacity: 0.3;
       padding: size(10);
       text-align: center;
+      @include transitionsall;
   
       @include breakpoint(mobile768) {
         @include font-face($primaryFont, style('normal'), size(24), weight('semibold'), line-height(32, 24));
@@ -443,46 +457,90 @@
       @include breakpoint(tab992) {
         @include font-face($primaryFont, style('normal'), size(28), weight('semibold'), line-height(38, 28));
       }
-    }
 
-    .analysis {
-      @include setBgColor($analysisbg, $datavisualbg);
-      @include w100;
+      &.analysis {
+        @include setBgColor($analysisbg, $datavisualbg);
+        @include w100;
+    
+        @include breakpoint(desktop1400) {
+          width: size(456);
+        }
+      }
   
-      @include breakpoint(mobile768) {
-        width: size(456);
+      &.development {
+        @include setBgColor($developbg, $datavisualbg);
+        @include w100;
+    
+        @include breakpoint(desktop1400) {
+          width: size(264);
+        }
+      }
+  
+      &.testing {
+        @include setBgColor($testingbg, $datavisualbg);
+        @include w100;
+    
+        @include breakpoint(desktop1400) {
+          width: size(330);
+        }
+      }
+  
+      &.maintenance {
+        @include setBgColor($maintenancebg, $datavisualbg);
+        @include w100;
+    
+        @include breakpoint(desktop1400) {
+          width: size(430);
+        }
+      }
+
+      &.active {
+        &.analysis,
+        &.development,
+        &.testing,
+        &.maintenance {
+          opacity: 1;
+        }
+      }
+
+      &:hover:not(.active) {
+        opacity: 1;
       }
     }
+  }
 
-    .development {
-      @include setBgColor($developbg, $datavisualbg);
-      width: size(264);
-      opacity: 0.3;
+  .scrollspy-contents {
+    position: relative;
+    margin: 0;
+    padding: 0;
+
+    @include breakpoint(tab992) {
+      overflow: auto;
+      max-height: size(540);
     }
 
-    .testing {
-      @include setBgColor($testingbg, $datavisualbg);
-      width: size(330);
-      opacity: 0.3;
-    }
+		&::-webkit-scrollbar {
+      display: none;
+		}
 
-    .maintenance {
-      @include setBgColor($maintenancebg, $datavisualbg);
-      @include w100;
-      opacity: 0.3;
-  
-      @include breakpoint(mobile768) {
-        width: size(430);
-      }
+    @include breakpoint(tab992) {
+      gap: size(48);
     }
   }
 
   .descriptions {
     @include flex-column;
     gap: size(20);
+    height: 100%;
+    margin-bottom: size(32);
     
     @include breakpoint(tab992) {
       gap: size(32);
+      margin-bottom: size(48);
+    }
+
+    &:last-of-type {
+      margin-bottom: 0;
     }
 
     .title {

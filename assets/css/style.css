@@ -7503,10 +7503,23 @@ select {
     gap: 3rem;
   }
 }
-.servicedeveloped .developdetail .analysis,
-.servicedeveloped .developdetail .development,
-.servicedeveloped .developdetail .testing,
-.servicedeveloped .developdetail .maintenance {
+.servicedeveloped .list-group {
+  background: transparent;
+  border-radius: 0rem;
+  border-radius: 0rem;
+  width: 100%;
+  align-items: center;
+  gap: 2rem;
+}
+@media screen and (min-width: 62rem) {
+  .servicedeveloped .list-group {
+    gap: 3rem;
+  }
+}
+.servicedeveloped .list-group-item {
+  background: transparent;
+  margin: 0;
+  border: none;
   height: 4rem;
   display: flex;
   align-items: center;
@@ -7518,14 +7531,13 @@ select {
   font-size: 1.25rem;
   font-weight: 600;
   line-height: 1.6;
+  opacity: 0.3;
   padding: 0.625rem;
   text-align: center;
+  transition: all 200ms ease-in-out;
 }
 @media screen and (min-width: 48rem) {
-  .servicedeveloped .developdetail .analysis,
-.servicedeveloped .developdetail .development,
-.servicedeveloped .developdetail .testing,
-.servicedeveloped .developdetail .maintenance {
+  .servicedeveloped .list-group-item {
     font-family: "Titillium Web";
     font-style: normal;
     font-size: 1.5rem;
@@ -7535,10 +7547,7 @@ select {
   }
 }
 @media screen and (min-width: 62rem) {
-  .servicedeveloped .developdetail .analysis,
-.servicedeveloped .developdetail .development,
-.servicedeveloped .developdetail .testing,
-.servicedeveloped .developdetail .maintenance {
+  .servicedeveloped .list-group-item {
     font-family: "Titillium Web";
     font-style: normal;
     font-size: 1.75rem;
@@ -7546,48 +7555,86 @@ select {
     line-height: 1.3571428571;
   }
 }
-.servicedeveloped .developdetail .analysis {
+.servicedeveloped .list-group-item.analysis {
   background: #D7F890;
   color: #00142D;
   width: 100%;
 }
-@media screen and (min-width: 48rem) {
-  .servicedeveloped .developdetail .analysis {
+@media screen and (min-width: 87.5rem) {
+  .servicedeveloped .list-group-item.analysis {
     width: 28.5rem;
   }
 }
-.servicedeveloped .developdetail .development {
+.servicedeveloped .list-group-item.development {
   background: #FF8E5E;
   color: #00142D;
-  width: 16.5rem;
-  opacity: 0.3;
+  width: 100%;
 }
-.servicedeveloped .developdetail .testing {
+@media screen and (min-width: 87.5rem) {
+  .servicedeveloped .list-group-item.development {
+    width: 16.5rem;
+  }
+}
+.servicedeveloped .list-group-item.testing {
   background: #F6F4F2;
   color: #00142D;
-  width: 20.625rem;
-  opacity: 0.3;
+  width: 100%;
 }
-.servicedeveloped .developdetail .maintenance {
+@media screen and (min-width: 87.5rem) {
+  .servicedeveloped .list-group-item.testing {
+    width: 20.625rem;
+  }
+}
+.servicedeveloped .list-group-item.maintenance {
   background: #84D6D7;
   color: #00142D;
   width: 100%;
-  opacity: 0.3;
 }
-@media screen and (min-width: 48rem) {
-  .servicedeveloped .developdetail .maintenance {
+@media screen and (min-width: 87.5rem) {
+  .servicedeveloped .list-group-item.maintenance {
     width: 26.875rem;
+  }
+}
+.servicedeveloped .list-group-item.active.analysis, .servicedeveloped .list-group-item.active.development, .servicedeveloped .list-group-item.active.testing, .servicedeveloped .list-group-item.active.maintenance {
+  opacity: 1;
+}
+.servicedeveloped .list-group-item:hover:not(.active) {
+  opacity: 1;
+}
+.servicedeveloped .scrollspy-contents {
+  position: relative;
+  margin: 0;
+  padding: 0;
+}
+@media screen and (min-width: 62rem) {
+  .servicedeveloped .scrollspy-contents {
+    overflow: auto;
+    max-height: 33.75rem;
+  }
+}
+.servicedeveloped .scrollspy-contents::-webkit-scrollbar {
+  display: none;
+}
+@media screen and (min-width: 62rem) {
+  .servicedeveloped .scrollspy-contents {
+    gap: 3rem;
   }
 }
 .servicedeveloped .descriptions {
   display: flex;
   flex-direction: column;
   gap: 1.25rem;
+  height: 100%;
+  margin-bottom: 2rem;
 }
 @media screen and (min-width: 62rem) {
   .servicedeveloped .descriptions {
     gap: 2rem;
+    margin-bottom: 3rem;
   }
+}
+.servicedeveloped .descriptions:last-of-type {
+  margin-bottom: 0;
 }
 .servicedeveloped .descriptions .title {
   color: #ffffff;

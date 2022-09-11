@@ -126,12 +126,12 @@
 	@include flex-center-vert;
 }
 
-@mixin border($style, $width, $color) {
-	border: $style (calc($width / $base) + rem) $color;
+@mixin border($style, $width, $color, $base: 16) {
+	border: $style (calc($width / $base)) + rem $color;
 }
 
-@mixin border-single($direction, $style, $width, $color) {
-	border-#{$direction}: $style (($width / $base) + rem) $color;
+@mixin border-single($direction, $style, $width, $color, $base: 16) {
+	border-#{$direction}: $style (calc($width / $base)) + rem $color;
 }
 
 // DEFINE BORDER-RADIUS-ALL MIXIN
