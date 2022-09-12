@@ -1923,8 +1923,10 @@ select {
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  justify-content: flex-start;
   gap: 1rem;
   text-align: center;
+  height: 10.3125rem;
 }
 .card-technology-cap {
   height: 3.75rem;

@@ -339,8 +339,10 @@
 
 	&-header {
 		@include flex-center-column;
+		justify-content: flex-start;
 		gap: length(16);
 		text-align: center;
+		height: length(165);
 	}
 
 	&-cap {
