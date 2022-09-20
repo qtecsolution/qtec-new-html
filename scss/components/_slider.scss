@@ -37,17 +37,13 @@
 
     &-fraction {
       z-index: 100;
+      bottom: length(96);
 
       @include breakpoint(tab992) {
         left: auto;
         right: length(80);
-        bottom: length(80);
         width: 5%;
         text-align: center;
-      }
-
-      @include breakpoint(desktop1400) {
-        bottom: length(100);
       }
     }
   }
@@ -58,17 +54,13 @@
     height: length(64);
     display: none;
     z-index: 100;
+    bottom: length(96);
 
     @include breakpoint(tab992) {
       @include flex-column;
       align-items: flex-end;
       gap: length(0);
-      bottom: length(80);
       right: length(48);
-    }
-
-    @include breakpoint(desktop1400) {
-      bottom: length(100);
     }
   }
 

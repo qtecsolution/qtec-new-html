@@ -280,11 +280,13 @@
 			@include breakpoint(tab992) {
 				gap: length(48);
 				text-align: right;
+				padding-right: length(64);
 			}
 
 			.gallery-title {
 				color: $gray-700;
 				@include font-face($primaryFont, style('normal'), size(24), weight('semibold'), line-height(36, 24));
+				margin-top: size(32);
 
 				@include breakpoint(tab992) {
 					@include font-face($primaryFont, style('normal'), size(40), weight('semibold'), line-height(48, 40));
@@ -316,12 +318,8 @@
 				@include breakpoint(tab992) {
 					@include flex-center;
 					@include square(length(160));
-					top: -17%;
-					right: length(-64);
-				}
-
-				@include breakpoint(tab992) {
-					top: -14%;
+					top: 0;
+					right: size(64);
 				}
 
 				svg {
