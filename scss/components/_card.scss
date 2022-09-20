@@ -157,6 +157,7 @@
 	@include flex-center-column;
 	gap: length(24);
 	text-align: center;
+	@include h100;
 
 	.text-testimonial {
 		color: $gray-600;
@@ -846,6 +847,41 @@
 					}
 				}
 			}
+		}
+	}
+}
+
+.cardanalysis {
+	@include flex-column;
+	gap: size(16);
+
+	@include breakpoint(tab992) {
+		gap: size(24);
+	}
+
+	.analysistitle {
+		color: $gray-700;
+		@include font-face($primaryFont, style('normal'), size(24), weight('semibold'), line-height(32, 24));
+
+		@include breakpoint(mobile768) {
+			@include font-face($primaryFont, style('normal'), size(28), weight('semibold'), line-height(38, 28));
+		}
+
+		@include breakpoint(tab992) {
+			@include font-face($primaryFont, style('normal'), size(32), weight('semibold'), line-height(40, 32));
+		}
+	}
+
+	.analysistext {
+		color: $gray-700;
+		@include font-face($primaryFont, style('normal'), size(16), weight('normal'), line-height(28, 16));
+
+		@include breakpoint(mobile768) {
+			@include font-face($primaryFont, style('normal'), size(18), weight('normal'), line-height(30, 18));
+		}
+
+		@include breakpoint(tab992) {
+			@include font-face($primaryFont, style('normal'), size(20), weight('normal'), line-height(36, 20));
 		}
 	}
 }

@@ -63,6 +63,10 @@
     @include breakpoint(desktop1400) {
       @include font-face($primaryFont, style('normal'), size(60), weight('semibold'), line-height(76, 60));
     }
+
+    &.textservice {
+      color: $gray-700;
+    }
   }
 
   .cardcustom {
@@ -95,6 +99,10 @@
         @include breakpoint(tab992) {
           @include font-face($primaryFont, style('normal'), size(20), weight('semibold'), line-height(36, 20));
         }
+
+        &.textservice {
+          color: $gray-700;
+        }
       }
       
       .customtext {
@@ -104,6 +112,10 @@
         @include breakpoint(tab992) {
           @include font-face($primaryFont, style('normal'), size(18), weight('normal'), line-height(30, 18));
         }
+
+    &.textservice {
+      color: $gray-700;
+    }
       }
     }
   }
@@ -340,6 +352,26 @@
       @include breakpoint(tab992) {
         @include font-face($primaryFont, style('normal'), size(20), weight('normal'), line-height(36, 20));
       }
+    }
+  }
+
+  .link {
+    @include setBgColor($primary, $white);
+    @include radius(8);
+    @include font-face($primaryFont, style('normal'), size(14), weight('bold'), line-height(20, 14));
+    letter-spacing: length(0.24);
+    width: size(200);
+    height: size(58);
+    @include flex-center;
+    text-align: center;
+    @include transitionsbackground;
+
+    @include breakpoint(tab992) {
+      @include font-face($primaryFont, style('normal'), size(16), weight('bold'), line-height(24, 16));
+    }
+
+    @include hover {
+      @include setBgColor(darken($primary, 25%), $white);
     }
   }
 }
