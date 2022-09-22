@@ -374,6 +374,39 @@
       @include setBgColor(darken($primary, 25%), $white);
     }
   }
+
+  .maintenance-support {
+    @include flex-center-column;
+    gap: length(32);
+    text-align: center;
+
+    &-title {
+      color: $gray-700;
+      @include font-face($primaryFont, style('normal'), size(24), weight('semibold'), line-height(32, 24));
+  
+      @include breakpoint(mobile768) {
+        @include font-face($primaryFont, style('normal'), size(28), weight('semibold'), line-height(38, 28));
+      }
+  
+      @include breakpoint(tab992) {
+        @include font-face($primaryFont, style('normal'), size(32), weight('semibold'), line-height(40, 32));
+      }
+    }
+
+    &-text {
+      color: $gray-700;
+      @include font-face($primaryFont, style('normal'), size(16), weight('normal'), line-height(28, 16));
+      letter-spacing: length(0.24);
+  
+      @include breakpoint(mobile768) {
+        @include font-face($primaryFont, style('normal'), size(18), weight('normal'), line-height(30, 18));
+      }
+  
+      @include breakpoint(tab992) {
+        @include font-face($primaryFont, style('normal'), size(20), weight('normal'), line-height(36, 20));
+      }
+    }
+  }
 }
 
 /**=======================================================**
@@ -641,6 +674,18 @@
         @include hover {
           @include setBgColor(darken($primary, 25%), $white);
         }
+      }
+    }
+  }
+
+  &.bg-white {
+    .servicedeveloped-title {
+      color: $gray-700;
+    }
+
+    .card-testimonial {
+      .text-testimonial {
+        color: $gray-600;
       }
     }
   }

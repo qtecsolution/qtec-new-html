@@ -25,7 +25,7 @@ $breakpoints: (break-321: 321,
 }
 
 @function break($point) {
-    @return breakpoint($point) / $base+rem;
+    @return (calc(breakpoint($point) / $base) + rem);
 }
 
 /**=====================================================**

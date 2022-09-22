@@ -360,8 +360,9 @@
 			@include square(length(100));
 		}
 
-		svg {
+		svg, img {
 			@include wh100;
+			object-fit: contain;
 		}
 	}
 
@@ -882,6 +883,56 @@
 
 		@include breakpoint(tab992) {
 			@include font-face($primaryFont, style('normal'), size(20), weight('normal'), line-height(36, 20));
+		}
+	}
+}
+
+.cardcommerce {
+	@include flex-column;
+	gap: length(24);
+
+	&-header {
+		@include flex-center-vert;
+		gap: size(24);
+
+		.titlebox {
+			width: calc(100% - 4.75rem);
+
+			.title {
+				color: $gray-700;
+				@include font-face($primaryFont, style('normal'), size(24), weight('semibold'), line-height(32, 24));
+		
+				@include breakpoint(mobile768) {
+					@include font-face($primaryFont, style('normal'), size(26), weight('semibold'), line-height(36, 26));
+				}
+			}
+		}
+
+		.icon {
+			@include square(length(52));
+			@include flex-center;
+			overflow: hidden;
+
+			img {
+				@include wh100;
+				object-fit: cover;
+			}
+		}
+	}
+
+	&-body {
+		.text {
+      color: $gray-700;
+      @include font-face($primaryFont, style('normal'), size(16), weight('normal'), line-height(28, 16));
+      letter-spacing: length(0.24);
+  
+      @include breakpoint(mobile768) {
+        @include font-face($primaryFont, style('normal'), size(18), weight('normal'), line-height(30, 18));
+      }
+  
+      @include breakpoint(tab992) {
+        @include font-face($primaryFont, style('normal'), size(20), weight('normal'), line-height(36, 20));
+      }
 		}
 	}
 }

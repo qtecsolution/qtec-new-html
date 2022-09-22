@@ -1950,9 +1950,11 @@ select {
     width: 6.25rem;
   }
 }
-.card-technology-cap svg {
+.card-technology-cap svg, .card-technology-cap img {
   width: 100%;
   height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 .card-technology-title {
   color: #4A5568;
@@ -2626,6 +2628,78 @@ select {
 }
 @media screen and (min-width: 62rem) {
   .cardanalysis .analysistext {
+    font-family: "Titillium Web";
+    font-style: normal;
+    font-size: 1.25rem;
+    font-weight: normal;
+    line-height: 1.8;
+  }
+}
+
+.cardcommerce {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.cardcommerce-header {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+.cardcommerce-header .titlebox {
+  width: calc(100% - 4.75rem);
+}
+.cardcommerce-header .titlebox .title {
+  color: #4A5568;
+  font-family: "Titillium Web";
+  font-style: normal;
+  font-size: 1.5rem;
+  font-weight: 600;
+  line-height: 1.3333333333;
+}
+@media screen and (min-width: 48rem) {
+  .cardcommerce-header .titlebox .title {
+    font-family: "Titillium Web";
+    font-style: normal;
+    font-size: 1.625rem;
+    font-weight: 600;
+    line-height: 1.3846153846;
+  }
+}
+.cardcommerce-header .icon {
+  height: 3.25rem;
+  width: 3.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.cardcommerce-header .icon img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.cardcommerce-body .text {
+  color: #4A5568;
+  font-family: "Titillium Web";
+  font-style: normal;
+  font-size: 1rem;
+  font-weight: normal;
+  line-height: 1.75;
+  letter-spacing: 0.015rem;
+}
+@media screen and (min-width: 48rem) {
+  .cardcommerce-body .text {
+    font-family: "Titillium Web";
+    font-style: normal;
+    font-size: 1.125rem;
+    font-weight: normal;
+    line-height: 1.6666666667;
+  }
+}
+@media screen and (min-width: 62rem) {
+  .cardcommerce-body .text {
     font-family: "Titillium Web";
     font-style: normal;
     font-size: 1.25rem;
@@ -7476,6 +7550,67 @@ select {
   background: #023c83;
   color: #ffffff;
 }
+.serviceconsider .maintenance-support {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 2rem;
+  text-align: center;
+}
+.serviceconsider .maintenance-support-title {
+  color: #4A5568;
+  font-family: "Titillium Web";
+  font-style: normal;
+  font-size: 1.5rem;
+  font-weight: 600;
+  line-height: 1.3333333333;
+}
+@media screen and (min-width: 48rem) {
+  .serviceconsider .maintenance-support-title {
+    font-family: "Titillium Web";
+    font-style: normal;
+    font-size: 1.75rem;
+    font-weight: 600;
+    line-height: 1.3571428571;
+  }
+}
+@media screen and (min-width: 62rem) {
+  .serviceconsider .maintenance-support-title {
+    font-family: "Titillium Web";
+    font-style: normal;
+    font-size: 2rem;
+    font-weight: 600;
+    line-height: 1.25;
+  }
+}
+.serviceconsider .maintenance-support-text {
+  color: #4A5568;
+  font-family: "Titillium Web";
+  font-style: normal;
+  font-size: 1rem;
+  font-weight: normal;
+  line-height: 1.75;
+  letter-spacing: 0.015rem;
+}
+@media screen and (min-width: 48rem) {
+  .serviceconsider .maintenance-support-text {
+    font-family: "Titillium Web";
+    font-style: normal;
+    font-size: 1.125rem;
+    font-weight: normal;
+    line-height: 1.6666666667;
+  }
+}
+@media screen and (min-width: 62rem) {
+  .serviceconsider .maintenance-support-text {
+    font-family: "Titillium Web";
+    font-style: normal;
+    font-size: 1.25rem;
+    font-weight: normal;
+    line-height: 1.8;
+  }
+}
 
 /**=======================================================**
                     SERVICE-CONSIDER END
@@ -7852,6 +7987,12 @@ select {
 .servicedeveloped .developedinfo .viewall .link:not([disabled]):hover {
   background: #023c83;
   color: #ffffff;
+}
+.servicedeveloped.bg-white .servicedeveloped-title {
+  color: #4A5568;
+}
+.servicedeveloped.bg-white .card-testimonial .text-testimonial {
+  color: #718096;
 }
 
 /**=======================================================**
