@@ -1410,7 +1410,7 @@
       &-button {
         background: transparent;
         @include flex-center-vert;
-        // align-items: baseline;
+        align-items: baseline;
         gap: size(16);
 
         @include breakpoint(tab992) {
@@ -1419,9 +1419,10 @@
         }
 
         .plusminus {
+          cursor: pointer;
           position: relative;
           @include square(size(16));
-          cursor: pointer;
+          overflow: hidden;
           
           &::before , &::after {
             content: '';

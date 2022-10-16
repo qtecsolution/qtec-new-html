@@ -11468,6 +11468,7 @@ select {
   background: transparent;
   display: flex;
   align-items: center;
+  align-items: baseline;
   gap: 1rem;
 }
 @media screen and (min-width: 62rem) {
@@ -11477,10 +11478,11 @@ select {
   }
 }
 .servicefaq-body .accordion-button .plusminus {
+  cursor: pointer;
   position: relative;
   height: 1rem;
   width: 1rem;
-  cursor: pointer;
+  overflow: hidden;
 }
 .servicefaq-body .accordion-button .plusminus::before, .servicefaq-body .accordion-button .plusminus::after {
   content: "";
