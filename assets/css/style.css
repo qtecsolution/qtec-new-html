@@ -9656,6 +9656,11 @@ select {
     padding: 5rem 0rem;
   }
 }
+@media screen and (min-width: 87.5rem) {
+  .servicesec {
+    padding: 6.5rem 0rem;
+  }
+}
 .servicesec-content {
   display: flex;
   flex-direction: column;
@@ -9866,7 +9871,7 @@ select {
 }
 @media screen and (min-width: 87.5rem) {
   .servicedata {
-    padding: 6.25rem 0rem;
+    padding: 6.5rem 0rem;
   }
 }
 .servicedata-content {
@@ -10227,7 +10232,7 @@ select {
 }
 @media screen and (min-width: 87.5rem) {
   .serviceinfo {
-    padding: 6.25rem 0rem;
+    padding: 6.5rem 0rem;
   }
 }
 .serviceinfo-content {
@@ -10402,7 +10407,7 @@ select {
 }
 @media screen and (min-width: 87.5rem) {
   .serviceanalysis {
-    padding: 6.25rem 0rem;
+    padding: 6.5rem 0rem;
   }
 }
 .serviceanalysis-title {
@@ -10483,10 +10488,52 @@ select {
     gap: 4rem;
   }
 }
-@media screen and (min-width: 87.5rem) {
+@media screen and (min-width: 75rem) {
   .serviceanalysis-content {
     gap: 5rem;
   }
+}
+@media screen and (min-width: 87.5rem) {
+  .serviceanalysis-content {
+    gap: 6.5rem;
+  }
+}
+.serviceanalysis-content .viewall {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.serviceanalysis-content .viewall .link {
+  background: #0876FC;
+  color: #ffffff;
+  border-radius: 0.5rem;
+  border-radius: 0.5rem;
+  font-family: "Titillium Web";
+  font-style: normal;
+  font-size: 0.875rem;
+  font-weight: 700;
+  line-height: 1.4285714286;
+  letter-spacing: 0.015rem;
+  width: 12.5rem;
+  height: 3.625rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  transition: background 200ms ease-in-out;
+}
+@media screen and (min-width: 62rem) {
+  .serviceanalysis-content .viewall .link {
+    font-family: "Titillium Web";
+    font-style: normal;
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 1.5;
+  }
+}
+.serviceanalysis-content .viewall .link:not([disabled]):hover {
+  background: #023c83;
+  color: #ffffff;
 }
 .serviceanalysis .leftcontent,
 .serviceanalysis .rightcontent {
@@ -10533,7 +10580,7 @@ select {
 }
 @media screen and (min-width: 87.5rem) {
   .serviceredesign {
-    padding: 6.25rem 0rem;
+    padding: 6.5rem 0rem;
   }
 }
 .serviceredesign-content {
@@ -10779,7 +10826,7 @@ select {
 }
 @media screen and (min-width: 87.5rem) {
   .servicepolicy {
-    padding: 6.25rem 0rem;
+    padding: 6.5rem 0rem;
   }
 }
 .servicepolicy-content {
@@ -11040,7 +11087,7 @@ select {
 }
 @media screen and (min-width: 87.5rem) {
   .servicepolicydetails {
-    padding: 6.25rem 0rem;
+    padding: 6.5rem 0rem;
   }
 }
 .servicepolicydetails-title {
@@ -11153,7 +11200,7 @@ select {
 }
 @media screen and (min-width: 87.5rem) {
   .designservice {
-    padding: 6.25rem 0rem;
+    padding: 6.5rem 0rem;
   }
 }
 .designservice-content {
@@ -11374,7 +11421,7 @@ select {
 }
 @media screen and (min-width: 87.5rem) {
   .servicefaq {
-    padding: 6.25rem 0rem;
+    padding: 6.5rem 0rem;
   }
 }
 .servicefaq-content {
