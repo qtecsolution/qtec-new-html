@@ -571,7 +571,7 @@
 .card-opportunities {
 	@include flex-column;
 	justify-content: space-between;
-	gap: length(40);
+	gap: length(20);
 	background: $white;
 	@include radius(8);
 	@include border(solid, 1, $gray-300);
