@@ -6777,6 +6777,10 @@ select {
 .homeclients-body .client-thumnail {
   width: 10.625rem;
   height: 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
 }
 .homeclients-body .client-thumnail img {
   width: 100%;
