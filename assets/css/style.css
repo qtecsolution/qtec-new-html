@@ -829,6 +829,21 @@ select {
 .footer-content .footlogo-subscribe .subscribe.errorfield .error-message {
   display: block;
 }
+.footer-content .footlogo-subscribe .basislogo {
+  margin-top: 1.5rem;
+  width: 14.0625rem;
+  height: 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.footer-content .footlogo-subscribe .basislogo img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
 .footer-content .footerinfo {
   display: flex;
   align-items: center;

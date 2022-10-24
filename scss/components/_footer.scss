@@ -96,6 +96,19 @@
 					}
 				}
 			}
+
+			.basislogo {
+				margin-top: size(24);
+				width: size(225);
+				height: size(80);
+				@include flex-center;
+				overflow: hidden;
+
+				img {
+					@include wh100;
+					object-fit: cover;
+				}
+			}
 		}
 
 		.footerinfo {
