@@ -735,6 +735,7 @@
   &-title {
     color: $gray-700;
     @include font-face($primaryFont, style('normal'), size(24), weight('semibold'), line-height(32, 24));
+    text-align: center;
 
     @include breakpoint(mobile414) {
       @include font-face($primaryFont, style('normal'), size(32), weight('semibold'), line-height(44, 32));
@@ -761,9 +762,15 @@
     }
   }
 
+  &-info {
+    @include flex-center-column;
+    gap: size(44);
+  }
+
   &-details {
-    @include flex-column;
+    @include flex-center-column;
     gap: size(40);
+    text-align: center;
 
     .detail {
       .detailtext {

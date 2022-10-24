@@ -197,6 +197,127 @@
 
 
 /**=======================================================**
+                    HOME-INFO START
+**=======================================================**/
+
+.homeinfo {
+	padding: length(80) length(8);
+
+	@include breakpoint(tab992) {
+		padding: length(160) length(0);
+	}
+
+	&-content {
+		@include flex-center-column;
+		gap: length(44);
+		text-align: center;
+	}
+
+	.titlebox {
+		max-width: length(648);
+		margin-inline: auto;
+
+		.homeinfo-title {
+			color: $gray-700;
+			@include font-face($primaryFont, style('normal'), size(32), weight('semibold'), line-height(47, 32));
+
+			@include breakpoint(mobile768) {
+				@include font-face($primaryFont, style('normal'), size(40), weight('semibold'), line-height(77, 40));
+			}
+
+			@include breakpoint(tab992) {
+				@include font-face($primaryFont, style('normal'), size(52), weight('semibold'), line-height(79.09, 52));
+			}
+		}
+	}
+
+	.textsbox {
+		max-width: length(1096);
+		margin-inline: auto;
+
+		.homeinfo-text {
+			color: $gray-700;
+			@include font-face($primaryFont, style('normal'), size(16), weight('normal'), line-height(25.92, 16));
+			letter-spacing: length(0.24);
+			text-align: justify;
+
+			@include breakpoint(tab992) {
+				@include font-face($primaryFont, style('normal'), size(18), weight('normal'), line-height(30, 18));
+			}
+		}
+	}
+}
+
+/**=======================================================**
+                    HOME-INFO END
+**=======================================================**/
+
+
+
+/**=======================================================**
+                    HOME-CLIENTS START
+**=======================================================**/
+
+.homeclients {
+	background: $white;
+	padding: length(80) length(8);
+
+	@include breakpoint(tab992) {
+		padding: length(120) length(0);
+	}
+
+	&-content {
+		@include flex-center-column;
+		gap: size(48);
+		text-align: center;
+
+		@include breakpoint(tab992) {
+			gap: size(80);
+		}
+	}
+
+	&-header {
+		.title {
+			color: $gray-700;
+			@include font-face($primaryFont, style('normal'), size(20), weight('normal'), line-height(32.64, 20));
+
+			@include breakpoint(mobile768) {
+				@include font-face($primaryFont, style('normal'), size(24), weight('normal'), line-height(38.08, 24));
+			}
+
+			@include breakpoint(tab992) {
+				@include font-face($primaryFont, style('normal'), size(28), weight('normal'), line-height(38.08, 28));
+			}
+
+			span {
+				color: inherit;
+				font: inherit;
+				font-weight: 600;
+			}
+		}
+	}
+
+	&-body {
+		.client-thumnail {
+			width: size(170);
+			height: size(80);
+			@include flex-center;
+			overflow: hidden;
+			
+			img {
+				@include wh100;
+				object-fit: cover;
+			}
+		}
+}
+
+/**=======================================================**
+                    HOME-CLIENTS END
+**=======================================================**/
+
+
+
+/**=======================================================**
                 HOME-FEATURES SECTION START
 **=======================================================**/
 
@@ -485,7 +606,6 @@
 **=======================================================**/
 
 .testimonial {
-	background: $aboutBg;
 	padding: length(48) length(8);
 
 	@include breakpoint(tab992) {

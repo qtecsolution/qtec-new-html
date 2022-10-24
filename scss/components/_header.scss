@@ -9,7 +9,7 @@
 	filter: $drop-shadow-1;
 	position: fixed;
 	@include w100;
-	top: 0;
+	top: size(-2);
 	left: 0;
 	height: length(68);
 	transition: ease $time;
@@ -21,6 +21,7 @@
 
 	@include breakpoint(tab992) {
 		height: length(100);
+		top: 0;
 	}
 
 	&-nav {

@@ -540,7 +540,7 @@ select {
   filter: drop-shadow(0 0 0.0625rem rgba(12, 26, 75, 0.24));
   position: fixed;
   width: 100%;
-  top: 0;
+  top: -0.125rem;
   left: 0;
   height: 4.25rem;
   transition: ease 200ms;
@@ -554,6 +554,7 @@ select {
 @media screen and (min-width: 62rem) {
   .header {
     height: 6.25rem;
+    top: 0;
   }
 }
 .header-nav {
@@ -6642,6 +6643,152 @@ select {
                     HOME-BANNER SECTION END
 **=======================================================**/
 /**=======================================================**
+                    HOME-INFO START
+**=======================================================**/
+.homeinfo {
+  padding: 5rem 0.5rem;
+}
+@media screen and (min-width: 62rem) {
+  .homeinfo {
+    padding: 10rem 0rem;
+  }
+}
+.homeinfo-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 2.75rem;
+  text-align: center;
+}
+.homeinfo .titlebox {
+  max-width: 40.5rem;
+  margin-inline: auto;
+}
+.homeinfo .titlebox .homeinfo-title {
+  color: #4A5568;
+  font-family: "Titillium Web";
+  font-style: normal;
+  font-size: 2rem;
+  font-weight: 600;
+  line-height: 1.46875;
+}
+@media screen and (min-width: 48rem) {
+  .homeinfo .titlebox .homeinfo-title {
+    font-family: "Titillium Web";
+    font-style: normal;
+    font-size: 2.5rem;
+    font-weight: 600;
+    line-height: 1.925;
+  }
+}
+@media screen and (min-width: 62rem) {
+  .homeinfo .titlebox .homeinfo-title {
+    font-family: "Titillium Web";
+    font-style: normal;
+    font-size: 3.25rem;
+    font-weight: 600;
+    line-height: 1.5209615385;
+  }
+}
+.homeinfo .textsbox {
+  max-width: 68.5rem;
+  margin-inline: auto;
+}
+.homeinfo .textsbox .homeinfo-text {
+  color: #4A5568;
+  font-family: "Titillium Web";
+  font-style: normal;
+  font-size: 1rem;
+  font-weight: normal;
+  line-height: 1.62;
+  letter-spacing: 0.015rem;
+  text-align: justify;
+}
+@media screen and (min-width: 62rem) {
+  .homeinfo .textsbox .homeinfo-text {
+    font-family: "Titillium Web";
+    font-style: normal;
+    font-size: 1.125rem;
+    font-weight: normal;
+    line-height: 1.6666666667;
+  }
+}
+
+/**=======================================================**
+                    HOME-INFO END
+**=======================================================**/
+/**=======================================================**
+                    HOME-CLIENTS START
+**=======================================================**/
+.homeclients {
+  background: #ffffff;
+  padding: 5rem 0.5rem;
+}
+@media screen and (min-width: 62rem) {
+  .homeclients {
+    padding: 7.5rem 0rem;
+  }
+}
+.homeclients-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 3rem;
+  text-align: center;
+}
+@media screen and (min-width: 62rem) {
+  .homeclients-content {
+    gap: 5rem;
+  }
+}
+.homeclients-header .title {
+  color: #4A5568;
+  font-family: "Titillium Web";
+  font-style: normal;
+  font-size: 1.25rem;
+  font-weight: normal;
+  line-height: 1.632;
+}
+@media screen and (min-width: 48rem) {
+  .homeclients-header .title {
+    font-family: "Titillium Web";
+    font-style: normal;
+    font-size: 1.5rem;
+    font-weight: normal;
+    line-height: 1.5866666667;
+  }
+}
+@media screen and (min-width: 62rem) {
+  .homeclients-header .title {
+    font-family: "Titillium Web";
+    font-style: normal;
+    font-size: 1.75rem;
+    font-weight: normal;
+    line-height: 1.36;
+  }
+}
+.homeclients-header .title span {
+  color: inherit;
+  font: inherit;
+  font-weight: 600;
+}
+.homeclients-body .client-thumnail {
+  width: 10.625rem;
+  height: 5rem;
+}
+.homeclients-body .client-thumnail img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+/**=======================================================**
+                    HOME-CLIENTS END
+**=======================================================**/
+/**=======================================================**
                 HOME-FEATURES SECTION START
 **=======================================================**/
 .home-features {
@@ -6940,7 +7087,6 @@ select {
                 HOME-TESTIMONIALS SECTION START
 **=======================================================**/
 .testimonial {
-  background: #FFFDF2;
   padding: 3rem 0.5rem;
 }
 @media screen and (min-width: 62rem) {
@@ -8228,6 +8374,7 @@ select {
   font-size: 1.5rem;
   font-weight: 600;
   line-height: 1.3333333333;
+  text-align: center;
 }
 @media screen and (min-width: 25.875rem) {
   .servicexpect-title {
@@ -8283,10 +8430,20 @@ select {
     line-height: 1.2666666667;
   }
 }
+.servicexpect-info {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 2.75rem;
+}
 .servicexpect-details {
   display: flex;
+  align-items: center;
+  justify-content: center;
   flex-direction: column;
   gap: 2.5rem;
+  text-align: center;
 }
 .servicexpect-details .detail .detailtext {
   color: #4A5568;
