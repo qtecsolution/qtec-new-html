@@ -2241,12 +2241,10 @@ select {
 }
 .card-opportunities-header {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  align-items: center;
+  flex-direction: column;
+  gap: 0.625rem;
 }
 .card-opportunities-header .titlebox {
-  width: calc(100% - 5rem);
   overflow: hidden;
 }
 .card-opportunities-header .titlebox .card-opportunities-title {
@@ -5797,6 +5795,72 @@ select {
 }
 .career-apply .apply-body .applyform .inputbox.inputerror .inputfield {
   border-color: #FF3E3E;
+}
+.career-apply .nojob {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+@media screen and (min-width: 36rem) {
+  .career-apply .nojob {
+    width: 27.5rem;
+    margin-inline: auto;
+  }
+}
+.career-apply .nojob-content {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 2rem;
+  text-align: center;
+}
+@media screen and (min-width: 36rem) {
+  .career-apply .nojob-content {
+    gap: 3rem;
+  }
+}
+@media screen and (min-width: 62rem) {
+  .career-apply .nojob-content {
+    gap: 4rem;
+  }
+}
+.career-apply .nojob-content .icon {
+  width: 100%;
+  height: 15.625rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+@media screen and (min-width: 36rem) {
+  .career-apply .nojob-content .icon {
+    width: 27.125rem;
+    height: 19.75rem;
+  }
+}
+.career-apply .nojob-content .icon svg {
+  width: 100%;
+  height: 100%;
+}
+.career-apply .nojob-content .nojobinfo .infotext {
+  color: #4A5568;
+  font-family: "Titillium Web";
+  font-style: normal;
+  font-size: 1.25rem;
+  font-weight: 600;
+  line-height: 1.632;
+}
+@media screen and (min-width: 48rem) {
+  .career-apply .nojob-content .nojobinfo .infotext {
+    font-family: "Titillium Web";
+    font-style: normal;
+    font-size: 1.75rem;
+    font-weight: 600;
+    line-height: 1.36;
+  }
 }
 
 /**=======================================================**

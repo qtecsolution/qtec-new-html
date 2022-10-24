@@ -362,6 +362,58 @@
       }
     }
   }
+
+  .nojob {
+    @include flex-center;
+    @include w100;
+
+    @include breakpoint(mobile576) {
+      width: length(440);
+      margin-inline: auto;
+    }
+
+    &-content {
+      @include w100;
+      @include flex-center-column;
+      gap: size(32);
+      text-align: center;
+
+      @include breakpoint(mobile576) {
+        gap: size(48);
+      }
+
+      @include breakpoint(tab992) {
+        gap: size(64);
+      }
+
+      .icon {
+        @include w100;
+        height: length(250);
+        @include flex-center;
+        overflow: hidden;
+
+        @include breakpoint(mobile576) {
+          width: length(434);
+          height: length(316);
+        }
+
+        svg {
+          @include wh100;
+        }
+      }
+      
+      .nojobinfo {
+        .infotext {
+          color: $gray-700;
+          @include font-face($primaryFont, style('normal'), size(20), weight('semibold'), line-height(32.64, 20));
+    
+          @include breakpoint(mobile768) {
+            @include font-face($primaryFont, style('normal'), size(28), weight('semibold'), line-height(38.08, 28));
+          }
+        }
+      }
+    }
+  }
 }
 
 /**=======================================================**

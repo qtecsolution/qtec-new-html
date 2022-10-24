@@ -583,10 +583,10 @@
 	}
 
 	&-header {
-		@include flex-center-between;
+		@include flex-column;
+		gap: length(10);
 
 		.titlebox {
-			width: calc(100% - 5rem);
 			overflow: hidden;
 
 			.card-opportunities-title {
