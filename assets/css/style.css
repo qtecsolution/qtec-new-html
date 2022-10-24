@@ -2251,17 +2251,17 @@ select {
   color: #2D3748;
   font-family: "Titillium Web";
   font-style: normal;
-  font-size: 0.875rem;
+  font-size: 1.125rem;
   font-weight: 600;
-  line-height: 1.7857142857;
+  line-height: 1.3888888889;
 }
 @media screen and (min-width: 87.5rem) {
   .card-opportunities-header .titlebox .card-opportunities-title {
     font-family: "Titillium Web";
     font-style: normal;
-    font-size: 1rem;
+    font-size: 1.375rem;
     font-weight: 600;
-    line-height: 1.5625;
+    line-height: 1.4545454545;
   }
 }
 .card-opportunities-header .badge-opportunities {

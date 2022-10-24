@@ -591,10 +591,10 @@
 
 			.card-opportunities-title {
 				color: $gray-800;
-				@include font-face($primaryFont, style('normal'), size(14), weight('semibold'), line-height(25, 14));
+				@include font-face($primaryFont, style('normal'), size(18), weight('semibold'), line-height(25, 18));
 				
 				@include breakpoint(desktop1400) {
-					@include font-face($primaryFont, style('normal'), size(16), weight('semibold'), line-height(25, 16));
+					@include font-face($primaryFont, style('normal'), size(22), weight('semibold'), line-height(32, 22));
 				}
 			}
 		}
