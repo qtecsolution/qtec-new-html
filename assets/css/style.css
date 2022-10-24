@@ -2750,6 +2750,7 @@ select {
 }
 .card-testimoni .info {
   margin-bottom: 1.25rem;
+  min-height: 9.375rem;
 }
 .card-testimoni .info .text-testimonial {
   color: #718096;
