@@ -1725,7 +1725,6 @@ select {
   font-size: 0.875rem;
   font-weight: normal;
   line-height: 1.7142857143;
-  font-feature-settings: "salt" on;
 }
 
 .card-project {
@@ -2719,6 +2718,109 @@ select {
     font-weight: normal;
     line-height: 1.8;
   }
+}
+
+.card-testimoni {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  background: #ffffff;
+  border-radius: 0.5rem;
+  border-radius: 0.5rem;
+  height: 100%;
+  padding: 1rem;
+  transition: all 200ms ease-in-out;
+}
+@media screen and (min-width: 48rem) {
+  .card-testimoni {
+    padding: 1.5rem;
+  }
+}
+.card-testimoni .icon {
+  width: 2.125rem;
+  height: 1.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.card-testimoni .icon svg {
+  width: 100%;
+  height: 100%;
+}
+.card-testimoni .info {
+  margin-bottom: 1.25rem;
+}
+.card-testimoni .info .text-testimonial {
+  color: #718096;
+  font-family: "Titillium Web";
+  font-style: normal;
+  font-size: 1rem;
+  font-weight: normal;
+  line-height: 1.625;
+  letter-spacing: 0.015rem;
+}
+@media screen and (min-width: 48rem) {
+  .card-testimoni .info .text-testimonial {
+    font-family: "Titillium Web";
+    font-style: normal;
+    font-size: 1.125rem;
+    font-weight: normal;
+    line-height: 1.6666666667;
+  }
+}
+.card-testimoni .userinfo {
+  display: flex;
+  align-items: center;
+  gap: 0.875rem;
+}
+.card-testimoni .userinfo .userthumb {
+  height: 3.75rem;
+  width: 3.75rem;
+  border-radius: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.card-testimoni .userinfo .userthumb img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.card-testimoni .userinfo .detail {
+  width: calc(100% - 4.625rem);
+  display: flex;
+  flex-direction: column;
+}
+.card-testimoni .userinfo .detail .name {
+  color: #4A5568;
+  font-family: "Titillium Web";
+  font-style: normal;
+  font-size: 1rem;
+  font-weight: normal;
+  line-height: 1.5;
+}
+.card-testimoni .userinfo .detail .position {
+  color: #4A5568;
+  font-family: "Titillium Web";
+  font-style: normal;
+  font-size: 0.875rem;
+  font-weight: normal;
+  line-height: 1.7142857143;
+}
+.card-testimoni:not([disabled]):hover {
+  background: #0876FC;
+}
+.card-testimoni:not([disabled]):hover .icon svg path {
+  fill: #ffffff;
+}
+.card-testimoni:not([disabled]):hover .info .text-testimonial {
+  color: #ffffff;
+}
+.card-testimoni:not([disabled]):hover .userinfo .detail .name, .card-testimoni:not([disabled]):hover .userinfo .detail .position {
+  color: #ffffff;
 }
 
 .modal-content {
