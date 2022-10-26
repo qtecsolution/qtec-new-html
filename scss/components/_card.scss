@@ -2,1033 +2,1466 @@
                         HOME-CARDS
 =======================================================**/
 .card-feature {
-	@include flex-column;
-	gap: length(16);
-	padding: length(32) length(24);
-	@include radius(16);
-	@include h100;
+  @include flex-column;
+  gap: length(16);
+  padding: length(32) length(24);
+  @include radius(16);
+  @include h100;
 
-	&-header {
-		.card-cap {
-			background: $gray-200;
-			@include square(length(56));
-			@include circle;
-			@include flex-center;
-			// padding: length(14);
-			overflow: hidden;
+  &-header {
+    .card-cap {
+      background: $gray-200;
+      @include square(length(56));
+      @include circle;
+      @include flex-center;
+      // padding: length(14);
+      overflow: hidden;
 
-			svg {
-				@include wh100;
-			}
-		}
-	}
+      svg {
+        @include wh100;
+      }
+    }
+  }
 
-	&-body {
-		@include flex-column;
-		gap: length(8);
+  &-body {
+    @include flex-column;
+    gap: length(8);
 
-		.feature-title {
-			color: $gray-700;
-			@include font-face($primaryFont, style('normal'), size(24), weight('semibold'), line-height(34.09, 24));
+    .feature-title {
+      color: $gray-700;
+      @include font-face(
+        $primaryFont,
+        style("normal"),
+        size(24),
+        weight("semibold"),
+        line-height(34.09, 24)
+      );
 
-			@include breakpoint(desktop1400) {
-				@include font-face($primaryFont, style('normal'), size(28), weight('semibold'), line-height(38.09, 28));
-			}
-		}
+      @include breakpoint(desktop1400) {
+        @include font-face(
+          $primaryFont,
+          style("normal"),
+          size(28),
+          weight("semibold"),
+          line-height(38.09, 28)
+        );
+      }
+    }
 
-		.feature-text {
-			color: $gray-600;
-			@include font-face($primaryFont, style('normal'), size(16), weight('normal'), line-height(28, 16));
-			letter-spacing: length(0.24);
-			text-align: left;
+    .feature-text {
+      color: $gray-600;
+      @include font-face(
+        $primaryFont,
+        style("normal"),
+        size(16),
+        weight("normal"),
+        line-height(28, 16)
+      );
+      letter-spacing: length(0.24);
+      text-align: left;
 
-			@include breakpoint(desktop1400) {
-				@include font-face($primaryFont, style('normal'), size(18), weight('normal'), line-height(30, 18));
-			}
+      @include breakpoint(desktop1400) {
+        @include font-face(
+          $primaryFont,
+          style("normal"),
+          size(18),
+          weight("normal"),
+          line-height(30, 18)
+        );
+      }
 
-			@include breakpoint(desktop1400) {
-				text-align: justify;
-			}
-		}
-	}
+      @include breakpoint(desktop1400) {
+        text-align: justify;
+      }
+    }
+  }
 }
 
 .feature {
-	@include h100;
+  @include h100;
 }
 
 .feature-1,
 .feature-4 {
-	background: $expartBg;
+  background: $expartBg;
 }
 
 .feature-2 {
-	background: $professionalBg;
+  background: $professionalBg;
 }
 
 .feature-3 {
-	background: $transparencylBg;
+  background: $transparencylBg;
 }
 
 .card-article {
-	background: $white;
-	@include radius(8);
-	@include flex-column;
-	gap: length(8);
-	padding: length(6);
-	max-width: 100%;
+  background: $white;
+  @include radius(8);
+  @include flex-column;
+  gap: length(8);
+  padding: length(6);
+  max-width: 100%;
 
-	@include breakpoint(mobile480) {
-		max-width: length(312);
-		margin-inline: auto;
-	}
+  @include breakpoint(mobile480) {
+    max-width: length(312);
+    margin-inline: auto;
+  }
 
-	@include breakpoint(mobile576) {
-		max-width: 100%;
-	}
+  @include breakpoint(mobile576) {
+    max-width: 100%;
+  }
 
-	&-header {
-		@include radius(8);
-		@include w100;
-		height: length(170);
-		overflow: hidden;
+  &-header {
+    @include radius(8);
+    @include w100;
+    height: length(170);
+    overflow: hidden;
 
-		img {
-			@include wh100;
-			object-fit: contain;
-			@include transitiontransform;
+    img {
+      @include wh100;
+      object-fit: contain;
+      @include transitiontransform;
 
-			@include hover {
-				@include transform(scale(1.05));
-			}
-		}
-	}
+      @include hover {
+        @include transform(scale(1.05));
+      }
+    }
+  }
 
-	&-body {
-		@include flex-column;
-		gap: length(12);
-		padding: length(6);
+  &-body {
+    @include flex-column;
+    gap: length(12);
+    padding: length(6);
 
-		.title-date {
-			@include flex-column;
+    .title-date {
+      @include flex-column;
 
-			.title {
-				color: $gray-800;
-				@include font-face($primaryFont, style('normal'), size(16), weight('semibold'), line-height(25, 16));
-				@include transitionscolor;
+      .title {
+        color: $gray-800;
+        @include font-face(
+          $primaryFont,
+          style("normal"),
+          size(16),
+          weight("semibold"),
+          line-height(25, 16)
+        );
+        @include transitionscolor;
 
-				@include hover {
-					color: $primary;
-				}
-			}
+        @include hover {
+          color: $primary;
+        }
+      }
 
-			.date {
-				color: $gray-600;
-				@include font-face($primaryFont, style('normal'), size(14), weight('normal'), line-height(24, 14));
-				font-feature-settings: 'salt';
-			}
-		}
+      .date {
+        color: $gray-600;
+        @include font-face(
+          $primaryFont,
+          style("normal"),
+          size(14),
+          weight("normal"),
+          line-height(24, 14)
+        );
+        font-feature-settings: "salt";
+      }
+    }
 
-		.articledescript {
-			.articletext {
-				color: $gray-600;
-				@include font-face($primaryFont, style('normal'), size(14), weight('normal'), line-height(24, 14));
-				font-feature-settings: 'salt';
-			}
-		}
+    .articledescript {
+      .articletext {
+        color: $gray-600;
+        @include font-face(
+          $primaryFont,
+          style("normal"),
+          size(14),
+          weight("normal"),
+          line-height(24, 14)
+        );
+        font-feature-settings: "salt";
+      }
+    }
 
-		.articlelink {
-			color: $gray-800;
-			@include font-face($primaryFont, style('normal'), size(14), weight('semibold'), line-height(24, 14));
-			font-feature-settings: 'salt';
-			@include transitionscolor;
+    .articlelink {
+      color: $gray-800;
+      @include font-face(
+        $primaryFont,
+        style("normal"),
+        size(14),
+        weight("semibold"),
+        line-height(24, 14)
+      );
+      font-feature-settings: "salt";
+      @include transitionscolor;
 
-			@include hover {
-				color: $primary;
-			}
-		}
-	}
+      @include hover {
+        color: $primary;
+      }
+    }
+  }
 }
 
 .card-testimonial {
-	background: $white;
-	@include radius(8);
-	padding: length(16) length(40);
-	@include flex-center-column;
-	gap: length(24);
-	text-align: center;
-	@include h100;
+  background: $white;
+  @include radius(8);
+  padding: length(16) length(40);
+  @include flex-center-column;
+  gap: length(24);
+  text-align: center;
+  @include h100;
 
-	.text-testimonial {
-		color: $gray-600;
-		@include font-face($primaryFont, style('normal'), size(16), weight('normal'), line-height(26, 16));
-		letter-spacing: length(0.24);
+  .text-testimonial {
+    color: $gray-600;
+    @include font-face(
+      $primaryFont,
+      style("normal"),
+      size(16),
+      weight("normal"),
+      line-height(26, 16)
+    );
+    letter-spacing: length(0.24);
 
-		@include breakpoint(mobile768) {
-			@include font-face($primaryFont, style('normal'), size(18), weight('normal'), line-height(30, 18));
-		}
-	}
+    @include breakpoint(mobile768) {
+      @include font-face(
+        $primaryFont,
+        style("normal"),
+        size(18),
+        weight("normal"),
+        line-height(30, 18)
+      );
+    }
+  }
 
-	.author {
-		color: $black;
-		@include font-face($primaryFont, style('normal'), size(14), weight('normal'), line-height(24, 14));
-	}
+  .author {
+    color: $black;
+    @include font-face(
+      $primaryFont,
+      style("normal"),
+      size(14),
+      weight("normal"),
+      line-height(24, 14)
+    );
+  }
 }
 
 .card-project {
-	@include flex-column;
-	gap: length(22);
+  @include flex-column;
+  gap: length(22);
 
-	&-header {
-		@include radius(16);
-		@include w100;
-		max-height: length(310);
-		@include flex-center;
-		overflow: hidden;
+  &-header {
+    @include radius(16);
+    @include w100;
+    max-height: length(310);
+    @include flex-center;
+    overflow: hidden;
 
-		@include breakpoint(mobile480) {
-			width: length(420);
-		}
+    @include breakpoint(mobile480) {
+      width: length(420);
+    }
 
-		@include breakpoint(mobile576) {
-			@include w100;
-		}
+    @include breakpoint(mobile576) {
+      @include w100;
+    }
 
-		img {
-			@include wh100;
-			object-fit: contain;
-			@include transitiontransform;
+    img {
+      @include wh100;
+      object-fit: contain;
+      @include transitiontransform;
 
-			@include hover {
-				@include transform(scale(1.05));
-			}
-		}
-	}
+      @include hover {
+        @include transform(scale(1.05));
+      }
+    }
+  }
 
-	&-body {
-		@include flex-column;
-		gap: length(16);
+  &-body {
+    @include flex-column;
+    gap: length(16);
 
-		.project-title {
-			@include flex-center-vert;
-			gap: length(40);
+    .project-title {
+      @include flex-center-vert;
+      gap: length(40);
 
-			.title {
-				color: $gray-700;
-				@include font-face($primaryFont, style('normal'), size(16), weight('semibold'), line-height(26, 16));
-				letter-spacing: length(0.24);
+      .title {
+        color: $gray-700;
+        @include font-face(
+          $primaryFont,
+          style("normal"),
+          size(16),
+          weight("semibold"),
+          line-height(26, 16)
+        );
+        letter-spacing: length(0.24);
 
-				@include breakpoint(mobile768) {
-					@include font-face($primaryFont, style('normal'), size(20), weight('semibold'), line-height(27.3, 20));
-				}
-			}
+        @include breakpoint(mobile768) {
+          @include font-face(
+            $primaryFont,
+            style("normal"),
+            size(20),
+            weight("semibold"),
+            line-height(27.3, 20)
+          );
+        }
+      }
 
-			.icon {
-				@include square(length(24));
-				@include flex-center;
-				overflow: hidden;
+      .icon {
+        @include square(length(24));
+        @include flex-center;
+        overflow: hidden;
 
-				svg {
-					@include wh100;
-				}
-			}
+        svg {
+          @include wh100;
+        }
+      }
 
-			@include hover {
-				.title {
-					color: $secondary;
-				}
+      @include hover {
+        .title {
+          color: $secondary;
+        }
 
-				svg {
-					path {
-						fill: $secondary;
-					}
-				}
-			}
-		}
+        svg {
+          path {
+            fill: $secondary;
+          }
+        }
+      }
+    }
 
-		.tags {
-			@include flex-center-vert;
-			gap: length(8);
-			flex-wrap: wrap;
+    .tags {
+      @include flex-center-vert;
+      gap: length(8);
+      flex-wrap: wrap;
 
-			.tag {
-				@include setBgColor($gray-200, $gray-500);
-				@include radius(6);
-				@include font-face($primaryFont, style('normal'), size(14), weight('semibold'), line-height(21.29, 14));
-				padding: length(8) length(12);
-				text-align: center;
-				@include transitionsall;
+      .tag {
+        @include setBgColor($gray-200, $gray-500);
+        @include radius(6);
+        @include font-face(
+          $primaryFont,
+          style("normal"),
+          size(14),
+          weight("semibold"),
+          line-height(21.29, 14)
+        );
+        padding: length(8) length(12);
+        text-align: center;
+        @include transitionsall;
 
-				@include hover {
-					@include setBgColor($gray-500, $gray-200);
-				}
-			}
-		}
-	}
+        @include hover {
+          @include setBgColor($gray-500, $gray-200);
+        }
+      }
+    }
+  }
 }
 
 .feature {
-	@include flex-column;
-	gap: length(22);
-	background: $white;
-	padding: length(20);
+  @include flex-column;
+  gap: length(22);
+  background: $white;
+  padding: length(20);
 
-	@include breakpoint(mobile768) {
-		padding: length(24);
-	}
+  @include breakpoint(mobile768) {
+    padding: length(24);
+  }
 
-	@include breakpoint(tab992) {
-		padding: length(40);
-	}
+  @include breakpoint(tab992) {
+    padding: length(40);
+  }
 
-	&-header {
-		@include flex-column;
-		gap: length(16);
-	}
+  &-header {
+    @include flex-column;
+    gap: length(16);
+  }
 
-	&-cap {
-		// background: $technologyBg;
-		@include square(length(48));
-		@include circle;
-		@include flex-center;
+  &-cap {
+    // background: $technologyBg;
+    @include square(length(48));
+    @include circle;
+    @include flex-center;
 
-		svg {
-			@include wh100;
-		}
-	}
+    svg {
+      @include wh100;
+    }
+  }
 
-	&-title {
-		color: $gray-600;
-		@include font-face($primaryFont, style('normal'), size(18), weight('semibold'), line-height(25.3, 18));
+  &-title {
+    color: $gray-600;
+    @include font-face(
+      $primaryFont,
+      style("normal"),
+      size(18),
+      weight("semibold"),
+      line-height(25.3, 18)
+    );
 
-		@include breakpoint(mobile768) {
-			@include font-face($primaryFont, style('normal'), size(20), weight('semibold'), line-height(27.3, 20));
-		}
-	}
+    @include breakpoint(mobile768) {
+      @include font-face(
+        $primaryFont,
+        style("normal"),
+        size(20),
+        weight("semibold"),
+        line-height(27.3, 20)
+      );
+    }
+  }
 
-	&-text {
-		color: $gray-600;
-		@include font-face($primaryFont, style('normal'), size(14), weight('normal'), line-height(25.58, 14));
-		letter-spacing: length(0.24);
-		text-align: justify;
+  &-text {
+    color: $gray-600;
+    @include font-face(
+      $primaryFont,
+      style("normal"),
+      size(14),
+      weight("normal"),
+      line-height(25.58, 14)
+    );
+    letter-spacing: length(0.24);
+    text-align: justify;
 
-		@include breakpoint(mobile768) {
-			@include font-face($primaryFont, style('normal'), size(16), weight('normal'), line-height(25.92, 16));
-		}
+    @include breakpoint(mobile768) {
+      @include font-face(
+        $primaryFont,
+        style("normal"),
+        size(16),
+        weight("normal"),
+        line-height(25.92, 16)
+      );
+    }
 
-		@include breakpoint(tab992) {
-			@include font-face($primaryFont, style('normal'), size(18), weight('normal'), line-height(30, 18));
-		}
-	}
+    @include breakpoint(tab992) {
+      @include font-face(
+        $primaryFont,
+        style("normal"),
+        size(18),
+        weight("normal"),
+        line-height(30, 18)
+      );
+    }
+  }
 }
 
 .card-technology {
-	@include flex-center-column;
-	gap: length(22);
-	background: $white;
-	padding: length(20);
-	@include h100;
+  @include flex-center-column;
+  gap: length(22);
+  background: $white;
+  padding: length(20);
+  @include h100;
 
-	@include breakpoint(mobile768) {
-		padding: length(24);
-	}
+  @include breakpoint(mobile768) {
+    padding: length(24);
+  }
 
-	@include breakpoint(tab992) {
-		padding: length(40);
-	}
+  @include breakpoint(tab992) {
+    padding: length(40);
+  }
 
-	&-header {
-		@include flex-center-column;
-		justify-content: flex-start;
-		gap: length(16);
-		text-align: center;
-		height: length(165);
-	}
+  &-header {
+    @include flex-center-column;
+    justify-content: flex-start;
+    gap: length(16);
+    text-align: center;
+    height: length(165);
+  }
 
-	&-cap {
-		@include square(length(60));
-		@include circle;
-		@include flex-center;
-		padding: length(24);
+  &-cap {
+    @include square(length(60));
+    @include circle;
+    @include flex-center;
+    padding: length(24);
 
-		@include breakpoint(mobile768) {
-			@include square(length(80));
-		}
+    @include breakpoint(mobile768) {
+      @include square(length(80));
+    }
 
-		@include breakpoint(tab992) {
-			@include square(length(100));
-		}
+    @include breakpoint(tab992) {
+      @include square(length(100));
+    }
 
-		svg, img {
-			@include wh100;
-			object-fit: contain;
-		}
-	}
+    svg,
+    img {
+      @include wh100;
+      object-fit: contain;
+    }
+  }
 
-	&-title {
-		color: $gray-700;
-		@include font-face($primaryFont, style('normal'), size(24), weight('semibold'), line-height(36.97, 24));
+  &-title {
+    color: $gray-700;
+    @include font-face(
+      $primaryFont,
+      style("normal"),
+      size(24),
+      weight("semibold"),
+      line-height(36.97, 24)
+    );
 
-		@include breakpoint(mobile768) {
-			@include font-face($primaryFont, style('normal'), size(36), weight('semibold'), line-height(48.97, 36));
-		}
-	}
+    @include breakpoint(mobile768) {
+      @include font-face(
+        $primaryFont,
+        style("normal"),
+        size(36),
+        weight("semibold"),
+        line-height(48.97, 36)
+      );
+    }
+  }
 
-	&-text {
-		color: $gray-600;
-		@include font-face($primaryFont, style('normal'), size(14), weight('normal'), line-height(25.58, 14));
-		letter-spacing: length(0.24);
-		text-align: center;
+  &-text {
+    color: $gray-600;
+    @include font-face(
+      $primaryFont,
+      style("normal"),
+      size(14),
+      weight("normal"),
+      line-height(25.58, 14)
+    );
+    letter-spacing: length(0.24);
+    text-align: center;
 
-		@include breakpoint(mobile768) {
-			@include font-face($primaryFont, style('normal'), size(16), weight('normal'), line-height(25.92, 16));
-		}
+    @include breakpoint(mobile768) {
+      @include font-face(
+        $primaryFont,
+        style("normal"),
+        size(16),
+        weight("normal"),
+        line-height(25.92, 16)
+      );
+    }
 
-		@include breakpoint(tab992) {
-			@include font-face($primaryFont, style('normal'), size(18), weight('normal'), line-height(30, 18));
-		}
-	}
+    @include breakpoint(tab992) {
+      @include font-face(
+        $primaryFont,
+        style("normal"),
+        size(18),
+        weight("normal"),
+        line-height(30, 18)
+      );
+    }
+  }
 
-	@include hover {
-		.card-technology-title {
-			color: $primary;
-		}
-	}
+  @include hover {
+    .card-technology-title {
+      color: $primary;
+    }
+  }
 }
 
 .card-blog {
-	background: $white;
-	@include radius(16);
-	overflow: hidden;
+  background: $white;
+  @include radius(16);
+  overflow: hidden;
 
-	&-thumbnail {
-		overflow: hidden;
-		@include wh100;
+  &-thumbnail {
+    overflow: hidden;
+    @include wh100;
 
-		@include breakpoint(tablet991) {
-			@include radius(16);
-		}
+    @include breakpoint(tablet991) {
+      @include radius(16);
+    }
 
-		img {
-			@include wh100;
-			object-fit: cover;
-		}
-	}
+    img {
+      @include wh100;
+      object-fit: cover;
+    }
+  }
 
-	&-details {
-		padding: length(24);
-		@include flex-column;
-		gap: length(24);
-		
-		@include breakpoint(tab992) {
-			gap: length(44);
-			padding: length(44) length(44) length(44) length(0);
-		}
+  &-details {
+    padding: length(24);
+    @include flex-column;
+    gap: length(24);
 
-		@include breakpoint(desktop1400) {
-			padding: length(40) length(42) length(40) length(0);
-		}
+    @include breakpoint(tab992) {
+      gap: length(44);
+      padding: length(44) length(44) length(44) length(0);
+    }
 
-		@include breakpoint(desktop1200) {
-			gap: length(32);
-			padding: length(30) length(30) length(30) length(0);
-		}
+    @include breakpoint(desktop1400) {
+      padding: length(40) length(42) length(40) length(0);
+    }
 
-		@include breakpoint(tablet991) {
-			padding: length(32);
-		}
+    @include breakpoint(desktop1200) {
+      gap: length(32);
+      padding: length(30) length(30) length(30) length(0);
+    }
 
-		@include breakpoint(phone768) {
-			padding: length(24);
-		}
+    @include breakpoint(tablet991) {
+      padding: length(32);
+    }
 
-		@include breakpoint(phone575) {
-			padding: length(16) length(16) length(32);
-		}
+    @include breakpoint(phone768) {
+      padding: length(24);
+    }
 
-		.info {
-			@include flex-column;
-			gap: length(16);
+    @include breakpoint(phone575) {
+      padding: length(16) length(16) length(32);
+    }
 
-			@include breakpoint(desktop1200) {
-				gap: length(28);
-			}
+    .info {
+      @include flex-column;
+      gap: length(16);
 
-			&-head {
-				@include flex-column;
-				gap: length(8);
+      @include breakpoint(desktop1200) {
+        gap: length(28);
+      }
 
-				.blogtitle {
-					color: $gray-800;
-					@include font-face($primaryFont, style('normal'), size(20), weight('semibold'), line-height(27.3, 20));
+      &-head {
+        @include flex-column;
+        gap: length(8);
 
-					@include breakpoint(mobile768) {
-						@include font-face($primaryFont, style('normal'), size(24), weight('semibold'), line-height(32.64, 24));
-					}
+        .blogtitle {
+          color: $gray-800;
+          @include font-face(
+            $primaryFont,
+            style("normal"),
+            size(20),
+            weight("semibold"),
+            line-height(27.3, 20)
+          );
 
-					@include breakpoint(tab992) {
-						@include font-face($primaryFont, style('normal'), size(28), weight('semibold'), line-height(38.08, 28));
-					}
+          @include breakpoint(mobile768) {
+            @include font-face(
+              $primaryFont,
+              style("normal"),
+              size(24),
+              weight("semibold"),
+              line-height(32.64, 24)
+            );
+          }
 
-					@include breakpoint(desktop1400) {
-						@include font-face($primaryFont, style('normal'), size(36), weight('semibold'), line-height(48.96, 36));
-					}
-				}
+          @include breakpoint(tab992) {
+            @include font-face(
+              $primaryFont,
+              style("normal"),
+              size(28),
+              weight("semibold"),
+              line-height(38.08, 28)
+            );
+          }
 
-				.date {
-					@include font-face($primaryFont, style('normal'), size(20), weight('normal'), line-height(27.3, 20));
-					color: $dateColor;
-					
-					@include breakpoint(mobile768) {
-						@include font-face($primaryFont, style('normal'), size(16), weight('normal'), line-height(26, 16));
-					}
-				}
-			}
+          @include breakpoint(desktop1400) {
+            @include font-face(
+              $primaryFont,
+              style("normal"),
+              size(36),
+              weight("semibold"),
+              line-height(48.96, 36)
+            );
+          }
+        }
 
-			&-body {
-				.blogtext {
-					@include font-face($primaryFont, style('normal'), size(14), weight('normal'), line-height(24, 14));
-					color: $gray-600;
-					
-					@include breakpoint(mobile768) {
-						@include font-face($primaryFont, style('normal'), size(18), weight('normal'), line-height(30, 18));
-					}
-				}
-			}
-		}
+        .date {
+          @include font-face(
+            $primaryFont,
+            style("normal"),
+            size(20),
+            weight("normal"),
+            line-height(27.3, 20)
+          );
+          color: $dateColor;
 
-		.readinfo {
-			width: length(200);
-		}
-	}
+          @include breakpoint(mobile768) {
+            @include font-face(
+              $primaryFont,
+              style("normal"),
+              size(16),
+              weight("normal"),
+              line-height(26, 16)
+            );
+          }
+        }
+      }
+
+      &-body {
+        .blogtext {
+          @include font-face(
+            $primaryFont,
+            style("normal"),
+            size(14),
+            weight("normal"),
+            line-height(24, 14)
+          );
+          color: $gray-600;
+
+          @include breakpoint(mobile768) {
+            @include font-face(
+              $primaryFont,
+              style("normal"),
+              size(18),
+              weight("normal"),
+              line-height(30, 18)
+            );
+          }
+        }
+      }
+    }
+
+    .readinfo {
+      width: length(200);
+    }
+  }
 }
 
 .cardwork {
-	padding: length(32) length(24) length(64);
-	@include radius(16);
-	@include flex-column;
-	gap: length(16);
-	@include h100;
+  padding: length(32) length(24) length(64);
+  @include radius(16);
+  @include flex-column;
+  gap: length(16);
+  @include h100;
 
-	&-header {
-		.card-thumbnail {
-			@include square(length(56));
-			@include flex-center;
-			overflow: hidden;
+  &-header {
+    .card-thumbnail {
+      @include square(length(56));
+      @include flex-center;
+      overflow: hidden;
 
-			svg {
-				@include wh100;
-			}
-		}
-	}
+      svg {
+        @include wh100;
+      }
+    }
+  }
 
-	&-body {
-		@include flex-column;
-		gap: length(8);
+  &-body {
+    @include flex-column;
+    gap: length(8);
 
-		.cardwork-title {
-			color: $gray-700;
-			@include font-face($primaryFont, style('normal'), size(18), weight('semibold'), line-height(28, 18));
+    .cardwork-title {
+      color: $gray-700;
+      @include font-face(
+        $primaryFont,
+        style("normal"),
+        size(18),
+        weight("semibold"),
+        line-height(28, 18)
+      );
 
-			@include breakpoint(mobile768) {
-				@include font-face($primaryFont, style('normal'), size(20), weight('semibold'), line-height(28, 20));
-			}
+      @include breakpoint(mobile768) {
+        @include font-face(
+          $primaryFont,
+          style("normal"),
+          size(20),
+          weight("semibold"),
+          line-height(28, 20)
+        );
+      }
 
-			@include breakpoint(tab992) {
-				@include font-face($primaryFont, style('normal'), size(28), weight('semibold'), line-height(53.01, 28));
-			}
-		}
+      @include breakpoint(tab992) {
+        @include font-face(
+          $primaryFont,
+          style("normal"),
+          size(28),
+          weight("semibold"),
+          line-height(53.01, 28)
+        );
+      }
+    }
 
-		.cardwork-text {
-			color: $gray-600;
-			@include font-face($primaryFont, style('normal'), size(14), weight('normal'), line-height(24, 14));
-			letter-spacing: length(0.24);
+    .cardwork-text {
+      color: $gray-600;
+      @include font-face(
+        $primaryFont,
+        style("normal"),
+        size(14),
+        weight("normal"),
+        line-height(24, 14)
+      );
+      letter-spacing: length(0.24);
 
-			@include breakpoint(mobile768) {
-				@include font-face($primaryFont, style('normal'), size(16), weight('normal'), line-height(26, 16));
-			}
+      @include breakpoint(mobile768) {
+        @include font-face(
+          $primaryFont,
+          style("normal"),
+          size(16),
+          weight("normal"),
+          line-height(26, 16)
+        );
+      }
 
-			@include breakpoint(tab992) {
-				@include font-face($primaryFont, style('normal'), size(18), weight('normal'), line-height(30, 18));
-			}
-		}
-	}
+      @include breakpoint(tab992) {
+        @include font-face(
+          $primaryFont,
+          style("normal"),
+          size(18),
+          weight("normal"),
+          line-height(30, 18)
+        );
+      }
+    }
+  }
 
-	&-1 {
-		background: $cardbg-1;
-	}
-	
-	&-2 {
-		background: $cardbg-2;
-	}
+  &-1 {
+    background: $cardbg-1;
+  }
 
-	&-3 {
-		background: $cardbg-3;
-	}
+  &-2 {
+    background: $cardbg-2;
+  }
+
+  &-3 {
+    background: $cardbg-3;
+  }
 }
 
 .card-opportunities {
-	@include flex-column;
-	justify-content: space-between;
-	gap: length(20);
-	background: $white;
-	@include radius(8);
-	@include border(solid, 1, $gray-300);
-	padding: length(16);
-	@include h100;
-				
-	@include breakpoint(desktop1400) {
-		padding: length(20) length(24);
-	}
+  @include flex-column;
+  justify-content: space-between;
+  gap: length(20);
+  background: $white;
+  @include radius(8);
+  @include border(solid, 1, $gray-300);
+  padding: length(16);
+  @include h100;
 
-	&-header {
-		@include flex-column;
-		gap: length(10);
+  @include breakpoint(desktop1400) {
+    padding: length(20) length(24);
+  }
 
-		.titlebox {
-			overflow: hidden;
+  &-header {
+    @include flex-column;
+    gap: length(10);
 
-			.card-opportunities-title {
-				color: $gray-800;
-				@include font-face($primaryFont, style('normal'), size(18), weight('semibold'), line-height(25, 18));
-				
-				@include breakpoint(desktop1400) {
-					@include font-face($primaryFont, style('normal'), size(22), weight('semibold'), line-height(32, 22));
-				}
-			}
-		}
+    .titlebox {
+      overflow: hidden;
 
-		.badge-opportunities {
-			@include setBgColor($choosebg, $choose);
-			display: inline-block;
-			@include font-face($primaryFont, style('normal'), size(12), weight('semibold'), line-height(16, 12));
-			@include radius(5);
-			padding: length(6) length(12);
-			text-align: center;
-			width: length(80);
+      .card-opportunities-title {
+        color: $gray-800;
+        @include font-face(
+          $primaryFont,
+          style("normal"),
+          size(18),
+          weight("semibold"),
+          line-height(25, 18)
+        );
 
-			@include breakpoint(mobile768) {
-				@include font-face($primaryFont, style('normal'), size(14), weight('semibold'), line-height(20, 14));
-			}
-		}
-	}
+        @include breakpoint(desktop1400) {
+          @include font-face(
+            $primaryFont,
+            style("normal"),
+            size(22),
+            weight("semibold"),
+            line-height(32, 22)
+          );
+        }
+      }
+    }
 
-	&-body {
-		@include flex-center-between;
-		align-items: flex-end;
-		flex-wrap: wrap;
-		gap: length(8);
+    .badge-opportunities {
+      @include setBgColor($choosebg, $choose);
+      display: inline-block;
+      @include font-face(
+        $primaryFont,
+        style("normal"),
+        size(12),
+        weight("semibold"),
+        line-height(16, 12)
+      );
+      @include radius(5);
+      padding: length(6) length(12);
+      text-align: center;
+      width: length(80);
 
-		.deadline {
-			@include flex-column;
-			
-			.text {
-				color: $gray-600;
-				@include font-face($primaryFont, style('normal'), size(14), weight('normal'), line-height(20, 14));
-				font-feature-settings: 'salt';
-			}
-		}
+      @include breakpoint(mobile768) {
+        @include font-face(
+          $primaryFont,
+          style("normal"),
+          size(14),
+          weight("semibold"),
+          line-height(20, 14)
+        );
+      }
+    }
+  }
 
-		.link {
-			color: $primary;
-			@include font-face($primaryFont, style('normal'), size(14), weight('semibold'), line-height(20, 14));
-			@include transitionscolor;
+  &-body {
+    @include flex-center-between;
+    align-items: flex-end;
+    flex-wrap: wrap;
+    gap: length(8);
 
-			@include hover {
-				color: darken($primary, 15%);
-			}
-		}
-	}
+    .deadline {
+      @include flex-column;
+
+      .text {
+        color: $gray-600;
+        @include font-face(
+          $primaryFont,
+          style("normal"),
+          size(14),
+          weight("normal"),
+          line-height(20, 14)
+        );
+        font-feature-settings: "salt";
+      }
+    }
+
+    .link {
+      color: $primary;
+      @include font-face(
+        $primaryFont,
+        style("normal"),
+        size(14),
+        weight("semibold"),
+        line-height(20, 14)
+      );
+      @include transitionscolor;
+
+      @include hover {
+        color: darken($primary, 15%);
+      }
+    }
+  }
 }
 
 .service {
-	@include flex-column;
-	gap: length(22);
-	background: $white;
-	padding: length(20);
-	@include h100;
+  @include flex-column;
+  gap: length(22);
+  background: $white;
+  padding: length(20);
+  @include h100;
 
-	@include breakpoint(mobile768) {
-		padding: length(24);
-	}
+  @include breakpoint(mobile768) {
+    padding: length(24);
+  }
 
-	@include breakpoint(tab992) {
-		padding: length(40);
-	}
+  @include breakpoint(tab992) {
+    padding: length(40);
+  }
 
-	&-header {
-		@include flex-column;
-		gap: length(16);
+  &-header {
+    @include flex-column;
+    gap: length(16);
 
-		.service-icon {
-			@include square(length(48));
-			@include circle;
-			@include flex-center;
-	
-			img {
-				@include wh100;
-			}
-		}
+    .service-icon {
+      @include square(length(48));
+      @include circle;
+      @include flex-center;
 
-		.service-title {
-			color: $gray-600;
-			@include font-face($primaryFont, style('normal'), size(18), weight('semibold'), line-height(25.3, 18));
-			overflow: hidden;
-			@include flex-center-vert;
+      img {
+        @include wh100;
+      }
+    }
 
-			@include breakpoint(mobile768) {
-				@include font-face($primaryFont, style('normal'), size(20), weight('semibold'), line-height(27.3, 20));
-			}
+    .service-title {
+      color: $gray-600;
+      @include font-face(
+        $primaryFont,
+        style("normal"),
+        size(18),
+        weight("semibold"),
+        line-height(25.3, 18)
+      );
+      overflow: hidden;
+      @include flex-center-vert;
 
-			@include breakpoint(tab992) {
-				height: length(55);
-			}
+      @include breakpoint(mobile768) {
+        @include font-face(
+          $primaryFont,
+          style("normal"),
+          size(20),
+          weight("semibold"),
+          line-height(27.3, 20)
+        );
+      }
 
-			@include hover {
-				color: $primary;
-			}
-		}
-	}
+      @include breakpoint(tab992) {
+        height: length(55);
+      }
 
-	&-body {
-		@include flex-column;
-		gap: length(36);
+      @include hover {
+        color: $primary;
+      }
+    }
+  }
 
-		.servicetext {
-			color: $gray-600;
-			@include font-face($primaryFont, style('normal'), size(14), weight('normal'), line-height(25.58, 14));
-			letter-spacing: length(0.24);
-			text-align: justify;
-	
-			@include breakpoint(mobile768) {
-				@include font-face($primaryFont, style('normal'), size(16), weight('normal'), line-height(25.92, 16));
-			}
-	
-			@include breakpoint(tab992) {
-				@include font-face($primaryFont, style('normal'), size(18), weight('normal'), line-height(30, 18));
-			}
-		}
+  &-body {
+    @include flex-column;
+    gap: length(36);
 
-		.learnmore {
-			color: $primary;
-			@include font-face($primaryFont, style('normal'), size(16), weight('semibold'), line-height(24, 16));
-			font-feature-settings: 'salt';
-			@include transitionscolor;
+    .servicetext {
+      color: $gray-600;
+      @include font-face(
+        $primaryFont,
+        style("normal"),
+        size(14),
+        weight("normal"),
+        line-height(25.58, 14)
+      );
+      letter-spacing: length(0.24);
+      text-align: justify;
 
-			@include hover {
-				color: darken($primary, 20%);
-				// color: $footerbg;
-			}
-		}
-	}
+      @include breakpoint(mobile768) {
+        @include font-face(
+          $primaryFont,
+          style("normal"),
+          size(16),
+          weight("normal"),
+          line-height(25.92, 16)
+        );
+      }
+
+      @include breakpoint(tab992) {
+        @include font-face(
+          $primaryFont,
+          style("normal"),
+          size(18),
+          weight("normal"),
+          line-height(30, 18)
+        );
+      }
+    }
+
+    .learnmore {
+      color: $primary;
+      @include font-face(
+        $primaryFont,
+        style("normal"),
+        size(16),
+        weight("semibold"),
+        line-height(24, 16)
+      );
+      font-feature-settings: "salt";
+      @include transitionscolor;
+
+      @include hover {
+        color: darken($primary, 20%);
+        // color: $footerbg;
+      }
+    }
+  }
 }
 
 .card-team {
-	@include flex-center-column;
-	gap: length(24);
-	@include wh100;
+  @include flex-center-column;
+  gap: length(24);
+  @include wh100;
 
-	&-header {
-		@include radius(10);
-		@include flex-center;
-		@include w100;
-		height: length(200);
-		overflow: hidden;
+  &-header {
+    @include radius(10);
+    @include flex-center;
+    @include w100;
+    height: length(200);
+    overflow: hidden;
 
-		@include breakpoint(mobile576) {
-			height: length(250);
-		}
+    @include breakpoint(mobile576) {
+      height: length(250);
+    }
 
-		@include breakpoint(mobile768) {
-			height: length(312);
-		}
+    @include breakpoint(mobile768) {
+      height: length(312);
+    }
 
-		img {
-			@include wh100;
-			@include transitiontransform;
-			object-fit: cover;
+    img {
+      @include wh100;
+      @include transitiontransform;
+      object-fit: cover;
 
-			@include hover {
-				@include transform(scale(1.1));
-			}
-		}
-	}
+      @include hover {
+        @include transform(scale(1.1));
+      }
+    }
+  }
 
-	&-body {
-		@include flex-center-column;
-		gap: length(4);
-		text-align: center;
+  &-body {
+    @include flex-center-column;
+    gap: length(4);
+    text-align: center;
 
-		.name {
-			color: $gray-800;
-			@include font-face($primaryFont, style('normal'), size(15), weight('semibold'), line-height(24, 15));
+    .name {
+      color: $gray-800;
+      @include font-face(
+        $primaryFont,
+        style("normal"),
+        size(15),
+        weight("semibold"),
+        line-height(24, 15)
+      );
 
-			@include breakpoint(mobile576) {
-				@include font-face($primaryFont, style('normal'), size(18), weight('semibold'), line-height(30, 18));
-			}
+      @include breakpoint(mobile576) {
+        @include font-face(
+          $primaryFont,
+          style("normal"),
+          size(18),
+          weight("semibold"),
+          line-height(30, 18)
+        );
+      }
 
-			@include breakpoint(mobile768) {
-				@include font-face($primaryFont, style('normal'), size(20), weight('semibold'), line-height(32, 20));
-			}	
-			
-			@include breakpoint(desktop1400) {
-				@include font-face($primaryFont, style('normal'), size(26), weight('semibold'), line-height(40, 26));
-			}
-		}
+      @include breakpoint(mobile768) {
+        @include font-face(
+          $primaryFont,
+          style("normal"),
+          size(20),
+          weight("semibold"),
+          line-height(32, 20)
+        );
+      }
 
-		.designation {
-			color: $gray-700;
-			@include font-face($primaryFont, style('normal'), size(14), weight('semibold'), line-height(25, 14));
-			letter-spacing: length(0.24);
-			margin-bottom: length(16);
-			
-			@include breakpoint(desktop1400) {
-				@include font-face($primaryFont, style('normal'), size(16), weight('semibold'), line-height(25, 16));
-			}
-		}
-		
-		.social {
-			@include list-horizontal;
-			justify-content: center;
-			gap: length(14);
+      @include breakpoint(desktop1400) {
+        @include font-face(
+          $primaryFont,
+          style("normal"),
+          size(26),
+          weight("semibold"),
+          line-height(40, 26)
+        );
+      }
+    }
 
-			&-link {
-				@include square(length(19));
-				@include flex-center;
-				overflow: hidden;
+    .designation {
+      color: $gray-700;
+      @include font-face(
+        $primaryFont,
+        style("normal"),
+        size(14),
+        weight("semibold"),
+        line-height(25, 14)
+      );
+      letter-spacing: length(0.24);
+      margin-bottom: length(16);
 
-				svg {
-					@include wh100;
+      @include breakpoint(desktop1400) {
+        @include font-face(
+          $primaryFont,
+          style("normal"),
+          size(16),
+          weight("semibold"),
+          line-height(25, 16)
+        );
+      }
+    }
 
-					svg {
-						path {
-							@include transitionsall;
-						}
-					}
-				}
+    .social {
+      @include list-horizontal;
+      justify-content: center;
+      gap: length(14);
 
-				&.githublink {
-					@include hover {
-						svg {
-							path {
-								fill: $gmail;
-							}
-						}
-					}
-				}
+      &-link {
+        @include square(length(19));
+        @include flex-center;
+        overflow: hidden;
 
-				&.emaillink {
-					@include hover {
-						svg {
-							path {
-								fill: $gmail;
-							}
-						}
-					}
-				}
+        svg {
+          @include wh100;
 
-				&.linkedinlink {
-					@include hover {
-						svg {
-							path {
-								fill: $linkedin;
-							}
-						}
-					}
-				}
+          svg {
+            path {
+              @include transitionsall;
+            }
+          }
+        }
 
-				&.instagramlink {
-					@include hover {
-						svg {
-							path {
-								fill: $instagram;
-							}
-						}
-					}
-				}
-			}
-		}
-	}
+        &.githublink {
+          @include hover {
+            svg {
+              path {
+                fill: $gmail;
+              }
+            }
+          }
+        }
+
+        &.emaillink {
+          @include hover {
+            svg {
+              path {
+                fill: $gmail;
+              }
+            }
+          }
+        }
+
+        &.linkedinlink {
+          @include hover {
+            svg {
+              path {
+                fill: $linkedin;
+              }
+            }
+          }
+        }
+
+        &.instagramlink {
+          @include hover {
+            svg {
+              path {
+                fill: $instagram;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
 }
 
 .cardanalysis {
-	@include flex-column;
-	gap: size(16);
+  @include flex-column;
+  gap: size(16);
 
-	@include breakpoint(tab992) {
-		gap: size(24);
-	}
+  @include breakpoint(tab992) {
+    gap: size(24);
+  }
 
-	.analysistitle {
-		color: $gray-700;
-		@include font-face($primaryFont, style('normal'), size(24), weight('semibold'), line-height(32, 24));
+  .analysistitle {
+    color: $gray-700;
+    @include font-face(
+      $primaryFont,
+      style("normal"),
+      size(24),
+      weight("semibold"),
+      line-height(32, 24)
+    );
 
-		@include breakpoint(mobile768) {
-			@include font-face($primaryFont, style('normal'), size(28), weight('semibold'), line-height(38, 28));
-		}
+    @include breakpoint(mobile768) {
+      @include font-face(
+        $primaryFont,
+        style("normal"),
+        size(28),
+        weight("semibold"),
+        line-height(38, 28)
+      );
+    }
 
-		@include breakpoint(tab992) {
-			@include font-face($primaryFont, style('normal'), size(32), weight('semibold'), line-height(40, 32));
-		}
-	}
+    @include breakpoint(tab992) {
+      @include font-face(
+        $primaryFont,
+        style("normal"),
+        size(32),
+        weight("semibold"),
+        line-height(40, 32)
+      );
+    }
+  }
 
-	.analysistext {
-		color: $gray-700;
-		@include font-face($primaryFont, style('normal'), size(16), weight('normal'), line-height(28, 16));
+  .analysistext {
+    color: $gray-700;
+    @include font-face(
+      $primaryFont,
+      style("normal"),
+      size(16),
+      weight("normal"),
+      line-height(28, 16)
+    );
 
-		@include breakpoint(mobile768) {
-			@include font-face($primaryFont, style('normal'), size(18), weight('normal'), line-height(30, 18));
-		}
+    @include breakpoint(mobile768) {
+      @include font-face(
+        $primaryFont,
+        style("normal"),
+        size(18),
+        weight("normal"),
+        line-height(30, 18)
+      );
+    }
 
-		@include breakpoint(tab992) {
-			@include font-face($primaryFont, style('normal'), size(20), weight('normal'), line-height(36, 20));
-		}
-	}
+    @include breakpoint(tab992) {
+      @include font-face(
+        $primaryFont,
+        style("normal"),
+        size(20),
+        weight("normal"),
+        line-height(36, 20)
+      );
+    }
+  }
 }
 
 .cardcommerce {
-	@include flex-column;
-	gap: length(24);
+  @include flex-column;
+  gap: length(24);
 
-	&-header {
-		@include flex-center-vert;
-		gap: size(24);
+  &-header {
+    @include flex-center-vert;
+    gap: size(24);
 
-		.titlebox {
-			width: calc(100% - 4.75rem);
+    .titlebox {
+      width: calc(100% - 4.75rem);
 
-			.title {
-				color: $gray-700;
-				@include font-face($primaryFont, style('normal'), size(24), weight('semibold'), line-height(32, 24));
-		
-				@include breakpoint(mobile768) {
-					@include font-face($primaryFont, style('normal'), size(26), weight('semibold'), line-height(36, 26));
-				}
-			}
-		}
+      .title {
+        color: $gray-700;
+        @include font-face(
+          $primaryFont,
+          style("normal"),
+          size(24),
+          weight("semibold"),
+          line-height(32, 24)
+        );
 
-		.icon {
-			@include square(length(52));
-			@include flex-center;
-			overflow: hidden;
+        @include breakpoint(mobile768) {
+          @include font-face(
+            $primaryFont,
+            style("normal"),
+            size(26),
+            weight("semibold"),
+            line-height(36, 26)
+          );
+        }
+      }
+    }
 
-			img {
-				@include wh100;
-				object-fit: cover;
-			}
-		}
-	}
+    .icon {
+      @include square(length(52));
+      @include flex-center;
+      overflow: hidden;
 
-	&-body {
-		.text {
+      img {
+        @include wh100;
+        object-fit: cover;
+      }
+    }
+  }
+
+  &-body {
+    .text {
       color: $gray-700;
-      @include font-face($primaryFont, style('normal'), size(16), weight('normal'), line-height(28, 16));
+      @include font-face(
+        $primaryFont,
+        style("normal"),
+        size(16),
+        weight("normal"),
+        line-height(28, 16)
+      );
       letter-spacing: length(0.24);
-  
+
       @include breakpoint(mobile768) {
-        @include font-face($primaryFont, style('normal'), size(18), weight('normal'), line-height(30, 18));
+        @include font-face(
+          $primaryFont,
+          style("normal"),
+          size(18),
+          weight("normal"),
+          line-height(30, 18)
+        );
       }
-  
+
       @include breakpoint(tab992) {
-        @include font-face($primaryFont, style('normal'), size(20), weight('normal'), line-height(36, 20));
+        @include font-face(
+          $primaryFont,
+          style("normal"),
+          size(20),
+          weight("normal"),
+          line-height(36, 20)
+        );
       }
-		}
-	}
+    }
+  }
 }
 
 .card-testimoni {
-	@include flex-column;
-	gap: size(24);
-	background: $white;
-	@include radius(8);
-	@include h100;
-	padding: size(16);
-	@include transitionsall;
+  @include flex-column;
+  gap: size(24);
+  background: $white;
+  @include radius(8);
+  @include h100;
+  padding: size(16);
+  @include transitionsall;
 
-	@include breakpoint(mobile768) {
-		padding: size(24);
-	}
+  @include breakpoint(mobile768) {
+    padding: size(24);
+  }
 
-	.icon {
-		width: size(34);
-		height: size(28);
-		@include flex-center;
-		overflow: hidden;
+  .icon {
+    width: size(34);
+    height: size(28);
+    @include flex-center;
+    overflow: hidden;
 
-		svg {
-			@include wh100;
-		}
-	}
+    svg {
+      @include wh100;
+    }
+  }
 
-	.info {
-		margin-bottom: size(20);
-		min-height: size(150);
+  .info {
+    margin-bottom: size(20);
+    min-height: size(150);
 
-		.text-testimonial {
-			color: $gray-600;
-			@include font-face($primaryFont, style('normal'), size(16), weight('normal'), line-height(26, 16));
-			letter-spacing: length(0.24);
-	
-			@include breakpoint(mobile768) {
-				@include font-face($primaryFont, style('normal'), size(18), weight('normal'), line-height(30, 18));
-			}
-		}
-	}
+    .text-testimonial {
+      color: $gray-600;
+      @include font-face(
+        $primaryFont,
+        style("normal"),
+        size(16),
+        weight("normal"),
+        line-height(26, 16)
+      );
+      letter-spacing: length(0.24);
 
-	.userinfo {
-		@include flex-center-vert;
-		gap: size(14);
+      @include breakpoint(mobile768) {
+        @include font-face(
+          $primaryFont,
+          style("normal"),
+          size(18),
+          weight("normal"),
+          line-height(30, 18)
+        );
+      }
+    }
+  }
 
-		.userthumb {
-			@include square(size(60));
-			@include circle;
-			@include flex-center;
-			overflow: hidden;
+  .userinfo {
+    @include flex-center-vert;
+    gap: size(14);
 
-			img {
-				@include wh100;
-				object-fit: cover;
-			}
-		}
+    .userthumb {
+      @include square(size(60));
+      @include circle;
+      @include flex-center;
+      overflow: hidden;
 
-		.detail {
-			width: calc(100% - 4.625rem);
-			@include flex-column;
+      img {
+        @include wh100;
+        object-fit: cover;
+      }
+    }
 
-			.name {
-				color: $gray-700;
-				@include font-face($primaryFont, style('normal'), size(16), weight('normal'), line-height(24, 16));
-			}
-			.position {
-				color: $gray-700;
-				@include font-face($primaryFont, style('normal'), size(14), weight('normal'), line-height(24, 14));
-			}
-		}
-	}
+    .detail {
+      width: calc(100% - 4.625rem);
+      @include flex-column;
 
-	@include hover {
-		background: $primary;
+      .name {
+        color: $gray-700;
+        @include font-face(
+          $primaryFont,
+          style("normal"),
+          size(16),
+          weight("normal"),
+          line-height(24, 16)
+        );
+      }
 
-		.icon {
-			svg {
-				path {
-					fill: $white;
-				}
-			}
-		}
+      .position {
+        color: $gray-700;
+        @include font-face(
+          $primaryFont,
+          style("normal"),
+          size(14),
+          weight("normal"),
+          line-height(24, 14)
+        );
+      }
+    }
+  }
 
-		.info {
-			.text-testimonial {
-				color: $white;
-			}
-		}
+  @include hover {
+    background: $primary;
 
-		.userinfo {
-			.detail {
-				.name, .position {
-					color: $white;
-				}
-			}
-		}
-	}
+    .icon {
+      svg {
+        path {
+          fill: $white;
+        }
+      }
+    }
+
+    .info {
+      .text-testimonial {
+        color: $white;
+      }
+    }
+
+    .userinfo {
+      .detail {
+        .name {
+          font-weight: 600;
+        }
+
+        .name,
+        .position {
+          color: $white;
+        }
+      }
+    }
+  }
 }
