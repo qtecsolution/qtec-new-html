@@ -1,7 +1,7 @@
 .swiper {
   max-height: length(540);
   position: relative;
-      
+
   @include breakpoint(mobile768) {
     max-height: length(750);
   }
@@ -19,7 +19,7 @@
     }
 
     &::before {
-      content: '0';
+      content: "0";
       position: absolute;
       top: 0;
       left: length(-5);
@@ -27,7 +27,7 @@
       font-size: length(40);
 
       @include breakpoint(desktop1400) {
-        left: 0;  
+        left: 0;
       }
     }
 
@@ -90,7 +90,7 @@
     &::after {
       width: 0;
       height: 0;
-      content: '';
+      content: "";
       display: none;
     }
 
@@ -104,4 +104,8 @@
       }
     }
   }
+}
+
+.swiper-slide {
+  flex-shrink: 1;
 }

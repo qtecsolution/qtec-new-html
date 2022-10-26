@@ -1,25 +1,31 @@
-const clientSlider = new Swiper(".clientSlider", {
-	loop: true,
-	autoplay: {
-		delay: 5000,
-		disableOnInteraction: false
-	},
-  breakpoints: {
-    '0': {
-      slidesPerView: 1
+var slider = tns({
+  container: ".clientslide",
+  slideBy: "1",
+  autoplay: true,
+  nav: false,
+  controls: false,
+  mouseDrag: true,
+  autoplayButtonOutput: false,
+  autoplayTimeout: 5000,
+  responsive: {
+    0: {
+      items: 1,
     },
-    '360': {
-      slidesPerView: 2,
-      spaceBetween: 20
+    360: {
+      items: 2,
+      gutter: 8,
     },
-    '768': {
-      slidesPerView: 3
+    768: {
+      items: 3,
+      gutter: 16,
     },
-    '992': {
-      slidesPerView: 4
+    992: {
+      items: 4,
+      gutter: 24,
     },
-    '1200': {
-      slidesPerView: 5
-    }
-  }
+    1200: {
+      items: 5,
+      gutter: 40,
+    },
+  },
 });
