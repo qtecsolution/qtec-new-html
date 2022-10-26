@@ -1,4 +1,4 @@
-var slider = tns({
+const slider = tns({
   container: ".clientslide",
   slideBy: "1",
   autoplay: true,
