@@ -3,136 +3,217 @@
 **=======================================================**/
 
 .header {
-	padding: length(10) length(8);
-	background: $white;
-	box-shadow: $box-shadow-2;
-	filter: $drop-shadow-1;
-	position: fixed;
-	@include w100;
-	top: size(-2);
-	left: 0;
-	height: length(68);
-	transition: ease $time;
-	z-index: 9999;
+  padding: length(0) length(8);
+  background: $white;
+  box-shadow: $box-shadow-2;
+  filter: $drop-shadow-1;
+  @include flex-center-vert;
+  position: fixed;
+  @include w100;
+  top: size(-2);
+  left: 0;
+  height: length(68);
+  transition: ease $time;
+  z-index: 9999;
 
-	@include breakpoint(mobile576) {
-		height: length(80);
-	}
+  @include breakpoint(mobile576) {
+    height: length(80);
+  }
 
-	@include breakpoint(tab992) {
-		height: length(100);
-		top: 0;
-	}
+  @include breakpoint(tab992) {
+    height: length(100);
+    top: 0;
+  }
 
-	&-nav {
-		@include flex-center-between;
+  &-nav {
+    @include flex-center-between;
 
-		.logo {
-			@include square(length(48));
-			@include flex-center;
-			overflow: hidden;
+    .logo {
+      @include square(length(48));
+      @include flex-center;
+      overflow: hidden;
 
-			@include breakpoint(mobile576) {
-				@include square(length(60));
-			}
+      @include breakpoint(mobile576) {
+        @include square(length(60));
+      }
 
-			@include breakpoint(tab992) {
-				@include square(length(80));
-			}
+      @include breakpoint(tab992) {
+        @include square(length(80));
+      }
 
-			img {
-				@include wh100;
-				object-fit: contain;
-			}
-		}
+      img {
+        @include wh100;
+        object-fit: contain;
+      }
+    }
 
-		.desktopmenu {
-			margin-left: auto;
-			display: none;
+    .desktopmenu {
+      margin-left: auto;
+      display: none;
 
-			@include breakpoint(tab992) {
-				display: block;
-			}
-		}
+      @include breakpoint(tab992) {
+        display: block;
+      }
+    }
 
-		.desktoplist {
-			@include list-horizontal;
-			gap: length(40);
+    .desktoplist {
+      position: relative;
+      @include list-horizontal;
+      gap: size(4);
 
-			@include breakpoint(desktop1200) {
-				gap: length(48);
-			}
+      &-link {
+        color: $desktopLinkColor;
+        @include font-face(
+          $primaryFont,
+          style("normal"),
+          size(14),
+          weight("semibold"),
+          line-height(21.29, 14)
+        );
+        letter-spacing: length(1.6);
+        padding: length(0) length(20);
+        text-transform: uppercase;
 
-			@include breakpoint(desktop1400) {
-				gap: length(64);
-			}
+        @include breakpoint(desktop1200) {
+          padding: length(0) length(24);
+        }
 
-			&-link {
-				color: $desktopLinkColor;
-				@include font-face($primaryFont, style('normal'), size(14), weight('semibold'), line-height(21.29, 14));
-				letter-spacing: length(1.6);
-				text-transform: uppercase;
+        @include breakpoint(desktop1400) {
+          padding: length(0) length(32);
+        }
 
-				&:hover:not(.active) {
-					color: $primary;
-				}
+        &:hover:not(.active) {
+          color: $primary;
+        }
 
-				&.active {
-					color: $primary;
-				}
-			}
-		}
+        &.active {
+          color: $primary;
+        }
+      }
 
-		.hamburgermenu {
-			display: block;
+      &-item {
+        position: relative;
+        @include flex-center;
+        height: length(68);
+        cursor: pointer;
 
-			@include breakpoint(tab992) {
-				display: none;
-			}
+        @include breakpoint(mobile576) {
+          height: length(80);
+        }
 
-			.btn-hamburger {
-				@include square(length(24));
-				@include transparent-button;
-				@include flex-center;
-				overflow: hidden;
+        @include breakpoint(tab992) {
+          height: length(100);
+        }
 
-				svg {
-					@include wh100;
-				}
+        @include hover {
+          .desktopdropdown {
+            display: block;
+          }
+        }
+      }
 
-				@include hover {
-					svg {
-						.fill {
-							fill: $primary;
-						}
-					}
-				}
-			}
-		}
+      .desktopdropdown {
+        position: absolute;
+        left: -50%;
+        top: 100%;
+        min-width: 240%;
+        background: $white;
+        @include border-single(top, solid, 1, $headerborder);
+        box-shadow: $box-shadow-2;
+        z-index: 100;
+        padding-bottom: size(12);
+        display: none;
+        @extend %animation;
+        @extend %slideUpIn;
 
-		.mobilelist {
-			@include list-vertical;
-			gap: length(24);
-			align-items: center;
-			justify-content: center;
-			height: 60%;
+        @include breakpoint(desktop1400) {
+          min-width: 200%;
+        }
 
-			&-link {
-				color: $headerLinkColor;
-				@include font-face($primaryFont, style('normal'), size(14), weight('semibold'), line-height(21.29, 14));
-				letter-spacing: length(1.6);
-				text-transform: uppercase;
+        .dropdownlist {
+          @include list-vertical;
 
-				&:hover:not(.active) {
-					color: $secondary;
-				}
+          &-link {
+            display: inline-block;
+            color: $desktopLinkColor;
+            @include font-face(
+              $primaryFont,
+              style("normal"),
+              size(14),
+              weight("semibold"),
+              line-height(21.29, 14)
+            );
+            letter-spacing: length(1.6);
+            padding: size(4) size(12);
 
-				&.active {
-					color: $secondary;
-				}
-			}
-		}
-	}
+            &:hover:not(.active) {
+              color: $primary;
+            }
+
+            &.active {
+              color: $primary;
+            }
+          }
+        }
+      }
+    }
+
+    .hamburgermenu {
+      display: block;
+
+      @include breakpoint(tab992) {
+        display: none;
+      }
+
+      .btn-hamburger {
+        @include square(length(24));
+        @include transparent-button;
+        @include flex-center;
+        overflow: hidden;
+
+        svg {
+          @include wh100;
+        }
+
+        @include hover {
+          svg {
+            .fill {
+              fill: $primary;
+            }
+          }
+        }
+      }
+    }
+
+    .mobilelist {
+      @include list-vertical;
+      gap: length(24);
+      align-items: center;
+      justify-content: center;
+      height: 60%;
+
+      &-link {
+        color: $headerLinkColor;
+        @include font-face(
+          $primaryFont,
+          style("normal"),
+          size(14),
+          weight("semibold"),
+          line-height(21.29, 14)
+        );
+        letter-spacing: length(1.6);
+        text-transform: uppercase;
+
+        &:hover:not(.active) {
+          color: $secondary;
+        }
+
+        &.active {
+          color: $secondary;
+        }
+      }
+    }
+  }
 }
 
 /**=======================================================**
@@ -144,15 +225,15 @@
 **=======================================================**/
 
 .gap {
-	height: length(68);
+  height: length(68);
 
-	@include breakpoint(mobile576) {
-		height: length(80);
-	}
+  @include breakpoint(mobile576) {
+    height: length(80);
+  }
 
-	@include breakpoint(tab992) {
-		height: length(100);
-	}
+  @include breakpoint(tab992) {
+    height: length(100);
+  }
 }
 
 /**=======================================================**

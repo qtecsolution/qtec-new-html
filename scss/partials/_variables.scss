@@ -1,71 +1,68 @@
 /**=====================================================**
                     THEME-COLORS
 =======================================================**/
-$primary: #0876FC;
-$secondary: #02D7F8;
+$primary: #0876fc;
+$secondary: #02d7f8;
 $tertiary: rgb(252, 222, 8);
 
 /**=====================================================**
                     TEXT-COLORS
 =======================================================**/
-$headerLinkColor: #9D9D9D;
+$headerLinkColor: #9d9d9d;
 $desktopLinkColor: #333333;
-$textGray: #C4C4C4;
-$textPlaceholder: #B5B5BD;
-$subscribePlaceholder: #7A828A;
+$textGray: #c4c4c4;
+$textPlaceholder: #b5b5bd;
+$subscribePlaceholder: #7a828a;
 $textLabel: #425466;
 
-$gray-100:#F7FAFC;
-$gray-200:#EDF2F7;
-$gray-300:#E2E8F0;
-$gray-500:#A0AEC0;
-$gray-600:#718096;
-$gray-700:#4A5568;
-$gray-800:#2D3748;
+$gray-100: #f7fafc;
+$gray-200: #edf2f7;
+$gray-300: #e2e8f0;
+$gray-500: #a0aec0;
+$gray-600: #718096;
+$gray-700: #4a5568;
+$gray-800: #2d3748;
 
 $choose: #505780;
-$choosebg: #E4ECF7;
+$choosebg: #e4ecf7;
 
 /**=====================================================**
                     BACKGROUND-COLORS
 =======================================================**/
 $footerbg: #001938;
-$lightGrayBackground: #F1F1F1;
-$darkGrayBg: #DCDCDC;
-$cardHeaderBg: #F2F2F2;
-$datavisualbg: #00142D;
+$lightGrayBackground: #f1f1f1;
+$darkGrayBg: #dcdcdc;
+$cardHeaderBg: #f2f2f2;
+$datavisualbg: #00142d;
 
-$serviceBg: #F2F8FF;
-$aboutBg: #FFFDF2;
-$caseStudyBg: #F4F2F2;
+$serviceBg: #f2f8ff;
+$aboutBg: #fffdf2;
+$caseStudyBg: #f4f2f2;
 $btnbg: rgba(244, 209, 209, 0.5);
-$bannericonbg: #FFFCEA;
-$caseStudyBannerBg: #E1E8FF;
+$bannericonbg: #fffcea;
+$caseStudyBannerBg: #e1e8ff;
 $socialIconBg: rgba(157, 157, 157, 0.04);
-$errorBg: #EDF2F7;
+$errorBg: #edf2f7;
 $faqborder: rgba(74, 85, 104, 0.2);
-
 
 $bannerBg: rgba(252, 222, 8, 0.05);
 $bannerBg-2: rgba(255, 219, 204, 0.3);
 $bannerBg-3: rgba(180, 220, 98, 0.08);
 
+$expartBg: #f7f9ff;
+$professionalBg: #fffef7;
+$transparencylBg: #f9f7ff;
 
-$expartBg: #F7F9FF;
-$professionalBg: #FFFEF7;
-$transparencylBg: #F9F7FF;
-
-
-$thumb1-bg: #EBBE0B;
-$thumb2-bg: #DD5117;
-$thumb3-bg: #B4DC62;
+$thumb1-bg: #ebbe0b;
+$thumb2-bg: #dd5117;
+$thumb3-bg: #b4dc62;
 
 $dateColor: #425466;
 
-$danger: #FF3E3E;
-$toastbg: #E6EEF2;
+$danger: #ff3e3e;
+$toastbg: #e6eef2;
 
-$cardbg-1: #F7FAFF;
+$cardbg-1: #f7faff;
 $cardbg-2: rgba(180, 220, 98, 0.08);
 $cardbg-3: rgba(255, 219, 204, 0.3);
 
@@ -75,11 +72,11 @@ $client-3: rgba(41, 196, 131, 0.2);
 $client-4: rgba(254, 199, 30, 0.2);
 $client-5: rgba(254, 158, 151, 0.2);
 
-$client-thumb-1: #E8B6EB;
-$client-thumb-2: #F3F656;
-$client-thumb-3: #29C483;
-$client-thumb-4: #FEC71E;
-$client-thumb-5: #FE9E97;
+$client-thumb-1: #e8b6eb;
+$client-thumb-2: #f3f656;
+$client-thumb-3: #29c483;
+$client-thumb-4: #fec71e;
+$client-thumb-5: #fe9e97;
 
 $technology-1: rgba(255, 245, 0, 0.3);
 $technology-2: rgba(135, 211, 250, 0.3);
@@ -88,17 +85,16 @@ $technology-4: rgba(191, 209, 237, 0.3);
 $technology-5: rgba(235, 244, 212, 0.3);
 
 $techbg: rgba(16, 62, 46, 0.2);
-$thumbg: #E0E5FE;
-$thumbbg: #FFAB8D;
-$closebg: #F7F7FC;
-$success: #8DC640;
-$leftbg: #EBFBF6;
+$thumbg: #e0e5fe;
+$thumbbg: #ffab8d;
+$closebg: #f7f7fc;
+$success: #8dc640;
+$leftbg: #ebfbf6;
 
-
-$analysisbg: #D7F890;
-$developbg: #FF8E5E;
-$testingbg: #F6F4F2;
-$maintenancebg: #84D6D7;
+$analysisbg: #d7f890;
+$developbg: #ff8e5e;
+$testingbg: #f6f4f2;
+$maintenancebg: #84d6d7;
 
 /**=====================================================**
                   SOCIAL-NETWORK-COLORS
@@ -113,8 +109,9 @@ $linkedin: hsl(201, 100%, 35%); //#0072b1
 /**=====================================================**
                     BORDER-COLORS
 =======================================================**/
-$border-1: #FBFBFB;
+$border-1: #fbfbfb;
 $footerBorder: #636262;
+$headerborder: #eeeeee;
 
 /**=====================================================**
                     NORMAL-COLORS
@@ -125,17 +122,27 @@ $white: #ffffff;
 /**=====================================================**
                     GRADIENT-COLORS
 =======================================================**/
-$color-1: #FAFBFC;
-$color-2: #EDEFF2;
-$color-3: #D7DBE2;
-$color-4: #D1D5DE;
+$color-1: #fafbfc;
+$color-2: #edeff2;
+$color-3: #d7dbe2;
+$color-4: #d1d5de;
 
 /**=====================================================**
                     GRADIENT-BACKGROUNDS
 =======================================================**/
-$technologyBg: linear-gradient(180deg, $white 0%, $color-1 28.37%, $color-2 59.78%, $color-3 92.52%, $color-4 100%);
-$glassmorbg: linear-gradient(180deg, rgba($white, 0.4) 0%, rgba($white, 0.1) 100%);
-
+$technologyBg: linear-gradient(
+  180deg,
+  $white 0%,
+  $color-1 28.37%,
+  $color-2 59.78%,
+  $color-3 92.52%,
+  $color-4 100%
+);
+$glassmorbg: linear-gradient(
+  180deg,
+  rgba($white, 0.4) 0%,
+  rgba($white, 0.1) 100%
+);
 
 /**=====================================================**
                         SHADOWS
@@ -149,21 +156,20 @@ $shadow-5: rgba(50, 50, 71, 0.08);
 /**=====================================================**
                         BOX-SHADOWS
 =======================================================**/
-$box-shadow-1: 0 0 .0625rem $shadow-1, 0 .1875rem .5rem -0.0625rem $shadow-2;
-$box-shadow-2: 0 .1875rem .5rem -0.0625rem $shadow-2;
-$drop-shadow-1: drop-shadow(0 0 .0625rem $shadow-1);
-$close-shadow: 0 0 .0625rem $shadow-3, 0 .625rem 1rem $shadow-4;
+$box-shadow-1: 0 0 0.0625rem $shadow-1, 0 0.1875rem 0.5rem -0.0625rem $shadow-2;
+$box-shadow-2: 0 0.1875rem 0.5rem -0.0625rem $shadow-2;
+$drop-shadow-1: drop-shadow(0 0 0.0625rem $shadow-1);
+$close-shadow: 0 0 0.0625rem $shadow-3, 0 0.625rem 1rem $shadow-4;
 
-$tab-shadow: 0 .25rem 1.25rem -0.125rem $shadow-5;
-$tab-shade: drop-shadow(0 0 .0625rem $shadow-3);
-$header-shadow: 0 0 .625rem 0 rgba($black, 0.1%);
+$tab-shadow: 0 0.25rem 1.25rem -0.125rem $shadow-5;
+$tab-shade: drop-shadow(0 0 0.0625rem $shadow-3);
+$header-shadow: 0 0 0.625rem 0 rgba($black, 0.1%);
 
-$toast-shadow: 0 .625rem 4.375rem rgba($black, 0.15%);
+$toast-shadow: 0 0.625rem 4.375rem rgba($black, 0.15%);
 
 /**=====================================================**
                         TEXT-SHADOWS
 =======================================================**/
-
 
 /**=====================================================**
                     TIMING-VARIABLES
