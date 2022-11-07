@@ -116,18 +116,18 @@
         position: absolute;
         left: -50%;
         top: 100%;
-        min-width: 240%;
+        min-width: 280%;
         background: $white;
         @include border-single(top, solid, 1, $headerborder);
         box-shadow: $box-shadow-2;
         z-index: 100;
-        padding-bottom: size(12);
+        padding: size(4) size(0) size(12);
         display: none;
         @extend %animation;
         @extend %slideUpIn;
 
         @include breakpoint(desktop1400) {
-          min-width: 200%;
+          min-width: 240%;
         }
 
         .dropdownlist {
@@ -139,12 +139,13 @@
             @include font-face(
               $primaryFont,
               style("normal"),
-              size(14),
+              size(13),
               weight("semibold"),
-              line-height(21.29, 14)
+              line-height(20, 13)
             );
             letter-spacing: length(1.6);
             padding: size(4) size(12);
+            text-transform: uppercase;
 
             &:hover:not(.active) {
               color: $primary;
