@@ -144,7 +144,7 @@
               line-height(20, 13)
             );
             letter-spacing: length(1.6);
-            padding: size(4) size(12);
+            padding: size(8) size(12);
             text-transform: uppercase;
 
             &:hover:not(.active) {
@@ -188,10 +188,8 @@
 
     .mobilelist {
       @include list-vertical;
-      gap: length(24);
-      align-items: center;
-      justify-content: center;
-      height: 60%;
+      margin-top: size(32);
+      // height: 60%;
 
       &-link {
         color: $headerLinkColor;
@@ -204,6 +202,9 @@
         );
         letter-spacing: length(1.6);
         text-transform: uppercase;
+        display: inline-block;
+        @include w100;
+        padding: size(12) size(0);
 
         &:hover:not(.active) {
           color: $secondary;
@@ -211,6 +212,85 @@
 
         &.active {
           color: $secondary;
+        }
+      }
+
+      .accordion {
+        &-item {
+          background: transparent;
+
+          &:first-of-type {
+            border-top-left-radius: 0;
+            border-top-right-radius: 0;
+
+            .accordion-button {
+              border-top-left-radius: 0;
+              border-top-right-radius: 0;
+            }
+          }
+
+          &:last-of-type {
+            border-bottom-right-radius: 0;
+            border-bottom-left-radius: 0;
+          }
+        }
+
+        &-header {
+          @include flex-center-vert;
+
+          .link {
+            width: 50%;
+            height: size(44);
+            color: $headerLinkColor;
+            @include font-face(
+              $primaryFont,
+              style("normal"),
+              size(14),
+              weight("semibold"),
+              line-height(21.29, 14)
+            );
+            letter-spacing: length(1.6);
+            text-transform: uppercase;
+            padding: size(12) size(0);
+          }
+        }
+
+        &-button {
+          background: transparent;
+          padding: 0;
+          padding: size(12) size(0);
+          width: 50%;
+          height: size(44);
+
+          &::after {
+            background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23ffffff'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+          }
+        }
+
+        &-body {
+          @include flex-column;
+          gap: size(12);
+
+          .servicelink {
+            color: $desktopLinkColor;
+            @include font-face(
+              $primaryFont,
+              style("normal"),
+              size(13),
+              weight("semibold"),
+              line-height(20, 13)
+            );
+            letter-spacing: length(1.6);
+            @include transitionscolor;
+
+            &:hover:not(.active) {
+              color: $secondary;
+            }
+
+            &.active {
+              color: $secondary;
+            }
+          }
         }
       }
     }

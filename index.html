@@ -196,11 +196,43 @@
                   <a href="about.html" class="mobilelist-link">About Us</a>
                 </li>
 
-                <li class="mobilelist-item">
-                  <a href="services-2.0.html" class="mobilelist-link"
-                    >Services</a
-                  >
-                </li>
+                <div class="accordion" id="accordionDropdown">
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="heading-service">
+                      <a href="#" class="link">Services</a>
+
+                      <button
+                        class="accordion-button"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#collapseOne"
+                        aria-expanded="true"
+                        aria-controls="collapseOne"
+                      ></button>
+                    </h2>
+                    <div
+                      id="collapseOne"
+                      class="accordion-collapse"
+                      aria-labelledby="heading-service"
+                      data-bs-parent="#accordionDropdown"
+                    >
+                      <div class="accordion-body">
+                        <a href="services-2.0.html" class="servicelink">
+                          UI /UX Design
+                        </a>
+                        <a href="services-2.1.html" class="servicelink">
+                          Software Development
+                        </a>
+                        <a href="services-2.2.html" class="servicelink">
+                          Mobile Application Development
+                        </a>
+                        <a href="services-2.3.html" class="servicelink">
+                          E-commerce Development
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
 
                 <li class="mobilelist-item">
                   <a href="products.html" class="mobilelist-link">Products</a>
