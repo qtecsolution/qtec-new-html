@@ -119,7 +119,7 @@
 
     img {
       @include wh100;
-      object-fit: contain;
+      object-fit: cover;
       @include transitiontransform;
 
       @include hover {
@@ -262,7 +262,7 @@
 
     img {
       @include wh100;
-      object-fit: contain;
+      object-fit: cover;
       @include transitiontransform;
 
       @include hover {
@@ -476,7 +476,7 @@
     svg,
     img {
       @include wh100;
-      object-fit: contain;
+      object-fit: cover;
     }
   }
 
