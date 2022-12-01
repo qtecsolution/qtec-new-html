@@ -71,16 +71,8 @@
           line-height(21.29, 14)
         );
         letter-spacing: length(1.6);
-        padding: length(0) length(20);
+        padding: length(0) length(16);
         text-transform: uppercase;
-
-        @include breakpoint(desktop1200) {
-          padding: length(0) length(24);
-        }
-
-        @include breakpoint(desktop1400) {
-          padding: length(0) length(32);
-        }
 
         &:hover:not(.active) {
           color: $primary;

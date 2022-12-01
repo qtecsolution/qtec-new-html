@@ -9,6 +9,8 @@
   @include h100;
 
   &-header {
+    @include flex-center;
+
     .card-cap {
       background: $gray-200;
       @include square(length(56));
@@ -36,6 +38,7 @@
         weight("semibold"),
         line-height(34.09, 24)
       );
+      text-align: center;
 
       @include breakpoint(desktop1400) {
         @include font-face(
@@ -58,7 +61,7 @@
         line-height(28, 16)
       );
       letter-spacing: length(0.24);
-      text-align: left;
+      text-align: center;
 
       @include breakpoint(desktop1400) {
         @include font-face(
@@ -68,10 +71,6 @@
           weight("normal"),
           line-height(30, 18)
         );
-      }
-
-      @include breakpoint(desktop1400) {
-        text-align: justify;
       }
     }
   }
@@ -101,6 +100,7 @@
   gap: length(8);
   padding: length(6);
   max-width: 100%;
+  @include h100;
 
   @include breakpoint(mobile480) {
     max-width: length(312);
@@ -145,6 +145,8 @@
           weight("semibold"),
           line-height(25, 16)
         );
+        align-items: center;
+        @include line-clamp;
         @include transitionscolor;
 
         @include hover {
@@ -412,7 +414,7 @@
       line-height(25.58, 14)
     );
     letter-spacing: length(0.24);
-    text-align: justify;
+    text-align: left;
 
     @include breakpoint(mobile768) {
       @include font-face(
@@ -476,7 +478,7 @@
     svg,
     img {
       @include wh100;
-      object-fit: cover;
+      object-fit: contain;
     }
   }
 

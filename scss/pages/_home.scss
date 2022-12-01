@@ -142,7 +142,7 @@
       gap: length(16);
       background: $white;
       backdrop-filter: blur(length(10));
-      @include border(solid, 1, $gray-100);
+      @include border(solid, 1, $gray-300);
       @include radius(16);
       padding: length(24) length(24) length(16);
       filter: $drop-shadow-1;
@@ -277,11 +277,7 @@
 **=======================================================**/
 
 .homeinfo {
-  padding: length(80) length(8);
-
-  @include breakpoint(tab992) {
-    padding: length(160) length(0);
-  }
+  padding: length(60) length(8);
 
   &-content {
     @include flex-center-column;
@@ -290,8 +286,8 @@
   }
 
   .titlebox {
-    max-width: length(648);
-    margin-inline: auto;
+    // max-width: length(648);
+    // margin-inline: auto;
 
     .homeinfo-title {
       color: $gray-700;
@@ -339,7 +335,7 @@
         line-height(25.92, 16)
       );
       letter-spacing: length(0.24);
-      text-align: justify;
+      text-align: center;
 
       @include breakpoint(tab992) {
         @include font-face(
@@ -364,11 +360,7 @@
 
 .workingclients {
   background: $white;
-  padding: length(80) length(0);
-
-  @include breakpoint(tab992) {
-    padding: length(120) length(0);
-  }
+  padding: length(60) length(0);
 
   &-content {
     @include flex-center-column;
@@ -452,10 +444,10 @@
 
 .home-features {
   background: $white;
-  padding: length(80) length(8);
+  padding: length(40) length(8) length(80);
 
   @include breakpoint(tab992) {
-    padding: length(160) length(0);
+    padding: length(60) length(0) length(160);
   }
 
   &-content {
@@ -557,7 +549,7 @@
   padding: length(48) length(8);
 
   @include breakpoint(tab992) {
-    padding: length(80) length(0);
+    padding: length(60) length(0);
   }
 
   &-content {
@@ -638,7 +630,8 @@
 
     .tab-content {
       .tab-thumbnail {
-        @include wh100;
+        @include w100;
+        height: size(376);
         overflow: hidden;
 
         img {
@@ -668,7 +661,7 @@
   padding: length(48) length(8);
 
   @include breakpoint(tab992) {
-    padding: length(80) length(0);
+    padding: length(60) length(0);
   }
 
   &-content {
@@ -742,7 +735,7 @@
   padding: length(48) length(8);
 
   @include breakpoint(tab992) {
-    padding: length(80) length(0);
+    padding: length(60) length(0);
   }
 
   &-content {

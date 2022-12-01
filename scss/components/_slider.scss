@@ -19,7 +19,8 @@
     }
 
     &::before {
-      content: "0";
+      // content: "0";
+      content: "";
       position: absolute;
       top: 0;
       left: length(-5);

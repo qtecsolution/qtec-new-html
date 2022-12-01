@@ -3,44 +3,63 @@
 **=======================================================**/
 
 .about-banner {
-	background: url(../images/about/about-banner.webp) no-repeat center center/cover;
-	position: relative;
+  background: url(../images/about/about-banner.webp) no-repeat center
+    center/cover;
+  position: relative;
 
-	&-content {
-		@include flex-center-vert;
-		min-height: length(240);
+  &-content {
+    @include flex-center-vert;
+    min-height: length(240);
 
-		@include breakpoint(tab992) {
-			min-height: length(640);
-		}
-	}
+    @include breakpoint(tab992) {
+      min-height: length(640);
+    }
+  }
 
-	&-title {
-		color: $gray-700;
-		@include font-face($primaryFont, style('normal'), size(32), weight('semibold'), line-height(40, 32));
-		position: relative;
-		z-index: 100;
+  &-title {
+    color: $gray-700;
+    @include font-face(
+      $primaryFont,
+      style("normal"),
+      size(32),
+      weight("semibold"),
+      line-height(40, 32)
+    );
+    position: relative;
+    z-index: 100;
 
-		@include breakpoint(mobile768) {
-			@include font-face($primaryFont, style('normal'), size(40), weight('semibold'), line-height(50, 40));
-		}
+    @include breakpoint(mobile768) {
+      @include font-face(
+        $primaryFont,
+        style("normal"),
+        size(40),
+        weight("semibold"),
+        line-height(50, 40)
+      );
+    }
 
-		@include breakpoint(tab992) {
-			@include font-face($primaryFont, style('normal'), size(52), weight('semibold'), line-height(60, 52));
-		}
+    @include breakpoint(tab992) {
+      @include font-face(
+        $primaryFont,
+        style("normal"),
+        size(52),
+        weight("semibold"),
+        line-height(60, 52)
+      );
+    }
 
-		span {
-			color: $black;
-		}
-	}
+    span {
+      color: $black;
+    }
+  }
 
   .overlay {
     position: absolute;
     top: 0;
     left: 0;
     @include wh100;
-		background: rgba($white, 0.8);
-		z-index: 1;
+    background: rgba($white, 0.8);
+    z-index: 1;
 
     @include breakpoint(tab992) {
       display: none;
@@ -52,143 +71,205 @@
                         ABOUT-BANNER END
 **=======================================================**/
 
-
-
 /**=======================================================**
                         OUR-STORY START
 **=======================================================**/
 
 .ourstory {
-	background: $bannerBg;
-	padding: length(80) length(8);
+  background: $bannerBg;
+  padding: length(40) length(8);
 
-	@include breakpoint(tab992) {
-		padding: length(160) length(0);
-	}
+  @include breakpoint(tab992) {
+    padding: length(60) length(0) length(160);
+  }
 
-	&-content {
-		@include flex-center-column;
-		gap: length(40);
-		text-align: center;
+  &-content {
+    @include flex-center-column;
+    gap: length(40);
+    text-align: center;
 
-		.ourstory-title {
-			color: $gray-700;
-			@include font-face($primaryFont, style('normal'), size(32), weight('semibold'), line-height(47, 32));
+    .ourstory-title {
+      color: $gray-700;
+      @include font-face(
+        $primaryFont,
+        style("normal"),
+        size(32),
+        weight("semibold"),
+        line-height(47, 32)
+      );
 
-			@include breakpoint(mobile768) {
-				@include font-face($primaryFont, style('normal'), size(40), weight('semibold'), line-height(77, 40));
-			}
+      @include breakpoint(mobile768) {
+        @include font-face(
+          $primaryFont,
+          style("normal"),
+          size(40),
+          weight("semibold"),
+          line-height(77, 40)
+        );
+      }
 
-			@include breakpoint(tab992) {
-				@include font-face($primaryFont, style('normal'), size(52), weight('semibold'), line-height(79.09, 52));
-			}
-		}
+      @include breakpoint(tab992) {
+        @include font-face(
+          $primaryFont,
+          style("normal"),
+          size(52),
+          weight("semibold"),
+          line-height(79.09, 52)
+        );
+      }
+    }
 
-		.ourstory-text {
-			color: $gray-600;
-			@include font-face($primaryFont, style('normal'), size(16), weight('normal'), line-height(28, 16));
-			letter-spacing: length(0.24);
+    .ourstory-text {
+      color: $gray-600;
+      @include font-face(
+        $primaryFont,
+        style("normal"),
+        size(16),
+        weight("normal"),
+        line-height(28, 16)
+      );
+      letter-spacing: length(0.24);
 
-			@include breakpoint(mobile768) {
-				@include font-face($primaryFont, style('normal'), size(18), weight('normal'), line-height(30, 18));
-			}
-		}
-	}
+      @include breakpoint(mobile768) {
+        @include font-face(
+          $primaryFont,
+          style("normal"),
+          size(18),
+          weight("normal"),
+          line-height(30, 18)
+        );
+      }
+    }
+  }
 }
 
 /**=======================================================**
                         OUR-STORY END
 **=======================================================**/
 
-
-
 /**=======================================================**
                         FEATURED START
 **=======================================================**/
 
 .featured {
-	background: $white;
-	padding: length(48) length(8) length(64);
+  background: $white;
+  padding: length(48) length(8) length(64);
 
-	@include breakpoint(tab992) {
-		padding: length(60) length(0) length(120);
-	}
+  @include breakpoint(tab992) {
+    padding: length(60) length(0) length(120);
+  }
 
-	&-description {
-		@include flex-column;
-		gap: length(24);
+  &-description {
+    @include flex-column;
+    gap: length(24);
 
-		.featuredinfo {
-			.featured-title {
-				color: $gray-700;
-				@include font-face($primaryFont, style('normal'), size(28), weight('semibold'), line-height(53.01, 28));
+    .featuredinfo {
+      .featured-title {
+        color: $gray-700;
+        @include font-face(
+          $primaryFont,
+          style("normal"),
+          size(28),
+          weight("semibold"),
+          line-height(53.01, 28)
+        );
 
-				@include breakpoint(mobile768) {
-					@include font-face($primaryFont, style('normal'), size(38), weight('semibold'), line-height(63.01, 38));
-				}
+        @include breakpoint(mobile768) {
+          @include font-face(
+            $primaryFont,
+            style("normal"),
+            size(38),
+            weight("semibold"),
+            line-height(63.01, 38)
+          );
+        }
 
-				@include breakpoint(tab992) {
-					@include font-face($primaryFont, style('normal'), size(48), weight('semibold'), line-height(73.01, 48));
-				}
-			}
-		}
+        @include breakpoint(tab992) {
+          @include font-face(
+            $primaryFont,
+            style("normal"),
+            size(48),
+            weight("semibold"),
+            line-height(73.01, 48)
+          );
+        }
+      }
+    }
 
-		.featureddetetail {
-			.featured-text {
-				color: $gray-600;
-				@include font-face($primaryFont, style('normal'), size(14), weight('normal'), line-height(25.58, 14));
-				letter-spacing: length(0.24);
-				text-align: justify;
+    .featureddetetail {
+      .featured-text {
+        color: $gray-600;
+        @include font-face(
+          $primaryFont,
+          style("normal"),
+          size(14),
+          weight("normal"),
+          line-height(25.58, 14)
+        );
+        letter-spacing: length(0.24);
+        text-align: justify;
 
-				@include breakpoint(mobile768) {
-					@include font-face($primaryFont, style('normal'), size(16), weight('normal'), line-height(25.92, 16));
-				}
+        @include breakpoint(mobile768) {
+          @include font-face(
+            $primaryFont,
+            style("normal"),
+            size(16),
+            weight("normal"),
+            line-height(25.92, 16)
+          );
+        }
 
-				@include breakpoint(tab992) {
-					@include font-face($primaryFont, style('normal'), size(18), weight('normal'), line-height(30, 18));
-				}
-			}
-		}
-	}
+        @include breakpoint(tab992) {
+          @include font-face(
+            $primaryFont,
+            style("normal"),
+            size(18),
+            weight("normal"),
+            line-height(30, 18)
+          );
+        }
+      }
+    }
+  }
 
-	.thumbnailbox {
-		@include radius(16);
-		position: relative;
-		margin-top: length(80);
+  .thumbnailbox {
+    @include radius(16);
+    position: relative;
+    margin-top: length(80);
 
-		@include breakpoint(tab992) {
-			margin-top: length(0);
-		}
+    @include breakpoint(tab992) {
+      margin-top: length(0);
+    }
 
-		&::after {
-			content: '';
-			position: absolute;
-			top: length(-30);
-			right: length(-15);
-			z-index: 1;
-			width: 70%;
-			height: length(167);
-			background: $caseStudyBannerBg;
+    &::after {
+      content: "";
+      position: absolute;
+      top: length(-30);
+      right: length(-15);
+      z-index: 1;
+      width: 70%;
+      height: length(167);
+      background: $caseStudyBannerBg;
 
-			@include breakpoint(tab992) {
-				top: length(-60);
-				right: length(-30);
-			}
-		}
+      @include breakpoint(tab992) {
+        top: length(-60);
+        right: length(-30);
+      }
+    }
 
-		.product-thumbnail {
-			@include w100;
-			@include radius(16);
-			overflow: hidden;
-			position: relative;
-			z-index: 2;
+    .product-thumbnail {
+      @include w100;
+      @include radius(16);
+      overflow: hidden;
+      position: relative;
+      z-index: 2;
 
-			img {
-				@include wh100;
-				object-fit: cover;
-			}
-		}
-	}
+      img {
+        @include wh100;
+        object-fit: cover;
+      }
+    }
+  }
 }
 
 /**=======================================================**
@@ -200,185 +281,261 @@
 **=======================================================**/
 
 .aboutgallery {
-	padding: length(48) length(8) length(0);
+  padding: length(48) length(8) length(0);
 
-	@include breakpoint(tab992) {
-		padding: length(60) length(0) length(48);
-	}
+  @include breakpoint(tab992) {
+    padding: length(60) length(0) length(48);
+  }
 
-	&-content {
-		@include flex-column;
-		gap: length(24);
-	}
+  &-content {
+    @include flex-column;
+    gap: length(24);
+  }
 
-	&-header {
-		@include flex-center-column;
-		text-align: center;
+  &-header {
+    @include flex-center-column;
+    text-align: center;
 
-		.aboutgallery-title {
-			color: $gray-700;
-			@include font-face($primaryFont, style('normal'), size(28), weight('semibold'), line-height(53.01, 28));
+    .aboutgallery-title {
+      color: $gray-700;
+      @include font-face(
+        $primaryFont,
+        style("normal"),
+        size(28),
+        weight("semibold"),
+        line-height(53.01, 28)
+      );
 
-			@include breakpoint(mobile768) {
-				@include font-face($primaryFont, style('normal'), size(38), weight('semibold'), line-height(63.01, 38));
-			}
+      @include breakpoint(mobile768) {
+        @include font-face(
+          $primaryFont,
+          style("normal"),
+          size(38),
+          weight("semibold"),
+          line-height(63.01, 38)
+        );
+      }
 
-			@include breakpoint(tab992) {
-				@include font-face($primaryFont, style('normal'), size(48), weight('semibold'), line-height(73.01, 48));
-			}
-		}
-	}
+      @include breakpoint(tab992) {
+        @include font-face(
+          $primaryFont,
+          style("normal"),
+          size(48),
+          weight("semibold"),
+          line-height(73.01, 48)
+        );
+      }
+    }
+  }
 
-	&-body {
+  &-body {
+    @include breakpoint(tab992) {
+      max-height: length(440);
+    }
 
-		@include breakpoint(tab992) {
-			max-height: length(440);
-		}
+    .gallery-images {
+      @include flex;
+      gap: length(24);
 
-		.gallery-images {
-			@include flex;
-			gap: length(24);
+      .primary-image,
+      .secondary-image {
+        overflow: hidden;
 
-			.primary-image,
-			.secondary-image {
-				overflow: hidden;
+        img {
+          @include wh100;
+          object-fit: cover;
+          @include transitiontransform;
 
-				img {
-					@include wh100;
-					object-fit: cover;
-					@include transitiontransform;
-					
-					@include hover {
-						@include transform(scale(1.05));
-					}
-				}
-			}
+          @include hover {
+            @include transform(scale(1.05));
+          }
+        }
+      }
 
-			.primary-image,
-			.secondary-image {
-				width: length(275);
-				height: length(260);
+      .primary-image,
+      .secondary-image {
+        width: length(275);
+        height: length(260);
 
-				@include breakpoint(mobile480) {
-					width: length(300);
-					height: length(280);
-				}
+        @include breakpoint(mobile480) {
+          width: length(300);
+          height: length(280);
+        }
 
-				@include breakpoint(mobile768) {
-					width: length(375);
-					height: length(440);
-				}
-			}
-		}
+        @include breakpoint(mobile768) {
+          width: length(375);
+          height: length(440);
+        }
+      }
+    }
 
-		.gallerydetails {
-			position: relative;
-			@include flex-center-column;
-			text-align: center;
-			gap: length(20);
+    .gallerydetails {
+      position: relative;
+      @include flex-center-column;
+      text-align: center;
+      gap: length(20);
 
-			@include breakpoint(tab992) {
-				gap: length(48);
-				text-align: right;
-				padding-right: length(64);
-			}
+      @include breakpoint(tab992) {
+        gap: length(48);
+        text-align: right;
+        padding-right: length(64);
+      }
 
-			.gallery-title {
-				color: $gray-700;
-				@include font-face($primaryFont, style('normal'), size(24), weight('semibold'), line-height(36, 24));
-				margin-top: size(32);
+      .gallery-title {
+        color: $gray-700;
+        @include font-face(
+          $primaryFont,
+          style("normal"),
+          size(24),
+          weight("semibold"),
+          line-height(36, 24)
+        );
+        margin-top: size(32);
 
-				@include breakpoint(tab992) {
-					@include font-face($primaryFont, style('normal'), size(40), weight('semibold'), line-height(48, 40));
-				}
-			}
+        @include breakpoint(tab992) {
+          @include font-face(
+            $primaryFont,
+            style("normal"),
+            size(40),
+            weight("semibold"),
+            line-height(48, 40)
+          );
+        }
+      }
 
-			.gallery-text {
-				color: $gray-700;
-				@include font-face($primaryFont, style('normal'), size(14), weight('normal'), line-height(25.58, 14));
-				letter-spacing: length(0.24);
+      .gallery-text {
+        color: $gray-700;
+        @include font-face(
+          $primaryFont,
+          style("normal"),
+          size(14),
+          weight("normal"),
+          line-height(25.58, 14)
+        );
+        letter-spacing: length(0.24);
 
-				@include breakpoint(mobile768) {
-					@include font-face($primaryFont, style('normal'), size(16), weight('normal'), line-height(25.92, 16));
-				}
+        @include breakpoint(mobile768) {
+          @include font-face(
+            $primaryFont,
+            style("normal"),
+            size(16),
+            weight("normal"),
+            line-height(25.92, 16)
+          );
+        }
 
-				@include breakpoint(tab992) {
-					@include font-face($primaryFont, style('normal'), size(18), weight('normal'), line-height(30, 18));
-					// @include line-clamp-4;
-					// height: length(120);
-				}
-			}
+        @include breakpoint(tab992) {
+          @include font-face(
+            $primaryFont,
+            style("normal"),
+            size(18),
+            weight("normal"),
+            line-height(30, 18)
+          );
+          // @include line-clamp-4;
+          // height: length(120);
+        }
+      }
 
-			.galleryicon {
-				overflow: hidden;
-				position: absolute;
-				z-index: -1;
-				display: none;
+      .galleryicon {
+        overflow: hidden;
+        position: absolute;
+        z-index: -1;
+        display: none;
 
-				@include breakpoint(tab992) {
-					@include flex-center;
-					@include square(length(160));
-					top: 0;
-					right: size(64);
-				}
+        @include breakpoint(tab992) {
+          @include flex-center;
+          @include square(length(160));
+          top: 0;
+          right: size(64);
+        }
 
-				svg {
-					@include wh100;
-				}
-			}
-		}
-	}
+        svg {
+          @include wh100;
+        }
+      }
+    }
+  }
 }
 
 /**=======================================================**
                         OUR-GALLERY END
 **=======================================================**/
 
-
 /**=======================================================**
                         OUR-TEAM START
 **=======================================================**/
 
 .ourteam {
-	padding: length(48) length(8);
+  padding: length(48) length(8);
 
-	@include breakpoint(tab992) {
-		padding: length(80) length(8);
-	}
+  @include breakpoint(tab992) {
+    padding: length(80) length(8);
+  }
 
-	&-content {
-		@include flex-center-column;
-		gap: length(40);
-	}
+  &-content {
+    @include flex-center-column;
+    gap: length(40);
+  }
 
-	&-header {
-		@include flex-center-column;
-		gap: length(10);
-		text-align: center;
+  &-header {
+    @include flex-center-column;
+    gap: length(10);
+    text-align: center;
 
-		.ourteam-title {
-			color: $gray-700;
-			@include font-face($primaryFont, style('normal'), size(32), weight('semibold'), line-height(47, 32));
+    .ourteam-title {
+      color: $gray-700;
+      @include font-face(
+        $primaryFont,
+        style("normal"),
+        size(32),
+        weight("semibold"),
+        line-height(47, 32)
+      );
 
-			@include breakpoint(mobile768) {
-				@include font-face($primaryFont, style('normal'), size(40), weight('semibold'), line-height(77, 40));
-			}
+      @include breakpoint(mobile768) {
+        @include font-face(
+          $primaryFont,
+          style("normal"),
+          size(40),
+          weight("semibold"),
+          line-height(77, 40)
+        );
+      }
 
-			@include breakpoint(tab992) {
-				@include font-face($primaryFont, style('normal'), size(52), weight('semibold'), line-height(79.09, 52));
-			}
-		}
+      @include breakpoint(tab992) {
+        @include font-face(
+          $primaryFont,
+          style("normal"),
+          size(52),
+          weight("semibold"),
+          line-height(79.09, 52)
+        );
+      }
+    }
 
-		.ourteam-text {
-			color: $gray-600;
-			@include font-face($primaryFont, style('normal'), size(16), weight('normal'), line-height(28, 16));
-			letter-spacing: length(0.24);
+    .ourteam-text {
+      color: $gray-600;
+      @include font-face(
+        $primaryFont,
+        style("normal"),
+        size(16),
+        weight("normal"),
+        line-height(28, 16)
+      );
+      letter-spacing: length(0.24);
 
-			@include breakpoint(mobile768) {
-				@include font-face($primaryFont, style('normal'), size(18), weight('normal'), line-height(30, 18));
-			}
-		}
-	}
+      @include breakpoint(mobile768) {
+        @include font-face(
+          $primaryFont,
+          style("normal"),
+          size(18),
+          weight("normal"),
+          line-height(30, 18)
+        );
+      }
+    }
+  }
 }
 
 /**=======================================================**

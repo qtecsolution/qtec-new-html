@@ -5,11 +5,11 @@
 .customsoftware {
   background: $datavisualbg;
   padding: size(40) size(8);
-  
+
   @include breakpoint(mobile768) {
     padding: size(64) size(0);
   }
-  
+
   @include breakpoint(tab992) {
     padding: size(80) size(0);
   }
@@ -21,15 +21,15 @@
   &-content {
     @include flex-column;
     gap: size(40);
-  
+
     @include breakpoint(mobile768) {
       gap: size(48);
     }
-    
+
     @include breakpoint(tab992) {
       gap: size(64);
     }
-  
+
     @include breakpoint(desktop1400) {
       gap: size(80);
     }
@@ -37,31 +37,73 @@
 
   &-title {
     color: $white;
-    @include font-face($primaryFont, style('normal'), size(24), weight('semibold'), line-height(32, 24));
+    @include font-face(
+      $primaryFont,
+      style("normal"),
+      size(24),
+      weight("semibold"),
+      line-height(32, 24)
+    );
     text-align: center;
 
     @include breakpoint(mobile414) {
-      @include font-face($primaryFont, style('normal'), size(32), weight('semibold'), line-height(44, 32));
+      @include font-face(
+        $primaryFont,
+        style("normal"),
+        size(32),
+        weight("semibold"),
+        line-height(44, 32)
+      );
     }
 
     @include breakpoint(mobile500) {
-      @include font-face($primaryFont, style('normal'), size(40), weight('semibold'), line-height(54, 40));
+      @include font-face(
+        $primaryFont,
+        style("normal"),
+        size(40),
+        weight("semibold"),
+        line-height(54, 40)
+      );
     }
 
     @include breakpoint(mobile768) {
-      @include font-face($primaryFont, style('normal'), size(48), weight('semibold'), line-height(60, 48));
+      @include font-face(
+        $primaryFont,
+        style("normal"),
+        size(48),
+        weight("semibold"),
+        line-height(60, 48)
+      );
     }
 
     @include breakpoint(tab992) {
-      @include font-face($primaryFont, style('normal'), size(40), weight('semibold'), line-height(54, 40));
+      @include font-face(
+        $primaryFont,
+        style("normal"),
+        size(40),
+        weight("semibold"),
+        line-height(54, 40)
+      );
     }
 
     @include breakpoint(desktop1200) {
-      @include font-face($primaryFont, style('normal'), size(48), weight('semibold'), line-height(60, 48));
+      @include font-face(
+        $primaryFont,
+        style("normal"),
+        size(48),
+        weight("semibold"),
+        line-height(60, 48)
+      );
     }
-    
+
     @include breakpoint(desktop1400) {
-      @include font-face($primaryFont, style('normal'), size(60), weight('semibold'), line-height(76, 60));
+      @include font-face(
+        $primaryFont,
+        style("normal"),
+        size(60),
+        weight("semibold"),
+        line-height(76, 60)
+      );
     }
 
     &.textservice {
@@ -94,28 +136,57 @@
 
       .customtitle {
         color: $white;
-        @include font-face($primaryFont, style('normal'), size(18), weight('semibold'), line-height(30, 18));
-    
+        @include font-face(
+          $primaryFont,
+          style("normal"),
+          size(18),
+          weight("semibold"),
+          line-height(30, 18)
+        );
+
         @include breakpoint(tab992) {
-          @include font-face($primaryFont, style('normal'), size(20), weight('semibold'), line-height(36, 20));
+          @include font-face(
+            $primaryFont,
+            style("normal"),
+            size(20),
+            weight("semibold"),
+            line-height(36, 20)
+          );
         }
 
         &.textservice {
           color: $gray-700;
         }
       }
-      
+
       .customtext {
         color: $white;
-        @include font-face($primaryFont, style('normal'), size(16), weight('normal'), line-height(28, 16));
-    
+        @include font-face(
+          $primaryFont,
+          style("normal"),
+          size(16),
+          weight("normal"),
+          line-height(28, 16)
+        );
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        -webkit-line-clamp: 5;
+
         @include breakpoint(tab992) {
-          @include font-face($primaryFont, style('normal'), size(18), weight('normal'), line-height(30, 18));
+          @include font-face(
+            $primaryFont,
+            style("normal"),
+            size(18),
+            weight("normal"),
+            line-height(30, 18)
+          );
         }
 
-    &.textservice {
-      color: $gray-700;
-    }
+        &.textservice {
+          color: $gray-700;
+        }
       }
     }
   }
@@ -125,38 +196,29 @@
                     CUSTOM-SOFTWARE END
 **=======================================================**/
 
-
 /**=======================================================**
                     SERVICE-ADVANTAGE START
 **=======================================================**/
 
 .serviceadvantage {
   padding: size(40) size(8);
-  
-  @include breakpoint(mobile768) {
-    padding: size(64) size(0);
-  }
-  
-  @include breakpoint(tab992) {
-    padding: size(80) size(0);
-  }
 
-  @include breakpoint(desktop1400) {
-    padding: size(100) size(0);
+  @include breakpoint(mobile768) {
+    padding: size(60) size(0);
   }
 
   &-content {
     @include flex-column;
     gap: size(40);
-  
+
     @include breakpoint(mobile768) {
       gap: size(48);
     }
-    
+
     @include breakpoint(tab992) {
       gap: size(64);
     }
-  
+
     @include breakpoint(desktop1400) {
       gap: size(80);
     }
@@ -164,30 +226,72 @@
 
   &-title {
     color: $gray-700;
-    @include font-face($primaryFont, style('normal'), size(24), weight('semibold'), line-height(32, 24));
+    @include font-face(
+      $primaryFont,
+      style("normal"),
+      size(24),
+      weight("semibold"),
+      line-height(32, 24)
+    );
 
     @include breakpoint(mobile414) {
-      @include font-face($primaryFont, style('normal'), size(32), weight('semibold'), line-height(44, 32));
+      @include font-face(
+        $primaryFont,
+        style("normal"),
+        size(32),
+        weight("semibold"),
+        line-height(44, 32)
+      );
     }
 
     @include breakpoint(mobile500) {
-      @include font-face($primaryFont, style('normal'), size(40), weight('semibold'), line-height(54, 40));
+      @include font-face(
+        $primaryFont,
+        style("normal"),
+        size(40),
+        weight("semibold"),
+        line-height(54, 40)
+      );
     }
 
     @include breakpoint(mobile768) {
-      @include font-face($primaryFont, style('normal'), size(48), weight('semibold'), line-height(60, 48));
+      @include font-face(
+        $primaryFont,
+        style("normal"),
+        size(48),
+        weight("semibold"),
+        line-height(60, 48)
+      );
     }
 
     @include breakpoint(tab992) {
-      @include font-face($primaryFont, style('normal'), size(40), weight('semibold'), line-height(54, 40));
+      @include font-face(
+        $primaryFont,
+        style("normal"),
+        size(40),
+        weight("semibold"),
+        line-height(54, 40)
+      );
     }
 
     @include breakpoint(desktop1200) {
-      @include font-face($primaryFont, style('normal'), size(48), weight('semibold'), line-height(60, 48));
+      @include font-face(
+        $primaryFont,
+        style("normal"),
+        size(48),
+        weight("semibold"),
+        line-height(60, 48)
+      );
     }
-    
+
     @include breakpoint(desktop1400) {
-      @include font-face($primaryFont, style('normal'), size(60), weight('semibold'), line-height(76, 60));
+      @include font-face(
+        $primaryFont,
+        style("normal"),
+        size(60),
+        weight("semibold"),
+        line-height(76, 60)
+      );
     }
   }
 
@@ -212,27 +316,63 @@
 
       &-title {
         color: $gray-700;
-        @include font-face($primaryFont, style('normal'), size(24), weight('semibold'), line-height(32, 24));
-    
+        @include font-face(
+          $primaryFont,
+          style("normal"),
+          size(24),
+          weight("semibold"),
+          line-height(32, 24)
+        );
+
         @include breakpoint(mobile768) {
-          @include font-face($primaryFont, style('normal'), size(28), weight('semibold'), line-height(38, 28));
+          @include font-face(
+            $primaryFont,
+            style("normal"),
+            size(28),
+            weight("semibold"),
+            line-height(38, 28)
+          );
         }
-    
+
         @include breakpoint(tab992) {
-          @include font-face($primaryFont, style('normal'), size(32), weight('semibold'), line-height(40, 32));
+          @include font-face(
+            $primaryFont,
+            style("normal"),
+            size(32),
+            weight("semibold"),
+            line-height(40, 32)
+          );
         }
       }
 
       &-text {
         color: $gray-700;
-        @include font-face($primaryFont, style('normal'), size(16), weight('normal'), line-height(28, 16));
-    
+        @include font-face(
+          $primaryFont,
+          style("normal"),
+          size(16),
+          weight("normal"),
+          line-height(28, 16)
+        );
+
         @include breakpoint(mobile768) {
-          @include font-face($primaryFont, style('normal'), size(18), weight('normal'), line-height(30, 18));
+          @include font-face(
+            $primaryFont,
+            style("normal"),
+            size(18),
+            weight("normal"),
+            line-height(30, 18)
+          );
         }
-    
+
         @include breakpoint(tab992) {
-          @include font-face($primaryFont, style('normal'), size(20), weight('normal'), line-height(36, 20));
+          @include font-face(
+            $primaryFont,
+            style("normal"),
+            size(20),
+            weight("normal"),
+            line-height(36, 20)
+          );
         }
       }
     }
@@ -243,38 +383,29 @@
                     SERVICE-ADVANTAGE END
 **=======================================================**/
 
-
 /**=======================================================**
                     SERVICE-CONSIDER START
 **=======================================================**/
 
 .serviceconsider {
   padding: size(40) size(8);
-  
-  @include breakpoint(mobile768) {
-    padding: size(64) size(0);
-  }
-  
-  @include breakpoint(tab992) {
-    padding: size(80) size(0);
-  }
 
-  @include breakpoint(desktop1400) {
-    padding: size(100) size(0);
+  @include breakpoint(mobile768) {
+    padding: size(60) size(0);
   }
 
   &-content {
     @include flex-column;
     gap: size(40);
-  
+
     @include breakpoint(mobile768) {
       gap: size(48);
     }
-    
+
     @include breakpoint(tab992) {
       gap: size(64);
     }
-  
+
     @include breakpoint(desktop1400) {
       gap: size(80);
     }
@@ -282,30 +413,72 @@
 
   &-title {
     color: $gray-700;
-    @include font-face($primaryFont, style('normal'), size(24), weight('semibold'), line-height(32, 24));
+    @include font-face(
+      $primaryFont,
+      style("normal"),
+      size(24),
+      weight("semibold"),
+      line-height(32, 24)
+    );
 
     @include breakpoint(mobile414) {
-      @include font-face($primaryFont, style('normal'), size(32), weight('semibold'), line-height(44, 32));
+      @include font-face(
+        $primaryFont,
+        style("normal"),
+        size(32),
+        weight("semibold"),
+        line-height(44, 32)
+      );
     }
 
     @include breakpoint(mobile500) {
-      @include font-face($primaryFont, style('normal'), size(40), weight('semibold'), line-height(54, 40));
+      @include font-face(
+        $primaryFont,
+        style("normal"),
+        size(40),
+        weight("semibold"),
+        line-height(54, 40)
+      );
     }
 
     @include breakpoint(mobile768) {
-      @include font-face($primaryFont, style('normal'), size(48), weight('semibold'), line-height(60, 48));
+      @include font-face(
+        $primaryFont,
+        style("normal"),
+        size(48),
+        weight("semibold"),
+        line-height(60, 48)
+      );
     }
 
     @include breakpoint(tab992) {
-      @include font-face($primaryFont, style('normal'), size(40), weight('semibold'), line-height(54, 40));
+      @include font-face(
+        $primaryFont,
+        style("normal"),
+        size(40),
+        weight("semibold"),
+        line-height(54, 40)
+      );
     }
 
     @include breakpoint(desktop1200) {
-      @include font-face($primaryFont, style('normal'), size(48), weight('semibold'), line-height(60, 48));
+      @include font-face(
+        $primaryFont,
+        style("normal"),
+        size(48),
+        weight("semibold"),
+        line-height(60, 48)
+      );
     }
-    
+
     @include breakpoint(desktop1400) {
-      @include font-face($primaryFont, style('normal'), size(60), weight('semibold'), line-height(76, 60));
+      @include font-face(
+        $primaryFont,
+        style("normal"),
+        size(60),
+        weight("semibold"),
+        line-height(76, 60)
+      );
     }
   }
 
@@ -323,42 +496,85 @@
   .cardconsider {
     @include flex-column;
     gap: size(20);
-    
+
     @include breakpoint(tab992) {
       gap: size(32);
     }
 
     .cardtitle {
       color: $gray-700;
-      @include font-face($primaryFont, style('normal'), size(24), weight('semibold'), line-height(32, 24));
-  
+      @include font-face(
+        $primaryFont,
+        style("normal"),
+        size(24),
+        weight("semibold"),
+        line-height(32, 24)
+      );
+
       @include breakpoint(mobile768) {
-        @include font-face($primaryFont, style('normal'), size(28), weight('semibold'), line-height(38, 28));
+        @include font-face(
+          $primaryFont,
+          style("normal"),
+          size(28),
+          weight("semibold"),
+          line-height(38, 28)
+        );
       }
-  
+
       @include breakpoint(tab992) {
-        @include font-face($primaryFont, style('normal'), size(32), weight('semibold'), line-height(40, 32));
+        @include font-face(
+          $primaryFont,
+          style("normal"),
+          size(32),
+          weight("semibold"),
+          line-height(40, 32)
+        );
       }
     }
 
     .cardtext {
       color: $gray-700;
-      @include font-face($primaryFont, style('normal'), size(16), weight('normal'), line-height(28, 16));
-  
+      @include font-face(
+        $primaryFont,
+        style("normal"),
+        size(16),
+        weight("normal"),
+        line-height(28, 16)
+      );
+
       @include breakpoint(mobile768) {
-        @include font-face($primaryFont, style('normal'), size(18), weight('normal'), line-height(30, 18));
+        @include font-face(
+          $primaryFont,
+          style("normal"),
+          size(18),
+          weight("normal"),
+          line-height(30, 18)
+        );
       }
-  
+
       @include breakpoint(tab992) {
-        @include font-face($primaryFont, style('normal'), size(20), weight('normal'), line-height(36, 20));
+        @include font-face(
+          $primaryFont,
+          style("normal"),
+          size(20),
+          weight("normal"),
+          line-height(36, 20)
+        );
       }
     }
   }
 
   .link {
-    @include setBgColor($primary, $white);
+    @include setBgColor($buttonbg, $white);
+    background-size: 200%;
     @include radius(8);
-    @include font-face($primaryFont, style('normal'), size(14), weight('bold'), line-height(20, 14));
+    @include font-face(
+      $primaryFont,
+      style("normal"),
+      size(14),
+      weight("bold"),
+      line-height(20, 14)
+    );
     letter-spacing: length(0.24);
     width: size(200);
     height: size(58);
@@ -367,11 +583,18 @@
     @include transitionsbackground;
 
     @include breakpoint(tab992) {
-      @include font-face($primaryFont, style('normal'), size(16), weight('bold'), line-height(24, 16));
+      @include font-face(
+        $primaryFont,
+        style("normal"),
+        size(16),
+        weight("bold"),
+        line-height(24, 16)
+      );
     }
 
     @include hover {
-      @include setBgColor(darken($primary, 25%), $white);
+      background-position-x: 100%;
+      color: $white;
     }
   }
 
@@ -382,28 +605,64 @@
 
     &-title {
       color: $gray-700;
-      @include font-face($primaryFont, style('normal'), size(24), weight('semibold'), line-height(32, 24));
-  
+      @include font-face(
+        $primaryFont,
+        style("normal"),
+        size(24),
+        weight("semibold"),
+        line-height(32, 24)
+      );
+
       @include breakpoint(mobile768) {
-        @include font-face($primaryFont, style('normal'), size(28), weight('semibold'), line-height(38, 28));
+        @include font-face(
+          $primaryFont,
+          style("normal"),
+          size(28),
+          weight("semibold"),
+          line-height(38, 28)
+        );
       }
-  
+
       @include breakpoint(tab992) {
-        @include font-face($primaryFont, style('normal'), size(32), weight('semibold'), line-height(40, 32));
+        @include font-face(
+          $primaryFont,
+          style("normal"),
+          size(32),
+          weight("semibold"),
+          line-height(40, 32)
+        );
       }
     }
 
     &-text {
       color: $gray-700;
-      @include font-face($primaryFont, style('normal'), size(16), weight('normal'), line-height(28, 16));
+      @include font-face(
+        $primaryFont,
+        style("normal"),
+        size(16),
+        weight("normal"),
+        line-height(28, 16)
+      );
       letter-spacing: length(0.24);
-  
+
       @include breakpoint(mobile768) {
-        @include font-face($primaryFont, style('normal'), size(18), weight('normal'), line-height(30, 18));
+        @include font-face(
+          $primaryFont,
+          style("normal"),
+          size(18),
+          weight("normal"),
+          line-height(30, 18)
+        );
       }
-  
+
       @include breakpoint(tab992) {
-        @include font-face($primaryFont, style('normal'), size(20), weight('normal'), line-height(36, 20));
+        @include font-face(
+          $primaryFont,
+          style("normal"),
+          size(20),
+          weight("normal"),
+          line-height(36, 20)
+        );
       }
     }
   }
@@ -413,7 +672,6 @@
                     SERVICE-CONSIDER END
 **=======================================================**/
 
-
 /**=======================================================**
                     SECTION START
 **=======================================================**/
@@ -421,11 +679,11 @@
 .servicedeveloped {
   background: $datavisualbg;
   padding: size(40) size(8);
-  
+
   @include breakpoint(mobile768) {
     padding: size(64) size(0);
   }
-  
+
   @include breakpoint(tab992) {
     padding: size(80) size(0);
   }
@@ -437,15 +695,15 @@
   &-content {
     @include flex-column;
     gap: size(40);
-  
+
     @include breakpoint(mobile768) {
       gap: size(48);
     }
-    
+
     @include breakpoint(tab992) {
       gap: size(64);
     }
-  
+
     @include breakpoint(desktop1400) {
       gap: size(80);
     }
@@ -453,31 +711,73 @@
 
   &-title {
     color: $white;
-    @include font-face($primaryFont, style('normal'), size(24), weight('semibold'), line-height(32, 24));
+    @include font-face(
+      $primaryFont,
+      style("normal"),
+      size(24),
+      weight("semibold"),
+      line-height(32, 24)
+    );
     text-align: center;
 
     @include breakpoint(mobile414) {
-      @include font-face($primaryFont, style('normal'), size(32), weight('semibold'), line-height(44, 32));
+      @include font-face(
+        $primaryFont,
+        style("normal"),
+        size(32),
+        weight("semibold"),
+        line-height(44, 32)
+      );
     }
 
     @include breakpoint(mobile500) {
-      @include font-face($primaryFont, style('normal'), size(40), weight('semibold'), line-height(54, 40));
+      @include font-face(
+        $primaryFont,
+        style("normal"),
+        size(40),
+        weight("semibold"),
+        line-height(54, 40)
+      );
     }
 
     @include breakpoint(mobile768) {
-      @include font-face($primaryFont, style('normal'), size(48), weight('semibold'), line-height(60, 48));
+      @include font-face(
+        $primaryFont,
+        style("normal"),
+        size(48),
+        weight("semibold"),
+        line-height(60, 48)
+      );
     }
 
     @include breakpoint(tab992) {
-      @include font-face($primaryFont, style('normal'), size(40), weight('semibold'), line-height(54, 40));
+      @include font-face(
+        $primaryFont,
+        style("normal"),
+        size(40),
+        weight("semibold"),
+        line-height(54, 40)
+      );
     }
 
     @include breakpoint(desktop1200) {
-      @include font-face($primaryFont, style('normal'), size(48), weight('semibold'), line-height(60, 48));
+      @include font-face(
+        $primaryFont,
+        style("normal"),
+        size(48),
+        weight("semibold"),
+        line-height(60, 48)
+      );
     }
-    
+
     @include breakpoint(desktop1400) {
-      @include font-face($primaryFont, style('normal'), size(60), weight('semibold'), line-height(76, 60));
+      @include font-face(
+        $primaryFont,
+        style("normal"),
+        size(60),
+        weight("semibold"),
+        line-height(76, 60)
+      );
     }
   }
 
@@ -508,52 +808,70 @@
       height: size(64);
       @include flex-center;
       @include radius(13);
-      @include font-face($primaryFont, style('normal'), size(20), weight('semibold'), line-height(32, 20));
+      @include font-face(
+        $primaryFont,
+        style("normal"),
+        size(20),
+        weight("semibold"),
+        line-height(32, 20)
+      );
       opacity: 0.3;
       padding: size(10);
       text-align: center;
       @include transitionsall;
-  
+
       @include breakpoint(mobile768) {
-        @include font-face($primaryFont, style('normal'), size(24), weight('semibold'), line-height(32, 24));
+        @include font-face(
+          $primaryFont,
+          style("normal"),
+          size(24),
+          weight("semibold"),
+          line-height(32, 24)
+        );
         height: size(98);
       }
 
       @include breakpoint(tab992) {
-        @include font-face($primaryFont, style('normal'), size(28), weight('semibold'), line-height(38, 28));
+        @include font-face(
+          $primaryFont,
+          style("normal"),
+          size(28),
+          weight("semibold"),
+          line-height(38, 28)
+        );
       }
 
       &.analysis {
         @include setBgColor($analysisbg, $datavisualbg);
         @include w100;
-    
+
         @include breakpoint(desktop1400) {
           width: size(456);
         }
       }
-  
+
       &.development {
         @include setBgColor($developbg, $datavisualbg);
         @include w100;
-    
+
         @include breakpoint(desktop1400) {
           width: size(264);
         }
       }
-  
+
       &.testing {
         @include setBgColor($testingbg, $datavisualbg);
         @include w100;
-    
+
         @include breakpoint(desktop1400) {
           width: size(330);
         }
       }
-  
+
       &.maintenance {
         @include setBgColor($maintenancebg, $datavisualbg);
         @include w100;
-    
+
         @include breakpoint(desktop1400) {
           width: size(430);
         }
@@ -584,9 +902,9 @@
       max-height: size(540);
     }
 
-		&::-webkit-scrollbar {
+    &::-webkit-scrollbar {
       display: none;
-		}
+    }
 
     @include breakpoint(tab992) {
       gap: size(48);
@@ -598,7 +916,7 @@
     gap: size(20);
     height: 100%;
     margin-bottom: size(32);
-    
+
     @include breakpoint(tab992) {
       gap: size(32);
       margin-bottom: size(48);
@@ -610,27 +928,63 @@
 
     .title {
       color: $white;
-      @include font-face($primaryFont, style('normal'), size(24), weight('semibold'), line-height(32, 24));
-  
+      @include font-face(
+        $primaryFont,
+        style("normal"),
+        size(24),
+        weight("semibold"),
+        line-height(32, 24)
+      );
+
       @include breakpoint(mobile768) {
-        @include font-face($primaryFont, style('normal'), size(28), weight('semibold'), line-height(38, 28));
+        @include font-face(
+          $primaryFont,
+          style("normal"),
+          size(28),
+          weight("semibold"),
+          line-height(38, 28)
+        );
       }
-  
+
       @include breakpoint(tab992) {
-        @include font-face($primaryFont, style('normal'), size(32), weight('semibold'), line-height(40, 32));
+        @include font-face(
+          $primaryFont,
+          style("normal"),
+          size(32),
+          weight("semibold"),
+          line-height(40, 32)
+        );
       }
     }
 
     .text {
       color: $white;
-      @include font-face($primaryFont, style('normal'), size(16), weight('normal'), line-height(28, 16));
-  
+      @include font-face(
+        $primaryFont,
+        style("normal"),
+        size(16),
+        weight("normal"),
+        line-height(28, 16)
+      );
+
       @include breakpoint(mobile768) {
-        @include font-face($primaryFont, style('normal'), size(18), weight('normal'), line-height(30, 18));
+        @include font-face(
+          $primaryFont,
+          style("normal"),
+          size(18),
+          weight("normal"),
+          line-height(30, 18)
+        );
       }
-  
+
       @include breakpoint(tab992) {
-        @include font-face($primaryFont, style('normal'), size(20), weight('normal'), line-height(36, 20));
+        @include font-face(
+          $primaryFont,
+          style("normal"),
+          size(20),
+          weight("normal"),
+          line-height(36, 20)
+        );
       }
     }
   }
@@ -642,14 +996,32 @@
 
     .developtedtext {
       color: $white;
-      @include font-face($primaryFont, style('normal'), size(16), weight('normal'), line-height(28, 16));
-  
+      @include font-face(
+        $primaryFont,
+        style("normal"),
+        size(16),
+        weight("normal"),
+        line-height(28, 16)
+      );
+
       @include breakpoint(mobile768) {
-        @include font-face($primaryFont, style('normal'), size(18), weight('normal'), line-height(30, 18));
+        @include font-face(
+          $primaryFont,
+          style("normal"),
+          size(18),
+          weight("normal"),
+          line-height(30, 18)
+        );
       }
-  
+
       @include breakpoint(tab992) {
-        @include font-face($primaryFont, style('normal'), size(20), weight('normal'), line-height(36, 20));
+        @include font-face(
+          $primaryFont,
+          style("normal"),
+          size(20),
+          weight("normal"),
+          line-height(36, 20)
+        );
       }
     }
 
@@ -657,22 +1029,36 @@
       @include flex-center;
 
       .link {
-        @include setBgColor($primary, $white);
+        @include setBgColor($buttonbg, $white);
+        background-size: 200%;
         @include radius(8);
-        @include font-face($primaryFont, style('normal'), size(14), weight('bold'), line-height(20, 14));
+        @include font-face(
+          $primaryFont,
+          style("normal"),
+          size(14),
+          weight("bold"),
+          line-height(20, 14)
+        );
         letter-spacing: length(0.24);
         width: size(200);
         height: size(58);
         @include flex-center;
         text-align: center;
         @include transitionsbackground;
-    
+
         @include breakpoint(tab992) {
-          @include font-face($primaryFont, style('normal'), size(16), weight('bold'), line-height(24, 16));
+          @include font-face(
+            $primaryFont,
+            style("normal"),
+            size(16),
+            weight("bold"),
+            line-height(24, 16)
+          );
         }
 
         @include hover {
-          @include setBgColor(darken($primary, 25%), $white);
+          background-position-x: 100%;
+          color: $white;
         }
       }
     }
@@ -695,70 +1081,99 @@
                     SECTION END
 **=======================================================**/
 
-
 /**=======================================================**
                     SECTION START
 **=======================================================**/
 
 .servicexpect {
   padding: size(40) size(8);
-  
+
   @include breakpoint(mobile768) {
     padding: size(64) size(0);
-  }
-  
-  @include breakpoint(tab992) {
-    padding: size(80) size(0);
-  }
-
-  @include breakpoint(desktop1400) {
-    padding: size(100) size(0);
   }
 
   &-content {
     @include flex-column;
     gap: size(40);
-  
+
     @include breakpoint(mobile768) {
       gap: size(48);
     }
-    
+
     @include breakpoint(tab992) {
       gap: size(64);
-    }
-  
-    @include breakpoint(desktop1400) {
-      gap: size(80);
     }
   }
 
   &-title {
     color: $gray-700;
-    @include font-face($primaryFont, style('normal'), size(24), weight('semibold'), line-height(32, 24));
+    @include font-face(
+      $primaryFont,
+      style("normal"),
+      size(24),
+      weight("semibold"),
+      line-height(32, 24)
+    );
     text-align: center;
 
     @include breakpoint(mobile414) {
-      @include font-face($primaryFont, style('normal'), size(32), weight('semibold'), line-height(44, 32));
+      @include font-face(
+        $primaryFont,
+        style("normal"),
+        size(32),
+        weight("semibold"),
+        line-height(44, 32)
+      );
     }
 
     @include breakpoint(mobile500) {
-      @include font-face($primaryFont, style('normal'), size(40), weight('semibold'), line-height(54, 40));
+      @include font-face(
+        $primaryFont,
+        style("normal"),
+        size(40),
+        weight("semibold"),
+        line-height(54, 40)
+      );
     }
 
     @include breakpoint(mobile768) {
-      @include font-face($primaryFont, style('normal'), size(48), weight('semibold'), line-height(60, 48));
+      @include font-face(
+        $primaryFont,
+        style("normal"),
+        size(48),
+        weight("semibold"),
+        line-height(60, 48)
+      );
     }
 
     @include breakpoint(tab992) {
-      @include font-face($primaryFont, style('normal'), size(40), weight('semibold'), line-height(54, 40));
+      @include font-face(
+        $primaryFont,
+        style("normal"),
+        size(40),
+        weight("semibold"),
+        line-height(54, 40)
+      );
     }
 
     @include breakpoint(desktop1200) {
-      @include font-face($primaryFont, style('normal'), size(48), weight('semibold'), line-height(60, 48));
+      @include font-face(
+        $primaryFont,
+        style("normal"),
+        size(48),
+        weight("semibold"),
+        line-height(60, 48)
+      );
     }
-    
+
     @include breakpoint(desktop1400) {
-      @include font-face($primaryFont, style('normal'), size(60), weight('semibold'), line-height(76, 60));
+      @include font-face(
+        $primaryFont,
+        style("normal"),
+        size(60),
+        weight("semibold"),
+        line-height(76, 60)
+      );
     }
   }
 
@@ -775,36 +1190,68 @@
     .detail {
       .detailtext {
         color: $gray-700;
-        @include font-face($primaryFont, style('normal'), size(16), weight('normal'), line-height(28, 16));
-    
+        @include font-face(
+          $primaryFont,
+          style("normal"),
+          size(16),
+          weight("normal"),
+          line-height(28, 16)
+        );
+
         @include breakpoint(mobile768) {
-          @include font-face($primaryFont, style('normal'), size(18), weight('normal'), line-height(30, 18));
+          @include font-face(
+            $primaryFont,
+            style("normal"),
+            size(18),
+            weight("normal"),
+            line-height(30, 18)
+          );
         }
-    
+
         @include breakpoint(tab992) {
-          @include font-face($primaryFont, style('normal'), size(20), weight('normal'), line-height(36, 20));
+          @include font-face(
+            $primaryFont,
+            style("normal"),
+            size(20),
+            weight("normal"),
+            line-height(36, 20)
+          );
         }
       }
     }
 
     .viewall {
       .link {
-        @include setBgColor($primary, $white);
+        @include setBgColor($buttonbg, $white);
+        background-size: 200%;
         @include radius(8);
-        @include font-face($primaryFont, style('normal'), size(14), weight('bold'), line-height(20, 14));
+        @include font-face(
+          $primaryFont,
+          style("normal"),
+          size(14),
+          weight("bold"),
+          line-height(20, 14)
+        );
         letter-spacing: length(0.24);
         width: size(200);
         height: size(58);
         @include flex-center;
         text-align: center;
         @include transitionsbackground;
-    
+
         @include breakpoint(tab992) {
-          @include font-face($primaryFont, style('normal'), size(16), weight('bold'), line-height(24, 16));
+          @include font-face(
+            $primaryFont,
+            style("normal"),
+            size(16),
+            weight("bold"),
+            line-height(24, 16)
+          );
         }
 
         @include hover {
-          @include setBgColor(darken($primary, 25%), $white);
+          background-position-x: 100%;
+          color: $white;
         }
       }
     }
@@ -816,14 +1263,32 @@
 
     .textinfo {
       color: $gray-700;
-      @include font-face($primaryFont, style('normal'), size(16), weight('normal'), line-height(28, 16));
-  
+      @include font-face(
+        $primaryFont,
+        style("normal"),
+        size(16),
+        weight("normal"),
+        line-height(28, 16)
+      );
+
       @include breakpoint(mobile768) {
-        @include font-face($primaryFont, style('normal'), size(18), weight('normal'), line-height(30, 18));
+        @include font-face(
+          $primaryFont,
+          style("normal"),
+          size(18),
+          weight("normal"),
+          line-height(30, 18)
+        );
       }
-  
+
       @include breakpoint(tab992) {
-        @include font-face($primaryFont, style('normal'), size(20), weight('normal'), line-height(36, 20));
+        @include font-face(
+          $primaryFont,
+          style("normal"),
+          size(20),
+          weight("normal"),
+          line-height(36, 20)
+        );
       }
     }
   }
@@ -833,18 +1298,17 @@
                     SECTION END
 **=======================================================**/
 
-
 /**=======================================================**
                     SERVICE-BUSINESS START
 **=======================================================**/
 
 .servicebusiness {
   padding: size(40) size(8);
-  
+
   @include breakpoint(mobile768) {
     padding: size(64) size(0);
   }
-  
+
   @include breakpoint(tab992) {
     padding: size(80) size(0);
   }
@@ -856,15 +1320,15 @@
   &-content {
     @include flex-column;
     gap: size(40);
-  
+
     @include breakpoint(mobile768) {
       gap: size(48);
     }
-    
+
     @include breakpoint(tab992) {
       gap: size(64);
     }
-  
+
     @include breakpoint(desktop1400) {
       gap: size(80);
     }
@@ -872,30 +1336,72 @@
 
   &-title {
     color: $gray-700;
-    @include font-face($primaryFont, style('normal'), size(24), weight('semibold'), line-height(32, 24));
+    @include font-face(
+      $primaryFont,
+      style("normal"),
+      size(24),
+      weight("semibold"),
+      line-height(32, 24)
+    );
 
     @include breakpoint(mobile414) {
-      @include font-face($primaryFont, style('normal'), size(32), weight('semibold'), line-height(44, 32));
+      @include font-face(
+        $primaryFont,
+        style("normal"),
+        size(32),
+        weight("semibold"),
+        line-height(44, 32)
+      );
     }
 
     @include breakpoint(mobile500) {
-      @include font-face($primaryFont, style('normal'), size(40), weight('semibold'), line-height(54, 40));
+      @include font-face(
+        $primaryFont,
+        style("normal"),
+        size(40),
+        weight("semibold"),
+        line-height(54, 40)
+      );
     }
 
     @include breakpoint(mobile768) {
-      @include font-face($primaryFont, style('normal'), size(48), weight('semibold'), line-height(60, 48));
+      @include font-face(
+        $primaryFont,
+        style("normal"),
+        size(48),
+        weight("semibold"),
+        line-height(60, 48)
+      );
     }
 
     @include breakpoint(tab992) {
-      @include font-face($primaryFont, style('normal'), size(40), weight('semibold'), line-height(54, 40));
+      @include font-face(
+        $primaryFont,
+        style("normal"),
+        size(40),
+        weight("semibold"),
+        line-height(54, 40)
+      );
     }
 
     @include breakpoint(desktop1200) {
-      @include font-face($primaryFont, style('normal'), size(48), weight('semibold'), line-height(60, 48));
+      @include font-face(
+        $primaryFont,
+        style("normal"),
+        size(48),
+        weight("semibold"),
+        line-height(60, 48)
+      );
     }
-    
+
     @include breakpoint(desktop1400) {
-      @include font-face($primaryFont, style('normal'), size(60), weight('semibold'), line-height(76, 60));
+      @include font-face(
+        $primaryFont,
+        style("normal"),
+        size(60),
+        weight("semibold"),
+        line-height(76, 60)
+      );
     }
   }
 
@@ -903,7 +1409,7 @@
     @include wh100;
     @include flex-center;
     overflow: hidden;
-    
+
     img {
       @include wh100;
       object-fit: cover;
@@ -924,27 +1430,63 @@
 
       &-title {
         color: $gray-700;
-        @include font-face($primaryFont, style('normal'), size(24), weight('semibold'), line-height(32, 24));
-    
+        @include font-face(
+          $primaryFont,
+          style("normal"),
+          size(24),
+          weight("semibold"),
+          line-height(32, 24)
+        );
+
         @include breakpoint(mobile768) {
-          @include font-face($primaryFont, style('normal'), size(28), weight('semibold'), line-height(38, 28));
+          @include font-face(
+            $primaryFont,
+            style("normal"),
+            size(28),
+            weight("semibold"),
+            line-height(38, 28)
+          );
         }
-    
+
         @include breakpoint(tab992) {
-          @include font-face($primaryFont, style('normal'), size(32), weight('semibold'), line-height(40, 32));
+          @include font-face(
+            $primaryFont,
+            style("normal"),
+            size(32),
+            weight("semibold"),
+            line-height(40, 32)
+          );
         }
       }
 
       &-text {
         color: $gray-700;
-        @include font-face($primaryFont, style('normal'), size(16), weight('normal'), line-height(28, 16));
-    
+        @include font-face(
+          $primaryFont,
+          style("normal"),
+          size(16),
+          weight("normal"),
+          line-height(28, 16)
+        );
+
         @include breakpoint(mobile768) {
-          @include font-face($primaryFont, style('normal'), size(18), weight('normal'), line-height(30, 18));
+          @include font-face(
+            $primaryFont,
+            style("normal"),
+            size(18),
+            weight("normal"),
+            line-height(30, 18)
+          );
         }
-    
+
         @include breakpoint(tab992) {
-          @include font-face($primaryFont, style('normal'), size(20), weight('normal'), line-height(36, 20));
+          @include font-face(
+            $primaryFont,
+            style("normal"),
+            size(20),
+            weight("normal"),
+            line-height(36, 20)
+          );
         }
       }
     }
@@ -952,14 +1494,32 @@
     &-info {
       .businesstext {
         color: $gray-700;
-        @include font-face($primaryFont, style('normal'), size(16), weight('normal'), line-height(28, 16));
-    
+        @include font-face(
+          $primaryFont,
+          style("normal"),
+          size(16),
+          weight("normal"),
+          line-height(28, 16)
+        );
+
         @include breakpoint(mobile768) {
-          @include font-face($primaryFont, style('normal'), size(18), weight('normal'), line-height(30, 18));
+          @include font-face(
+            $primaryFont,
+            style("normal"),
+            size(18),
+            weight("normal"),
+            line-height(30, 18)
+          );
         }
-    
+
         @include breakpoint(tab992) {
-          @include font-face($primaryFont, style('normal'), size(20), weight('normal'), line-height(36, 20));
+          @include font-face(
+            $primaryFont,
+            style("normal"),
+            size(20),
+            weight("normal"),
+            line-height(36, 20)
+          );
         }
       }
     }
@@ -970,7 +1530,6 @@
                     SERVICE-BUSINESS END
 **=======================================================**/
 
-
 /**=======================================================**
                     RECENT-WORK START
 **=======================================================**/
@@ -978,31 +1537,23 @@
 .recentwork {
   background: $white;
   padding: size(40) size(8);
-  
-  @include breakpoint(mobile768) {
-    padding: size(64) size(0);
-  }
-  
-  @include breakpoint(tab992) {
-    padding: size(80) size(0);
-  }
 
-  @include breakpoint(desktop1400) {
-    padding: size(100) size(0);
+  @include breakpoint(mobile768) {
+    padding: size(60) size(0);
   }
 
   &-content {
     @include flex-column;
     gap: size(40);
-  
+
     @include breakpoint(mobile768) {
       gap: size(48);
     }
-    
+
     @include breakpoint(tab992) {
       gap: size(64);
     }
-  
+
     @include breakpoint(desktop1400) {
       gap: size(80);
     }
@@ -1014,43 +1565,103 @@
 
     .recentwork-title {
       color: $gray-700;
-      @include font-face($primaryFont, style('normal'), size(24), weight('semibold'), line-height(32, 24));
-  
+      @include font-face(
+        $primaryFont,
+        style("normal"),
+        size(24),
+        weight("semibold"),
+        line-height(32, 24)
+      );
+
       @include breakpoint(mobile414) {
-        @include font-face($primaryFont, style('normal'), size(32), weight('semibold'), line-height(44, 32));
+        @include font-face(
+          $primaryFont,
+          style("normal"),
+          size(32),
+          weight("semibold"),
+          line-height(44, 32)
+        );
       }
-  
+
       @include breakpoint(mobile500) {
-        @include font-face($primaryFont, style('normal'), size(40), weight('semibold'), line-height(54, 40));
+        @include font-face(
+          $primaryFont,
+          style("normal"),
+          size(40),
+          weight("semibold"),
+          line-height(54, 40)
+        );
       }
-  
+
       @include breakpoint(mobile768) {
-        @include font-face($primaryFont, style('normal'), size(48), weight('semibold'), line-height(60, 48));
+        @include font-face(
+          $primaryFont,
+          style("normal"),
+          size(48),
+          weight("semibold"),
+          line-height(60, 48)
+        );
       }
-  
+
       @include breakpoint(tab992) {
-        @include font-face($primaryFont, style('normal'), size(40), weight('semibold'), line-height(54, 40));
+        @include font-face(
+          $primaryFont,
+          style("normal"),
+          size(40),
+          weight("semibold"),
+          line-height(54, 40)
+        );
       }
-  
+
       @include breakpoint(desktop1200) {
-        @include font-face($primaryFont, style('normal'), size(48), weight('semibold'), line-height(60, 48));
+        @include font-face(
+          $primaryFont,
+          style("normal"),
+          size(48),
+          weight("semibold"),
+          line-height(60, 48)
+        );
       }
-      
+
       @include breakpoint(desktop1400) {
-        @include font-face($primaryFont, style('normal'), size(60), weight('semibold'), line-height(76, 60));
+        @include font-face(
+          $primaryFont,
+          style("normal"),
+          size(60),
+          weight("semibold"),
+          line-height(76, 60)
+        );
       }
     }
-    
+
     .recentwork-text {
       color: $gray-700;
-      @include font-face($primaryFont, style('normal'), size(16), weight('normal'), line-height(28, 16));
-  
+      @include font-face(
+        $primaryFont,
+        style("normal"),
+        size(16),
+        weight("normal"),
+        line-height(28, 16)
+      );
+
       @include breakpoint(mobile768) {
-        @include font-face($primaryFont, style('normal'), size(18), weight('normal'), line-height(30, 18));
+        @include font-face(
+          $primaryFont,
+          style("normal"),
+          size(18),
+          weight("normal"),
+          line-height(30, 18)
+        );
       }
-  
+
       @include breakpoint(tab992) {
-        @include font-face($primaryFont, style('normal'), size(20), weight('normal'), line-height(36, 20));
+        @include font-face(
+          $primaryFont,
+          style("normal"),
+          size(20),
+          weight("normal"),
+          line-height(36, 20)
+        );
       }
     }
   }
@@ -1059,7 +1670,7 @@
     @include wh100;
     @include flex-center;
     overflow: hidden;
-    
+
     img {
       @include wh100;
       object-fit: cover;
@@ -1069,11 +1680,11 @@
   .recentproject {
     @include flex-column;
     gap: size(48);
-  
+
     @include breakpoint(mobile768) {
       gap: size(64);
     }
-    
+
     @include breakpoint(tab992) {
       gap: size(80);
     }
@@ -1084,27 +1695,63 @@
 
       .recentsubtitle {
         color: $gray-700;
-        @include font-face($primaryFont, style('normal'), size(16), weight('normal'), line-height(28, 16));
-    
+        @include font-face(
+          $primaryFont,
+          style("normal"),
+          size(16),
+          weight("normal"),
+          line-height(28, 16)
+        );
+
         @include breakpoint(mobile768) {
-          @include font-face($primaryFont, style('normal'), size(18), weight('normal'), line-height(30, 18));
+          @include font-face(
+            $primaryFont,
+            style("normal"),
+            size(18),
+            weight("normal"),
+            line-height(30, 18)
+          );
         }
-    
+
         @include breakpoint(tab992) {
-          @include font-face($primaryFont, style('normal'), size(20), weight('normal'), line-height(36, 20));
+          @include font-face(
+            $primaryFont,
+            style("normal"),
+            size(20),
+            weight("normal"),
+            line-height(36, 20)
+          );
         }
       }
 
       .recent-title {
         color: $gray-700;
-        @include font-face($primaryFont, style('normal'), size(24), weight('semibold'), line-height(32, 24));
-    
+        @include font-face(
+          $primaryFont,
+          style("normal"),
+          size(24),
+          weight("semibold"),
+          line-height(32, 24)
+        );
+
         @include breakpoint(mobile768) {
-          @include font-face($primaryFont, style('normal'), size(28), weight('semibold'), line-height(38, 28));
+          @include font-face(
+            $primaryFont,
+            style("normal"),
+            size(28),
+            weight("semibold"),
+            line-height(38, 28)
+          );
         }
-    
+
         @include breakpoint(tab992) {
-          @include font-face($primaryFont, style('normal'), size(32), weight('semibold'), line-height(40, 32));
+          @include font-face(
+            $primaryFont,
+            style("normal"),
+            size(32),
+            weight("semibold"),
+            line-height(40, 32)
+          );
         }
       }
     }
@@ -1112,36 +1759,68 @@
     &-body {
       .text {
         color: $gray-700;
-        @include font-face($primaryFont, style('normal'), size(16), weight('normal'), line-height(28, 16));
-    
+        @include font-face(
+          $primaryFont,
+          style("normal"),
+          size(16),
+          weight("normal"),
+          line-height(28, 16)
+        );
+
         @include breakpoint(mobile768) {
-          @include font-face($primaryFont, style('normal'), size(18), weight('normal'), line-height(30, 18));
+          @include font-face(
+            $primaryFont,
+            style("normal"),
+            size(18),
+            weight("normal"),
+            line-height(30, 18)
+          );
         }
-    
+
         @include breakpoint(tab992) {
-          @include font-face($primaryFont, style('normal'), size(20), weight('normal'), line-height(36, 20));
+          @include font-face(
+            $primaryFont,
+            style("normal"),
+            size(20),
+            weight("normal"),
+            line-height(36, 20)
+          );
         }
       }
     }
 
     .viewall {
       .link {
-        @include setBgColor($primary, $white);
+        @include setBgColor($buttonbg, $white);
+        background-size: 200%;
         @include radius(8);
-        @include font-face($primaryFont, style('normal'), size(14), weight('bold'), line-height(20, 14));
+        @include font-face(
+          $primaryFont,
+          style("normal"),
+          size(14),
+          weight("bold"),
+          line-height(20, 14)
+        );
         letter-spacing: length(0.24);
         width: size(200);
         height: size(58);
         @include flex-center;
         text-align: center;
         @include transitionsbackground;
-    
+
         @include breakpoint(tab992) {
-          @include font-face($primaryFont, style('normal'), size(16), weight('bold'), line-height(24, 16));
+          @include font-face(
+            $primaryFont,
+            style("normal"),
+            size(16),
+            weight("bold"),
+            line-height(24, 16)
+          );
         }
 
         @include hover {
-          @include setBgColor(darken($primary, 25%), $white);
+          background-position-x: 100%;
+          color: $white;
         }
       }
     }
