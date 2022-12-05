@@ -244,6 +244,14 @@
             letter-spacing: length(1.6);
             text-transform: uppercase;
             padding: size(12) size(0);
+
+            &:hover:not(.active) {
+              color: $secondary;
+            }
+
+            &.active {
+              color: $secondary;
+            }
           }
         }
 
@@ -271,9 +279,9 @@
             @include font-face(
               $primaryFont,
               style("normal"),
-              size(13),
+              size(14),
               weight("semibold"),
-              line-height(20, 13)
+              line-height(20, 14)
             );
             letter-spacing: length(1.6);
             @include transitionscolor;
