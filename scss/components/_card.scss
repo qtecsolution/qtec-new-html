@@ -492,7 +492,7 @@
       line-height(36.97, 24)
     );
 
-    @include breakpoint(mobile768) {
+    @include breakpoint(desktop1400) {
       @include font-face(
         $primaryFont,
         style("normal"),
@@ -1367,7 +1367,17 @@
 
   .info {
     margin-bottom: size(20);
-    min-height: size(150);
+    max-height: size(150);
+    overflow-x: hidden;
+
+    &::-webkit-scrollbar {
+      background: transparent;
+      width: length(4);
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background: transparent;
+    }
 
     .text-testimonial {
       color: $gray-600;
