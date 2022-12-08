@@ -1367,17 +1367,7 @@
 
   .info {
     margin-bottom: size(20);
-    max-height: size(150);
-    overflow-x: hidden;
-
-    &::-webkit-scrollbar {
-      background: transparent;
-      width: length(4);
-    }
-
-    &::-webkit-scrollbar-thumb {
-      background: transparent;
-    }
+    height: size(156);
 
     .text-testimonial {
       color: $gray-600;
@@ -1389,6 +1379,17 @@
         line-height(26, 16)
       );
       letter-spacing: length(0.24);
+      max-height: size(156);
+      overflow-x: hidden;
+
+      &::-webkit-scrollbar {
+        background: transparent;
+        width: length(4);
+      }
+
+      &::-webkit-scrollbar-thumb {
+        background: transparent;
+      }
 
       @include breakpoint(mobile768) {
         @include font-face(
