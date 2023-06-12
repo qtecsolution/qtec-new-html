@@ -106,6 +106,8 @@
 
         .slider-buttons {
           @include flex-center-vert;
+          gap: size(16);
+          background: $white;
 
           button {
             @include square(size(32));
@@ -117,12 +119,6 @@
             }
           }
         }
-      }
-
-      .slider-buttons {
-        @include flex-center-vert;
-        gap: size(16);
-        background: $white;
       }
     }
 
@@ -217,6 +213,64 @@
         @include breakpoint(mobile576) {
           width: calc(100% / 2 - size(24));
         }
+      }
+    }
+  }
+}
+
+.happyreviews {
+  padding: length(40) length(8);
+
+  @include breakpoint(tab992) {
+    padding: length(0) length(0) length(100);
+  }
+
+  &-content {
+    @include flex-column;
+    gap: size(48);
+
+    @include breakpoint(tab992) {
+      gap: size(80)
+    }
+  }
+
+  &-header {
+    @include flex-center-between;
+
+    .reviewtitle {
+      color: $datavisualbg;
+      font-size: size(24);
+      font-weight: 600;
+      
+      @include breakpoint(mobile768) {
+        font-size: size(32);
+      }
+      
+      @include breakpoint(tab992) {
+        font-size: size(40);
+      }
+    }
+
+    .slider-buttons {
+      @include flex-center-vert;
+      gap: size(16);
+
+      button {
+        @include square(size(32));
+        @include flex-center;
+        overflow: hidden;
+
+        svg {
+          @include wh100;
+        }
+      }
+    }
+  }
+
+  &-body {
+    .swiper {
+      &-slide {
+        flex-shrink: 0;
       }
     }
   }

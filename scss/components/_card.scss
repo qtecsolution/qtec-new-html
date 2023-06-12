@@ -1518,3 +1518,61 @@
     font-size: size(13);
   }
 }
+
+.cardreview {
+  @include flex-column;
+  gap: size(16);
+  @include h100;
+  position: relative;
+  padding: size(16);
+  background: rgba($datavisualbg, 0.03);
+
+  @include breakpoint(mobile576) {
+    padding: size(24);
+  }
+
+  .reviewer {
+    // position: absolute;
+    // top: size(-38);
+    // left: size(16);
+    // z-index: 400;
+    @include square(size(64));
+    @include circle;
+    @include flex-center;
+    @include border(solid, 6, $white);
+
+    @include breakpoint(mobile576) {
+      left: size(24);
+    }
+
+    img {
+      @include wh100;
+      object-fit: cover;
+    }
+  }
+
+  .reviewinfo {
+    margin-bottom: size(20);
+
+    .reviewtext {
+      color: $gray-600;
+      font-size: size(14);
+      line-height: 1.5;
+    }
+  }
+
+  .reviwerinfo {
+    @include flex-column;
+
+    .name {
+      color: $gray-700;
+      font-size: size(18);
+      font-weight: 600;
+    }
+
+    .designation {
+      color: $gray-600;
+      font-size: size(14);
+    }
+  }
+}
