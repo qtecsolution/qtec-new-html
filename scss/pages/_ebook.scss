@@ -2,7 +2,7 @@
   padding: length(40) length(8);
 
   @include breakpoint(tab992) {
-    padding: length(100) length(0) length(140);
+    padding: length(100) length(0) length(0);
   }
 
   @include breakpoint(desktop1100) {
@@ -61,6 +61,163 @@
     img {
       @include wh100;
       object-fit: cover;
+    }
+  }
+}
+
+.inthisbook {
+  padding: length(40) length(8);
+
+  @include breakpoint(tab992) {
+    padding: length(100) length(0) length(0);
+  }
+  
+  &-content {
+    @include flex-column;
+  }
+  
+  &-header {
+    height: size(300);
+    background: $datavisualbg;
+    @include flex-center-vert;
+    position: relative;
+      
+    @include breakpoint(tab992) {
+      height: size(400);
+    }
+
+    .details {
+      @include flex-center-between;
+      @include h100;
+
+      .leftinfo {
+        width: 45%;
+        @include h100;
+        @include flex-center-vert;
+        background: $datavisualbg;
+      }
+
+      .rightinfo {
+        width: 55%;
+        @include h100;
+        @include flex-center-vert;
+        justify-content: flex-end;
+        background: $white;
+
+        .slider-buttons {
+          @include flex-center-vert;
+
+          button {
+            @include square(size(32));
+            @include flex-center;
+            overflow: hidden;
+
+            svg {
+              @include wh100;
+            }
+          }
+        }
+      }
+
+      .slider-buttons {
+        @include flex-center-vert;
+        gap: size(16);
+        background: $white;
+      }
+    }
+
+    .title {
+      color: $white;
+      font-size: size(24);
+      font-weight: 600;
+      
+      @include breakpoint(mobile768) {
+        font-size: size(32);
+      }
+      
+      @include breakpoint(tab992) {
+        font-size: size(40);
+      }
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      @include h100;
+      width: size(150);
+      background: $white;
+    }
+  }
+
+  &-body {
+    position: relative;
+    top: size(-96);
+    z-index: 200;
+
+    .swiper-slide {
+      flex-shrink: 0;
+    }
+  }
+}
+
+.keytopics {
+  padding: length(40) length(8);
+
+  @include breakpoint(tab992) {
+    padding: length(0) length(0) length(100);
+  }
+
+  &-detail {
+    @include flex-center-column;
+    gap: size(48);
+
+    @include breakpoint(tab992) {
+      gap: size(80)
+    }
+
+    .keytitle {
+      color: $datavisualbg;
+      font-size: size(24);
+      font-weight: 600;
+      
+      @include breakpoint(mobile768) {
+        font-size: size(32);
+      }
+      
+      @include breakpoint(tab992) {
+        font-size: size(40);
+      }
+    }
+
+    .topicthumb {
+      @include w100;
+      max-height: size(500);
+      
+      img {
+        @include wh100;
+        object-fit: cover;
+      }
+    }
+
+    .topics {
+      @include flex-center;
+      gap: size(24);
+      flex-wrap: wrap;
+
+      .topic {
+        @include w100;
+        display: inline-block;
+        background: rgba($datavisualbg, 0.05);
+        padding: size(24);
+        color: $datavisualbg;
+        font-weight: 600;
+        
+        @include breakpoint(mobile576) {
+          width: calc(100% / 2 - size(24));
+        }
+      }
     }
   }
 }

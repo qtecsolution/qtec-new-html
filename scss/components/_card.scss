@@ -1479,3 +1479,42 @@
     }
   }
 }
+
+.cardbook {
+  background: $white;
+  @include border(solid, 1, rgba($datavisualbg, .1));
+  @include flex-column;
+  gap: size(24);
+  padding: size(16);
+  @include h100;
+
+  @include breakpoint(mobile576) {
+    padding: size(24);
+  }
+
+  &-header {
+    @include flex-column;
+    gap: size(16);
+
+    .bookcard-icon {
+      @include square(length(52));
+      @include flex-center;
+      overflow: hidden;
+
+      img {
+        @include wh100;
+        object-fit: contain;
+      }
+    }
+
+    .title {
+      font-size: size(16);
+      @include line-clamp;
+    }
+  }
+
+  &-body {
+    color: $gray-600;
+    font-size: size(13);
+  }
+}

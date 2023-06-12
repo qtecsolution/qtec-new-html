@@ -109,6 +109,7 @@ video {
 	margin: 0;
 	padding: 0;
 	border: 0;
+	font: inherit;
 
 	&::selection {
 		@include setBgColor($primary, $white);
@@ -139,6 +140,7 @@ body {
 	background: $gray-100;
 	margin: 0;
 	padding: 0;
+	font-family: $primaryFont;
 	position: relative;
 	overflow-x: hidden;
 	font-size: 1rem;
