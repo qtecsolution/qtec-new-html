@@ -1,0 +1,66 @@
+.ebook-banner {
+  padding: length(40) length(8);
+
+  @include breakpoint(tab992) {
+    padding: length(100) length(0) length(140);
+  }
+
+  @include breakpoint(desktop1100) {
+    min-height: calc(100vh - 6.25rem);
+  }
+
+  .banner-detail {
+    @include flex-column;
+    gap: size(24);
+
+    .banner-title {
+      color: $gray-700;
+      @include font-face(
+        $primaryFont,
+        style("normal"),
+        size(32),
+        weight("semibold"),
+        line-height(47, 32)
+      );
+
+      @include breakpoint(mobile768) {
+        font-size: size(40);
+      }
+
+      @include breakpoint(tab992) {
+        font-size: size(48);
+      }
+    }
+    
+    .info {
+      margin-bottom: size(24);
+
+      .text {
+        color: $gray-700;
+        font-size: size(16);
+        line-height: 1.5;
+      }
+    }
+
+    .downloadinfo {
+      width: size(200);
+
+      .btn-explore {
+        @include flex-center;
+        @include w100;
+      }
+    }
+  }
+
+  .banner-thumb {
+    @include w100;
+    max-height: size(470);
+    @include flex-center;
+    overflow: hidden;
+
+    img {
+      @include wh100;
+      object-fit: cover;
+    }
+  }
+}
