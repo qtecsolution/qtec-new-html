@@ -2951,6 +2951,7 @@ select {
   overflow: hidden;
   text-overflow: ellipsis;
   -webkit-line-clamp: 4;
+  max-height: 5rem;
 }
 
 .cardreview {
@@ -2999,6 +3000,7 @@ select {
   overflow: hidden;
   text-overflow: ellipsis;
   -webkit-line-clamp: 4;
+  max-height: 5.25rem;
 }
 .cardreview .reviwerinfo {
   display: flex;

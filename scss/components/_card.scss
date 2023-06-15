@@ -1516,6 +1516,7 @@
       color: inherit;
       font: inherit;
       @include line-clamp-4;
+      max-height: size(80);
     }
   }
 }
@@ -1560,6 +1561,7 @@
       font-size: size(14);
       line-height: 1.5;
       @include line-clamp-4;
+      max-height: size(84);
     }
   }
 
