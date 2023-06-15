@@ -1511,12 +1511,11 @@
   &-body {
     color: $gray-600;
     font-size: size(13);
+    @include line-clamp-4;
     
     .text {
       color: inherit;
       font: inherit;
-      @include line-clamp-4;
-      max-height: size(80);
     }
   }
 }
@@ -1555,13 +1554,12 @@
 
   .reviewinfo {
     margin-bottom: size(20);
+    @include line-clamp-4;
 
     .reviewtext {
       color: $gray-600;
       font-size: size(14);
       line-height: 1.5;
-      @include line-clamp-4;
-      max-height: size(84);
     }
   }
 
