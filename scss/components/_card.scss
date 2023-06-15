@@ -76,10 +76,6 @@
   }
 }
 
-.feature {
-  @include h100;
-}
-
 .feature-1,
 .feature-4 {
   background: $expartBg;
@@ -163,7 +159,6 @@
           weight("normal"),
           line-height(24, 14)
         );
-        font-feature-settings: "salt";
       }
     }
 
@@ -177,7 +172,6 @@
           weight("normal"),
           line-height(24, 14)
         );
-        font-feature-settings: "salt";
       }
     }
 
@@ -190,7 +184,6 @@
         weight("semibold"),
         line-height(24, 14)
       );
-      font-feature-settings: "salt";
       @include transitionscolor;
 
       @include hover {
@@ -358,6 +351,7 @@
   gap: length(22);
   background: $white;
   padding: length(20);
+  @include h100;
 
   @include breakpoint(mobile768) {
     padding: length(24);
@@ -547,6 +541,7 @@
   background: $white;
   @include radius(16);
   overflow: hidden;
+  @include h100;
 
   &-thumbnail {
     overflow: hidden;
@@ -886,7 +881,6 @@
           weight("normal"),
           line-height(20, 14)
         );
-        font-feature-settings: "salt";
       }
     }
 
@@ -1015,7 +1009,6 @@
         weight("semibold"),
         line-height(24, 16)
       );
-      font-feature-settings: "salt";
       @include transitionscolor;
 
       @include hover {
@@ -1193,6 +1186,7 @@
 .cardanalysis {
   @include flex-column;
   gap: size(16);
+  @include h100;
 
   @include breakpoint(tab992) {
     gap: size(24);
@@ -1264,6 +1258,7 @@
 .cardcommerce {
   @include flex-column;
   gap: length(24);
+  @include h100;
 
   &-header {
     @include flex-center-vert;
@@ -1486,7 +1481,7 @@
   @include flex-column;
   gap: size(24);
   padding: size(16);
-  @include h100;
+  // @include h100;
 
   @include breakpoint(mobile576) {
     padding: size(24);
@@ -1516,6 +1511,12 @@
   &-body {
     color: $gray-600;
     font-size: size(13);
+    
+    .text {
+      color: inherit;
+      font: inherit;
+      @include line-clamp-4;
+    }
   }
 }
 
@@ -1558,6 +1559,7 @@
       color: $gray-600;
       font-size: size(14);
       line-height: 1.5;
+      @include line-clamp-4;
     }
   }
 
