@@ -2942,16 +2942,15 @@ select {
 .cardbook-body {
   color: #718096;
   font-size: 0.8125rem;
-}
-.cardbook-body .text {
-  color: inherit;
-  font: inherit;
   display: -webkit-box;
   -webkit-box-orient: vertical;
   overflow: hidden;
   text-overflow: ellipsis;
   -webkit-line-clamp: 4;
-  max-height: 5rem;
+}
+.cardbook-body .text {
+  color: inherit;
+  font: inherit;
 }
 
 .cardreview {
@@ -2990,17 +2989,16 @@ select {
 }
 .cardreview .reviewinfo {
   margin-bottom: 1.25rem;
-}
-.cardreview .reviewinfo .reviewtext {
-  color: #718096;
-  font-size: 0.875rem;
-  line-height: 1.5;
   display: -webkit-box;
   -webkit-box-orient: vertical;
   overflow: hidden;
   text-overflow: ellipsis;
   -webkit-line-clamp: 4;
-  max-height: 5.25rem;
+}
+.cardreview .reviewinfo .reviewtext {
+  color: #718096;
+  font-size: 0.875rem;
+  line-height: 1.5;
 }
 .cardreview .reviwerinfo {
   display: flex;
