@@ -50,6 +50,11 @@
         @include w100;
       }
     }
+
+    .hireinfo {
+      @include flex-center-vert;
+      gap: size(12);
+    }
   }
 
   .banner-thumb {

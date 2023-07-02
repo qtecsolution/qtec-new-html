@@ -4,6 +4,7 @@
 $primary: #0876fc;
 $secondary: #02d7f8;
 $tertiary: rgb(252, 222, 8);
+$blue: #002DF8;
 
 /**=====================================================**
                     TEXT-COLORS
@@ -36,7 +37,12 @@ $darkGrayBg: #dcdcdc;
 $cardHeaderBg: #f2f2f2;
 $datavisualbg: #00142d;
 
+$bg1: #43CBFF;
+$bg2: #9708CC;
+$cardborder: #EBEEFC;
+
 $buttonbg: linear-gradient(151.47deg, $secondary 9.01%, $primary 84.28%);
+$staffbg: linear-gradient(135deg, $bg1 0%, $bg2 100%);
 
 $serviceBg: #f2f8ff;
 $aboutBg: #fffdf2;
@@ -170,6 +176,8 @@ $tab-shade: drop-shadow(0 0 0.0625rem $shadow-3);
 $header-shadow: 0 0 0.625rem 0 rgba($black, 0.1%);
 
 $toast-shadow: 0 0.625rem 4.375rem rgba($black, 0.15%);
+
+$cardshadow: .3125rem .5rem .9375rem .375rem rgba($black, 0.10);
 
 /**=====================================================**
                         TEXT-SHADOWS

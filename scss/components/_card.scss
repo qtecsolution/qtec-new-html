@@ -1203,23 +1203,11 @@
     );
 
     @include breakpoint(mobile768) {
-      @include font-face(
-        $primaryFont,
-        style("normal"),
-        size(28),
-        weight("semibold"),
-        line-height(38, 28)
-      );
+      font-size: size(28);
     }
 
     @include breakpoint(tab992) {
-      @include font-face(
-        $primaryFont,
-        style("normal"),
-        size(32),
-        weight("semibold"),
-        line-height(40, 32)
-      );
+      font-size: size(40);
     }
   }
 

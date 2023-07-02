@@ -1,0 +1,281 @@
+.staffrequirements {
+  padding-bottom: size(80);
+
+  &-content {
+    @include flex-column;
+  }
+
+  &-header {
+    background: $staffbg;
+    min-height: size(300);
+
+    @include breakpoint(tab992) {
+      min-height: size(500);
+    }
+
+    .titlebox {
+      max-width: size(700);
+      margin-inline: auto;
+      @include flex-center;
+      text-align: center;
+      padding: size(64) size(0);
+
+      @include breakpoint(mobile768) {
+        padding: size(80) size(0);
+      }
+
+      @include breakpoint(tab992) {
+        padding: size(100) size(0);
+      }
+
+      .title {
+        color: $white;
+        @include font-face(
+          $primaryFont,
+          style("normal"),
+          size(24),
+          weight("semibold"),
+          line-height(33.6, 24)
+        );
+
+        @include breakpoint(mobile768) {
+          font-size: size(32);
+        }
+
+        @include breakpoint(tab992) {
+          font-size: size(40);
+        }
+      }
+    }
+  }
+
+  &-body {
+    padding-bottom: size(100);
+    margin-top: size(-100);
+
+    @include breakpoint(tab992) {
+      margin-top: size(-200);
+    }
+
+    .cardrequirement {
+      background: $white;
+      @include border(solid, 1, $cardborder);
+      @include flex-center-column;
+      gap: size(32);
+      padding: size(32) size(16) size(48);
+      text-align: center;
+      @include h100;
+
+      &-header {
+        @include flex-center-column;
+        gap: size(32);
+
+        .thumbnail {
+          @include square(size(165));
+          @include flex-center;
+          overflow: hidden;
+
+          img {
+            @include wh100;
+            object-fit: cover;
+          }
+        }
+
+        .requiretitle {
+          color: $gray-700;
+          font-size: size(20);
+          font-weight: 600;
+          @include line-clamp;
+
+          @include breakpoint(tab992) {
+            font-size: size(24);
+          }
+        }
+      }
+
+      &-body {
+        .text {
+          color: $gray-700;
+          font-size: size(13);
+          @include line-clamp-4;
+
+          @include breakpoint(tab992) {
+            font-size: size(15);
+          }
+        }
+      }
+    }
+  }
+}
+
+.staffcontent {
+  padding-bottom: size(80);
+
+  @include breakpoint(tab992) {
+    padding-bottom: size(140);
+  }
+
+  .thumb {
+    @include w100;
+    height: size(250);
+    position: relative;
+    @include flex-center;
+
+    @include breakpoint(mobile768) {
+      height: size(350);
+    }
+
+    @include breakpoint(tab992) {
+      height: size(500);
+    }
+
+    img {
+      @include wh100;
+      object-fit: cover;
+      position: relative;
+      z-index: 100;
+    }
+
+    .thumbshade {
+      position: absolute;
+      @include wh100;
+      background: $staffbg;
+      bottom: size(-40);
+      right: size(-40);
+      z-index: 1;
+    }
+  }
+
+  .descriptions {
+    @include flex-column;
+    gap: size(40);
+
+    .title {
+      color: $gray-700;
+      @include font-face(
+        $primaryFont,
+        style("normal"),
+        size(24),
+        weight("semibold"),
+        line-height(32, 24)
+      );
+      @include line-clamp;
+  
+      @include breakpoint(mobile768) {
+        font-size: size(28);
+      }
+  
+      @include breakpoint(tab992) {
+        font-size: size(40);
+      }
+    }
+
+    .infos {
+      @include flex-column;
+      gap: size(24);
+      max-width: size(480);
+
+      .text {
+        color: $gray-700;
+        font-size: size(13);
+        @include line-clamp-4;
+
+        @include breakpoint(tab992) {
+          font-size: size(15);
+        }
+      }
+
+      .link {
+        @include flex-center-vert;
+        gap: size(4);
+
+        .text {
+          color: $primary;
+          font-size: size(16);
+          font-weight: 600;
+        }
+
+        .icon {
+          @include square(size(36));
+          @include flex-center;
+          overflow: hidden;
+        }
+      }
+    }
+  }
+}
+
+.hireme {
+  padding-bottom: size(80);
+
+  @include breakpoint(tab992) {
+    padding-bottom: size(140);
+  }
+
+  &-detail {
+    @include border(dashed, 2, $blue);
+    @include flex-column;
+    gap: size(32);
+    padding: size(32);
+
+    @include breakpoint(mobile768) {
+      flex-direction: row;
+      align-items: center;
+    }
+
+    @include breakpoint(tab992) {
+      padding: size(48);
+    }
+
+    .leftcontent {
+      @include w100;
+
+      @include breakpoint(mobile768) {
+        width: calc(100% - size(182));
+      }
+
+      .title {
+        color: $gray-700;
+        @include font-face(
+          $primaryFont,
+          style("normal"),
+          size(20),
+          weight("semibold"),
+          line-height(28, 20)
+        );
+        // @include line-clamp;
+
+        @include breakpoint(mobile576) {
+          font-size: size(24);
+        }
+
+        @include breakpoint(tab992) {
+          font-size: size(32);
+        }
+      }
+    }
+
+    .rightcontent {
+      .link {
+        @include setBgColor($white, $primary);
+        @include border(solid, 2, $primary);
+        @include radius(8);
+        @include flex-center;
+        font-size: size(15);
+        font-weight: 700;
+        @include w100;
+        height: size(60);
+        text-align: center;
+        @include transitionsall;
+
+        @include breakpoint(mobile576) {
+          width: size(150);
+        }
+
+        @include hover {
+          @include setBgColor($primary, $white);
+        }
+      }
+    }
+  }
+}
