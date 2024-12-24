@@ -1,15 +1,18 @@
 const slider = tns({
   container: ".clientslide",
-  slideBy: "1",
+  slideBy: 1,
   autoplay: true,
   nav: false,
   controls: false,
-  mouseDrag: true,
+  mouseDrag: false,
   autoplayButtonOutput: false,
-  autoplayTimeout: 5000,
+  loop: true,
+  speed: 10000,
+  autoplayTimeout: 800,
   responsive: {
     0: {
       items: 1,
+      gutter: 0,
     },
     360: {
       items: 2,
