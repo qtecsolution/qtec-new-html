@@ -359,9 +359,6 @@
 **=======================================================**/
 
 .workingclients {
-  background: $white;
-  padding: length(60) length(0);
-
   &-content {
     @include flex-center-column;
     gap: size(48);
@@ -431,6 +428,56 @@
         }
       }
     }
+  }
+}
+.clientLogoSection {
+  background: $white;
+  padding: length(60) length(0);
+  .title {
+    text-align: center;
+    color: $gray-700;
+    @include font-face(
+      $primaryFont,
+      style("normal"),
+      size(20),
+      weight("normal"),
+      line-height(32.64, 20)
+    );
+
+    @include breakpoint(mobile768) {
+      @include font-face(
+        $primaryFont,
+        style("normal"),
+        size(24),
+        weight("normal"),
+        line-height(38.08, 24)
+      );
+    }
+
+    @include breakpoint(tab992) {
+      @include font-face(
+        $primaryFont,
+        style("normal"),
+        size(28),
+        weight("normal"),
+        line-height(38.08, 28)
+      );
+    }
+
+    span {
+      color: inherit;
+      font: inherit;
+      font-weight: 600;
+    }
+  }
+
+  .clientLogoInner {
+    width: 200px;
+    /* margin: 0 10px; */
+  }
+
+  .clientLogoInner img {
+    width: 100%;
   }
 }
 
